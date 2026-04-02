@@ -409,111 +409,185 @@ In this exercise, MOD Administrator creates all three Zava agents in Microsoft C
 
 ### Task 2: Create the Zava Finance Agent
 
-1. In the left navigation pane, select **Create**.
+1. In the left navigation pane, select **Agents**. Then select **create blank agent**.
 
-2. On the **Create** page, select **New agent**.
+	![](./media/image1.png)
 
-3. On the **Create an agent** page, select **Skip to configure**.
+3. On the **Agent** page, select **Edit** under details.
+
+	![](./media/image1.png)
 
 4. On the agent configuration page, in the **Name** field, enter `Zava Finance Agent`.
 
-5. In the **Description** field, enter `An AI assistant that helps Zava finance team members retrieve budget information, invoice data, and financial reports.`
+5. In the **Description** field, enter `An AI assistant that helps Zava finance team members retrieve budget information, invoice data, and financial reports.` Then select **Save**.
 
-6. In the **Instructions** field, enter the following:
+	![](./media/image1.png)
+
+6. In the **Instructions** field, select **Edit**.
+
+	![](./media/image1.png)
+
+7. Then enter the following and select **Save**.
 
     ```
     You are the Zava Finance Agent. Answer questions using only the information in the Zava Finance SharePoint knowledge base. Do not share financial data with users who have not been granted access to the Finance SharePoint site. Always respond professionally and flag any requests for data outside your knowledge base.
     ```
 
-7. On the agent configuration page, locate the **Knowledge** section.
+	![](./media/image1.png)
 
-8. Select **+ Add knowledge**.
+7. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
+
+	![](./media/image1.png)
 
 9. On the **Add knowledge** panel, select **SharePoint**.
 
-10. In the **SharePoint URL** field, enter the SharePoint Finance site URL in the following format:
-    `https://[TenantName].sharepoint.com/sites/ZavaFinance`
+	![](./media/image1.png)
 
-    > **Note:** Replace `[TenantName]` with your tenant prefix from the **Resources** tab.
+10. In the **SharePoint URL** field, enter the SharePoint Finance site URL in the following format:
+    `https://[TenantName].sharepoint.com/sites/Operations`
+
+    > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab.
+
+	![](./media/image1.png)
 
 11. Select **Add** to connect the SharePoint site as the knowledge source.
 
-16. In the top-right corner of the agent configuration page, select **Publish**.
+	![](./media/image1.png)
+
+16. Then select **Add to agent**.
+
+12. In the top-right corner of the agent configuration page, select **Publish**.
+
+	![](./media/image1.png)
 
 17. In the confirmation dialog, select **Publish** to confirm.
 
+	![](./media/image1.png)
+
 18. On the agent configuration page, locate the **Channels** tab on the top section (select +2 if it is not directly visible).
+
+	![](./media/image1.png)
 
 19. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
 
+	![](./media/image1.png)
+
 20. Then select **Add channel**.
+
+	![](./media/image1.png)
+
+21. In the Ready to publish? dialogue, sect **Publish**.
 
 21. Under **Decide who you want to show your agent to:**, select **Show to my teammates and shared users**.
 
-18. On the **Share "Zava Finance Agent" in Teams** panel, in the search field, enter `Patti Fernandes`.
+	![](./media/image1.png)
 
-19. Select **Patti Fernandes** from the results.
+18. Under Agent preview, sleect **Availability options**.
+
+	![](./media/image1.png)
+
+21. On the **Share "Zava Finance Agent" in Teams** panel, in the search field, enter `Patti Fernandes`. Select **Patti Fernandes** from the results.
+
+	![](./media/image1.png)
 
 21. Select **Patti Fernandes** again and on the right panel, select the **Editor** role.
 
-20. In the search field, enter `Megan Bowen`.
+	![](./media/image1.png)
 
-21. Select **Megan Bowen** from the results.
+20. In the search field, enter `Megan Bowen`. Select **Megan Bowen** from the results.
 
-22. In the search field, enter `Alex Wilber`.
+	![](./media/image1.png)
 
-23. Select **Alex Wilber** from the results.
+22. In the search field, enter `Alex Wilber`. Select **Alex Wilber** from the results.
+
+	![](./media/image1.png)
 
 24. Select **Update** to apply the sharing configuration.
+
+	![](./media/image1.png)
 
 ---
 
 ### Task 3: Create the Zava IT Support Agent
 
-1. In the left navigation pane, select **Create**.
+1. 1. In the left navigation pane, select **Agents**. Then select **create blank agent**.
 
-2. On the **Create** page, select **New agent**.
+	![](./media/image1.png)
 
-3. On the **Create an agent** page, select **Skip to configure**.
+3. On the **Agent** page, select **Edit** under details.
+
+	![](./media/image1.png)
 
 4. On the agent configuration page, in the **Name** field, enter `Zava IT Support Agent`.
 
-5. In the **Description** field, enter `An AI assistant that helps Zava employees resolve common IT issues, submit support requests, and find IT policy documentation.`
+5. In the **Description** field, enter `An AI assistant that helps Zava employees resolve common IT issues, submit support requests, and find IT policy documentation.` Then select **Save**.
 
-6. In the **Instructions** field, enter the following:
+	![](./media/image1.png)
+
+6. In the **Instructions** field, select **Edit**.
+
+	![](./media/image1.png)
+
+7. Then enter the following and select **Save**.
 
     ```
     You are the Zava IT Support Agent. Help users with common IT questions using publicly available Microsoft support documentation and Zava IT policies. Do not access or share any sensitive financial or HR information. Escalate complex issues to the IT helpdesk.
     ```
 
-7. On the agent configuration page, locate the **Knowledge** section.
+	![](./media/image1.png)
 
-8. Select **+ Add knowledge**.
+7. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
+
+	![](./media/image1.png)
 
 9. On the **Add knowledge** panel, select **Public Website**.
 
-10. In the **URL** field, enter the following site URL:
+	![](./media/image1.png)
+
+10. In the **URL** field, enter the following site URL. Select **Add** to connect the SharePoint site as the knowledge source.
     `https://support.microsoft.com/`
 
-11. Select **Add** to connect the SharePoint site as the knowledge source.
+	![](./media/image1.png)
+
+16. Then select **Add to agent**.
+
+	![](./media/image1.png)
 
 16. In the top-right corner of the agent configuration page, select **Publish**.
 
+	![](./media/image1.png)
+
 17. In the confirmation dialog, select **Publish** to confirm.
+
+	![](./media/image1.png)
 
 18. On the agent configuration page, locate the **Channels** tab on the top section (select +2 if it is not directly visible).
 
+	![](./media/image1.png)
+
 19. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
+
+	![](./media/image1.png)
 
 20. Then select **Add channel**.
 
+	![](./media/image1.png)
+
 21. Select **Availability options**.
+
+	![](./media/image1.png)
 
 22. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
 
+	![](./media/image1.png)
+
 23. Select **Submit to org catalog**.
 
+	![](./media/image1.png)
+
 24. On the **Give everyone access to this agent?** in the confirmation dialog, select **Yes**.
+
+	![](./media/image1.png)
 
 25. You will get redirected **Show in Teams app store for org** and show a notification **Your agent is submitted and waiting for approval from your Teams admin**.
 
@@ -527,17 +601,19 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
 
 ### Task 1: Upload Files to the Zava HR SharePoint Site
 
-1. Open a new browser tab and navigate to `https://[TenantName].sharepoint.com/sites/ZavaHR`.
+1. Open a new browser tab and navigate to `https://[TenantName].sharepoint.com/sites/HR`.
 
    > **Note:** Replace `[TenantName]` with your tenant prefix from the **Resources** tab.
 
-2. In the left navigation pane, select **Documents**.
+2. From the top navigation select Benefits @ Contoso and then from the left sub-navigation pane, select **Documents**.
 
-3. On the **Documents** page, select **Upload**.
+	![](./media/image1.png)
 
-4. In the **Upload** dropdown, select **Files**.
+3. On the **Documents** page, select **Create or upload**. Then select **Files upload**.
 
-5. In the file picker, navigate to the **Lab Files** folder on your lab VM desktop.
+	![](./media/image1.png)
+
+5. In the file picker, navigate to the **Lab Files** > **HR** folder on your lab VM desktop.
 
 6. Select the following files and then select **Open** to upload them:
 
@@ -556,6 +632,8 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
 
 8. On the **Documents** page, confirm that all 8 files appear in the document library.
 
+	![](./media/image1.png)
+
 9. Select **Zava_Employee_Records.xlsx** to open it.
 
 10. Confirm that the file opens and displays employee data including employee IDs, names, and salary information.
@@ -566,17 +644,19 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
 
 ### Task 2: Upload Files to the Zava Finance SharePoint Site
 
-1. Open a new browser tab and navigate to `https://[TenantName].sharepoint.com/sites/ZavaFinance`.
+1. Open a new browser tab and navigate to `https://[TenantName].sharepoint.com/sites/Operations`.
 
    > **Note:** Replace `[TenantName]` with your tenant prefix from the **Resources** tab.
 
 2. In the left navigation pane, select **Documents**.
 
-3. On the **Documents** page, select **Upload**.
+	![](./media/image1.png)
 
-4. In the **Upload** dropdown, select **Files**.
+3. On the **Documents** page, select **Create or upload** > **Files upload**.
 
-5. In the file picker, navigate to the **Lab Files** folder on your lab VM desktop.
+	![](./media/image1.png)
+
+5. In the file picker, navigate to the **Lab Files** > **Operations** folder on your lab VM desktop.
 
 6. Select the following files and then select **Open** to upload them:
 
@@ -602,21 +682,19 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
 ---
 ### Task 3: Verify Agents in the Microsoft Agent 365 Agent Registry
 
-1. Open a new browser tab and navigate to `https://admin.microsoft.com`.
+1. Open a new browser tab and navigate to `https://admin.cloud.microsoft/`. Sign in with **MOD Administrator** credentials if prompted.
 
-2. Sign in with **MOD Administrator** credentials if prompted.
+3. In the left navigation pane, select **Agents**. If this option is not visible, select **AI** and then select **Agents**. Then select **All agents**.
 
-3. In the left navigation pane, select **Agents**. If this option is not visible, select **AI** and then select **Agents**.
-
-4. Select **All agents**.
-
-5. On this page, confirm that the following three agents appear in the list: (You can confirm it by searcing for Zava in the search box.
+5. On this page, confirm that the following three agents appear in the list: (You can confirm it by searcing for Zava in the search box.)
 
    | Agent Name | Status | Publisher |
    |---|---|---|
    | Zava HR Assistant | Active | Default Publisher |
    | Zava Finance Agent | Active | Default Publisher |
    | Zava IT Support Agent | Active | Default Publisher |
+
+	![](./media/image1.png)
 
    > **Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
 
