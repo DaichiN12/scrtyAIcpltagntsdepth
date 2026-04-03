@@ -47,30 +47,30 @@ Estimated time: **30 minutes**
 
 2. On the sign-in page, enter the **MOD Administrator** credentials from the **Resources** tab of your lab environment.
 
-	![](./media/image1.png)
-	![](./media/image1.png)
+	![](./media/image2.png)
+	![](./media/image3.png)
 
 3. If prompted with a **Keep your account secure** window, select **Next**.
 
-	![](./media/image1.png)
+	![](./media/image4.png)
 
 4. Follow the on-screen prompts to set up the Microsoft Authenticator app.
 
    > **Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then select **Scan a QR code**. Scan the QR code displayed on screen.
 
-	![](./media/image1.png)
+	![](./media/image5.png)
 
 5. Complete all remaining prompts to finish the Authenticator setup.
 
-	![](./media/image1.png)
+	![](./media/image6.png)
 
 6. If asked **Stay signed in?**, select **Yes**.
 
-	![](./media/image1.png)
+	![](./media/image7.png)
 
 7. On the Microsoft Entra admin center welcome screen, select **Get Started**.
 
-	![](./media/image1.png)
+	![](./media/image8.png)
 
 ---
 
@@ -78,11 +78,11 @@ Estimated time: **30 minutes**
 
 1. In the Microsoft Entra admin center, in the left navigation pane, expand **Entra ID**. Under **Entra ID**, select **Groups**.
 
-	![](./media/image1.png)
+	![](./media/image9.png)
 
 3. On the **Overview** page, select **New group**.
 
-	![](./media/image1.png)
+	![](./media/image10.png)
 
 4. On the **New Group** page, configure the following fields:
 
@@ -90,44 +90,44 @@ Estimated time: **30 minutes**
    - **Group name:** Enter `copilotagentsecurity`.
    - **Microsoft Entra roles can be assigned to the group:** Select **Yes**. If this option is not visible, skip this field and continue.
 
-	![](./media/image1.png)
+	![](./media/image11.png)
 
 5. Under **Owners**, select **No owners selected**.
 
-	![](./media/image1.png)
+	![](./media/image12.png)
 
 6. On the **Add owners** panel, search for and select **MOD Administrator**. Choose **Select** to confirm the owner.
 
-	![](./media/image1.png)
+	![](./media/image13.png)
 
 8. Under **Members**, select **No members selected**.
 
-	![](./media/image1.png)
+	![](./media/image14.png)
 
 9. On the **Add members** panel, search for and select **MOD Administrator** and **Patti Fernandez**. Select **Select** to confirm the member.
 
-	![](./media/image1.png)
+	![](./media/image15.png)
 
 11. Under **Roles**, select **No roles selected**.
 
-	![](./media/image1.png)
+	![](./media/image16.png)
 
 12. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and then select **Select**.
 
-	![](./media/image1.png)
+	![](./media/image17.png)
 
 13. Select **Create**.
 
-	![](./media/image1.png)
+	![](./media/image18.png)
 
 14. In the confirmation dialog, select **Yes**.
 
-	![](./media/image1.png)
+	![](./media/image19.png)
 
 15. Confirm that a success notification appears at the top of the page.
 
-	![](./media/image1.png)
-	![](./media/image1.png)
+	![](./media/image20.png)
+	![](./media/image21.png)
 
 ---
 
@@ -135,27 +135,27 @@ Estimated time: **30 minutes**
 
 1. In the left navigation pane of the Microsoft Entra admin center, expand **Entra ID**. Under **Entra ID**, select **Overview**.
 
-	![](./media/image1.png)
+	![](./media/image22.png)
 
 3. On the **Overview** page, select **Properties** from the top bar.
 
-	![](./media/image1.png)
+	![](./media/image23.png)
 
 4. On the **Properties** page, locate the **Access management for Azure resources** toggle and set it to **Yes**.
 
-	![](./media/image1.png)
+	![](./media/image24.png)
 
 5. Select **Manage security defaults**.
 
-	![](./media/image1.png)
+	![](./media/image25.png)
 
 6. On the **Security defaults** panel, under **Security defaults**, select **Enabled**. Select **Save**.
 
-	![](./media/image1.png)
+	![](./media/image26.png)
 
 8. Return to the **Properties** page and select **Save**.
 
-	![](./media/image1.png)
+	![](./media/image27.png)
 
 ---
 
@@ -163,41 +163,41 @@ Estimated time: **30 minutes**
 
 1. In the left navigation pane of the Microsoft Entra admin center, expand **Entra ID** and select **Roles & admins**.
 
-	![](./media/image1.png)
+	![](./media/image28.png)
 
 3. On the **Roles and administrators** page, in the search bar, enter `privileged role admin`.
 
-	![](./media/image1.png)
+	![](./media/image29.png)
 
 4. In the search results, select **Privileged Role Administrator** by selecting its name. Do not select the checkbox next to it.
 
-	![](./media/image1.png)
+	![](./media/image30.png)
 
 5. On the **Privileged Role Administrator** page, select **+ Add assignments**.
 
-	![](./media/image1.png)
+	![](./media/image31.png)
 
 6. On the **Add assignments** panel, select **No members selected**.
 
-	![](./media/image1.png)
+	![](./media/image32.png)
 
 7. On the **Select members** panel, search for and select **copilotagentsecurity**. Select **Select** to confirm.
 
-	![](./media/image1.png)
+	![](./media/image33.png)
 
 9. Select **Next**.
 
-	![](./media/image1.png)
+	![](./media/image34.png)
 
 10. On the **Settings** step, under **Assignment type**, select **Active**. In the **Enter justification** field, enter `Successful lab completion`.
 
 11. Select **Assign**.
 
-	![](./media/image1.png)
+	![](./media/image35.png)
 
 12. Confirm that the role assignment appears in the assignments list.
 
-	![](./media/image1.png)
+	![](./media/image36.png)
 
 ---
 
@@ -207,23 +207,23 @@ Estimated time: **30 minutes**
 
 2. In the left navigation pane, select **Manage**.
 
-	![](./media/image1.png)
+	![](./media/image37.png)
 
 3. Under **Manage**, select **Tenant Settings**. On the **Tenant Settings** page, locate and select **Copilot Studio Authors** from the list.
 
-	![](./media/image1.png)
+	![](./media/image38.png)
 
 5. On the **Copilot Studio Authors** panel, select the **Edit** icon near security group.
 
-	![](./media/image1.png)
+	![](./media/image39.png)
 
 6. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results.
 
-	![](./media/image1.png)
+	![](./media/image40.png)
 
 8. Select **Save** to apply the setting.
 
-	![](./media/image1.png)
+	![](./media/image41.png)
 
 ---
 
@@ -231,29 +231,29 @@ Estimated time: **30 minutes**
 
 1. Remain in the Power Platform Admin Center at `https://admin.powerplatform.microsoft.com`. In the left navigation pane, select **Copilot**.
 
-	![](./media/image1.png)
+	![](./media/image42.png)
 
 3. On the **Copilot** page, select **Settings**.
 
-	![](./media/image1.png)
+	![](./media/image43.png)
 
 4. In the settings list, under the **Copilot Studio** section, select **Entra Agent Identity for Copilot Studio**.
 
 5. On the **Entra Agent Identity for Copilot Studio** panel, select the **Dev One** environment from the environment list. Select **Edit setting**.
 
-	![](./media/image1.png)
+	![](./media/image44.png)
 
 7. On the setting panel, select **On**.
 
-	![](./media/image1.png)
+	![](./media/image45.png)
 
 8. Select **Save**.
 
-	![](./media/image1.png)
+	![](./media/image46.png)
 
 9. After saving, close the panel.
 
-	![](./media/image1.png)
+	![](./media/image47.png)
 
    > **Note:** Enabling Entra Agent Identity allows Copilot Studio agents to be automatically assigned a unique identity in Microsoft Entra ID. This is required for identity governance, Conditional Access, and Defender for Cloud Apps integration in later labs.
 
@@ -265,35 +265,35 @@ Estimated time: **30 minutes**
 
 2. If prompted, on the **Welcome to Power Apps**, slect **United States** and then select **Get started**.
 
-	![](./media/image1.png)
+	![](./media/image48.png)
 
 3. In the top-right corner, confirm that the **Dev One** environment is selected in the environment switcher. If not, select the environment switcher and select **Dev One**.
 
-	![](./media/image1.png)
+	![](./media/image49.png)
 
 4. In the left navigation bar, expand **More** and select **Connections**.
 
-	![](./media/image1.png)
+	![](./media/image50.png)
 
 6. On the **Connections** page, select **+ New connection**.
 
-	![](./media/image1.png)
+	![](./media/image51.png)
 
 7. In the connector search bar, enter `SharePoint`. Select **SharePoint** from the list of available connectors.
 
-	![](./media/image1.png)
+	![](./media/image52.png)
 
 9. On the **SharePoint** connection panel, select **Connect directly (cloud services)**. Select **Create**.
 
-	![](./media/image1.png)
+	![](./media/image53.png)
 
 11. When prompted, sign in with **MOD Administrator** credentials to authorise the connection and select **Allow access**.
 
-	![](./media/image1.png)
+	![](./media/image54.png)
 
 12. Confirm that the SharePoint connection appears in the **Connections** list with a status of **Connected**.
 
-	![](./media/image1.png)
+	![](./media/image55.png)
 
 ---
 
@@ -317,19 +317,19 @@ In this exercise, MOD Administrator creates all three Zava agents in Microsoft C
     
 	>Navigate back to the Copilot Studio tab and open `https://copilotstudio.microsoft.com/environments/< EnvironmentID>` (Replacing < EnvironmentID> with the value fetched above)
 
-	![](./media/image1.png)
+	![](./media/image56.png)
 
 5. In the left navigation pane, select **Agents**.
 
-	![](./media/image1.png)
+	![](./media/image57.png)
 
 7. On the **Create an agent** page, select **Create blank agent**.
 
-	![](./media/image1.png)
+	![](./media/image58.png)
 
 8. On the agent configuration page, select **Edit** under **Details**.
 
-	![](./media/image1.png)
+	![](./media/image59.png)
 
 9. in the **Name** field, enter `Zava HR Assistant`.
 
@@ -337,7 +337,7 @@ In this exercise, MOD Administrator creates all three Zava agents in Microsoft C
 
 10. Select **Save**.
 
-	![](./media/image1.png)
+	![](./media/image60.png)
 
 10. In the **Instructions** field, select **Edit** and enter the following and select **Save**.
 
@@ -347,63 +347,63 @@ In this exercise, MOD Administrator creates all three Zava agents in Microsoft C
 
 11. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
-	![](./media/image1.png)
+	![](./media/image61.png)
 
 13. On the **Add knowledge** panel, select **SharePoint**.
 
-	![](./media/image1.png)
+	![](./media/image62.png)
 
 14. In the **SharePoint URL** field, enter the SharePoint HR site URL in the following format and select **Add**:
     `https://[TenantPrefix].sharepoint.com/sites/HR`
 
     > **Note:** Replace [TenantPrefix] with your tenant prefix found on the **Resources** tab of your lab environment.
 
-	![](./media/image1.png)
+	![](./media/image63.png)
 
 15. Select **Add to agent** to connect the SharePoint site as the knowledge source.
 
-	![](./media/image1.png)
+	![](./media/image64.png)
 
 16. In the top-right corner of the agent configuration page, select **Publish**.
 
-	![](./media/image1.png)
+	![](./media/image65.png)
 
 17. In the confirmation dialog, select **Publish** to confirm.
 
-	![](./media/image1.png)
+	![](./media/image66.png)
 
 18. On the agent configuration page, locate the **Channels** tab on the top section (select +2 if it is not directly visible).
 
-	![](./media/image1.png)
-	![](./media/image1.png)
+	![](./media/image67.png)
+	![](./media/image68.png)
 
 19. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
 
-	![](./media/image1.png)
+	![](./media/image69.png)
 
 20. Then select **Add channel**.
 
-	![](./media/image1.png)
+	![](./media/image70.png)
 
 21. Select **Availability options**.
 
-	![](./media/image1.png)
+	![](./media/image71.png)
 
 22. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
 
-	![](./media/image1.png)
+	![](./media/image72.png)
 
 23. Select **Submit to org catalog**.
 
-	![](./media/image1.png)
+	![](./media/image73.png)
 
 24. On the **Give everyone access to this agent?** in the confirmation dialog, select **Yes**.
 
-	![](./media/image1.png)
+	![](./media/image74.png)
 
 25. You will get redirected **Show in Teams app store for org** and show a notification **Your agent is submitted and waiting for approval from your Teams admin**.
 
-	![](./media/image1.png)
+	![](./media/image75.png)
 
 ---
 
@@ -411,21 +411,21 @@ In this exercise, MOD Administrator creates all three Zava agents in Microsoft C
 
 1. In the left navigation pane, select **Agents**. Then select **create blank agent**.
 
-	![](./media/image1.png)
+	![](./media/image76.png)
 
 3. On the **Agent** page, select **Edit** under details.
 
-	![](./media/image1.png)
+	![](./media/image77.png)
 
 4. On the agent configuration page, in the **Name** field, enter `Zava Finance Agent`.
 
 5. In the **Description** field, enter `An AI assistant that helps Zava finance team members retrieve budget information, invoice data, and financial reports.` Then select **Save**.
 
-	![](./media/image1.png)
+	![](./media/image78.png)
 
 6. In the **Instructions** field, select **Edit**.
 
-	![](./media/image1.png)
+	![](./media/image79.png)
 
 7. Then enter the following and select **Save**.
 
@@ -433,78 +433,78 @@ In this exercise, MOD Administrator creates all three Zava agents in Microsoft C
     You are the Zava Finance Agent. Answer questions using only the information in the Zava Finance SharePoint knowledge base. Do not share financial data with users who have not been granted access to the Finance SharePoint site. Always respond professionally and flag any requests for data outside your knowledge base.
     ```
 
-	![](./media/image1.png)
+	![](./media/image80.png)
 
 7. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
-	![](./media/image1.png)
+	![](./media/image81.png)
 
 9. On the **Add knowledge** panel, select **SharePoint**.
 
-	![](./media/image1.png)
+	![](./media/image82.png)
 
 10. In the **SharePoint URL** field, enter the SharePoint Finance site URL in the following format:
     `https://[TenantName].sharepoint.com/sites/Operations`
 
     > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab.
 
-	![](./media/image1.png)
+	![](./media/image83.png)
 
 11. Select **Add** to connect the SharePoint site as the knowledge source.
 
-	![](./media/image1.png)
+	![](./media/image84.png)
 
 16. Then select **Add to agent**.
 
 12. In the top-right corner of the agent configuration page, select **Publish**.
 
-	![](./media/image1.png)
+	![](./media/image85.png)
 
 17. In the confirmation dialog, select **Publish** to confirm.
 
-	![](./media/image1.png)
+	![](./media/image86.png)
 
 18. On the agent configuration page, locate the **Channels** tab on the top section (select +2 if it is not directly visible).
 
-	![](./media/image1.png)
+	![](./media/image87.png)
 
 19. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
 
-	![](./media/image1.png)
+	![](./media/image88.png)
 
 20. Then select **Add channel**.
 
-	![](./media/image1.png)
+	![](./media/image89.png)
 
 21. In the Ready to publish? dialogue, sect **Publish**.
 
 21. Under **Decide who you want to show your agent to:**, select **Show to my teammates and shared users**.
 
-	![](./media/image1.png)
+	![](./media/image90.png)
 
 18. Under Agent preview, sleect **Availability options**.
 
-	![](./media/image1.png)
+	![](./media/image91.png)
 
 21. On the **Share "Zava Finance Agent" in Teams** panel, in the search field, enter `Patti Fernandes`. Select **Patti Fernandes** from the results.
 
-	![](./media/image1.png)
+	![](./media/image92.png)
 
 21. Select **Patti Fernandes** again and on the right panel, select the **Editor** role.
 
-	![](./media/image1.png)
+	![](./media/image93.png)
 
 20. In the search field, enter `Megan Bowen`. Select **Megan Bowen** from the results.
 
-	![](./media/image1.png)
+	![](./media/image94.png)
 
 22. In the search field, enter `Alex Wilber`. Select **Alex Wilber** from the results.
 
-	![](./media/image1.png)
+	![](./media/image95.png)
 
 24. Select **Update** to apply the sharing configuration.
 
-	![](./media/image1.png)
+	![](./media/image96.png)
 
 ---
 
@@ -512,21 +512,21 @@ In this exercise, MOD Administrator creates all three Zava agents in Microsoft C
 
 1. 1. In the left navigation pane, select **Agents**. Then select **create blank agent**.
 
-	![](./media/image1.png)
+	![](./media/image97.png)
 
 3. On the **Agent** page, select **Edit** under details.
 
-	![](./media/image1.png)
+	![](./media/image98.png)
 
 4. On the agent configuration page, in the **Name** field, enter `Zava IT Support Agent`.
 
 5. In the **Description** field, enter `An AI assistant that helps Zava employees resolve common IT issues, submit support requests, and find IT policy documentation.` Then select **Save**.
 
-	![](./media/image1.png)
+	![](./media/image99.png)
 
 6. In the **Instructions** field, select **Edit**.
 
-	![](./media/image1.png)
+	![](./media/image100.png)
 
 7. Then enter the following and select **Save**.
 
@@ -534,60 +534,60 @@ In this exercise, MOD Administrator creates all three Zava agents in Microsoft C
     You are the Zava IT Support Agent. Help users with common IT questions using publicly available Microsoft support documentation and Zava IT policies. Do not access or share any sensitive financial or HR information. Escalate complex issues to the IT helpdesk.
     ```
 
-	![](./media/image1.png)
+	![](./media/image101.png)
 
 7. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
-	![](./media/image1.png)
+	![](./media/image102.png)
 
 9. On the **Add knowledge** panel, select **Public Website**.
 
-	![](./media/image1.png)
+	![](./media/image103.png)
 
 10. In the **URL** field, enter the following site URL. Select **Add** to connect the SharePoint site as the knowledge source.
     `https://support.microsoft.com/`
 
-	![](./media/image1.png)
+	![](./media/image104.png)
 
 16. Then select **Add to agent**.
 
-	![](./media/image1.png)
+	![](./media/image105.png)
 
 16. In the top-right corner of the agent configuration page, select **Publish**.
 
-	![](./media/image1.png)
+	![](./media/image106.png)
 
 17. In the confirmation dialog, select **Publish** to confirm.
 
-	![](./media/image1.png)
+	![](./media/image107.png)
 
 18. On the agent configuration page, locate the **Channels** tab on the top section (select +2 if it is not directly visible).
 
-	![](./media/image1.png)
+	![](./media/image108.png)
 
 19. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
 
-	![](./media/image1.png)
+	![](./media/image109.png)
 
 20. Then select **Add channel**.
 
-	![](./media/image1.png)
+	![](./media/image110.png)
 
 21. Select **Availability options**.
 
-	![](./media/image1.png)
+	![](./media/image111.png)
 
 22. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
 
-	![](./media/image1.png)
+	![](./media/image112.png)
 
 23. Select **Submit to org catalog**.
 
-	![](./media/image1.png)
+	![](./media/image113.png)
 
 24. On the **Give everyone access to this agent?** in the confirmation dialog, select **Yes**.
 
-	![](./media/image1.png)
+	![](./media/image114.png)
 
 25. You will get redirected **Show in Teams app store for org** and show a notification **Your agent is submitted and waiting for approval from your Teams admin**.
 
@@ -607,11 +607,11 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
 
 2. From the top navigation select Benefits @ Contoso and then from the left sub-navigation pane, select **Documents**.
 
-	![](./media/image1.png)
+	![](./media/image115.png)
 
 3. On the **Documents** page, select **Create or upload**. Then select **Files upload**.
 
-	![](./media/image1.png)
+	![](./media/image116.png)
 
 5. In the file picker, navigate to the **Lab Files** > **HR** folder on your lab VM desktop.
 
@@ -632,7 +632,7 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
 
 8. On the **Documents** page, confirm that all 8 files appear in the document library.
 
-	![](./media/image1.png)
+	![](./media/image117.png)
 
 9. Select **Zava_Employee_Records.xlsx** to open it.
 
@@ -650,11 +650,11 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
 
 2. In the left navigation pane, select **Documents**.
 
-	![](./media/image1.png)
+	![](./media/image118.png)
 
 3. On the **Documents** page, select **Create or upload** > **Files upload**.
 
-	![](./media/image1.png)
+	![](./media/image119.png)
 
 5. In the file picker, navigate to the **Lab Files** > **Operations** folder on your lab VM desktop.
 
@@ -694,7 +694,7 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
    | Zava Finance Agent | Active | Default Publisher |
    | Zava IT Support Agent | Active | Default Publisher |
 
-	![](./media/image1.png)
+	![](./media/image120.png)
 
    > **Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
 
