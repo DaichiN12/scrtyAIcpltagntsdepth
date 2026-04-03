@@ -14,9 +14,11 @@ This lab introduces the Microsoft 365 Admin Center Agent Registry and Microsoft 
 
 ## Objectives
 
-- Assign Patti Fernandes the Security Operator role in Microsoft Admin Center.
+<!--
+- Assign Patti Fernandes the Security Administrator role in Microsoft Admin Center.
 - Assign Patti Fernandes the Security Operator role in Microsoft Defender XDR.
 - Assign Patti Fernandes to the Audit Reader role group in Microsoft Purview.
+-->
 - Explore the Agent 365 Overview dashboard and interpret key metrics.
 - Inspect all three Zava agents in the Agent Registry and review their metadata.
 - Block and unblock the Zava HR Assistant to validate lifecycle controls.
@@ -26,12 +28,11 @@ This lab introduces the Microsoft 365 Admin Center Agent Registry and Microsoft 
 - Provision Microsoft Defender XDR by signing in to the Defender portal.
 - Configure Defender for Cloud Apps organisation details and connect the Microsoft 365 app connector.
 
-
 ---
 
 ## Lab Duration
 
-Estimated time: **75 minutes**
+Estimated time: **20 minutes**
 
 ---
 
@@ -39,11 +40,11 @@ Estimated time: **75 minutes**
 
 ### Task 1: Access the Agent 365 Overview Page
 
-1. Open a browser and navigate to `https://admin.microsoft.com`.
-
-2. Sign in with **Patti Fernandez** credentials if prompted. (Use pattif@<TenantName> as ID and User Password as the password)
+1. Open a browser and navigate to `https://admin.cloud.microsoft/`. Sign in with **MOD Administrator** credentials if prompted.
 
 3. In the left navigation pane, expand **Agents**. and then select **Overview**.
+
+	![](./media/image1.png)
 
 5. On the **Agent Overview** page, locate the following metrics and note their current values:
 
@@ -53,70 +54,111 @@ Estimated time: **75 minutes**
    - **Agents without owners** — Agents whose owner has left the company.
    - **Agent analytics** - Agents by creators, Top platforms used to build agents, Active users in Copilot over time
  
+	![](./media/image2.png)
+
 > **Note:** In a freshly configured environment, active user and agents without owners may show zero. This is expected. The metrics will populate as agents are used throughout the course.
 
 ---
 
-### Task 2: Approve an agent in Teams admin center
+### Task 2: Inspect and approve the Zava Agents in the Agent Registry
 
-1. Open a new browser tab and navigate to `https://admin.teams.microsoft.com/` and log in using the MOD Admin credentials.
+1. In the left navigation pane, select **Agents**. Select **All agents**. Then select the **Requests** tab.
 
-2. From the left navigation under Teams apps, select **Manage apps**.
+	![](./media/image3.png)
 
-3. In the search bar, select **Zava HR Assistant**.
+5. In the agent list, locate **Zava IT Support Agent** and select the vertical ... near the name.
 
-4. On the **Zava HR Assistant** page, select **Publish**.
+6. From the two options you can either **Reject submission** or **Publish to store** the agent. For now select **Publish to store**.
+
+	![](./media/image4.png)
+
+7. On the **Publish new agent** flow, under **Select users or groups who can install the agent**,  select **All users**.
+
+	![](./media/image5.png)
+
+7. Under **Select users or groups who will have the agent pre-installed (optional)**,  select **All users**.
+
+	![](./media/image6.png)
+
+7. In the search box, searchbox for **Specific users/groups**, search for `Adele Vance` and select from the dropdown.
+
+	![](./media/image7.png)
+
+8. Add **Patti Fernandez** as well.
+
+	![](./media/image8.png)
+
+8. Then select **Next**.
+
+	![](./media/image9.png)
+
+8. On **Apply security template**, select **Next**.
+
+	![](./media/image10.png)
+
+9. On **Review permissions**, select **Next**.
+
+	![](./media/image11.png)
+
+10. Select the Registry tab, search for `Zava IT Support Agent Review`, select it and note the information in the pane.
+
+	![](./media/image12.png)
 
 ---
 
-### Task 3: Inspect and approve the Zava Agents in the Agent Registry
+### Task 3: Approve an agent in Teams admin center
 
-1. Move back on the admin center or open a browser and navigate to `https://admin.microsoft.com`.
+1. Open a new browser tab and navigate to `https://admin.teams.microsoft.com/` and log in using the MOD Admin credentials.
 
-2. In the left navigation pane, select **Agents**.
+2. From the left navigation under **Teams apps**, select **Manage apps**.
 
-3. Select **All agents**.
+	![](./media/image13.png)
 
-4. On the **All agents** page, select the **Requests** tab.
+3. In the search bar search for Zava and select **Zava HR Assistant**.
 
-5. In the agent list, locate **Zava IT Support Agent** and select the verticla ... near the name.
+	![](./media/image14.png)
 
-6. From the two options you can either **Reject** or **Publish** the agent. For now select **Publish**.
+4. On the **Zava HR Assistant** page, select **Publish**.
 
-7. Select the Registry tab, search for `Zava IT Support Agent Review`, select it and note the information in the pane.
+	![](./media/image15.png)
+
+5. On the confirmation dialogue, select **Publish** again.
+
+	![](./media/image16.png)
 
 ---
 
 ### Task 3: Block and Unblock the Zava HR Assistant
 
-1. On the **Registry** tab, search for and locate **Zava HR Assistant** in the agent list.
+1. Navigate back to `https://admin.cloud.microsoft/`. Sign in with **MOD Administrator** credentials if prompted.
 
-2. Select **Zava HR Assistant** to open its details panel.
+1. On the **All agents** page, **Registry tab** tab, search for and locate and select **Zava HR Assistant** in the agent list.
+
+	![](./media/image17.png)
 
 3. On the details panel, below the agent name, select **Block**.
 
-4. On the **Block agent** pane that opens, review the message confirming that blocking will prevent all users in the organisation from accessing the agent.
+	![](./media/image18.png)
 
-5. Check the box near **Block agent**.
+4. On the **Block agent** pane that opens, review the message confirming that blocking will prevent all users in the organisation from accessing the agent. Check the box near **Block agent**. Select **Save**.
 
-6. Select **Save**.
+	![](./media/image19.png)
 
-7. Close the details panel.
+7. Confirm that **Zava HR Assistant** now displays a **Blocked** status.
 
-8. In the agent list, confirm that **Zava HR Assistant** now displays a **Blocked** status.
+	![](./media/image20.png)
 
-9. Select **Zava HR Assistant** to open its details panel again.
+10. Now to unlock, below the agent name, select **Unblock**.
 
-10. On the details panel, below the agent name, select **Unblock**.
+	![](./media/image21.png)
 
-11. On the **Unblock agent** pane that opens, select **Unblock agent**.
+11. On the **Unblock agent** pane that opens, select **Unblock agent** checkbox. Select **Save**. Close the details panel.
 
-12. Select **Save**.
-
-13. Close the details panel.
+	![](./media/image22.png)
 
 14. In the agent list, confirm that **Zava HR Assistant** now displays an **Active** status.
-
+	
+	![](./media/image23.png)
 ---
 
 ### Task 4: Export the Agent Inventory
@@ -125,7 +167,11 @@ Estimated time: **75 minutes**
 
    > **Note:** If an **Export** button is not visible in the toolbar, select the ellipsis (**...**) menu in the toolbar to locate the export option.
 
-3. Wait for the export file to be generated and downloaded to your lab VM.
+	![](./media/image24.png)
+
+3. Confirm the download in the confirmation dialogue. Wait for the export file to be generated and downloaded to your lab VM.
+
+	![](./media/image25.png)
 
 4. Open the downloaded CSV file.
 
@@ -133,17 +179,21 @@ Estimated time: **75 minutes**
 
 6. Confirm that the following columns are present: agent name, publisher, creator, creation date, host products, and availability status.
 
+	![](./media/image26.png)
+
 7. Close the CSV file.
 
 ---
 
 ### Task 5: Identify Ownerless Agents
 
-1. On the **Registry** tab, locate the **Agent inventory** section above the agent list.
+1. On the **Registry** tab, select the **Missing an owner** card.
 
-2. Select the **Missing an owner** card.
+	![](./media/image27.png)
 
 3. Review the list of agents that are displayed after applying the ownerless filter.
+
+	![](./media/image28.png)
 
 4. Note whether any of the three Zava agents appear in this filtered list.
 
@@ -151,15 +201,16 @@ Estimated time: **75 minutes**
 
 5. Select **Clear filter** or reset the filters to return to the full agent list.
 
+	![](./media/image29.png)
+
 ---
 
 ## Exercise 2: Prepare Purview Audit for Day 2
+
 <!--
 ### Task 1: Assign Patti Fernandes the Audit Reader Role in Microsoft Purview
 
 1. Open a new browser tab and navigate to `https://purview.microsoft.com`.
-
-2. Sign in with **MOD Administrator** credentials if prompted.
 
 3. In the left navigation pane, select **Settings**.
 
@@ -192,13 +243,20 @@ Estimated time: **75 minutes**
 
 ### Task 1: Verify Purview Audit Is Active
 
-1. Remain in the Microsoft Purview portal at `https://purview.microsoft.com`.
+1. Remain in the Microsoft Purview portal at `https://purview.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted. Select **Get started**.
+
+	![](./media/image30.png)
 
 2. In the left navigation pane, select **Solutions** then select **Audit**.
+
+	![](./media/image31.png)
 
 3. On the **Audit** page, check whether a banner appears prompting you to start recording user and admin activity.
 
    - If a banner is displayed, select **Start recording user and admin activity** to enable auditing.
+
+	![](./media/image32.png)
+
    - If no banner is displayed, auditing is already enabled. Proceed to the next step.
 
 4. Configure the search with the following values:
@@ -211,6 +269,8 @@ Estimated time: **75 minutes**
 
 5. Select **Search**.
 
+	![](./media/image33.png)
+
 6. Wait for the search job to complete.
 
 7. Review the results to confirm that audit records are being returned.
@@ -218,6 +278,7 @@ Estimated time: **75 minutes**
    > **Note:** If the search returns no results, this may indicate that no audited activities have occurred yet in the tenant, or that audit log ingestion requires additional time after initial provisioning. This is expected in a new lab environment. The absence of results does not indicate a configuration problem. Audit records generated throughout this and subsequent labs will be searchable from Day 2 onwards.
 
 ---
+<!--
 
 ### Task 2: Run a Baseline Copilot Studio Audit Search (optional)
 
@@ -249,14 +310,13 @@ Estimated time: **75 minutes**
    > **Note:** This baseline search establishes the audit starting point for Zava's agent environment. In Day 2 labs, Patti Fernandes will run targeted audit searches to investigate specific agent and data activity events.
 
 ---
+-->
 
 ## Exercise 3: Initialise Microsoft Defender XDR and Defender for Cloud Apps
 
 ### Task 1: Provision Microsoft Defender XDR
 
-1. Open a new browser tab and navigate to `https://security.microsoft.com`.
-
-2. Sign in with **MOD Administrator** credentials if prompted.
+1. Open a new browser tab and navigate to `https://security.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted.
 
 3. On the **Microsoft Defender** portal welcome screen, review the provisioning message if displayed.
 
@@ -264,7 +324,11 @@ Estimated time: **75 minutes**
 
 4. Once the portal loads fully, confirm that the left navigation pane displays the following sections: **Home**, **Incidents & alerts**, **Hunting**, **Threat intelligence**, **Assets**, **Identities**, **Endpoints**, **Email & collaboration**, **Cloud Apps**, and **Settings**.
 
+	![](./media/image34.png)
+
 5. Select **Home** to confirm the Defender XDR home dashboard loads without errors.
+
+	![](./media/image35.png)
 
 ---
 
@@ -272,7 +336,11 @@ Estimated time: **75 minutes**
 
 1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, select **Settings**, under **System**.
 
+	![](./media/image36.png)
+
 2. On the **Settings** page, select **Cloud Apps**.
+
+	![](./media/image37.png)
 
 3.  select **Organisation details**.
 
