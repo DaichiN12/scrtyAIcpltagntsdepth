@@ -32,7 +32,7 @@ MOD Administrator will launch a custom data risk assessment against the Zava HR 
 
 ## Lab Duration
 
-Estimated time: **75 minutes**
+Estimated time: **25 minutes**
 
 ---
 
@@ -128,7 +128,7 @@ Estimated time: **75 minutes**
 
 	![](./media/image14.png)
 
-8. On the Client Secret tab, enter the **Application ID** and **Client secret** value copied in Task 00. Then select **Authenticate**. (Bda8Q~fBIdy2qjJd5rib~jS2Q~9KCd5hO1AunaRD) Once successful, select **Save**.
+8. On the Client Secret tab, enter the **Application ID** and **Client secret** value copied in Task 00. Then select **Authenticate**. Once successful, select **Save**.
 
 	![](./media/image15.png)
 
