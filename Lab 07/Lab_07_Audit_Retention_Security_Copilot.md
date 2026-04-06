@@ -31,7 +31,7 @@ Patti Fernandes will investigate audit records for Adele Vance's interactions wi
 
 ## Lab Duration
 
-Estimated time: **60 minutes**
+Estimated time: **30 minutes**
 
 ---
 
@@ -39,15 +39,9 @@ Estimated time: **60 minutes**
 
 ### Task 1: Invoke the Zava HR Assistant as Adele Vance
 
-1. Open a new **InPrivate** or **Incognito** browser window.
+1. Open a new **InPrivate** or **Incognito** browser window. Navigate to `https://copilot.microsoft.com`. Sign in with **Adele Vance** credentials from the **Resources** tab.
 
-2. Navigate to `https://copilot.microsoft.com`.
-
-3. Sign in with **Adele Vance** credentials from the **Resources** tab.
-
-4. In the Microsoft 365 Copilot Chat interface, select the agent picker icon.
-
-5. Search for and select **Zava HR Assistant**.
+4. In the Microsoft 365 Copilot Chat interface, search for and select **Zava HR Assistant**.
 
 6. In the chat input field, enter the following prompt:
 
@@ -89,28 +83,24 @@ Estimated time: **60 minutes**
 
 ## Exercise 2: Investigate Copilot Interaction Events in Purview Audit
 
-### Task 1: Search for CopilotInteraction Events as Patti Fernandes
+### Task 1: Search for CopilotInteraction Events
 
-1. Open a new **InPrivate** or **Incognito** browser window.
+1. Open a new **InPrivate** or **Incognito** browser window. Navigate to `https://purview.microsoft.com`. Sign in with **MOD Administrator** credentials from the **Resources** tab.
 
-2. Navigate to `https://purview.microsoft.com`.
+4. In the left navigation pane, select **Solutions** > **Audit**.
 
-3. Sign in with **Patti Fernandes** credentials from the **Resources** tab.
-
-4. In the left navigation pane, select **Solutions**.
-
-5. Select **Audit**.
-
-6. On the **Audit** page, select the **New Search** tab.
+	![](./media/image1.png)
 
 7. Configure the search with the following values:
 
-   - **Start date:** Select today's date minus 1 day.
+   - **Start date:** Select today's date minus 7 day.
    - **End date:** Select today's date.
    - **Activities – friendly names:** Enter `Copilot activities` and select **Interacted with Copilot** from the dropdown.
    - **Users:** Enter `Adele Vance` and select her account from the results.
 
 8. Select **Search**.
+
+	![](./media/image2.png)
 
 9. Wait for the search job to complete.
 
@@ -150,8 +140,6 @@ Estimated time: **60 minutes**
 ## Exercise 3: Search for Copilot Studio Agent Management Events
 
 ### Task 1: Search for Agent Management Audit Events
-
-1. Remain signed in as **Patti Fernandes** in the Microsoft Purview portal.
 
 2. On the **Audit** page, select **New Search**.
 
@@ -195,7 +183,7 @@ Estimated time: **60 minutes**
 
 2. Configure the search with the following values:
 
-   - **Start date:** Select today's date minus 1 day.
+   - **Start date:** Select today's date minus 7 day.
    - **End date:** Select today's date.
    - **Activities – friendly names:** Enter `DLP` and select **DLP rule matched** from the dropdown.
    - **Users:** Leave blank.
@@ -226,36 +214,28 @@ Estimated time: **60 minutes**
 
 ### Task 1: Create the Retention Policy as MOD Administrator
 
-1. Open a new browser tab and sign in as **MOD Administrator** at `https://purview.microsoft.com`.
+1. Open a new browser tab and sign in as **MOD Administrator** at `https://purview.microsoft.com`. In the left navigation pane, select **Solutions**. Select **Data Lifecycle Management**.
 
-2. In the left navigation pane, select **Solutions**.
+	![](./media/image3.png)
 
-3. Select **Data Lifecycle Management**.
+4. In the left sub-navigation, select **Policies**. Select **Retention policies** > **+ New retention policy**.
 
-4. In the left sub-navigation, select **Policies**.
-
-5. Select **Retention policies**.
-
-6. On the **Retention policies** page, select **+ New retention policy**.
+	![](./media/image4.png)
 
 7. On the **Name your retention policy** page, enter the following:
 
-   - **Name:** `Zava - Retain AI Interactions 1 Year`
+   - **Name:** `Zava - Retain AI Interactions 5 Year`
    - **Description:** `Retains all Microsoft 365 Copilot and Copilot Studio agent interaction data — including prompts and responses — for a minimum of one year to satisfy Zava financial services regulatory obligations.`
 
-8. Select **Next**.
+8. Select **Next** till you are asked to select type.
 
-1. On the **Choose the type of retention policy to create** page, select **Static**.
+	![](./media/image5.png)
 
-2. Select **Next**.
+1. On the **Choose the type of retention policy to create** page, select **Static**. Select **Next**.
 
-3. On the **Choose where to apply this policy** page, review the available locations.
+	![](./media/image6.png)
 
-4. Deselect all locations that are toggled **On** by default.
-
-5. Locate **Microsoft 365 Copilot and Copilot Chat** in the locations list.
-
-6. Toggle **Microsoft 365 Copilot and Copilot Chat** to **On**.
+3. On the **Choose where to apply this policy** page, deselect all locations that are toggled **On** by default. Toggle **Microsoft Copilot experiences** to **On**.
 
 7. Confirm the scope shows **All users** under the included entries.
 
@@ -263,26 +243,34 @@ Estimated time: **60 minutes**
 
 8. Select **Next**.
 
+	![](./media/image7.png)
+
 1. On the **Decide if you want to retain content, delete it, or both** page, configure the following:
 
-   - **Retain items for a specific period:** Select **1 year**.
+   - **Retain items for a specific period:** Select **5 year**.
    - **Start the retention period based on:** Select **When items were created**.
    - **At the end of the retention period:** Select **Do nothing**.
 
 2. Select **Next**.
 
+	![](./media/image8.png)
+
 3. On the **Review and finish** page, review the full policy configuration.
 
 4. Confirm the following:
 
-   - **Name:** Zava - Retain AI Interactions 1 Year
+   - **Name:** Zava - Retain AI Interactions 5 Year
    - **Locations:** Microsoft 365 Copilot and Copilot Chat — All users
    - **Retention period:** 1 year from creation
    - **Action after retention:** Do nothing
 
 5. Select **Submit**.
 
+	![](./media/image9.png)
+
 6. On the confirmation page, select **Done**.
+
+	![](./media/image10.png)
 
 ---
 
@@ -300,85 +288,13 @@ Estimated time: **60 minutes**
    - **Locations** shows **Microsoft 365 Copilot and Copilot Chat**.
    - **Retention period** shows **1 year**.
 
+	![](./media/image11.png)
+
 5. Close the detail panel.
 
    > **Note:** It can take up to seven days for a new retention policy to be distributed to all selected locations and applied to existing content. The policy will apply to all new and existing Copilot and agent interaction data stored in the hidden Exchange mailbox folder for each Zava user. If a user leaves the organisation, their interaction data remains subject to this policy for the duration of the retention period.
 
 ---
-<!--
-## Exercise 5: Use Security Copilot in Purview 
-
-### Task 1: Use Security Copilot Suggested Prompts in DSPM
-
-1. Return to **Patti Fernandes**'s browser session at `https://purview.microsoft.com`.
-
-2. In the left navigation pane, select **Solutions**.
-
-3. Select **DSPM (preview)**.
-
-4. On the **DSPM (preview)** landing page, locate the **Security Copilot** suggested prompts section.
-
-5. Select the suggested prompt: **Show me the top DLP alerts from the past 24 hours**.
-
-6. Wait for Security Copilot to generate a response.
-
-7. Review the AI-generated summary, noting:
-
-   - Which policies triggered the most alerts.
-   - Which users were most frequently involved.
-   - What sensitive data types were most commonly matched.
-
-8. In the Security Copilot response panel, select the suggested follow-up prompt or enter the following manually:
-
-   ```
-   What sensitive data was referenced in Copilot interactions in the past 7 days?
-   ```
-
-9. Wait for the response.
-
-10. Review the AI-generated summary of sensitive data accessed via Copilot across the Zava tenant.
-
-    > **Note:** Security Copilot embedded in DSPM uses the Microsoft Purview plugin to query DLP alerts, audit records, and DSPM posture data. The responses are AI-generated summaries grounded in the actual Purview data from your tenant — they reflect real events from the labs completed during this course.
-
----
-
-### Task 2: Use Security Copilot Standalone
-
-1. Open a new browser tab and navigate to `https://securitycopilot.microsoft.com`.
-
-2. Sign in with **Patti Fernandes** credentials if prompted.
-
-3. On the **Security Copilot** home page, confirm that the **Microsoft Purview** plugin is listed in the active plugins panel on the left side. If it is not enabled, select **Plugins**, locate **Microsoft Purview**, and toggle it **On**.
-
-4. In the prompt input field at the bottom of the page, enter the following:
-
-   ```
-   Summarise the current data security posture for AI agents in the Zava tenant. Include DLP policy coverage, sensitivity label application, and any unprotected sensitive files accessed by agents.
-   ```
-
-5. Wait for Security Copilot to generate a response.
-
-6. Review the response and note any findings related to:
-
-   - The three Zava agents and their data access patterns.
-   - DLP policy coverage gaps.
-   - Sensitivity label coverage across the HR and Finance SharePoint sites.
-
-7. In the prompt input field, enter the following follow-up prompt:
-
-   ```
-   Which users have interacted with Zava agents and accessed files labelled Zava-Confidential in the past 7 days?
-   ```
-
-8. Wait for the response.
-
-9. Review the output and confirm whether Adele Vance's interactions from Labs 03, 04, 06, and 07 appear in the findings.
-
-   > **Note:** Security Copilot's responses are grounded in signals from the connected Microsoft security products — Defender for Cloud Apps, Purview Audit, DSPM, and Entra. The quality of the response depends on the volume of signals generated throughout the course. In a freshly provisioned tenant with limited activity, responses may be general in nature. The more interactions and policy events generated during the labs, the richer and more specific the Security Copilot findings will be.
-
----
-
--->
 
 ## Summary
 
