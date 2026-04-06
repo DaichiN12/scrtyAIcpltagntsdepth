@@ -4,11 +4,9 @@
 
 Zava's information security team has identified that the Zava Finance Agent and Zava HR Assistant can retrieve and surface content from SharePoint without any awareness of how sensitive that content is. The CISO has mandated that all sensitive HR and financial documents must be labelled before the end of Day 2, and that Microsoft 365 Copilot must be prevented from processing documents labelled as confidential HR data.
 
-MOD Administrator will build the label framework, configure auto-labeling for financial data, and create a targeted DLP policy for the Microsoft 365 Copilot location. Adele Vance will test whether Copilot is blocked from surfacing labelled content. Patti Fernandes will verify the audit trail.
-
 Zava Corporation handles sensitive employee records, financial data, and vendor contracts across SharePoint sites that are now connected to AI agents. Without sensitivity labels and Data Loss Prevention policies, these agents can surface protected content to any user who asks — regardless of their access rights or data handling obligations.
 
-In this lab, MOD Administrator will enable sensitivity label support for SharePoint and OneDrive, build Zava's label taxonomy using a label group and child labels, configure auto-labeling to detect financial data automatically, publish labels to users, and create a DLP policy that prevents Microsoft 365 Copilot from processing labelled content. Patti Fernandes will validate that the DLP match event is recorded in Purview Audit.
+In this lab, MOD Administrator will enable sensitivity label support for SharePoint and OneDrive, build Zava's label taxonomy using a label group and child labels, configure auto-labelling for financial data, publish labels to users, and create a DLP policy that prevents Microsoft 365 Copilot from processing labelled content. Adele Vance will test whether Copilot is blocked from surfacing labelled content. Patti Fernandes will verify the audit trail.
 
 ---
 
@@ -16,7 +14,7 @@ In this lab, MOD Administrator will enable sensitivity label support for SharePo
 
 - Enable sensitivity label co-authoring support for SharePoint and OneDrive.
 - Create a Zava label group and two child labels for HR and Financial data.
-- Configure an auto-labeling policy to automatically apply the Financial Data label to content containing financial sensitive information types.
+- Configure an auto-labelling policy to automatically apply the Financial Data label to content containing financial sensitive information types.
 - Publish both labels to all Zava users.
 - Apply the HR Data label manually to Zava HR SharePoint files.
 - Create a DLP policy targeting the Microsoft 365 Copilot location to block processing of HR-labelled content.
@@ -37,17 +35,17 @@ Estimated time: **30 minutes**
 
 1. Open a browser and navigate to `https://purview.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted. In the left navigation pane, select **Settings**.
 
-4. Under **Settings**, select **Information Protection**.
+2. Under **Settings**, select **Information Protection**.
 
 	![](./media/image1.png)
 
-5. On the **Information Protection settings** page, select the **Co-authoring for files with sensitivity labels** tab.
+3. On the **Information Protection settings** page, select the **Co-authoring for files with sensitivity labels** tab.
 
-6. Select the checkbox for **Turn on co-authoring for files with sensitivity labels**.
+4. Select the checkbox for **Turn on co-authoring for files with sensitivity labels**.
 
 	![](./media/image2.png)
 
-7. Select **Apply** at the bottom of the page.
+5. Select **Apply** at the bottom of the page.
 
 	![](./media/image3.png)
 
@@ -63,11 +61,11 @@ Estimated time: **30 minutes**
 
 	![](./media/image4.png)
 
-3. In the left sub-navigation, select **Sensitivity labels**.
+2. In the left sub-navigation, select **Sensitivity labels**.
 
 	![](./media/image5.png)
 
-4. If asked, select **Get started** for migrating to the new label scheme.
+3. If asked, select **Get started** for migrating to the new label scheme.
 
 	![](./media/image6.png)
 
@@ -76,32 +74,30 @@ Estimated time: **30 minutes**
 	![](./media/image7.png)
 	![](./media/image8.png)
 
-4. On the **Sensitivity labels** page, select **+ Create** and then select **Label group**.
+5. On the **Sensitivity labels** page, select **+ Create** and then select **Label group**.
 
 	![](./media/image9.png)
 
-5. On the **New label group** configuration page, on the **Provide basic details for this label group** step, enter the following:
+6. On the **New label group** configuration page, on the **Provide basic details for this label group** step, enter the following:
 
    - **Name:** `Zava-Confidential`
    - **Display name:** `Zava-Confidential`
    - **Description for users:** `Use this label group for all Zava confidential content requiring restricted handling.`
    - **Description for admins:** `Zava confidential label group. Contains child labels for HR and Financial data classifications.`
 
-6. Select **Next**.
+7. Select **Next**.
 
 	![](./media/image10.png)
 
-7. On the **Review your settings and finish** page, select **Create label group**.
+8. On the **Review your settings and finish** page, select **Create label group**.
 
 	![](./media/image11.png)
 
-8. On the **Your label group was created successfully** page, select **Don't create a label yet**.
-
-9. Select **Done**.
+9. On the **Your label group was created** page, select **Done**.
 
 	![](./media/image12.png)
 
-10. Confirm that **Zava-Confidential** appears in the sensitivity labels list.
+10. Confirm that **Zava-Confidential** appears in the label list.
 
 	![](./media/image13.png)
 
@@ -113,153 +109,153 @@ Estimated time: **30 minutes**
 
 	![](./media/image14.png)
 
-4. On the **Provide basic details for this label** page, enter the following:
+2. On the **Provide basic details for this label** page, enter the following:
 
    - **Name:** `HR-Data`
    - **Display name:** `HR-Data`
-   - **Description for users:** `Apply this label to documents containing Zava employee records, payroll data, sick leave information, or other HR-related personal data.`
-   - **Description for admins:** `Child label of Zava-Confidential. Used to classify HR documents containing employee PII and payroll data on the Zava HR SharePoint site.`
+   - **Description for users:** `Apply this label to documents containing Zava employee data including personnel files, payroll records, sick leave reports, and termination documentation.`
+   - **Description for admins:** `Child label of Zava-Confidential. Used to classify HR documents on the Zava HR SharePoint site. Triggers DLP enforcement in Microsoft 365 Copilot.`
 
-5. Select **Next**.
+3. Select **Next**.
 
 	![](./media/image15.png)
 
-6. On the **Define the scope for this label** page, select **Files** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
+4. On the **Define the scope for this label** page, select **Files** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
 
 	![](./media/image16.png)
 
-8. On the **Choose protection settings for labeled items** page, select **Apply content marking**. Select **Next**.
+5. On the **Choose protection settings for labeled items** page, select **Apply content marking**. Select **Next**.
 
 	![](./media/image17.png)
 
-10. On the **Content marking** page, set the **Content marking** toggle to **On**.
+6. On the **Content marking** page, set the **Content marking** toggle to **On**.
 
 	![](./media/image18.png)
 
-11. Select the checkbox for **Add a header**.
+7. Select the checkbox for **Add a header**.
 
-12. Select the edit icon next to **Add a header**.
+8. Select the edit icon next to **Add a header**.
 
 	![](./media/image19.png)
 
-13. In the **Header text** field, enter `ZAVA CONFIDENTIAL — HR DATA`. Select **Save**.
+9. In the **Header text** field, enter `ZAVA CONFIDENTIAL — HR DATA`. Select **Save**.
 
 	![](./media/image20.png)
 
-15. Select the checkbox for **Add a footer**. Select the edit icon next to **Add a footer**.
+10. Select the checkbox for **Add a footer**. Select the edit icon next to **Add a footer**.
 
 	![](./media/image21.png)
 
-17. In the **Footer text** field, enter `Restricted — Zava HR use only`. Select **Save**.
+11. In the **Footer text** field, enter `Restricted — Zava HR use only`. Select **Save**.
 
 	![](./media/image22.png)
 
-19. Select **Next**.
+12. Select **Next**.
 
 	![](./media/image23.png)
 
-20. On the **Auto-labeling for files and emails** page, select **Next**.
+13. On the **Auto-labeling for files and emails** page, select **Next**.
 
 	![](./media/image24.png)
 
-21. On the **Define protection settings for groups and sites** page, select **Next**.
+14. On the **Define protection settings for groups and sites** page, select **Next**.
 
 	![](./media/image25.png)
 
-22. On the **Review your settings and finish** page, select **Create label**.
+15. On the **Review your settings and finish** page, select **Create label**.
 
 	![](./media/image26.png)
 
-23. On the **Your sensitivity label was created** page, select **Don't create a policy yet**. Select **Done**.
+16. On the **Your sensitivity label was created** page, select **Don't create a policy yet**. Select **Done**.
 
 	![](./media/image27.png)
 
 ---
 
-### Task 3: Create the Financial Data Child Label with Auto-Labeling
+### Task 3: Create the Financial Data Child Label with Auto-Labelling
 
 1. On the **Sensitivity labels** page, locate the **Zava-Confidential** label group. Select the vertical ellipsis (**…**) next to **Zava-Confidential**. Select **+ Create label in group** from the dropdown menu.
 
 	![](./media/image28.png)
 
-4. On the **Provide basic details for this label** page, enter the following:
+2. On the **Provide basic details for this label** page, enter the following:
 
    - **Name:** `Financial-Data`
    - **Display name:** `Financial-Data`
    - **Description for users:** `Apply this label to documents containing Zava financial data including invoices, budgets, expense reports, credit card numbers, or bank account information.`
-   - **Description for admins:** `Child label of Zava-Confidential. Used to classify financial documents on the Zava Finance SharePoint site. Configured with auto-labeling for credit card numbers, ABA routing numbers, and SWIFT codes.`
+   - **Description for admins:** `Child label of Zava-Confidential. Used to classify financial documents on the Zava Finance SharePoint site. Configured with auto-labelling for credit card numbers, ABA routing numbers, and SWIFT codes.`
 
-5. Select **Next**.
+3. Select **Next**.
 
 	![](./media/image29.png)
 
-6. On the **Define the scope for this label** page, select **Files** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
+4. On the **Define the scope for this label** page, select **Files** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
 
 	![](./media/image30.png)
 
-8. On the **Choose protection settings for labeled items** page, select **Apply content marking**. Select **Next**.
+5. On the **Choose protection settings for labeled items** page, select **Apply content marking**. Select **Next**.
 
 	![](./media/image31.png)
 
-10. On the **Content marking** page, set the **Content marking** toggle to **On**.
+6. On the **Content marking** page, set the **Content marking** toggle to **On**.
 
-15. Select the checkbox for **Add a footer**. Select the edit icon next to **Add a footer**.
+7. Select the checkbox for **Add a footer**. Select the edit icon next to **Add a footer**.
 
 	![](./media/image32.png)
 
-17. In the **Footer text** field, enter `Restricted — Zava Finance use only`. Select **Save**.
+8. In the **Footer text** field, enter `Restricted — Zava Finance use only`. Select **Save**.
 
 	![](./media/image33.png)
 
-19. Select **Next**.
+9. Select **Next**.
 
 	![](./media/image34.png)
 
-20. On the **Auto-labeling for files and emails** page, set the **Auto-labeling for files and emails** toggle to **On**.
+10. On the **Auto-labeling for files and emails** page, set the **Auto-labeling for files and emails** toggle to **On**.
 
 	![](./media/image35.png)
 
-21. Under **Detect content that matches these conditions**, select **+ Add condition**. Select **Content contains**.
+11. Under **Detect content that matches these conditions**, select **+ Add condition**. Select **Content contains**.
 
 	![](./media/image36.png)
 
-23. In the **Content contains** section, select **Add**. Select **Sensitive info types**.
+12. In the **Content contains** section, select **Add**. Select **Sensitive info types**.
 
 	![](./media/image37.png)
 
-25. On the **Sensitive info types** flyout panel, search for and select the following sensitive info types:
+13. On the **Sensitive info types** flyout panel, search for and select the following sensitive info types:
 
     - `Credit Card Number`
     - `ABA Routing Number`
     - `SWIFT Code`
 
-26. Select **Add** to confirm the selection.
+14. Select **Add** to confirm the selection.
 
 	![](./media/image38.png)
 
-27. Select **Next**.
+15. Select **Next**.
 
 	![](./media/image39.png)
 
-28. On the **Define protection settings for groups and sites** page, select **Next**.
+16. On the **Define protection settings for groups and sites** page, select **Next**.
 
 	![](./media/image40.png)
 
-29. On the **Review your settings and finish** page, select **Create label**.
+17. On the **Review your settings and finish** page, select **Create label**.
 
 	![](./media/image41.png)
 
-30. On the **Your sensitivity label was created** page, select **Automatically apply label to sensitive content**. Select **Done**.
+18. On the **Your sensitivity label was created** page, select **Automatically apply label to sensitive content**. Select **Done**.
 
 	![](./media/image42.png)
 
-32. On the **Create auto-labeling policy** flyout page, select **Review policy**.
+19. On the **Create auto-labeling policy** flyout page, select **Review policy**.
 
 	![](./media/image43.png)
 
 ---
 
-### Task 4: Configure and Save the Financial Data Auto-Labeling Policy
+### Task 4: Configure and Save the Financial Data Auto-Labelling Policy
 
 1. On the **Name your auto-labeling policy** page, confirm the default name reflects the Financial-Data label, then select **Next**.
 
@@ -342,23 +338,22 @@ Estimated time: **30 minutes**
 
 	![](./media/image57.png)
 
-6. Then select **Next** till you reach the naming page.
+6. Then select **Next** until you reach the naming page.
 
-
-13. On the **Name your policy** page, enter the following:
+7. On the **Name your policy** page, enter the following:
 
     - **Name:** `Zava-Confidential Label Policy`
-    - **Description:** `Publishes Zava-Confidential HR-Data and Financial-Data labels to all Zava users for manual and auto-labeling of sensitive content.`
+    - **Description:** `Publishes Zava-Confidential HR-Data and Financial-Data labels to all Zava users for manual and auto-labelling of sensitive content.`
 
-14. Select **Next**.
+8. Select **Next**.
 
 	![](./media/image58.png)
 
-15. On the **Review and finish** page, select **Submit**.
+9. On the **Review and finish** page, select **Submit**.
 
 	![](./media/image59.png)
 
-16. On the **New policy created** page, select **Done**.
+10. On the **New policy created** page, select **Done**.
 
 	![](./media/image60.png)
 
@@ -382,21 +377,21 @@ Estimated time: **30 minutes**
 
 	![](./media/image62.png)
 
-5. In the toolbar above the document library, select **⋯** (More options) or the **Details** pane icon.
+4. In the toolbar above the document library, select **⋯** (More options) or the **Details** pane icon.
 
 	![](./media/image63.png)
 
-6. On the **Details** pane or right-click context menu, select the **Sensitivity** field and then select **Zava-Confidential/HR-Data** from the dropdown list.
+5. On the **Details** pane or right-click context menu, select the **Sensitivity** field and then select **Zava-Confidential/HR-Data** from the dropdown list.
 
 	![](./media/image64.png)
 
-9. Repeat steps 4 to 8 for the following files:
+6. Repeat steps 3 to 5 for the following files:
 
    - `Zava_Payroll_Q1_2025.xlsx`
    - `Zava_Sick_Leave_Report.xlsx`
    - `Zava_Termination_Checklist.docx`
 
-10. Confirm that all four files show **Zava-Confidential/HR-Data** in the **Sensitivity** column.
+7. Confirm that all four files show **Zava-Confidential/HR-Data** in the **Sensitivity** column.
 
     > **Note:** If the Sensitivity column is not visible in the document library, select **Add column** from the column header row and add the **Sensitivity** column. If the sensitivity label options do not appear yet due to propagation delay, wait 15–30 minutes and retry. Alternatively, open each file in Office for the web, select **Sensitivity** from the ribbon, and apply the label from within the document.
 
@@ -410,100 +405,100 @@ Estimated time: **30 minutes**
 
 	![](./media/image65.png)
 
-4. In the left sub-navigation, select **Policies**.
+2. In the left sub-navigation, select **Policies**.
 
 	![](./media/image66.png)
 
-5. On the **Policies** page, select **+ Create policy**.
+3. On the **Policies** page, select **+ Create policy**.
 
 	![](./media/image67.png)
 
-6. For **What info do you want to protect?** pane, select **Enterprise applications and devices**.
+4. For the **What info do you want to protect?** pane, select **Enterprise applications and devices**.
 
 	![](./media/image68.png)
 
-6. On the **Start with a template or create a custom policy** page, select **Custom** under **Categories**. Select **Custom policy** under **Regulations**. Select **Next**.
+5. On the **Start with a template or create a custom policy** page, select **Custom** under **Categories**. Select **Custom policy** under **Regulations**. Select **Next**.
 
 	![](./media/image69.png)
 
-9. On the **Name your DLP policy** page, enter the following:
+6. On the **Name your DLP policy** page, enter the following:
 
    - **Name:** `Zava - Block HR Data in M365 Copilot`
    - **Description:** `Prevents Microsoft 365 Copilot and Copilot Chat from processing or surfacing documents labelled as Zava-Confidential HR-Data.`
 
-10. Select **Next**.
+7. Select **Next**.
 
 	![](./media/image70.png)
 
-11. On the **Assign admin units** page, select **Next**.
+8. On the **Assign admin units** page, select **Next**.
 
 	![](./media/image71.png)
 
-1. On the **Choose locations to apply the policy** page, deselect all locations that are toggled on by default.
+9. On the **Choose locations to apply the policy** page, deselect all locations that are toggled on by default.
 
-	2. Locate **Microsoft 365 Copilot and Copilot Chat** in the locations list. Toggle **Microsoft 365 Copilot and Copilot Chat** to **On**.
+10. Locate **Microsoft 365 Copilot and Copilot Chat** in the locations list. Toggle **Microsoft 365 Copilot and Copilot Chat** to **On**.
 
 	![](./media/image72.png)
 
-4. Confirm that all other locations remain toggled **Off**.
+11. Confirm that all other locations remain toggled **Off**.
 
-5. Select **Next**.
+12. Select **Next**.
 
-   > **Note:** The Microsoft 365 Copilot and Copilot Chat location applies DLP policy controls to interactions in Microsoft 365 Copilot Chat and Copilot-powered experiences. It does not apply to Copilot Studio custom agents accessed directly. The test in Exercise 6 will use M365 Copilot Chat at copilot.microsoft.com, not the Zava HR Assistant directly, to validate enforcement.
+    > **Note:** The Microsoft 365 Copilot and Copilot Chat location applies DLP policy controls to interactions in Microsoft 365 Copilot Chat and Copilot-powered experiences. It does not apply to Copilot Studio custom agents accessed directly. The test in Exercise 6 will use M365 Copilot Chat at copilot.microsoft.com, not the Zava HR Assistant directly, to validate enforcement.
 
 	![](./media/image73.png)
 
-1. On the **Define policy settings** page, select **Create or customize advanced DLP rules**. Select **Next**.
+13. On the **Define policy settings** page, select **Create or customize advanced DLP rules**. Select **Next**.
 
 	![](./media/image74.png)
 
-3. On the **Customize advanced DLP rules** page, select **+ Create rule**.
+14. On the **Customize advanced DLP rules** page, select **+ Create rule**.
 
 	![](./media/image75.png)
 
-4. On the **Create rule** panel, in the **Name** field, enter `Block Copilot access to HR-labelled content`.
+15. On the **Create rule** panel, in the **Name** field, enter `Block Copilot access to HR-labelled content`.
 
-5. In the **Description** field, enter `Blocks Microsoft 365 Copilot from processing files labelled Zava-Confidential/HR-Data.`
+16. In the **Description** field, enter `Blocks Microsoft 365 Copilot from processing files labelled Zava-Confidential/HR-Data.`
 
-6. Under **Conditions**, select **+ Add condition**. Select **Content contains**.
+17. Under **Conditions**, select **+ Add condition**. Select **Content contains**.
 
 	![](./media/image76.png)
 
-8. In the **Content contains** section, select **Add**. Select **Sensitivity labels**.
+18. In the **Content contains** section, select **Add**. Select **Sensitivity labels**.
 
 	![](./media/image77.png)
 
-10. On the **Sensitivity labels** flyout panel, search for and select **Zava-Confidential/HR-Data**. Select **Add** to confirm.
+19. On the **Sensitivity labels** flyout panel, search for and select **Zava-Confidential/HR-Data**. Select **Add** to confirm.
 
 	![](./media/image78.png)
 
-12. Under **Actions**, select **+ Add an action**. Select **Restrict Copilot from processing contents**.
+20. Under **Actions**, select **+ Add an action**. Select **Restrict Copilot from processing contents**.
 
 	![](./media/image79.png)
 
-13. Under **Restrict Copilot from processing contents**, select the check box near **Accessing knowledge sources**.
+21. Under **Restrict Copilot from processing contents**, select the checkbox next to **Accessing knowledge sources**.
 
-17. Select **Save** to save the rule.
+22. Select **Save** to save the rule.
 
 	![](./media/image80.png)
 
-18. Confirm that **Block Copilot access to HR-labelled content** appears in the rules list on the **Customize advanced DLP rules** page. Select **Next**.
+23. Confirm that **Block Copilot access to HR-labelled content** appears in the rules list on the **Customize advanced DLP rules** page. Select **Next**.
 
 	![](./media/image81.png)
 
-1. On the **Policy mode** page, select **Turn the policy on immediately**. Select **Next**.
+24. On the **Policy mode** page, select **Turn the policy on immediately**. Select **Next**.
 
 	![](./media/image82.png)
 
-3. On the **Review and finish** page, review the policy configuration and select **Submit**.
+25. On the **Review and finish** page, review the policy configuration and select **Submit**.
 
 	![](./media/image83.png)
 
-4. On the **New policy created** page, select **Done**.
+26. On the **New policy created** page, select **Done**.
 
 	![](./media/image84.png)
 
-5. On the **Policies** page, confirm that **Zava - Block HR Data in M365 Copilot** appears in the list with a status of **On**.
+27. On the **Policies** page, confirm that **Zava - Block HR Data in M365 Copilot** appears in the list with a status of **On**.
 
 	![](./media/image85.png)
 
@@ -597,4 +592,4 @@ Estimated time: **30 minutes**
 
 ## Summary
 
-In this lab, you enabled sensitivity label co-authoring support in Microsoft Purview, activating label awareness for SharePoint and OneDrive files. You created the **Zava-Confidential** label group and two child labels — **HR-Data** and **Financial-Data** — with content markings to identify classified documents. You configured an auto-labeling policy for Financial-Data that detects credit card numbers, ABA routing numbers, and SWIFT codes in SharePoint, OneDrive, and Exchange, running in simulation mode with automatic enforcement after seven days. You published both labels to all Zava users via the **Zava-Confidential Label Policy**. You manually applied the **HR-Data** label to four sensitive HR documents in the Zava HR SharePoint site. You created the **Zava - Block HR Data in M365 Copilot** DLP policy targeting the Microsoft 365 Copilot and Copilot Chat location, blocking access to any content carrying the HR-Data label. Adele Vance tested whether Microsoft 365 Copilot could surface labelled HR content, and Patti Fernandes searched the Purview Audit log for the resulting DLP match event. Zava's sensitive data is now classified, and Microsoft 365 Copilot is governed by policy-based access controls.
+In this lab, you enabled sensitivity label co-authoring support in Microsoft Purview, activating label awareness for SharePoint and OneDrive files. You created the **Zava-Confidential** label group and two child labels — **HR-Data** and **Financial-Data** — with content markings to identify classified documents. You configured an auto-labelling policy for Financial-Data that detects credit card numbers, ABA routing numbers, and SWIFT codes in SharePoint, OneDrive, and Exchange, running in simulation mode with automatic enforcement after seven days. You published both labels to all Zava users via the **Zava-Confidential Label Policy**, and manually applied the **HR-Data** label to four sensitive HR documents in the Zava HR SharePoint site. You created the **Zava - Block HR Data in M365 Copilot** DLP policy targeting the Microsoft 365 Copilot and Copilot Chat location, blocking access to any content carrying the HR-Data label. Adele Vance tested whether Microsoft 365 Copilot could surface labelled HR content, and Patti Fernandes searched the Purview Audit log for the resulting DLP match event. Zava's sensitive data is now classified, and Microsoft 365 Copilot is governed by policy-based access controls.
