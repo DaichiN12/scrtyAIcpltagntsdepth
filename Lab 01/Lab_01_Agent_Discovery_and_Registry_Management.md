@@ -67,7 +67,7 @@ Estimated time: **20 minutes**
 
 	![](./media/image5.png)
 
-5. Under **Select users or groups who will have the agent pre-installed (optional)**, select **All users**.
+5. Under **Select users or groups who will have the agent pre-installed (optional)**, select **Specific users/groups**.
 
 	![](./media/image6.png)
 
@@ -259,7 +259,7 @@ Estimated time: **20 minutes**
 
 ### Task 2: Configure Defender for Cloud Apps Organisation Details
 
-1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, select **Settings** under **System**.
+1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, select **Settings**.
 
 	![](./media/image36.png)
 
@@ -269,28 +269,58 @@ Estimated time: **20 minutes**
 
 3. Select **Organisation details**.
 
+	![](./media/image38.png)
+
 4. On the **Organisation details** page, in the **Organisation display name** field, enter `Zava Corporation`.
 
-5. In the **Environment name** field, enter `Zava-Prod`.
+5. In the **Environment name** field, enter `Dev One`.
 
 6. In the **Managed domains** field, enter your tenant's primary domain in the following format:
-   `[TenantName].onmicrosoft.com`
+   `[TenantPrefix].onmicrosoft.com`
 
-   > **Note:** Replace `[TenantName]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
+   > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
 
 7. Select **Save**.
 
+	![](./media/image39.png)
+
 8. Confirm that a success notification appears confirming that the settings were saved.
+
+	![](./media/image40.png)
 
 ---
 
-### Task 3: Connect the Microsoft 365 App Connector
+### Task 3: Enable File Monitoring in Defender for Cloud Apps
 
-1. In the Microsoft Defender portal, in the left navigation pane, select **Settings** under **System**.
+1. In the Microsoft Defender portal, in the left navigation pane, select **Settings**.
+
+	![](./media/image36.png)
 
 2. On the **Settings** page, select **Cloud Apps**.
 
+	![](./media/image37.png)
+
+3. Under **Information Protection**, select **Files**. On the **Files** page, select the **Enable file monitoring** checkbox. Select **Save**.
+
+	![](./media/image46.png)
+
+5. Confirm that a success notification appears confirming that file monitoring was enabled.
+
+---
+
+### Task 4: Connect the Microsoft 365 App Connector
+
+1. In the Microsoft Defender portal, in the left navigation pane, select **Settings**.
+
+	![](./media/image36.png)
+
+2. On the **Settings** page, select **Cloud Apps**.
+
+	![](./media/image37.png)
+
 3. Under **Connected apps**, select **App Connectors**.
+
+	![](./media/image41.png)
 
 4. On the **App Connectors** page, select **+ Connect an app**.
 
@@ -298,33 +328,25 @@ Estimated time: **20 minutes**
 
 6. On the **Select Microsoft 365 components** page, confirm that all components are selected by default. If any component is deselected, select it to enable it.
 
-7. Select **Connect**.
+7. Select **Connect Microsoft 365**.
 
-8. Wait for the connection to complete.
+	![](./media/image42.png)
+
+8. Wait for the connection to complete. Then slect **Done**.
+
+	![](./media/image43.png)
 
 9. On the **App Connectors** page, confirm that **Microsoft 365** appears in the connectors list with a status of **Connected**.
 
 10. On the **App Connectors** page, select the checkbox next to **Microsoft 365** and from the top options select **Connect Microsoft Azure Instance**.
 
-11. Wait for the connection to complete.
+	![](./media/image44.png)
+
+11. Select **Connect Microsoft Azure**. Wait for the connection to complete.
+
+	![](./media/image45.png)
 
     > **Note:** After connecting, Defender for Cloud Apps begins scanning Microsoft 365 activity. Initial data from the past week will appear in the portal. The first full scan may take several hours depending on tenant size. This connector is required for activity monitoring, DLP policy enforcement, and alert generation in Day 2 and Day 3 labs.
-
----
-
-### Task 4: Enable File Monitoring in Defender for Cloud Apps
-
-1. In the Microsoft Defender portal, in the left navigation pane, select **Settings**.
-
-2. On the **Settings** page, select **Cloud Apps**.
-
-3. Under **Information Protection**, select **Files**.
-
-4. On the **Files** page, select the **Enable file monitoring** checkbox.
-
-5. Select **Save**.
-
-6. Confirm that a success notification appears confirming that file monitoring was enabled.
 
 ---
 
