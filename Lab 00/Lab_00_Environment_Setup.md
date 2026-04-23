@@ -97,7 +97,7 @@ Estimated time: **30 minutes**
 
 	![](./media/image12.png)
 
-7. On the **Add members** panel, search for and select **MOD Administrator** and **Patti Fernandes**. Select **Select** to confirm the members.
+7. On the **Add members** panel, search for and select **MOD Administrator** and **Patti Fernandes**. Choose **Select** to confirm the members.
 
 	![](./media/image13.png)
 
@@ -105,7 +105,7 @@ Estimated time: **30 minutes**
 
 	![](./media/image14.png)
 
-9. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and then select **Select**.
+9. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and then choose **select**.
 
 	![](./media/image15.png)
 
@@ -174,7 +174,7 @@ Estimated time: **30 minutes**
 
 	![](./media/image30.png)
 
-6. On the **Select members** panel, search for and select **copilotagentsecurity**. Select **Select** to confirm.
+6. On the **Select members** panel, search for and select **copilotagentsecurity**. Choose **select** to confirm.
 
 	![](./media/image31.png)
 
@@ -202,11 +202,13 @@ Estimated time: **30 minutes**
 
 3. Under **Manage**, select **Tenant Settings**. On the **Tenant Settings** page, locate and select **Copilot Studio Authors** from the list.
 
+	![](./media/image134.png)
+
 4. On the **Copilot Studio Authors** panel, select the **Edit** icon near security group.
 
 	![](./media/image35.png)
 
-5. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results.
+5. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results. Then select **Done**.
 
 	![](./media/image36.png)
 
@@ -436,7 +438,7 @@ In this exercise, MOD Administrator creates all three Zava agents in Microsoft C
 	![](./media/image82.png)
 
 9. In the **SharePoint URL** field, enter the SharePoint Finance site URL in the following format:
-    `https://[TenantName].sharepoint.com/sites/Operations`
+    `https://[TenantPrefix].sharepoint.com/sites/Operations`
 
     > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab.
 
@@ -589,9 +591,9 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
 
 ### Task 1: Upload Files to the Zava HR SharePoint Site
 
-1. Open a new browser tab and navigate to `https://[TenantName].sharepoint.com/sites/HR`.
+1. Open a new browser tab and navigate to `https://[TenantPrefix].sharepoint.com/sites/HR`.
 
-   > **Note:** Replace `[TenantName]` with your tenant prefix from the **Resources** tab.
+   > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab.
 
 2. From the top navigation select **Benefits @ Contoso** and then from the left sub-navigation pane, select **Documents**.
 
@@ -632,9 +634,9 @@ In this exercise, MOD Administrator uploads the Zava sample business documents t
 
 ### Task 2: Upload Files to the Zava Finance SharePoint Site
 
-1. Open a new browser tab and navigate to `https://[TenantName].sharepoint.com/sites/Operations`.
+1. Open a new browser tab and navigate to `https://[TenantPrefix].sharepoint.com/sites/Operations`.
 
-   > **Note:** Replace `[TenantName]` with your tenant prefix from the **Resources** tab.
+   > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab.
 
 2. In the left navigation pane, select **Documents**.
 
