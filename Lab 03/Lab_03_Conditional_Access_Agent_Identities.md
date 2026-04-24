@@ -135,55 +135,53 @@ Estimated time: **30 minutes**
    - **Allow multiple values to be assigned:** Select **Yes**.
    - **Only allow predefined values to be assigned:** Select **Yes**.
 
-	![](./media/image19.png)
-
 4. Under **Predefined values**, select **+ Add value**.
 
-	![](./media/image20.png)
+	![](./media/image19.png)
 
 5. In the value field, enter `New`. Then select **Add**.
 
-	![](./media/image21.png)
+	![](./media/image20.png)
 
 6. Select **+ Add value**.
 
-	![](./media/image22.png)
+	![](./media/image21.png)
 
 7. In the value field, enter `In_Review`. Then select **Add**.
 
-	![](./media/image23.png)
+	![](./media/image22.png)
 
 8. Select **+ Add value**.
 
-	![](./media/image24.png)
+	![](./media/image23.png)
 
 9. In the value field, enter `HR_Approved`. Then select **Add**.
 
-	![](./media/image25.png)
+	![](./media/image24.png)
 
 10. Select **+ Add value**.
 
-	![](./media/image26.png)
+	![](./media/image25.png)
 
 11. In the value field, enter `Finance_Approved`. Then select **Add**.
 
-	![](./media/image27.png)
+	![](./media/image26.png)
 
 12. Select **+ Add value**.
 
-	![](./media/image28.png)
+	![](./media/image27.png)
 
 13. In the value field, enter `IT_Approved`. Then select **Add**.
 
-	![](./media/image29.png)
+	![](./media/image28.png)
 
 14. Select **Save**.
 
-	![](./media/image30.png)
+	![](./media/image29.png)
 
 15. Confirm that **AgentApprovalStatus** appears in the attributes list under **AgentAttributes**.
 
-	![](./media/image31.png)
+	![](./media/image30.png)
 
 ---
 
@@ -191,25 +189,27 @@ Estimated time: **30 minutes**
 
 1. In the left navigation pane, select **Agent ID**.
 
-	![](./media/image32.png)
+	![](./media/image31.png)
 
 2. On the **All agent identities (Preview)** page, select **Zava HR Assistant (Microsoft Copilot Studio)**.
 
-	![](./media/image33.png)
+	![](./media/image32.png)
 
 3. On the **Overview (Preview)** page, in the left sub-navigation, select **Custom security attributes (Preview)**.
 
-	![](./media/image34.png)
+	![](./media/image33.png)
 
 4. On the **Custom security attributes** page, select **+ Add assignment**.
 
-	![](./media/image35.png)
+	![](./media/image34.png)
 
 5. On the **Add custom security attribute assignment** panel, configure the following:
 
    - **Attribute set:** Select **AgentAttributes**.
    - **Attribute:** Select **AgentApprovalStatus**.
-   - **Assigned values:** Select **HR_Approved** and select **Save**.
+   - **Assigned values:** Select **Add value** > **HR_Approved** and select **Save**.
+
+	![](./media/image35.png)
 
 	![](./media/image36.png)
 
@@ -217,10 +217,12 @@ Estimated time: **30 minutes**
 
 	![](./media/image37.png)
 
-7. Confirm that **AgentApprovalStatus** appears with the value **HR_Approved** on the custom security attributes page. Select **Save**.
+7. Confirm that **AgentApprovalStatus** appears with the value **HR_Approved** on the custom security attributes page.
 
-	![](./media/image38.png)
+8. Similarly assign the following attributes to respective agents.
 
+   - **Zava Finance Agent (Microsoft Copilot Studio)**: HR_Approved
+   - **Zava HR Assistant (Microsoft Copilot Studio)**: HR_Approved
 ---
 
 ## Exercise 2: Create a Conditional Access Policy to Block Unapproved Agent Identities
@@ -231,11 +233,11 @@ Estimated time: **30 minutes**
 
 2. On the **Conditional Access** page, select **Policies**.
 
-	![](./media/image39.png)
+	![](./media/image38.png)
 
 3. On the **Policies** page, select **+ New policy**.
 
-	![](./media/image40.png)
+	![](./media/image39.png)
 
 4. On the **New Conditional Access policy** page, in the **Name** field, enter `Zava - Block Unapproved Agent Identities`.
 
@@ -243,37 +245,35 @@ Estimated time: **30 minutes**
 
 6. On the assignments panel, under **What does this policy apply to?**, select **Agents (Preview)**.
 
-	![](./media/image41.png)
+	![](./media/image40.png)
 
 7. Under **Include**, select **All agent identities (Preview)**.
 
-	![](./media/image42.png)
+	![](./media/image41.png)
 
 8. Under **Exclude**, select **Select agent identities based on attributes**.
 
-	![](./media/image43.png)
+	![](./media/image42.png)
 
 9. Set **Configure** to **Yes**.
 
+	![](./media/image43.png)
+
+10. In the expression configuration, under **AgentAttributes**, select the attribute **AgentApprovalStatus**. Set **Operator** to **Contains**. Set **Value** to **HR_Approved**.
+
 	![](./media/image44.png)
 
-10. Select **+ Add filter**.
+11. Select **Done** to confirm the exclusion configuration.
 
 	![](./media/image45.png)
 
-11. In the filter configuration, under **AgentAttributes**, select the attribute **AgentApprovalStatus**. Set **Operator** to **Contains**. Set **Value** to **HR_Approved**.
-
-12. Select **Done** to confirm the exclusion configuration.
+12. Under **Target resources**, select **No target resources selected**.
 
 	![](./media/image46.png)
 
-13. Under **Target resources**, select **No target resources selected**.
+13. Under **Include**, select **All resources (formerly 'All cloud apps')**.
 
 	![](./media/image47.png)
-
-14. Under **Include**, select **All resources (formerly 'All cloud apps')**.
-
-	![](./media/image48.png)
 
 15. Under **Access controls**, on the **Grant** panel, confirm that **Block access** is selected.
 
@@ -281,7 +281,7 @@ Estimated time: **30 minutes**
 
 17. Select **Create** to save the policy.
 
-	![](./media/image49.png)
+	![](./media/image48.png)
 
 ---
 
