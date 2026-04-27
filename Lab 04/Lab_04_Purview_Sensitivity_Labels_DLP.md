@@ -69,9 +69,10 @@ Estimated time: **30 minutes**
 
 	![](./media/image6.png)
 
-4. Select **Migrate** on the fly-out pane.
+4. Select **Migrate** on the fly-out pane and then **Confirm migration**.
 
 	![](./media/image7.png)
+
 	![](./media/image8.png)
 
 5. On the **Sensitivity labels** page, select **+ Create** and then select **Label group**.
@@ -132,9 +133,7 @@ Estimated time: **30 minutes**
 
 	![](./media/image18.png)
 
-7. Select the checkbox for **Add a header**.
-
-8. Select the edit icon next to **Add a header**.
+7. Select the checkbox for **Add a header**. Select the edit icon below to **Add a header**.
 
 	![](./media/image19.png)
 
@@ -142,7 +141,7 @@ Estimated time: **30 minutes**
 
 	![](./media/image20.png)
 
-10. Select the checkbox for **Add a footer**. Select the edit icon next to **Add a footer**.
+10. Select the checkbox for **Add a footer**. Select the edit icon below to **Add a footer**.
 
 	![](./media/image21.png)
 
@@ -383,8 +382,6 @@ Estimated time: **30 minutes**
 
 5. On the **Details** pane or right-click context menu, select the **Sensitivity** field and then select **Zava-Confidential/HR-Data** from the dropdown list.
 
-	![](./media/image64.png)
-
 6. Repeat steps 3 to 5 for the following files:
 
    - `Zava_Payroll_Q1_2025.xlsx`
@@ -466,41 +463,41 @@ Estimated time: **30 minutes**
 
 18. In the **Content contains** section, select **Add**. Select **Sensitivity labels**.
 
-	![](./media/image77.png)
+	<!--![](./media/image77.png)-->
 
 19. On the **Sensitivity labels** flyout panel, search for and select **Zava-Confidential/HR-Data**. Select **Add** to confirm.
 
-	![](./media/image78.png)
+	<!--![](./media/image78.png)-->
 
 20. Under **Actions**, select **+ Add an action**. Select **Restrict Copilot from processing contents**.
 
-	![](./media/image79.png)
+	<!--![](./media/image79.png)-->
 
 21. Under **Restrict Copilot from processing contents**, select the checkbox next to **Accessing knowledge sources**.
 
 22. Select **Save** to save the rule.
 
-	![](./media/image80.png)
+	<!--![](./media/image80.png)-->
 
 23. Confirm that **Block Copilot access to HR-labelled content** appears in the rules list on the **Customize advanced DLP rules** page. Select **Next**.
 
-	![](./media/image81.png)
+	<!--![](./media/image81.png)-->
 
 24. On the **Policy mode** page, select **Turn the policy on immediately**. Select **Next**.
 
-	![](./media/image82.png)
+	![](./media/image82.png)-->
 
 25. On the **Review and finish** page, review the policy configuration and select **Submit**.
 
-	![](./media/image83.png)
+	<!--![](./media/image83.png)-->
 
 26. On the **New policy created** page, select **Done**.
 
-	![](./media/image84.png)
+	<!--![](./media/image84.png)-->
 
 27. On the **Policies** page, confirm that **Zava - Block HR Data in M365 Copilot** appears in the list with a status of **On**.
 
-	![](./media/image85.png)
+	<!--![](./media/image85.png)-->
 
    > **Note:** DLP policy propagation to the Microsoft 365 Copilot location can take up to four hours. If the test in Exercise 6 does not produce a block immediately, this is expected. Proceed with the test, note the response, and if enforcement is not yet active, return to this test after completing Lab 05 or at the end of the day. The audit log event will confirm when enforcement first triggers.
 
