@@ -1,10 +1,10 @@
-# Lab 06: DSPM (Preview) — Oversharing Assessment and Remediation
+# Lab 06: DSPM — Oversharing Assessment and Remediation
 
 ## Introduction
 
-Microsoft Purview Data Security Posture Management (preview) is the unified front door for discovering, protecting, and investigating sensitive data risks across Zava's digital estate — including AI apps, agents, SharePoint sites, and user interactions. Unlike the classic DSPM for AI experience, the new DSPM (preview) combines traditional data security posture with AI observability into a single solution, organised around outcome-based security objectives.
+Microsoft Purview Data Security Posture Management is the unified front door for discovering, protecting, and investigating sensitive data risks across Zava's digital estate — including AI apps, agents, SharePoint sites, and user interactions. Unlike the classic DSPM for AI experience, the new DSPM combines traditional data security posture with AI observability into a single solution, organised around outcome-based security objectives.
 
-In this lab, the data risk assessment scan is initiated at the very start of Day 3 before any other work begins, so results are available by the time learners reach Exercise 4. Signal generation exercises create realistic Copilot interaction events referencing sensitive Zava files. MOD Administrator and Patti Fernandes then use DSPM Objectives, one-click policies, assessment results, and the Activity Explorer to investigate and remediate oversharing risks across the Zava agent environment.
+In this lab, the data risk assessment scan is initiated at the very start of Day 3 before any other work begins, so results are available by the time learners reach Exercise 4. Signal generation exercises create realistic Copilot interaction events referencing sensitive Zava files. MOD Administrator a nd Patti Fernandes then use DSPM Objectives, one-click policies, assessment results, and the Activity Explorer to investigate and remediate oversharing risks across the Zava agent environment.
 
 ---
 
@@ -19,8 +19,8 @@ MOD Administrator will launch a custom data risk assessment against the Zava HR 
 ## Objectives
 
 - Initiate a custom DSPM data risk assessment against Zava HR and Finance SharePoint sites at the start of Day 3.
-- Generate realistic M365 Copilot interaction signals referencing sensitive labelled files as Adele Vance.
-- Navigate the new DSPM (preview) experience and review the Posture dashboard.
+- Generate realistic Microsoft 365 Copilot interaction signals referencing sensitive labelled files as Adele Vance.
+- Navigate the new DSPM experience and review the Posture dashboard.
 - Activate DSPM one-click policies for risky AI usage detection and sensitive data protection.
 - Review DSPM Objectives for oversharing and Copilot data exposure.
 - Review data risk assessment results and apply remediation actions.
@@ -43,100 +43,100 @@ Estimated time: **25 minutes**
 
 ## Exercise 1: Initiate the Data Risk Assessment
 
-### Task 00: Register and Entra app
+### Task 1: Register an Entra App
 
-2. Navigate to `https://entra.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted.
+1. Navigate to `https://entra.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted.
 
-3. In the left navigation pane, select **App registrations** > **+ New registration**.
+2. In the left navigation pane, select **App registrations** > **+ New registration**.
 
 	![](./media/image1.png)
 
-5. Configure the following:
+3. Configure the following:
    - **Name:** `Purview DSPM Item Level Scan`
    - **Supported account types:** Select **Single tenant only - Contoso**
 
-6. Select **Register**.
+4. Select **Register**.
 
 	![](./media/image2.png)
 
-7. On the app registration overview page, copy and note the **Application (client) ID**.
+5. On the app registration overview page, copy and note the **Application (client) ID**.
 
 	![](./media/image3.png)
 
-8. In the left sub-navigation, select **API permissions**. Select **+ Add a permission**.
+6. In the left sub-navigation, select **API permissions**. Select **+ Add a permission**.
 
 	![](./media/image4.png)
 
-10. Select **Microsoft Graph**.
+7. Select **Microsoft Graph**.
 
 	![](./media/image5.png)
 
-11. Select **Application permissions**.
+8. Select **Application permissions**.
 
 	![](./media/image6.png)
 
-12. Search for and add the following permissions:
+9. Search for and add the following permissions:
     - `Application.Read.All`
     - `Directory.Read.All`
     - `Files.ReadWrite.All`
     - `SensitivityLabels.Read.All`
     - `Sites.ReadWrite.All`
     - `User.Read.All`
-	- `SensitivityLabel.Read`
+    - `SensitivityLabel.Read`
 
-13. Select **Add permissions**.
+10. Select **Add permissions**.
 
 	![](./media/image7.png)
 
-14. Select **Grant admin consent for Contos**.
+11. Select **Grant admin consent for Contoso**.
 
 	![](./media/image8.png)
 
-15. Select **Yes** to confirm.
+12. Select **Yes** to confirm.
 
 	![](./media/image9.png)
 
-19. Navigate to **Certificates & secrets** > **+ New client secret** > set expiry to **6 months** > **Add**.
+13. Navigate to **Certificates & secrets** > **+ New client secret** > set expiry to **6 months** > **Add**.
 
-	![](./media/image0.png)
+	![](./media/image10.png)
 
-20. Copy the **Value**.
+14. Copy the **Value**.
 
 	![](./media/image11.png)
 
-21. Save the values as they can be only copied once and they will be needed in the upcoming lab 6.
+15. Save the values, as they can only be copied once and will be needed in the next task.
 
 ---
 
-### Task 1: Run a Custom Data Risk Assessment Against Zava SharePoint Sites
+### Task 2: Run a Custom Data Risk Assessment Against Zava SharePoint Sites
 
 1. Open a browser and navigate to `https://purview.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted.
 
-3. In the left navigation pane, select **Solutions** > **DSPM (preview)**.
+2. In the left navigation pane, select **Solutions** > **DSPM **.
 
-   > **Note:** Do not select **DSPM for AI (classic)** or **Data Security Posture Management (classic)**. The new experience is labelled **DSPM (preview)** and is a separate entry in the Solutions menu.
+   > **Note:** Do not select **DSPM for AI (classic)** or **Data Security Posture Management (classic)**. The new experience is labelled **DSPM** and is a separate entry in the Solutions menu.
 
 	![](./media/image12.png)
 
-5. On the **DSPM (preview)** landing page, if prompted to complete initial setup tasks, select **Get started** and accept any required configuration to enable the solution. Allow the setup to complete before continuing.
+3. On the **DSPM** landing page, if prompted to complete initial setup tasks, select **Get started** and accept any required configuration to enable the solution. Allow the setup to complete before continuing.
 
-6. In the left sub-navigation, select **Discover**. Under **Discover**, select **Data risk assessments**.
+4. In the left sub-navigation, select **Discover**. Under **Discover**, select **Data risk assessments**.
 
 	![](./media/image13.png)
 
-7. On the **Item-level scan not setup** notification select **Setup connection**.
+5. On the **Item-level scan not setup** notification, select **Setup connection**.
 
 	![](./media/image14.png)
 
-8. On the Client Secret tab, enter the **Application ID** and **Client secret** value copied in Task 00. Then select **Authenticate**. Once successful, select **Save**.
+6. On the **Client Secret** tab, enter the **Application ID** and **Client secret** value copied in Task 1. Then select **Authenticate**. Once successful, select **Save**.
 
 	![](./media/image15.png)
 
-8. On the **Data risk assessments** page, select **+ Create custom assessment**.
+7. On the **Data risk assessments** page, select **+ Create custom assessment**.
 
 	![](./media/image16.png)
 
-9. On the **Basic details** panel, configure the following:
+8. On the **Basic details** panel, configure the following:
 
    - **Assessment name:** Enter `Zava SharePoint Oversharing Assessment`.
    - **Description:** Enter `Custom assessment to identify potentially overshared sensitive items across Zava HR and Finance SharePoint sites.`
@@ -145,41 +145,41 @@ Estimated time: **25 minutes**
 
 	![](./media/image17.png)
 
-10. On the **Select scan level**, choose **Item-level**. 
+10. On the **Select scan level**, choose **Item-level**.
 
 	![](./media/image18.png)
 
-10. Select next till you reach **Add data sources to assess**. Near **SharePoint**, select **Scope sites**.
+11. Select **Next** until you reach **Add data sources to assess**. Next to **SharePoint**, select **Scope sites**.
 
 	![](./media/image19.png)
 
-11. In the SharePoint site selector, select **Include** > **From all sites**.
+12. In the SharePoint site selector, select **Include** > **From all sites**.
 
 	![](./media/image20.png)
 
-11. Search for and select the following two sites:
+13. Search for and select the following two sites:
 
     - `HR`
     - `Operations`
 
-12. Select **Done** twice to confirm the site selection.
+14. Select **Done** twice to confirm the site selection.
 
 	![](./media/image21.png)
 	![](./media/image22.png)
 
-14. Select **Next**.
+15. Select **Next**.
 
 	![](./media/image23.png)
 
-14. Select **Save and Run**.
+16. Select **Save and Run**.
 
 	![](./media/image24.png)
 
-15. Select **Done**.
+17. Select **Done**.
 
 	![](./media/image25.png)
 
-15. Confirm that the assessment appears in the **Data risk assessments** list with a status of **In progress** or **Queued**.
+18. Confirm that the assessment appears in the **Data risk assessments** list with a status of **In progress** or **Queued**.
 
 	![](./media/image26.png)
 
@@ -189,17 +189,17 @@ Estimated time: **25 minutes**
 
 ## Exercise 2: Generate Copilot Interaction Signals
 
-In this exercise, Adele Vance generates realistic Microsoft 365 Copilot interaction events that reference sensitive labelled files across the Zava HR and Finance SharePoint sites. These interactions will surface in the DSPM Activity Explorer and Audit logs, creating the investigation data used in Exercises 5 and Lab 07.
+In this exercise, Adele Vance generates realistic Microsoft 365 Copilot interaction events that reference sensitive labelled files across the Zava HR and Finance SharePoint sites. These interactions will surface in the DSPM Activity Explorer and audit logs, creating the investigation data used in Exercises 5 and Lab 07.
 
 ### Task 1: Generate HR Data Interaction Signals as Adele Vance
 
 1. Open a new **InPrivate** or **Incognito** browser window. Navigate to `https://copilot.microsoft.com`. Sign in with **Adele Vance** credentials from the **Resources** tab. Complete the authentication steps if necessary.
 
-4. From the navigation select **All agants** > **Zava HR assistant** > **Add**.
+2. From the navigation, select **All agents** > **Zava HR Assistant** > **Add**.
 
 	![](./media/image27.png)
 
-4. In the input field, enter the following prompt:
+3. In the input field, enter the following prompt:
 
    ```
    Summarise the contents of Zava_Employee_Records.xlsx from the HR SharePoint site
@@ -207,39 +207,41 @@ In this exercise, Adele Vance generates realistic Microsoft 365 Copilot interact
 
 	![](./media/image28.png)
 
-5. Wait for the response and note what Copilot returns.
+4. Wait for the response and note what Copilot returns.
 
-6. Enter the following second prompt:
+5. Enter the following second prompt:
 
    ```
    Find all employee salary information across Zava HR documents
    ```
 
-7. Wait for the response.
+6. Wait for the response.
 
-8. Enter the following third prompt:
+7. Enter the following third prompt:
 
    ```
    What does the Zava payroll report for Q1 2025 contain?
    ```
 
-9. Wait for the response.
+8. Wait for the response.
 
-## Exercise 3: Explore the DSPM (Preview) Posture Dashboard and Activate One-Click Policies
+---
+
+## Exercise 3: Explore the DSPM Posture Dashboard and Activate One-Click Policies
 
 ### Task 1: Review the DSPM Posture Dashboard
 
 1. Return to the **MOD Administrator** session in the Microsoft Purview portal at `https://purview.microsoft.com`.
 
-2. In the left navigation pane, select **Solutions** > **DSPM (preview)**.
+2. In the left navigation pane, select **Solutions** > **DSPM**.
 
 	![](./media/image29.png)
 
-4. On the **DSPM (preview)** landing page, review the **Posture** dashboard.
+3. On the **DSPM** landing page, review the **Posture** dashboard.
 
 	![](./media/image30.png)
 
-5. Review the following sections and note their current values:
+4. Review the following sections and note their current values:
 
    - **Security Copilot suggested prompts** — note the prompt suggestions available.
    - **Top objectives to address** — note which objectives are listed as highest priority.
@@ -250,7 +252,7 @@ In this exercise, Adele Vance generates realistic Microsoft 365 Copilot interact
 
 ### Task 2: Activate the Detect Risky AI Usage One-Click Policy
 
-1. On the **DSPM (preview)** landing page, in the left sub-navigation, select **Tasks and actions**. Then select **Remediation actions**.
+1. On the **DSPM** landing page, in the left sub-navigation, select **Tasks and actions**. Then select **Remediation actions**.
 
 	![](./media/image31.png)
 
@@ -258,9 +260,9 @@ In this exercise, Adele Vance generates realistic Microsoft 365 Copilot interact
 
 	![](./media/image32.png)
 
-5. Select **Create Policy** to enable the **DSPM for AI - Detect risky AI usage** Insider Risk Management policy.
+3. Select **Create Policy** to enable the **DSPM for AI - Detect risky AI usage** Insider Risk Management policy.
 
-6. Confirm that the policy status updates to **On** or **Active**. Close the tab.
+4. Confirm that the policy status updates to **On** or **Active**. Close the tab.
 
 	![](./media/image33.png)
 
@@ -274,19 +276,19 @@ In this exercise, Adele Vance generates realistic Microsoft 365 Copilot interact
 
 	![](./media/image34.png)
 
-3. Select **Get started** to enable this DLP policy.
+2. Select **Get started** to enable this DLP policy.
 
 	![](./media/image35.png)
 
-5. On the data pane, select **view** near **Sensitive info types**.
+3. On the data pane, select **view** next to **Sensitive info types**.
 
 	![](./media/image36.png)
 
-6. Select **Credit Card Number**. Then select **Add**. 
+4. Select **Credit Card Number**. Then select **Add**.
 
 	![](./media/image37.png)
 
-6. Under actions select **Restrict user prompts from being processed**. Then select **Create policy**.
+5. Under **Actions**, select **Restrict user prompts from being processed**. Then select **Create policy**.
 
 	![](./media/image38.png)
 
@@ -305,17 +307,18 @@ In this exercise, Adele Vance generates realistic Microsoft 365 Copilot interact
 ---
 
 ## Exercise 4: Review Data Risk Assessment Results and Apply Remediation
-Assessments may take some time. You can come back to this excercise at the end of the labs.
+
+> **Note:** Assessments may take some time. You can return to this exercise at the end of the labs if the assessment is still in progress.
 
 ### Task 1: Return to the Data Risk Assessment Results
 
 1. In the left sub-navigation, select **Discover**. Select **Data risk assessments**.
 
-3. On the **Data risk assessments** page, locate **Zava SharePoint Oversharing Assessment**.
+2. On the **Data risk assessments** page, locate **Zava SharePoint Oversharing Assessment**.
 
-4. Confirm the status shows **Completed**. If the status still shows **In progress**.
+3. Confirm the status shows **Completed**. If the status still shows **In progress**, wait for it to complete before continuing.
 
-5. Select **Zava SharePoint Oversharing Assessment** to open the results.
+4. Select **Zava SharePoint Oversharing Assessment** to open the results.
 
 ---
 
@@ -376,7 +379,7 @@ Assessments may take some time. You can come back to this excercise at the end o
 
 ---
 
-## Exercise 6: Investigate Agent Activity and AI Interactions
+## Exercise 5: Investigate Agent Activity and AI Interactions
 
 ### Task 1: Review the Apps and Agents Dashboard
 
@@ -404,21 +407,21 @@ Assessments may take some time. You can come back to this excercise at the end o
 
 ### Task 2: Investigate AI Activities in Activity Explorer
 
-6. In the left sub-navigation, select **Discover**.
+1. In the left sub-navigation, select **Discover**.
 
-7. Select **Activity explorer**.
+2. Select **Activity explorer**.
 
-8. On the **Activity explorer** page, select the **AI activities** tab.
+3. On the **Activity explorer** page, select the **AI activities** tab.
 
-9. In the filter bar, select **User** and enter `Adele Vance`.
+4. In the filter bar, select **User** and enter `Adele Vance`.
 
-10. Select **Apply** to filter results to Adele's interactions.
+5. Select **Apply** to filter results to Adele's interactions.
 
-11. Review the interaction events listed in the filtered view.
+6. Review the interaction events listed in the filtered view.
 
-12. Select an interaction event that references a sensitive file — for example, one referencing `Zava_Employee_Records.xlsx` or `Zava_Payroll_Q1_2025.xlsx`.
+7. Select an interaction event that references a sensitive file — for example, one referencing `Zava_Employee_Records.xlsx` or `Zava_Payroll_Q1_2025.xlsx`.
 
-13. On the event detail panel, review the following fields:
+8. On the event detail panel, review the following fields:
 
     - **Date and time**
     - **User**
@@ -428,20 +431,18 @@ Assessments may take some time. You can come back to this excercise at the end o
     - **Sensitivity label on file**
     - **DLP rule matched** — if applicable
 
-14. Note whether the DLP policy **Zava - Block HR Data in M365 Copilot** appears as matched for any of the HR-labelled file interactions.
+9. Note whether the DLP policy **Zava - Block HR Data in M365 Copilot** appears as matched for any of the HR-labelled file interactions.
 
-15. Close the event detail panel.
+10. Close the event detail panel.
 
-16. Remove the user filter and apply a filter for **Sensitivity label** set to **Zava-Confidential/HR-Data**.
+11. Remove the user filter and apply a filter for **Sensitivity label** set to **Zava-Confidential/HR-Data**.
 
-17. Review the results — these show all AI interactions across the tenant that involved a file carrying the HR-Data label.
+12. Review the results — these show all AI interactions across the tenant that involved a file carrying the HR-Data label.
 
 ---
 
 ## Summary
 
-In this lab, you initiated a custom DSPM data risk assessment against the Zava HR and Finance SharePoint sites at the start of Day 3, ensuring results were available for investigation later in the lab. As Adele Vance, you generated six realistic Microsoft 365 Copilot interaction events referencing sensitive labelled files including employee records, payroll data, financial projections, and expense reports — creating the AI activity signals needed for investigation throughout Day 3.
+In this lab, you initiated a custom DSPM data risk assessment against the Zava HR and Finance SharePoint sites at the start of Day 3, ensuring results were available for investigation later in the lab. You registered an Entra app and configured the item-level scan connection required by DSPM. As Adele Vance, you generated three realistic Microsoft 365 Copilot interaction events referencing sensitive labelled files including employee records, payroll data, and financial projections — creating the AI activity signals needed for investigation throughout Day 3.
 
-You explored the new DSPM (preview) Posture dashboard and reviewed its key metrics, top objectives, and Security Copilot suggested prompts. You activated three one-click policies: the DSPM for AI risky AI usage Insider Risk Management policy, the sensitive info detection DLP policy for Edge, and the Copilot interactions collection policy. You reviewed the Policies page to confirm all AI-related policies — including the manual Lab 04 DLP policy — are visible in a single governance view.
-
-You reviewed the DSPM Objectives for Copilot data exposure and oversharing risk, noting recommended actions. You reviewed the data risk assessment results, identified overshared sensitive items in the Zava HR and Finance sites, and applied two remediation actions: restricting access by the HR-Data sensitivity label and enabling SharePoint Restricted Content Discovery on the Zava HR site. Finally, as Patti Fernandes, you investigated Adele Vance's Copilot interaction events in the DSPM Activity Explorer AI activities tab, reviewing file references, sensitivity labels, and DLP match records — building the evidence base for the Day 3 compliance review.
+You explored the DSPM Posture dashboard and reviewed its key metrics, top objectives, and Security Copilot suggested prompts. You activated two one-click policies: the DSPM for AI risky AI usage Insider Risk Management policy and the sensitive info detection DLP policy for Copilot interactions. You reviewed the data risk assessment results, identified overshared sensitive items in the Zava HR and Finance sites, and applied two remediation actions: restricting access by the HR-Data sensitivity label and enabling SharePoint Restricted Content Discovery on the Zava HR site. Finally, as Patti Fernandes, you investigated Adele Vance's Copilot interaction events in the DSPM Activity Explorer AI activities tab, reviewing file references, sensitivity labels, and DLP match records — building the evidence base for the Day 3 compliance review.
