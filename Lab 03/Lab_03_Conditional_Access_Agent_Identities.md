@@ -291,9 +291,13 @@ Estimated time: **30 minutes**
 
    > **Note:** The What If tool allows you to simulate whether a specific identity would be affected by this policy without enforcing it.
 
-	![](./media/image50.png)
+	![](./media/image49.png)
 
 2. On the **What If** panel, under **User or workload identity**, select **Agent identities**.
+
+	![](./media/image50.png)
+
+2. Select **Edit agent identity**.
 
 	![](./media/image51.png)
 
@@ -303,24 +307,27 @@ Estimated time: **30 minutes**
 
 4. Under **Target resource**, set **Select target type** to **Cloud apps**. Select **+ Select cloud app**.
 
-	![](./media/image53.png)
-
 5. In the search field, enter `Office 365 SharePoint Online`. Select **Office 365 SharePoint Online** from the results. Choose **Select** to confirm.
 
-	![](./media/image54.png)
+	![](./media/image53.png)
 
 6. Select **What if** to run the simulation.
 
-	![](./media/image55.png)
+	![](./media/image54.png)
 
 7. Review the results and confirm that the policy **Zava - Block Unapproved Agent Identities** shows as **Applied** — because the Zava Finance Agent is NOT excluded by the `HR_Approved` attribute.
 
 8. Return to the **Edit agent identity** link and change the agent to **Zava HR Assistant**.
 
+	![](./media/image55.png)
+
 	![](./media/image56.png)
+
+8. Select **What if** to run the simulation.
+
 	![](./media/image57.png)
 
-9. Select **What if** to run the simulation. Review the results and confirm that the policy **Zava - Block Unapproved Agent Identities** shows as **Not applied** — because the Zava HR Assistant is excluded by the `HR_Approved` attribute.
+9. Review the results and confirm that the policy **Zava - Block Unapproved Agent Identities** shows as **Not applied** — because the Zava HR Assistant is excluded by the `HR_Approved` attribute.
 
 	![](./media/image58.png)
 
@@ -446,11 +453,11 @@ Estimated time: **30 minutes**
 
 	![](./media/image72.png)
 
-4. In the filter bar, select **+ Add filters**. Select **Is Agent** as the filter field and then select **Yes**.
+4. In the filter bar, select **+ Add filters**. Select **Is Agent** as the filter field.
 
 	![](./media/image73.png)
 
-5. Select **Apply** to apply the filter.
+5.  Select **Yes** and then select **Apply** to apply the filter.
 
 	![](./media/image74.png)
 
