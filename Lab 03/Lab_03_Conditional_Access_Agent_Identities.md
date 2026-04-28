@@ -317,6 +317,8 @@ Estimated time: **30 minutes**
 
 7. Review the results and confirm that the policy **Zava - Block Unapproved Agent Identities** shows as **Applied** — because the Zava Finance Agent is NOT excluded by the `HR_Approved` attribute.
 
+	![](./media/image3541.png)
+
 8. Return to the **Edit agent identity** link and change the agent to **Zava HR Assistant**.
 
 	![](./media/image55.png)
