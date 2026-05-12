@@ -52,10 +52,9 @@ Tempo estimado: **30 minutos**
     ![](./media/image4.png)
 
 4.  Siga as instruções na tela para configurar o aplicativo Microsoft Authenticator.
-
-> **Observação:** No seu dispositivo móvel, abra o aplicativo Authenticator, selecione **+** no canto superior direito, selecione **Work or school account** e, em seguida, selecione **Scan a QR code**. Leia o código QR exibido na tela.
->
     ![](./media/image5.png)
+    
+> **Observação:** No seu dispositivo móvel, abra o aplicativo Authenticator, selecione **+** no canto superior direito, selecione **Work or school account** e, em seguida, selecione **Scan a QR code**. Leia o código QR exibido na tela.
 
 5.  Complete todas as instruções restantes para finalizar a configuração do Autenticador.
 
@@ -235,7 +234,7 @@ Tempo estimado: **30 minutos**
 7.  Após salvar, feche o painel.
 
     ![](./media/image42.png)
->
+
 > **Observação:** Ao ativar a identidade do agente do Entra, os agentes do Copilot Studio recebem automaticamente uma identidade exclusiva no Microsoft Entra ID. Isso é necessário para a governança de identidades, o acesso condicional e a integração com o Defender for Cloud Apps em laboratórios posteriores.
 
 **Tarefa 7: Adicione uma conexão do SharePoint no portal do Power Apps Maker**
@@ -292,7 +291,7 @@ Neste exercício, o MOD Administrator cria os três agentes da Zava no Microsoft
 >
 > Volte para a aba do Copilot Studio e abra `https://copilotstudio.microsoft.com/environments/\<EnvironmentID\>` (substituindo \<EnvironmentID\> pelo valor copiado acima).
 
-    ![](./media/image51.png)
+![](./media/image51.png)
 
 4.  No painel de navegação à esquerda, selecione **Agents**.
 
@@ -334,8 +333,8 @@ Neste exercício, o MOD Administrator cria os três agentes da Zava no Microsoft
 13. No campo **SharePoint URL**, insira a URL do site de RH do SharePoint no seguinte formato e selecione **Add:** `https://\[TenantPrefix\].sharepoint.com/sites/HR`
 
 > **Observação:** Substitua \[TenantPrefix\] pelo prefixo do seu locatário encontrado na aba **Resources** do seu ambiente de laboratório.
->
-    ![](./media/image60.png)
+
+   ![](./media/image60.png)
 
 14. Selecione **Add to agent** para conectar o site do SharePoint como fonte de conhecimento.
 
@@ -495,7 +494,6 @@ Neste exercício, o MOD Administrator cria os três agentes da Zava no Microsoft
     ```
     You are the Zava IT Support Agent. Help users with common IT questions using publicly available Microsoft support documentation and Zava IT policies. Do not access or share any sensitive financial or HR information. Escalate complex issues to the IT helpdesk.
     ```
-
     ![](./media/image95.png)
 
 7.  Na página de configuração do agente, localize a seção **Knowledge.** Selecione **+ Add knowledge**.
@@ -642,13 +640,13 @@ Neste exercício, o MOD Administrator carrega os documentos comerciais de amostr
 
 3.  Nesta página, confirme se os três agentes a seguir aparecem na lista. Você pode pesquisar por Zava na caixa de pesquisa para filtrar os resultados.
 
+    ![](./media/image114.png)
+
 | **Nome do agente**    | **Status** | **Editor**    |
 |-----------------------|------------|---------------|
 | Zava HR Assistant     | Ativo      | Editor padrão |
 | Zava Finance Agent    | Ativo      | Editor padrão |
 | Zava IT Support Agent | Ativo      | Editor padrão |
-
-    ![](./media/image114.png)
 
 > **Observação:** Pode levar até 10 minutos após a publicação no Copilot Studio para que os agentes apareçam no registro de agentes. Se os agentes não estiverem visíveis, aguarde 10 minutos e atualize a página.
 
