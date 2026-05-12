@@ -34,101 +34,101 @@ Tempo estimado: **30 minutos**
 
 **Tarefa 1: Atribua a função de administrador de definição de atributos**
 
-1.  Abra um navegador e acesse https://entra.microsoft.com. Faça login com as credenciais **MOD Administrator**, se solicitado. Em **Entra ID**, selecione **Roles & admins**.
+1.  Abra um navegador e acesse `https://entra.microsoft.com`. Faça login com as credenciais **MOD Administrator**, se solicitado. Em **Entra ID**, selecione **Roles & admins**.
 
-> <img src="media/image1.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image1.png)
 
-2.  Na barra de pesquisa, digite **Attribute Definition Administrator.**
+2.  Na barra de pesquisa, digite `Attribute Definition Administrator`.
 
-> <img src="media/image2.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image2.png)
 
 3.  Selecione **Attribute Definition Administrator** clicando no nome. Não marque a caixa de seleção.
 
-> <img src="media/image3.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image3.png)
 
 4.  Na página **Attribute Definition Administrator**, selecione **+ Add assignments**.
 
-> <img src="media/image4.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image4.png)
 
 5.  No painel **Add assignments**, selecione **No members selected**.
 
-> <img src="media/image5.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image5.png)
 
 6.  Procure e selecione **MOD Administrator**. Clique em **Select** para confirmar.
 
-> <img src="media/image6.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image6.png)
 
 7.  Selecione **Next**.
 
-> <img src="media/image7.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image7.png)
 
 8.  Em **Assignment type**, selecione **Active**.
 
-> <img src="media/image8.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image8.png)
 
-9.  No painel de ativação, insira uma justificativa — Lab 03 custom security attribute configuration.
+9.  No painel de ativação, insira uma justificativa — `Lab 03 custom security attribute configuration`.
 
-> <img src="media/image9.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image9.png)
 
 10. Desmarque a opção **Permanently assigned** e defina a duração para **1 hour**. Selecione **Assign**.
 
-> <img src="media/image10.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image10.png)
 
 11. Confirme se a tarefa aparece na lista em **Active assignments**.
 
-> <img src="media/image11.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image11.png)
 
 12. Volte para **Roles & admins**.
 
-13. Na barra de pesquisa, digite **Attribute Assignment Administrator** e repita as etapas para atribuir a função ao **MOD Administrator**.
+13. Na barra de pesquisa, digite `Attribute Assignment Administrator` e repita as etapas para atribuir a função ao **MOD Administrator**.
 
-> <img src="media/image12.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image12.png)
 
 14. Selecione o ícone da conta **MOD Administrator** no canto superior direito da página. Selecione **Sign out**.
 
-15. Faça login novamente em https://entra.microsoft.com com as credenciais **MOD Administrator**.
+15. Faça login novamente em `https://entra.microsoft.com` com as credenciais **MOD Administrator**.
 
-> **Observação:** A função de administrador de definição de atributos concede permissões para criar e gerenciar definições personalizadas de atributos de segurança. Essa função foi propositalmente excluída da função de administrador global para garantir a separação de funções. É necessário fazer um novo login para que a nova atribuição de função entre em vigor.
+	> **Observação:** A função de administrador de definição de atributos concede permissões para criar e gerenciar definições personalizadas de atributos de segurança. Essa função foi propositalmente excluída da função de administrador global para garantir a separação de funções. É necessário fazer um novo login para que a nova atribuição de função entre em vigor.
 
 **Tarefa 2: Crie o conjunto de atributos AgentAttributes**
 
 1.  No painel de navegação à esquerda, expanda **Entra ID** e selecione **Custom security attributes**.
 
-> <img src="media/image13.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image13.png)
 
 2.  Na página **Custom security attributes**, selecione **+ Add attribute set**.
 
-> <img src="media/image14.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image14.png)
 
-3.  No painel **Add attribute set**, no campo **Attribute set name**, digite AgentAttributes.
+3.  No painel **Add attribute set**, no campo **Attribute set name**, digite `AgentAttributes`.
 
-4.  No campo **Description**, digite Attribute set for classifying AI agent approval and governance status.
+4.  No campo **Description**, digite `Attribute set for classifying AI agent approval and governance status`.
 
 5.  No campo **Maximum number of attributes**, mantenha o valor padrão.
 
 6.  Selecione **Add** para criar o conjunto de atributos.
 
-> <img src="media/image15.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image15.png)
 
 7.  Confirme se **AgentAttributes** aparece na lista de conjuntos de atributos.
 
-> <img src="media/image16.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image16.png)
 
 **Tarefa 3: Crie o atributo AgentApprovalStatus**
 
 1.  Na página **Custom security attributes**, selecione **AgentAttributes** para abrir o conjunto de atributos.
 
-> <img src="media/image17.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image17.png)
 
 2.  Na página **AgentAttributes**, selecione **+ Add attribute**.
 
-> <img src="media/image18.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image18.png)
 
 3.  No painel **Add attribute**, configure os seguintes campos:
 
-    - **Nome do atributo:** Digite AgentApprovalStatus.
+    - **Nome do atributo:** Digite `AgentApprovalStatus`.
 
-    - **Description:** Digite Tracks the approval status of each AI agent identity in the Zava governance review process.
+    - **Description:** Digite `Tracks the approval status of each AI agent identity in the Zava governance review process.`
 
     - **Data type:** Selecione **String**.
 
@@ -138,69 +138,69 @@ Tempo estimado: **30 minutos**
 
 4.  Em **Predefined values**, selecione **+ Add value**.
 
-> <img src="media/image19.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image19.png)
 
-5.  No campo de valor, digite **New**. Em seguida, selecione **Add**.
+5.  No campo de valor, digite `New`. Em seguida, selecione **Add**.
 
-> <img src="media/image20.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image20.png)
 
 6.  Selecione **+ Add value**.
 
-> <img src="media/image21.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image21.png)
 
-7.  No campo de valor, digite In_Review. Em seguida, selecione **Add**.
+7.  No campo de valor, digite `In_Review`. Em seguida, selecione **Add**.
 
-> <img src="media/image22.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image22.png)
 
 8.  Selecione **+ Add value**.
 
-> <img src="media/image23.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image23.png)
 
-9.  No campo de valor, digite HR_Approved. Em seguida, selecione **Add**.
+9.  No campo de valor, digite `HR_Approved`. Em seguida, selecione **Add**.
 
-> <img src="media/image24.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image24.png)
 
 10. Selecione **+ Add value**.
 
-> <img src="media/image25.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image25.png)
 
-11. No campo de valor, digite Finance_Approved. Em seguida, selecione **Add**.
+11. No campo de valor, digite `Finance_Approved`. Em seguida, selecione **Add**.
 
-> <img src="media/image26.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image26.png)
 
 12. Selecione **+ Add value**.
 
-> <img src="media/image27.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image27.png)
 
-13. No campo de valor, digite IT_Approved. Em seguida, selecione **Add**.
+13. No campo de valor, digite `IT_Approved`. Em seguida, selecione **Add**.
 
-> <img src="media/image28.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image28.png)
 
 14. Selecione **Save**.
 
-> <img src="media/image29.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image29.png)
 
 15. Confirme se **AgentApprovalStatus** aparece na lista de atributos em **AgentAttributes**.
 
-> <img src="media/image30.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image30.png)
 
 **Tarefa 4: Atribua o HR_Approved ao Zava HR Assistant**
 
 1.  No painel de navegação à esquerda, selecione **Agent ID**.
 
-> <img src="media/image31.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image31.png)
 
 2.  Na página **All agent identities (Preview)**, selecione **Zava HR Assistant (Microsoft Copilot Studio).**
 
-> <img src="media/image32.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image32.png)
 
 3.  Na página **Overview (Preview)**, na subnavegação à esquerda, selecione **Custom security attributes (Preview)**.
 
-> <img src="media/image33.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image33.png)
 
 4.  Na página **Custom security attributes**, selecione **+ Add assignment**.
 
-> <img src="media/image34.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image34.png)
 
 5.  No painel **Add custom security attribute assignment**, configure o seguinte:
 
@@ -210,13 +210,13 @@ Tempo estimado: **30 minutos**
 
     - **Assigned values:** Selecione **Add value** \> **HR_Approved** e selecione **Save**.
 
-> <img src="media/image35.png" style="width:6.26806in;height:3.54792in" />
->
-> <img src="media/image36.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image35.png)
+
+	![](./media/image36.png)
 
 6.  Selecione **Save** para aplicar a tarefa.
 
-> <img src="media/image37.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image37.png)
 
 7.  Confirme se o **AgentApprovalStatus** aparece com o valor **HR_Approved** na página de atributos de segurança personalizados.
 
@@ -234,47 +234,47 @@ Tempo estimado: **30 minutos**
 
 2.  Na página **Conditional Access**, selecione **Policies**.
 
-> <img src="media/image38.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image38.png)
 
 3.  Na página **Policies**, selecione **+ New policy**.
 
-> <img src="media/image39.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image39.png)
 
-4.  Na página **New Conditional Access policy**, no campo **Name**, digite Zava - Block Unapproved Agent Identities.
+4.  Na página **New Conditional Access policy**, no campo **Name**, digite `Zava - Block Unapproved Agent Identities`.
 
 5.  Em **Assignments**, selecione **0 users or agents (Preview) selected** em **Users or agents**.
 
 6.  No painel de atribuições, em **What does this policy apply to?,** selecione **Agents (Preview)**.
 
-> <img src="media/image40.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image40.png)
 
 7.  Em **Include**, selecione **All agent identities (Preview)**.
 
-> <img src="media/image41.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image41.png)
 
 8.  Em **Exclude**, selecione **Select agent identities based on attributes**.
 
-> <img src="media/image42.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image42.png)
 
 9.  Defina **Configure** como **Yes**.
 
-> <img src="media/image43.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image43.png)
 
 10. Na configuração da expressão, em **AgentAttributes**, selecione o atributo **AgentApprovalStatus**. Defina **Operator** como **Contains**. Defina **Value** como **HR_Approved**.
 
-> <img src="media/image44.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image44.png)
 
 11. Selecione **Done** para confirmar a configuração de exclusão.
 
-> <img src="media/image45.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image45.png)
 
 12. Em **Target resources**, selecione **No target resources selected**.
 
-> <img src="media/image46.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image46.png)
 
 13. Em **Include**, selecione **All resources (formerly 'All cloud apps')**.
 
-> <img src="media/image47.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image47.png)
 
 14. Em **Access controls**, no painel **Grant**, confirme se **Block access** está selecionada.
 
@@ -282,53 +282,53 @@ Tempo estimado: **30 minutos**
 
 16. Selecione **Create** para salvar a política.
 
-> <img src="media/image48.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image48.png)
 
 **Tarefa 2: Valide a política usando a ferramenta "What If "**
 
 1.  Na página da política, selecione **"What If"** para abrir a visualização de impacto somente para o relatório.
 
-> **Observação:** A ferramenta “What If” permite simular se uma identidade específica seria afetada por esta política sem aplicá-la.
->
-> <img src="media/image49.png" style="width:6.26806in;height:3.54792in" />
+	> **Observação:** A ferramenta “What If” permite simular se uma identidade específica seria afetada por esta política sem aplicá-la.
+
+	![](./media/image49.png)
 
 2.  No painel **“What If”,** em **User or workload identity**, selecione **Agent identities**.
 
-> <img src="media/image50.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image50.png)
 
 3.  Selecione **Edit agent identity**.
 
-> <img src="media/image51.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image51.png)
 
 4.  No campo de pesquisa de identidade do agente, pesquise e selecione **Zava Finance Agent (Microsoft Copilot Studio)**.
 
-> <img src="media/image52.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image52.png)
 
 5.  Em **Target resource**, defina **Select target type** como **Cloud apps**. Selecione **+ Select cloud app**.
 
-6.  No campo de pesquisa, digite Office 365 SharePoint Online. Selecione **Office 365 SharePoint Online** nos resultados. Clique em **Select** para confirmar.
+6.  No campo de pesquisa, digite `Office 365 SharePoint Online`. Selecione **Office 365 SharePoint Online** nos resultados. Clique em **Select** para confirmar.
 
-> <img src="media/image53.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image53.png)
 
 7.  Selecione **“What If”** para executar a simulação.
 
-> <img src="media/image54.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image54.png)
 
-8.  Analise os resultados e confirme se a política **Zava - Block Unapproved Agent Identities** aparece como **Applied**, pois o agente financeiro da Zava NÃO está excluído pelo atributo HR_Approved.
+8.  Analise os resultados e confirme se a política **Zava - Block Unapproved Agent Identities** aparece como **Applied**, pois o agente financeiro da Zava NÃO está excluído pelo atributo `HR_Approved`.
 
 9.  Volte ao link **Edit agent identity** e altere o agente para **Zava HR Assistant**.
 
-> <img src="media/image55.png" style="width:6.26806in;height:3.54792in" />
->
-> <img src="media/image56.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image55.png)
+
+	![](./media/image56.png)
 
 10. Selecione **“What If”** para executar a simulação.
 
-> <img src="media/image57.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image57.png)
 
-11. Analise os resultados e confirme se a política **Zava - Block Unapproved Agent Identities** aparece como **Not applied**, porque o assistente de RH da Zava está excluído pelo atributo HR_Approved.
+11. Analise os resultados e confirme se a política **Zava - Block Unapproved Agent Identities** aparece como **Not applied**, porque o assistente de RH da Zava está excluído pelo atributo `HR_Approved`.
 
-> <img src="media/image58.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image58.png)
 
 12. Selecione **Close** para sair do painel “What If”.
 
@@ -350,33 +350,33 @@ Tempo estimado: **30 minutos**
 
 1.  Na página **Conditional Access**, selecione **+ Create new policy**.
 
-> <img src="media/image59.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image59.png)
 
 2.  No campo **Name**, digite Zava - Block High Risk Agent Identities.
 
 3.  Em **Assignments**, selecione **0 users or agents (Preview) selected** em **Users or agents**
 
-> <img src="media/image60.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image60.png)
 
 4.  Em **What does this policy apply to?,** selecione **Agents (Preview)**.
 
-> <img src="media/image61.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image61.png)
 
 5.  Em **Include**, selecione **All agent identities (Preview)**.
 
-> <img src="media/image62.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image62.png)
 
 6.  Em **Target resources**, selecione **No target resources selected** e, em seguida selecione **All resources (formerly 'All cloud apps')**.
 
-> <img src="media/image63.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image63.png)
 
 7.  Em **Conditions**, selecione **0 Conditions selected**. Em seguida, selecione **Not Configured** em **Agent Risk**.
 
-> <img src="media/image64.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image64.png)
 
 8.  No painel **Agent risk**, defina **Configure** como **Yes**. Em **Configure agent risk levels needed for policy to be enforced**, selecione **High**. Selecione **Done** para confirmar a condição.
 
-> <img src="media/image65.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image65.png)
 
 9.  Em **Access controls**, na seção **Grant**, certifique-se de que **Block access** esteja selecionada.
 
@@ -386,7 +386,7 @@ Tempo estimado: **30 minutos**
 
 11. Selecione **Create** para salvar a política.
 
-> <img src="media/image66.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image66.png)
 
 12. Na página **Policies**, confirme se a opção **Zava - Block High Risk Agent Identities** aparece com o status **Report-only**.
 
@@ -396,61 +396,65 @@ Tempo estimado: **30 minutos**
 
 1.  Abra uma nova janela **InPrivate** ou **Incognito** do navegador.
 
-2.  Acesse https://copilot.microsoft.com.
+2.  Acesse `https://copilot.microsoft.com`.
 
-3.  Faça login com as credenciais **Patti Fernandes** na aba **Resources**. (Você pode usar pattif@TenantName como seu ID e a senha do usuário na aba recursos.)
+3.  Faça login com as credenciais **Patti Fernandes** na aba **Resources**. (Você pode usar `pattif@TenantName` como seu ID e a senha do usuário na aba recursos.)
 
 4.  Na interface de chat do Microsoft 365 Copilot, selecione **All agents** na barra de navegação. Pesquise e selecione **Zava HR Assistant**.
 
-> <img src="media/image67.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image67.png)
 
 5.  Em seguida, selecione **Add**.
 
-> <img src="media/image68.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image68.png)
 
 6.  No campo de entrada do chat, digite o seguinte:
 
-> What is Zava's leave policy?
+    ```
+	What is Zava's leave policy?
+    ```
 
 7.  Aguarde a resposta do assistente de RH da Zava.
 
-> <img src="media/image69.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image69.png)
 
 8.  Digite uma segunda mensagem no campo de entrada do chat:
 
-> How do I submit a sick leave request?
+	```
+	How do I submit a sick leave request?
+    ```
 
 9.  Aguarde a resposta.
 
-> <img src="media/image70.png" style="width:6.26806in;height:3.54792in" />
->
-> **Observação:** Essas interações geram registros de entrada do agente, pois o assistente de RH da Zava se autentica para acessar sua fonte de conhecimento do SharePoint. Esses eventos aparecerão nos registros de login do Entra e terão a avaliação da política de acesso condicional registrada.
+	![](./media/image70.png)
+
+	> **Observação:** Essas interações geram registros de entrada do agente, pois o assistente de RH da Zava se autentica para acessar sua fonte de conhecimento do SharePoint. Esses eventos aparecerão nos registros de login do Entra e terão a avaliação da política de acesso condicional registrada.
 
 10. Feche a janela do navegador InPrivate.
 
 **Tarefa 2: Investigue os registros de login de agentes no Entra**
 
-1.  Retorne à sessão do navegador **MOD Administrator** https://entra.microsoft.com.
+1.  Retorne à sessão do navegador **MOD Administrator** `https://entra.microsoft.com`.
 
 2.  No painel de navegação à esquerda, expanda **Entra ID** e selecione **Monitoring & health**. Selecione **Sign-in logs**.
 
-> <img src="media/image71.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image71.png)
 
 3.  Na página **Sign-in logs**, selecione a aba **Service principal sign-ins.**
 
-> <img src="media/image72.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image72.png)
 
 4.  Na barra de filtros, selecione **+ Add filters**. Selecione **Is Agent** como campo do filtro.
 
-> <img src="media/image73.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image73.png)
 
 5.  Selecione **Yes** e, em seguida, selecione **Apply** para aplicar o filtro.
 
-> <img src="media/image74.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image74.png)
 
 6.  Analise as entradas de login retornadas na visualização filtrada.
 
-> <img src="media/image75.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image75.png)
 
 **Resumo**
 
