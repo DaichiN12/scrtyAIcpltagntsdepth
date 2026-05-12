@@ -34,11 +34,11 @@ Tempo estimado: **10 minutos**
 
 **Tarefa 1: Acesse identidades do agente Entra**
 
-1.  Abra um navegador e acesse https://entra.microsoft.com. Faça login com as credenciais **MOD Administrator**, se solicitado.
+1.  Abra um navegador e acesse `https://entra.microsoft.com`. Faça login com as credenciais **MOD Administrator**, se solicitado.
 
 2.  No painel de navegação à esquerda, selecione **Agent ID**. Na página **All agent identities (Preview)**, revise a lista de identidades de agente registradas no locatário.
 
-> <img src="media/image1.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image1.png)
 
 3.  Confirme se os três agentes a seguir constam na lista:
 
@@ -48,7 +48,7 @@ Tempo estimado: **10 minutos**
 | Zava Finance Agent (Microsoft Copilot Studio)    | Ativo      |
 | Zava IT Support Agent (Microsoft Copilot Studio) | Ativo      |
 
-> <img src="media/image2.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image2.png)
 
 4.  **Observação:** as identidades dos agentes são complementadas com **(Microsoft Copilot Studio)** para indicar a plataforma que as provisionou. Se algum agente não estiver listado, aguarde cinco minutos e atualize a página. O provisionamento da identidade do agente pode levar algum tempo após a publicação inicial no Copilot Studio.
 
@@ -56,7 +56,7 @@ Tempo estimado: **10 minutos**
 
 1.  Na página **All agent identities (Preview)**, selecione **Zava Finance Agent (Microsoft Copilot Studio)**.
 
-> <img src="media/image3.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image3.png)
 
 2.  Na página **Overview (Preview)**, revise e anote os seguintes campos:
 
@@ -80,29 +80,29 @@ Tempo estimado: **10 minutos**
 
     - **Entra roles**
 
-> <img src="media/image4.png" style="width:6.26806in;height:3.54792in" />
->
-> **Observação:** Em um ambiente recém-provisionado, ambos os valores serão exibidos como **0.** Isso confirma que a identidade do agente financeiro da Zava não recebeu nenhuma permissão de API ou função de diretório Entra, o que corresponde ao estado inicial esperado de privilégios mínimos.
+	![](./media/image4.png)
+
+	> **Observação:** Em um ambiente recém-provisionado, ambos os valores serão exibidos como **0.** Isso confirma que a identidade do agente financeiro da Zava não recebeu nenhuma permissão de API ou função de diretório Entra, o que corresponde ao estado inicial esperado de privilégios mínimos.
 
 **Tarefa 3: Atribua Patti Fernandes como proprietária da identidade do agente financeiro da Zava.**
 
-1.  Na subnavegação à esquerda da página de identidade do agente financeiro da Zava, em **Access**, selecione **Owners and sponsors (Preview)**.
+1.  Na subnavegação à esquerda da página de identidade do **Zava Finance Agent**, em **Access**, selecione **Owners and sponsors (Preview)**.
 
-> <img src="media/image5.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image5.png)
 
 2.  Na página **Owners and sponsors**, confirme que nenhum proprietário está listado no momento. Selecione **+ Add** \> **Add owner**.
 
-> <img src="media/image6.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image6.png)
 
-3.  No campo de pesquisa do painel **Add owners**, digite Patti. Selecione **Patti Fernandes** nos resultados. Selecione **Select** para confirmar.
+3.  No campo de pesquisa do painel **Add owners**, digite `Patti`. Selecione **Patti Fernandes** nos resultados. Selecione **Select** para confirmar.
 
-> <img src="media/image7.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image7.png)
 
 4.  Confirme se **Patti Fernandes** agora aparece como **Owner** na página **Owners and sponsors**.
 
-> <img src="media/image8.png" style="width:6.26806in;height:3.54792in" />
->
-> **Observação:** A atribuição de um proprietário a uma identidade de agente estabelece a responsabilidade por essa identidade dentro do modelo de governança da Entra. Os proprietários recebem notificações de revisão de acesso e são responsáveis por atestar a necessidade contínua da identidade e a adequação do acesso.
+	![](./media/image8.png)
+
+	> **Observação:** A atribuição de um proprietário a uma identidade de agente estabelece a responsabilidade por essa identidade dentro do modelo de governança da Entra. Os proprietários recebem notificações de revisão de acesso e são responsáveis por atestar a necessidade contínua da identidade e a adequação do acesso.
 
 **Exercício 2: Desative e reative o assistente de RH da Zava**
 
@@ -110,53 +110,53 @@ Tempo estimado: **10 minutos**
 
 1.  Na página **All agent identities (Preview)** do Microsoft Entra, navegue até a página de visão geral da identidade do agente **Zava HR Assistant**.
 
-> <img src="media/image9.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image9.png)
 
 2.  Na barra de ferramentas na parte superior da página, selecione **Disable**.
 
-> <img src="media/image10.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image10.png)
 
 3.  Na caixa de diálogo de confirmação, confirme a ação para desativar a identidade.
 
-> <img src="media/image11.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image11.png)
 
 4.  Aguarde a página atualizar.
 
 5.  Na página **Overview (Preview)**, confirme se o **Status** agora está como **Disabled**.
 
-> <img src="media/image12.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image12.png)
 
 **Tarefa 2: Verifique se o acesso do usuário final está bloqueado**
 
-1.  Abra uma nova janela **InPrivate** ou **Incognito** do navegador. Acesse https://copilot.microsoft.com. Faça login com as credenciais **MOD Administrator** na aba **Resources**.
+1.  Abra uma nova janela **InPrivate** ou **Incognito** do navegador. Acesse `https://copilot.microsoft.com`. Faça login com as credenciais **MOD Administrator** na aba **Resources**.
 
 2.  Na navegação à esquerda, selecione **Zava HR Assistant** e, em seguida, pesquise por Zava.
 
 3.  Observe os resultados — o agente **Zava HR Assistant** não deve estar visível.
 
-> **Observação:** A propagação da desativação da identidade pode levar até cinco minutos. Se o agente responder normalmente logo após a desativação, aguarde de três a cinco minutos e tente novamente. Não avance para a Tarefa 3 até que se confirme que o agente está indisponível.
+	> **Observação:** A propagação da desativação da identidade pode levar até cinco minutos. Se o agente responder normalmente logo após a desativação, aguarde de três a cinco minutos e tente novamente. Não avance para a Tarefa 3 até que se confirme que o agente está indisponível.
 
 **Tarefa 3: Reative a identidade do assistente de RH da Zava**
 
-1.  Retorne à sessão do navegador **MOD Administrator** em https://entra.microsoft.com.
+1.  Retorne à sessão do navegador **MOD Administrator** em `https://entra.microsoft.com`.
 
 2.  No painel de navegação à esquerda, selecione **Agent ID**. Na página **All agent identities (Preview)**, selecione **Zava HR Assistant (Microsoft Copilot Studio)**.
 
 3.  Na página **Overview (Preview)**, na barra de ferramentas, selecione **Enable**.
 
-> <img src="media/image13.png" style="width:6.26806in;height:3.54792in" />
->
-> **Observação:** O botão da barra de ferramentas terá mudado de **Disable** para **Enable** após a desativação da identidade na Tarefa 1.
+	![](./media/image13.png)
+
+	> **Observação:** O botão da barra de ferramentas terá mudado de **Disable** para **Enable** após a desativação da identidade na Tarefa 1.
 
 4.  Na caixa de diálogo de confirmação, confirme a ação para ativar a identidade.
 
-> <img src="media/image14.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image14.png)
 
 5.  Aguarde a página atualizar.
 
 6.  Na página **Overview (Preview)**, confirme se o **Status** agora está como **Active**.
 
-> <img src="media/image15.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image15.png)
 
 7.  Repita a verificação de acesso do usuário final para confirmar se o agente está acessível novamente.
 
