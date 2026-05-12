@@ -32,11 +32,11 @@ Tempo estimado: **20 minutos**
 
 **Tarefa 1: Acesse a página de visão geral do Agent 365**
 
-1.  Abra um navegador e acesse https://admin.cloud.microsoft/. Faça login com as credenciais do **MOD Administrator**, se solicitado.
+1.  Abra um navegador e acesse `https://admin.cloud.microsoft/`. Faça login com as credenciais do **MOD Administrator**, se solicitado.
 
 2.  No painel de navegação à esquerda, expanda **Agents** e selecione **Overview**.
 
-> <img src="media/image1.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image1.png)
 
 3.  Na página **Agent Overview**, localize as seguintes métricas e anote seus valores atuais:
 
@@ -50,7 +50,7 @@ Tempo estimado: **20 minutos**
 
     - **Agent analytics** — agentes por criador, principais plataformas usadas para criar agentes e usuários ativos no Copilot ao longo do tempo.
 
-> <img src="media/image2.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image2.png)
 >
 > **Observação:** Em um ambiente recém-configurado, a contagem de usuários ativos e agentes sem proprietários pode mostrar zero. Isso é esperado. As métricas serão atualizadas conforme os agentes forem utilizados ao longo do curso.
 
@@ -58,109 +58,109 @@ Tempo estimado: **20 minutos**
 
 1.  No painel de navegação à esquerda, selecione **Agents**. Selecione **All agents**. Em seguida, selecione a aba **Requests**.
 
-> <img src="media/image3.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image3.png)
 
 2.  Na lista de agentes, localize **Zava IT Support Agent** e selecione os três pontos verticais (**...**) ao lado do nome.
 
 3.  Entre as duas opções, você pode escolher **Reject submission** ou **Publish to store**. Por enquanto, selecione **Publish to store**.
 
-> <img src="media/image4.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image4.png)
 
 4.  No fluxo **Publish new agent**, em **Select users or groups who can install the agent**, selecione **All users**.
 
-> <img src="media/image5.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image5.png)
 
 5.  Em **Select users or groups who will have the agent pre-installed (optional)**, selecione **Specific users/groups**.
 
-> <img src="media/image6.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image6.png)
 
-6.  Na caixa de pesquisa **Specific users/groups**, procure por **Adele Vance** e selecione-a na lista suspensa.
+6.  Na caixa de pesquisa **Specific users/groups**, procure por `Adele Vance` e selecione-a na lista suspensa.
 
-> <img src="media/image7.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image7.png)
 
 7.  Inclua também **Patti Fernandes.**
 
-> <img src="media/image8.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image8.png)
 
 8.  Em seguida, selecione **Next**.
 
-> <img src="media/image9.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image9.png)
 
 9.  Em **Apply security template**, selecione **Next**.
 
-> <img src="media/image10.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image10.png)
 
 10. Em **Review permissions**, selecione **Next**.
 
-> <img src="media/image11.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image11.png)
 
-11. Selecione a aba **Registry**, procure por **Zava IT Support Agent**, selecione-o e anote as informações no painel de detalhes.
+11. Selecione a aba **Registry**, procure por `Zava IT Support Agent`, selecione-o e anote as informações no painel de detalhes.
 
-> <img src="media/image12.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image12.png)
 
 **Tarefa 3: Aprove um agente no centro de administração do Teams**
 
-1.  Abra uma nova aba do navegador e acesse https://admin.teams.microsoft.com/ e faça login usando as credenciais do MOD Administrator.
+1.  Abra uma nova aba do navegador e acesse `https://admin.teams.microsoft.com/` e faça login usando as credenciais do MOD Administrator.
 
 2.  Na navegação à esquerda, em **Teams apps**, selecione **Manage apps**.
 
-> <img src="media/image13.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image13.png)
 
-3.  Na barra de pesquisa, procure por Zava e selecione **Zava HR Assistant**.
+3.  Na barra de pesquisa, procure por `Zava` e selecione **Zava HR Assistant**.
 
-> <img src="media/image14.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image14.png)
 
 4.  Na página **Zava HR Assistant**, selecione **Publish**.
 
-> <img src="media/image15.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image15.png)
 
 5.  Na caixa de diálogo de confirmação, selecione **Publish** novamente.
 
-> <img src="media/image16.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image16.png)
 
 **Tarefa 4: Bloqueio e desbloqueio do assistente de RH da Zava**
 
-1.  Acesse novamente https://admin.cloud.microsoft/. Faça login com as credenciais do **MOD Administrator,** se solicitado.
+1.  Acesse novamente `https://admin.cloud.microsoft/`. Faça login com as credenciais do **MOD Administrator,** se solicitado.
 
 2.  Na página **All agents**, selecione a aba **Registry** e, em seguida, procure e selecione **Zava HR Assistant** na lista de agentes.
 
-> <img src="media/image17.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image17.png)
 
 3.  No painel de detalhes, abaixo do nome do agente, selecione **Block**.
 
-> <img src="media/image18.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image18.png)
 
 4.  No painel **Block agent**, revise a mensagem que confirma que o bloqueio impedirá que todos os usuários da organização acessem o agente. Marque a caixa ao lado de **Block agent**. Selecione **Save**.
 
-> <img src="media/image19.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image19.png)
 
 5.  Confirme se o **Zava HR Assistant** agora exibe o status **Blocked.**
 
-> <img src="media/image20.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image20.png)
 
 6.  Abaixo do nome do agente, selecione **Unblock**.
 
-> <img src="media/image21.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image21.png)
 
 7.  No painel **Unblock agent**, selecione a caixa de seleção **Unblock agent**. Selecione **Save**. Feche o painel de detalhes.
 
-> <img src="media/image22.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image22.png)
 
 8.  Na lista de agentes, confirme que o **Zava HR Assistant** agora exibe o status **Active**.
 
-> <img src="media/image23.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image23.png)
 
 **Tarefa 5: Exporte o inventário de agentes**
 
 1.  Na aba **Registry**, selecione **Export** na barra de ferramentas acima da lista de agentes.
 
+    ![](./media/image24.png)
+
 > **Observação:** Se o botão **Export** não estiver visível na barra de ferramentas, selecione o menu de reticências (**...**) na barra de ferramentas para localizar a opção de exportação.
->
-> <img src="media/image24.png" style="width:6.26806in;height:3.54792in" />
 
 2.  Confirme o download na caixa de diálogo de confirmação. Aguarde até que o arquivo de exportação seja gerado e baixado para sua máquina virtual de laboratório.
 
-> <img src="media/image25.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image25.png)
 
 3.  Abra o arquivo CSV baixado.
 
@@ -168,7 +168,7 @@ Tempo estimado: **20 minutos**
 
 5.  Verifique se as seguintes colunas estão presentes: nome do agente, editor, criador, data de criação, produtos hospedados e status de disponibilidade.
 
-> <img src="media/image26.png" style="width:6.26806in;height:3.76875in" />
+	![](./media/image26.png)
 
 6.  Feche o arquivo CSV.
 
@@ -176,11 +176,11 @@ Tempo estimado: **20 minutos**
 
 1.  Na aba **Registry**, selecione o cartão **Missing an owner**.
 
-> <img src="media/image27.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image27.png)
 
 2.  Analise a lista de agentes que é exibida após a aplicação do filtro de agentes sem proprietário.
 
-> <img src="media/image28.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image28.png)
 
 3.  Observe se algum dos três agentes da Zava aparece nesta lista filtrada.
 
@@ -188,25 +188,25 @@ Tempo estimado: **20 minutos**
 
 4.  Selecione **Clear filter** ou redefinir os filtros para retornar à lista completa de agentes.
 
-> <img src="media/image29.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image29.png)
 
 **Exercício 2: Prepare o Purview Audit para o dia 2**
 
 **Tarefa 1: Verifique se o Purview Audit está ativo**
 
-1.  Abra uma nova aba do navegador e acesse https://purview.microsoft.com. Faça login com as credenciais do **MOD Administrator,** se solicitado. Selecione **Get started**.
+1.  Abra uma nova aba do navegador e acesse `https://purview.microsoft.com`. Faça login com as credenciais do **MOD Administrator,** se solicitado. Selecione **Get started**.
 
-> <img src="media/image30.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image30.png)
 
 2.  No painel de navegação à esquerda, selecione **Solutions** e, em seguida, selecione **Audit**.
 
-> <img src="media/image31.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image31.png)
 
 3.  Na página **Audit**, verifique se aparece um banner solicitando que você inicie a gravação da atividade do usuário e do administrador.
 
     - Se um banner for exibido, selecione **Start recording user and admin activity** para ativar a auditoria.
 
-> <img src="media/image32.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image32.png)
 
 - Se nenhum banner for exibido, a auditoria já está ativada. Prossiga para a próxima etapa.
 
@@ -224,7 +224,7 @@ Tempo estimado: **20 minutos**
 
 5.  Selecione **Search**.
 
-> <img src="media/image33.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image33.png)
 
 6.  Aguarde a conclusão da tarefa de pesquisa.
 
@@ -236,7 +236,7 @@ Tempo estimado: **20 minutos**
 
 **Tarefa 1: Provisione o Microsoft Defender XDR**
 
-1.  Abra uma nova aba do navegador e acesse https://security.microsoft.com. Faça login com as credenciais do **MOD Administrator,** se solicitado.
+1.  Abra uma nova aba do navegador e acesse `https://security.microsoft.com`. Faça login com as credenciais do **MOD Administrator,** se solicitado.
 
 2.  Na tela de boas-vindas do portal do **Microsoft Defender**, verifique a mensagem de provisionamento, caso seja exibida.
 
@@ -244,55 +244,55 @@ Tempo estimado: **20 minutos**
 
 3.  Após o carregamento completo do portal, confirme se o painel de navegação à esquerda exibe as seguintes seções: **Home**, **Incidents & alerts**, **Hunting**, **Threat intelligence**, **Assets**, **Identities**, **Endpoints**, **Email & collaboration**, **Cloud Apps** e **Settings**.
 
-> <img src="media/image34.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image34.png)
 
 4.  Selecione **Home** para confirmar se o painel inicial do Defender XDR carrega sem erros.
 
-> <img src="media/image35.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image35.png)
 
 **Tarefa 2: Configure os detalhes da organização no Defender for Cloud Apps**
 
-1.  No portal do Microsoft Defender em https://security.microsoft.com, no painel de navegação à esquerda, selecione **Settings**.
+1.  No portal do Microsoft Defender em `https://security.microsoft.com`, no painel de navegação à esquerda, selecione **Settings**.
 
-> <img src="media/image36.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image36.png)
 
 2.  Na página **Settings**, selecione **Cloud Apps**.
 
-> <img src="media/image37.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image37.png)
 
 3.  Selecione **Organisation details**.
 
-> <img src="media/image38.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image38.png)
 
-4.  Na página **Organisation details**, no campo **Organisation display name**, digite **Zava Corporation**.
+4.  Na página **Organisation details**, no campo **Organisation display name**, digite `Zava Corporation`.
 
-5.  No campo **Environment name**, digite **Dev One**.
+5.  No campo **Environment name**, digite `Dev One`.
 
-6.  No campo **Managed domains**, insira o domínio principal do seu locatário no seguinte formato: \[TenantPrefix\].onmicrosoft.com
+6.  No campo **Managed domains**, insira o domínio principal do seu locatário no seguinte formato: `\[TenantPrefix\].onmicrosoft.com`
 
 > **Observação:** substitua \[TenantPrefix\] pelo prefixo do seu locatário na aba **Resources**. Adicionar domínios gerenciados garante que os usuários internos sejam identificados corretamente nos relatórios e alertas do Cloud Apps.
 
 7.  Selecione **Save**.
 
-> <img src="media/image39.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image39.png)
 
 8.  Confirme se aparece uma notificação de sucesso confirmando que as configurações foram salvas.
 
-> <img src="media/image40.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image40.png)
 
 **Tarefa 3: Habilite o monitoramento de arquivos no Defender for Cloud Apps**
 
 1.  No portal do Microsoft Defender, no painel de navegação à esquerda, selecione **Settings**.
 
-> <img src="media/image36.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image36.png)
 
 2.  Na página **Settings**, selecione **Cloud Apps**.
 
-> <img src="media/image37.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image37.png)
 
 3.  Em **Information Protection**, selecione **Files**. Na página **Files**, marque a caixa **Enable file monitoring**. Selecione **Save**.
 
-> <img src="media/image41.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image41.png)
 
 4.  Confirme se aparece uma notificação de sucesso confirmando que o monitoramento de arquivos foi ativado.
 
@@ -300,15 +300,15 @@ Tempo estimado: **20 minutos**
 
 1.  No portal do Microsoft Defender, no painel de navegação à esquerda, selecione **Settings**.
 
-> <img src="media/image36.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image36.png)
 
 2.  Na página **Settings**, selecione **Cloud Apps**.
 
-> <img src="media/image37.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image37.png)
 
 3.  Em **Connected apps**, selecione **App Connectors**.
 
-> <img src="media/image42.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image42.png)
 
 4.  Na página **App Connectors**, selecione **+ Connect an app**.
 
@@ -318,22 +318,22 @@ Tempo estimado: **20 minutos**
 
 7.  Selecione **Connect Microsoft 365**.
 
-> <img src="media/image43.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image43.png)
 
 8.  Aguarde a conexão ser concluída. Em seguida, selecione **Done**.
 
-> <img src="media/image44.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image44.png)
 
 9.  Na página **App Connectors**, confirme se o **Microsoft 365** aparece na lista de conectores com o status **Connected**.
 
 10. Na página **App Connectors**, selecione a caixa de seleção ao lado de **Microsoft 365** e, nas opções superiores, selecione **Connect Microsoft Azure Instance**.
 
-> <img src="media/image45.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image45.png)
 
 11. Selecione **Connect Microsoft Azure**. Aguarde a conclusão da conexão.
 
-> <img src="media/image46.png" style="width:6.26806in;height:3.54792in" />
->
+	![](./media/image46.png)
+
 > **Observação:** Após a conexão, o Defender for Cloud Apps começa a analisar a atividade do Microsoft 365. Os dados iniciais da semana anterior serão exibidos no portal. A primeira análise completa pode levar várias horas, dependendo do tamanho do locatário. Este conector é necessário para o monitoramento de atividades, a aplicação de políticas de DLP e a geração de alertas nos laboratórios do dia 2 e do dia 3.
 
 **Resumo**
