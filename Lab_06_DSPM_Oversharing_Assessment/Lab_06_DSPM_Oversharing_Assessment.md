@@ -44,155 +44,155 @@ A análise de risco de dados pode levar de 30 a 60 minutos para ser concluída. 
 
 **Tarefa 1: Registre um aplicativo Entra**
 
-1.  Acesse https://entra.microsoft.com. Faça login com as credenciais **MOD Administrator**, se solicitado.
+1.  Acesse `https://entra.microsoft.com`. Faça login com as credenciais **MOD Administrator**, se solicitado.
 
 2.  No painel de navegação à esquerda, selecione **App App registrations** \> **+ New registration**.
 
-> <img src="media/image1.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image1.png)
 
 3.  Configure o seguinte:
 
-    - **Name:** Purview DSPM Item Level Scan
+    - **Name:** `Purview DSPM Item Level Scan`
 
     - **Supported account types:** Selecione **Single tenant only - Contoso**
 
 4.  Selecione **Register**.
 
-> <img src="media/image2.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image2.png)
 
 5.  Na página de visão geral do registro do aplicativo, copie e anote o **Application (client) ID**.
 
-> <img src="media/image3.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image3.png)
 
 6.  Na subnavegação à esquerda, selecione **API permissions**. Selecione **+ Add a permission**.
 
-> <img src="media/image4.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image4.png)
 
 7.  Selecione **Microsoft Graph**.
 
-> <img src="media/image5.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image5.png)
 
 8.  Selecione **Application permissions**.
 
-> <img src="media/image6.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image6.png)
 
 9.  Procure e adicione as seguintes permissões:
 
-    - Application.Read.All
+    - `Application.Read.All`
 
-    - Directory.Read.All
+    - `Directory.Read.All`
 
-    - Files.ReadWrite.All
+    - `Files.ReadWrite.All`
 
-    - SensitivityLabels.Read.All
+    - `SensitivityLabels.Read.All`
 
-    - Sites.ReadWrite.All
+    - `Sites.ReadWrite.All`
 
-    - User.Read.All
+    - `User.Read.All`
 
-    - SensitivityLabel.Read
+    - `SensitivityLabel.Read`
 
 10. Selecione **Add permissions**.
 
-> <img src="media/image7.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image7.png)
 
 11. Selecione **Grant admin consent for Contoso**.
 
-> <img src="media/image8.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image8.png)
 
 12. Selecione **Yes**  para confirmar.
 
-> <img src="media/image9.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image9.png)
 
 13. Acesse **Certificates & secrets** \> **+ New client secret** \> defina a expiração para **6 months** \> **Add**.
 
-> <img src="media/image10.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image10.png)
 
 14. Copie o **Value**.
 
-> <img src="media/image11.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image11.png)
 
 15. Salve os valores, pois eles só podem ser copiados uma vez e serão necessários na próxima tarefa.
 
 **Tarefa 2: Execute uma avaliação de risco de dados personalizada nos sites do SharePoint da Zava**
 
-1.  Abra um navegador e acesse https://purview.microsoft.com. Faça login com as credenciais **MOD Administrator,** se solicitado.
+1.  Abra um navegador e acesse `https://purview.microsoft.com`. Faça login com as credenciais **MOD Administrator,** se solicitado.
 
 2.  No painel de navegação à esquerda, selecione **Solutions** \> \*\*DSPM\*\*.
 
-> **Observação:** Não selecione **DSPM for AI (classic)** ou **Data Security Posture Management (classic)**. A nova experiência é chamada de **DSPM** e é uma entrada separada no menu **Solutions**.
->
-> <img src="media/image12.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image12.png)
+
+	> **Observação:** Não selecione **DSPM for AI (classic)** ou **Data Security Posture Management (classic)**. A nova experiência é chamada de **DSPM** e é uma entrada separada no menu **Solutions**.
 
 3.  Na página inicial do **DSPM**, se for solicitado que você conclua as tarefas de configuração inicial, selecione **Get started** e aceite qualquer configuração necessária para ativar a solução. Aguarde a conclusão da configuração antes de prosseguir.
 
 4.  Na subnavegação à esquerda, selecione **Discover**. Em **Discover**, selecione **Data risk assessments**.
 
-> <img src="media/image13.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image13.png)
 
 5.  Na notificação **Item-level scan not setup**, selecione **Setup connection**.
 
-> <img src="media/image14.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image14.png)
 
 6.  Na aba **Client Secret**, insira o **Application ID** e o valor **Client secret** copiados na tarefa 1. Em seguida, selecione **Authenticate**. Após a autenticação bem-sucedida, selecione **Save**.
 
-> <img src="media/image15.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image15.png)
 
 7.  Na página **Data risk assessments**, selecione **+ Create custom assessment**.
 
-> <img src="media/image16.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image16.png)
 
 8.  No painel **Basic details**, configure o seguinte:
 
-    - **Assessment name:** Digite Zava SharePoint Oversharing Assessment.
+    - **Assessment name:** `Digite Zava SharePoint Oversharing Assessment`.
 
-    - **Description:** Digite Custom assessment to identify potentially overshared sensitive items across Zava HR and Finance SharePoint sites.
+    - **Description:** `Digite Custom assessment to identify potentially overshared sensitive items across Zava HR and Finance SharePoint sites`.
 
 9.  Selecione **Next**.
 
-> <img src="media/image17.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image17.png)
 
 10. Na **Select scan level**, escolha **Item-level**.
 
-> <img src="media/image18.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image18.png)
 
 11. Selecione **Next** até chegar em **Add data sources to assess**. Ao lado de **SharePoint**, selecione **Scope sites**.
 
-> <img src="media/image19.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image19.png)
 
 12. No seletor de sites do SharePoint, selecione **Include** \> **From all sites**.
 
-> <img src="media/image20.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image20.png)
 
 13. Procure e selecione os dois sites a seguir:
 
-    - HR
+    - `HR`
 
-    - Operations
+    - `Operations`
 
 14. Selecione **Done** duas vezes para confirmar a seleção do site.
 
-> <img src="media/image21.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image21.png)
 >
-> <img src="media/image22.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image22.png)
 
 15. Selecione **Next**.
 
-> <img src="media/image23.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image23.png)
 
 16. Selecione **Save and Run**.
 
-> <img src="media/image24.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image24.png)
 
 17. Selecione **Done**.
 
-> <img src="media/image25.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image25.png)
 
 18. Confirme se a avaliação aparece na lista **Data risk assessments** com o status **In progress** ou **Queued**.
 
-> <img src="media/image26.png" style="width:6.26806in;height:3.54792in" />
->
-> **Observação:** A avaliação levará de 30 a 60 minutos para ser concluída, dependendo do número de itens nos sites do SharePoint selecionados. Prossiga imediatamente para o exercício 2. Você retornará para revisar os resultados no exercício 4.
+	![](./media/image26.png)
+
+	> **Observação:** A avaliação levará de 30 a 60 minutos para ser concluída, dependendo do número de itens nos sites do SharePoint selecionados. Prossiga imediatamente para o exercício 2. Você retornará para revisar os resultados no exercício 4.
 
 **Exercício 2: Gere sinais de interação do Copilot**
 
@@ -200,29 +200,35 @@ Neste exercício, Adele Vance gera eventos de interação realistas do Microsoft
 
 **Tarefa 1: Gere sinais de interação de dados de RH conforme Adele Vance**
 
-1.  Abra uma nova janela **InPrivate** ou **Incognito** do navegador. Acesse https://copilot.microsoft.com. Faça login com as credenciais de **Adele Vance** na aba **Resources**. Conclua as etapas de autenticação, se necessário.
+1.  Abra uma nova janela **InPrivate** ou **Incognito** do navegador. Acesse `https://copilot.microsoft.com`. Faça login com as credenciais de **Adele Vance** na aba **Resources**. Conclua as etapas de autenticação, se necessário.
 
 2.  Na navegação, selecione **All agents** \> **Zava HR Assistant** \> **Add**.
 
-> <img src="media/image27.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image27.png)
 
 3.  No campo de entrada, digite a seguinte mensagem:
 
-> Summarise the contents of Zava_Employee_Records.xlsx from the HR SharePoint site
->
-> <img src="media/image28.png" style="width:6.26806in;height:3.54792in" />
+	```
+	Summarise the contents of Zava_Employee_Records.xlsx from the HR SharePoint site
+	```
+
+	![](./media/image28.png)
 
 4.  Aguarde a resposta e anote o que o Copilot retorna.
 
 5.  Digite o seguinte segundo prompt:
 
-> Find all employee salary information across Zava HR documents.
+	```
+	Find all employee salary information across Zava HR documents.
+	```
 
 6.  Aguarde a resposta.
 
 7.  Digite o seguinte terceiro prompt:
 
-> What does the Zava payroll report for Q1 2025 contain?
+	```
+	What does the Zava payroll report for Q1 2025 contain?
+	```
 
 8.  Aguarde a resposta.
 
@@ -230,15 +236,15 @@ Neste exercício, Adele Vance gera eventos de interação realistas do Microsoft
 
 **Tarefa 1: Analise o painel de postura do DSPM**
 
-1.  Retorne à sessão **MOD Administrator** no portal Microsoft Purview em https://purview.microsoft.com .
+1.  Retorne à sessão **MOD Administrator** no portal Microsoft Purview em `https://purview.microsoft.com`.
 
 2.  No painel de navegação à esquerda, selecione **Solutions** \> **DSPM**.
 
-> <img src="media/image12.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image12.png)
 
 3.  Na página inicial do **DSPM**, revise o painel de controle **Posture**.
 
-> <img src="media/image29.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image29.png)
 
 4.  Analise as seguintes seções e observe seus valores atuais:
 
@@ -254,53 +260,53 @@ Neste exercício, Adele Vance gera eventos de interação realistas do Microsoft
 
 1.  Na página inicial do **DSPM**, na subnavegação à esquerda, selecione **Tasks and actions**. Em seguida, selecione **Remediation actions**.
 
-> <img src="media/image30.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image30.png)
 
 2.  Selecione **Detect risky interactions in AI apps** para expandir.
 
-> <img src="media/image31.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image31.png)
 
 3.  Selecione **Create Policy** para habilitar a política **DSPM for AI - Detect risky AI usage** do Insider Risk Management.
 
 4.  Confirme que o status da política foi atualizado para **On** ou **Active**. Feche a aba.
 
-> <img src="media/image32.png" style="width:6.26806in;height:3.54792in" />
->
-> **Observação:** Esta política de Insider Risk Management detecta prompts e respostas de risco no Microsoft 365 Copilot, agentes e outros aplicativos de IA generativa, incluindo tentativas de injeção de prompts, acesso a materiais protegidos e outros padrões de interação de alto risco. As interações de Adele Vance geradas no exercício 2 serão avaliadas por esta política.
+	![](./media/image32.png)
+
+	> **Observação:** Esta política de Insider Risk Management detecta prompts e respostas de risco no Microsoft 365 Copilot, agentes e outros aplicativos de IA generativa, incluindo tentativas de injeção de prompts, acesso a materiais protegidos e outros padrões de interação de alto risco. As interações de Adele Vance geradas no exercício 2 serão avaliadas por esta política.
 
 **Tarefa 3: Ative a política de proteção de dados confidenciais com um clique**
 
 1.  Na página **Remediation actions**, selecione **Safeguard sensitive data in Microsoft 365 Copilot interactions** para expandi-la.
 
-> <img src="media/image33.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image33.png)
 
 2.  Selecione **Get started** para ativar esta política de DLP.
 
-> <img src="media/image34.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image34.png)
 
 3.  No painel de dados, selecione **view** ao lado de **Sensitive info types**.
 
-> <img src="media/image35.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image35.png)
 
 4.  Selecione **Credit Card Number**. Em seguida, selecione **Add**.
 
-> <img src="media/image36.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image36.png)
 
 5.  Em **Add**, selecione **Restrict user prompts from being processed**. Em seguida, selecione **Create policy**.
 
-> <img src="media/image37.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image37.png)
 
 6.  Retorne à página **Remediation actions** e selecione **Safeguard sensitive data in Microsoft 365 Copilot interactions**. Em seguida, selecione **Get started**.
 
-> <img src="media/image38.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image38.png)
 
 7.  Selecione **Enforce policy** para ativar a política **Default DLP policy - Protect sensitive M365 Copilot interactions**.
 
-> <img src="media/image39.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image39.png)
 
 8.  Confirme se a política está ativa.
 
-> <img src="media/image40.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image40.png)
 
 **Exercício 4: Analise os resultados da avaliação de risco de dados e aplique as medidas corretivas.**
 
@@ -404,7 +410,7 @@ Neste exercício, Adele Vance gera eventos de interação realistas do Microsoft
 
 3.  Na página **Activity explorer**, selecione a aba **AI activities**.
 
-4.  Na barra de filtros, selecione **User**  e digite Adele Vance.
+4.  Na barra de filtros, selecione **User**  e digite `Adele Vance`.
 
 5.  Selecione **Apply**  para filtrar os resultados e mostrar apenas as interações de Adele.
 
