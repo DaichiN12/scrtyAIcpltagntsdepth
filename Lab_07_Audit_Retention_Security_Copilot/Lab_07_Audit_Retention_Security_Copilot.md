@@ -38,35 +38,43 @@ Tempo estimado: **30 minutos**
 
 **Tarefa 1: Invoque a assistente de RH da Zava como Adele Vance**
 
-1.  Abra uma nova janela **InPrivate** ou **Incognito** do navegador. Acesse https://copilot.microsoft.com. Faça login com as credenciais **Adele Vance** na aba **Resources**.
+1.  Abra uma nova janela **InPrivate** ou **Incognito** do navegador. Acesse `https://copilot.microsoft.com`. Faça login com as credenciais **Adele Vance** na aba **Resources**.
 
 2.  Na interface do Microsoft 365 Copilot Chat, pesquise e selecione **Zava HR Assistant**.
 
 3.  No campo de entrada do chat, digite o seguinte prompt:
 
-> What is Zava's policy on annual leave entitlement?
+    ```
+    What is Zava's policy on annual leave entitlement?
+    ```
 
 4.  Aguarde a resposta do assistente de RH da Zava.
 
 5.  Digite o seguinte segundo prompt:
 
-> Can you show me the employee onboarding process at Zava?
+    ```
+    Can you show me the employee onboarding process at Zava?
+    ```
 
 6.  Aguarde a resposta.
 
 7.  Digite o terceiro prompt a seguir, que faz referência a um arquivo confidencial com rótulo:
 
-> What are the details in the Zava employee records?
+    ```
+    What are the details in the Zava employee records?
+    ```
 
 8.  Aguarde a resposta e observe se a política DLP do laboratório 04 bloqueia ou permite a resposta.
 
 9.  Digite o seguinte quarto prompt:
 
-> Who are the employees listed in the sick leave report?
+    ```
+    Who are the employees listed in the sick leave report?
+    ```
 
 10. Aguarde a resposta e anote o resultado.
 
-> **Observação:** Estas quatro solicitações geram eventos de auditoria do CopilotInteraction com escopo para o assistente de RH da Zava. Os prompts três e quatro fazem referência a arquivos com o rótulo de confidencialidade **Zava-Confidential/HR-Data**, o que produzirá eventos de correspondência de DLP no registro de auditoria se a política do laboratório 04 estiver em vigor. Os registros de auditoria gerados aqui são os principais alvos de investigação no exercício 2.
+	> **Observação:** Estas quatro solicitações geram eventos de auditoria do CopilotInteraction com escopo para o assistente de RH da Zava. Os prompts três e quatro fazem referência a arquivos com o rótulo de confidencialidade **Zava-Confidential/HR-Data**, o que produzirá eventos de correspondência de DLP no registro de auditoria se a política do laboratório 04 estiver em vigor. Os registros de auditoria gerados aqui são os principais alvos de investigação no exercício 2.
 
 11. Feche a janela do navegador **InPrivate**.
 
@@ -74,11 +82,11 @@ Tempo estimado: **30 minutos**
 
 **Tarefa 1: Busque eventos de interação com o Copilot**
 
-1.  Abra uma nova janela **InPrivate** ou **Incognito** do navegador. Acesse https://purview.microsoft.com. Faça login com as credenciais de **Patti Fernandes** na aba **Resources**.
+1.  Abra uma nova janela **InPrivate** ou **Incognito** do navegador. Acesse `https://purview.microsoft.com`. Faça login com as credenciais de **Patti Fernandes** na aba **Resources**.
 
 2.  No painel de navegação à esquerda, selecione **Solutions** \> **Audit**.
 
-> <img src="media/image1.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image1.png)
 
 3.  Configure a pesquisa com os seguintes parâmetros:
 
@@ -86,13 +94,13 @@ Tempo estimado: **30 minutos**
 
     - **End date:** Selecione a data de hoje.
 
-    - **Activities – friendly names:** Digite Copilot activities e selecione **Interacted with Copilot** no menu suspenso.
+    - **Activities – friendly names:** Digite `Copilot activities` e selecione **Interacted with Copilot** no menu suspenso.
 
-    - **Users:** Digite Adele Vance e selecione a conta dela nos resultados.
+    - **Users:** Digite `Adele Vance` e selecione a conta dela nos resultados.
 
 4.  Selecione **Search**.
 
-> <img src="media/image2.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image2.png)
 
 5.  Aguarde a conclusão da tarefa de pesquisa.
 
@@ -130,7 +138,7 @@ Tempo estimado: **30 minutos**
 
 6.  Feche o painel de detalhes.
 
-> **Observação:** O texto completo dos prompts e respostas não está incluído nos registros do Purview Audit. Apenas os metadados são referências de arquivos, IDs de rótulos, IDs de threads e contexto da interação são capturados. A transcrição completa pode ser acessada no DSPM Activity Explorer, conforme abordado no laboratório 06. Isso é intencional: os registros de auditoria fornecem o rastro forense, enquanto o DSPM oferece a interface para a investigação do conteúdo.
+	> **Observação:** O texto completo dos prompts e respostas não está incluído nos registros do Purview Audit. Apenas os metadados são referências de arquivos, IDs de rótulos, IDs de threads e contexto da interação são capturados. A transcrição completa pode ser acessada no DSPM Activity Explorer, conforme abordado no laboratório 06. Isso é intencional: os registros de auditoria fornecem o rastro forense, enquanto o DSPM oferece a interface para a investigação do conteúdo.
 
 **Exercício 3: Pesquise eventos de gerenciamento de agentes do Copilot Studio**
 
@@ -178,7 +186,7 @@ Tempo estimado: **30 minutos**
 
 9.  Feche o painel de detalhes.
 
-> **Observação:** Os eventos de gerenciamento de agentes do Copilot Studio são registrados automaticamente para todos os locatários, nenhuma configuração adicional é necessária. Esses eventos fornecem o histórico de auditoria administrativa das ações do ciclo de vida do agente, incluindo quem publicou um agente, quando foi configurado pela última vez e se alguma alteração foi feita em suas fontes de conhecimento ou instruções.
+	> **Observação:** Os eventos de gerenciamento de agentes do Copilot Studio são registrados automaticamente para todos os locatários, nenhuma configuração adicional é necessária. Esses eventos fornecem o histórico de auditoria administrativa das ações do ciclo de vida do agente, incluindo quem publicou um agente, quando foi configurado pela última vez e se alguma alteração foi feita em suas fontes de conhecimento ou instruções.
 
 **Exercício 4: Pesquise eventos correspondentes ao DLP e crie uma política de retenção.**
 
@@ -218,41 +226,41 @@ Tempo estimado: **30 minutos**
 
 8.  Feche o painel de detalhes.
 
-> **Observação:** Se ainda não houver eventos de correspondência de DLP, isso indica que a política de DLP ainda está sendo propagada para o local do Copilot. Os eventos de DLP para o local do Copilot podem levar até uma hora para aparecer no registro de auditoria após a aplicação. Volte a esta pesquisa após concluir o exercício 4 se os resultados ainda não estiverem disponíveis.
+	> **Observação:** Se ainda não houver eventos de correspondência de DLP, isso indica que a política de DLP ainda está sendo propagada para o local do Copilot. Os eventos de DLP para o local do Copilot podem levar até uma hora para aparecer no registro de auditoria após a aplicação. Volte a esta pesquisa após concluir o exercício 4 se os resultados ainda não estiverem disponíveis.
 
 **Tarefa 2: Crie a política de retenção como MOD Administrator**
 
-1.  Abra uma nova aba do navegador e faça login como **MOD Administrator** em https://purview.microsoft.com. No painel de navegação à esquerda, selecione **Solutions**. Selecione **Data Lifecycle Management**.
+1.  Abra uma nova aba do navegador e faça login como **MOD Administrator** em `https://purview.microsoft.com`. No painel de navegação à esquerda, selecione **Solutions**. Selecione **Data Lifecycle Management**.
 
-> <img src="media/image3.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image3.png)
 
 2.  Na subnavegação à esquerda, selecione **Policies**. Selecione **Retention policies** \> **+ New retention policy**.
 
-> <img src="media/image4.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image4.png)
 
 3.  Na página **Name your retention policy**, digite o seguinte:
 
-    - **Name:** Zava - Retain AI Interactions 5 Year
+    - **Name:** `Zava - Retain AI Interactions 5 Year`
 
-    - **Description:** Retains all Microsoft 365 Copilot and Copilot Studio agent interaction data — including prompts and responses — for a minimum of five years to satisfy Zava financial services regulatory obligations.
+    - **Description:** `Retains all Microsoft 365 Copilot and Copilot Studio agent interaction data — including prompts and responses — for a minimum of five years to satisfy Zava financial services regulatory obligations.`
 
 4.  Selecione **Next** até que seja solicitado que você selecione o tipo.
 
-> <img src="media/image5.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image5.png)
 
 5.  Na página **Choose the type of retention policy to create**, selecione **Static**. Selecione **Next**.
 
-> <img src="media/image6.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image6.png)
 
 6.  Na página **Choose where to apply this policy**, desmarque todos os locais que estão ativados **On** por padrão. Ative **On** para **Microsoft Copilot experiences**.
 
 7.  Confirme se o escopo mostra **All users** nas entradas incluídas.
 
-> **Observação:** O local de retenção do **Microsoft 365 Copilot and Copilot Chat** abrange as solicitações e respostas dos usuários para os agentes do Microsoft 365 Copilot e do Copilot Studio. Os dados de interação são armazenados em uma pasta oculta da caixa de correio do Exchange para cada usuário, não diretamente acessível a usuários ou administradores, mas possível pesquisar por meio da eDiscovery e sujeita à política de retenção configurada aqui.
+	> **Observação:** O local de retenção do **Microsoft 365 Copilot and Copilot Chat** abrange as solicitações e respostas dos usuários para os agentes do Microsoft 365 Copilot e do Copilot Studio. Os dados de interação são armazenados em uma pasta oculta da caixa de correio do Exchange para cada usuário, não diretamente acessível a usuários ou administradores, mas possível pesquisar por meio da eDiscovery e sujeita à política de retenção configurada aqui.
 
 8.  Selecione **Next**.
 
-> <img src="media/image7.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image7.png)
 
 9.  Na página **Decide if you want to retain content, delete it, or both**, configure o seguinte:
 
@@ -264,7 +272,7 @@ Tempo estimado: **30 minutos**
 
 10. Selecione **Next**.
 
-> <img src="media/image8.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image8.png)
 
 11. Na página **Review and finish**, revise a configuração completa da política.
 
@@ -280,11 +288,11 @@ Tempo estimado: **30 minutos**
 
 13. Selecione **Submit**.
 
-> <img src="media/image9.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image9.png)
 
 14. Na página de confirmação, selecione **Done**.
 
-> <img src="media/image10.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image10.png)
 
 **Tarefa 3: Verifique a política de retenção**
 
@@ -302,11 +310,11 @@ Tempo estimado: **30 minutos**
 
     - **Retention period** é **5 years**.
 
-> <img src="media/image11.png" style="width:6.26806in;height:3.54792in" />
+	![](./media/image11.png)
 
 5.  Feche o painel de detalhes.
 
-> **Observação:** Pode levar até sete dias para que uma nova política de retenção seja distribuída a todos os locais selecionados e aplicada ao conteúdo existente. A política se aplicará a todos os dados novos e existentes de interações com o Copilot e com agentes armazenados na pasta oculta da caixa de correio do Exchange de cada usuário da Zava. Se um usuário deixar a organização, seus dados de interação continuarão sujeitos a esta política durante todo o período de retenção.
+	> **Observação:** Pode levar até sete dias para que uma nova política de retenção seja distribuída a todos os locais selecionados e aplicada ao conteúdo existente. A política se aplicará a todos os dados novos e existentes de interações com o Copilot e com agentes armazenados na pasta oculta da caixa de correio do Exchange de cada usuário da Zava. Se um usuário deixar a organização, seus dados de interação continuarão sujeitos a esta política durante todo o período de retenção.
 
 **Resumo**
 
