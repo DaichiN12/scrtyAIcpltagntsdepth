@@ -54,7 +54,7 @@ Tempo estimado: **30 minutos**
 4.  Siga as instruções na tela para configurar o aplicativo Microsoft Authenticator.
     ![](./media/image5.png)
     
-> **Observação:** No seu dispositivo móvel, abra o aplicativo Authenticator, selecione **+** no canto superior direito, selecione **Work or school account** e, em seguida, selecione **Scan a QR code**. Leia o código QR exibido na tela.
+    > **Observação:** No seu dispositivo móvel, abra o aplicativo Authenticator, selecione **+** no canto superior direito, selecione **Work or school account** e, em seguida, selecione **Scan a QR code**. Leia o código QR exibido na tela.
 
 5.  Complete todas as instruções restantes para finalizar a configuração do Autenticador.
 
@@ -416,7 +416,8 @@ Neste exercício, o MOD Administrator cria os três agentes da Zava no Microsoft
 
 10. No campo **SharePoint URL**, insira a URL do site do SharePoint de Finanças no seguinte formato: `https://\[TenantPrefix\].sharepoint.com/sites/Operations`
 
-> **Observação:** Substitua \[TenantPrefix\] pelo prefixo do seu locatário na aba **Resources**.
+    > **Observação:** Substitua \[TenantPrefix\] pelo prefixo do seu locatário na aba **Resources**.
+
     ![](./media/image78.png)
 
 11. Selecione **Add** para conectar o site do SharePoint como fonte de conhecimento.
@@ -648,7 +649,7 @@ Neste exercício, o MOD Administrator carrega os documentos comerciais de amostr
 | Zava Finance Agent    | Ativo      | Editor padrão |
 | Zava IT Support Agent | Ativo      | Editor padrão |
 
-> **Observação:** Pode levar até 10 minutos após a publicação no Copilot Studio para que os agentes apareçam no registro de agentes. Se os agentes não estiverem visíveis, aguarde 10 minutos e atualize a página.
+    > **Observação:** Pode levar até 10 minutos após a publicação no Copilot Studio para que os agentes apareçam no registro de agentes. Se os agentes não estiverem visíveis, aguarde 10 minutos e atualize a página.
 
 **Resumo**
 
