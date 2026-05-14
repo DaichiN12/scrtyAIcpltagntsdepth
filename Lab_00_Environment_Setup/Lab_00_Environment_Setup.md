@@ -8,7 +8,7 @@ Antes de iniciar qualquer configuração de segurança, o ambiente da Zava Corpo
 
 Todos os laboratórios seguintes dependem dos agentes, identidades e arquivos criados aqui. Conclua os três exercícios na ordem antes de prosseguir para o laboratório 01.
 
-**Observação:** Em um ambiente real, as responsabilidades descritas aqui seriam distribuídas entre várias funções, como desenvolvedores, administradores de TI, administradores de segurança e responsáveis pela conformidade, cada uma operando com permissões delimitadas e alinhadas aos princípios do privilégio mínimo e do Zero Trust. No entanto, devido a restrições de tempo e de ambiente, este laboratório não reproduz essa separação de funções. Todas as tarefas de instalação e configuração serão realizadas por uma única função: o MOD Administrator, que detém a função de administrador Global na Microsoft.
+**Observação:** Em um ambiente real, responsabilidades como essas seriam distribuídas entre múltiplas personas — desenvolvedores, administradores de TI, administradores de segurança e oficiais de conformidade — cada uma operando com permissões definidas alinhadas aos princípios de menor privilégio e Zero Trust. Este laboratório replica levemente essa separação ao introduzir três personas nomeadas: Patti Fernandes (Analista SOC), Adele Vance (usuário final) e Alex Wilber (referenciada apenas nos arquivos financeiros). Se essas contas não estiverem disponíveis no seu ambiente, use o ID de usuário e o passe de acesso temporário fornecidos na aba Environmet para completar todos os exercícios com uma única conta que tenha sido pré-atribuída às permissões necessárias. Nesse caso, todas as tarefas de definição, configuração e investigação serão realizadas por esse único usuário.
 
 **Objetivos**
 
@@ -33,6 +33,58 @@ Todos os laboratórios seguintes dependem dos agentes, identidades e arquivos cr
 **Duração do laboratório**
 
 Tempo estimado: **30 minutos**
+Exercício 0: Criar o site de SharePoint de RH da Zava
+1.	Abra uma nova aba do navegador e navegue até https://admin.microsoft.com. Faça login com credenciais de administrador do MOD se solicitado.
+
+2.	No painel de navegação à esquerda, expanda Admin centers e selecione SharePoint.
+   
+    ![](./media/image06.png)
+  	
+3.	No SharePoint admin center, no painel de navegação à esquerda, selecione Sites > Active sites.
+
+4.	Selecione + Create.
+   
+    ![](./media/image07.png)
+  	
+5.	No painel Create a site, selecione Team site.
+   
+    ![](./media/image08.png)
+  	
+6.	Na página Select a template, selecione Standard team. E em Preview, use o modelo 'Standard team', selecione Use template.
+
+7.	Na página Team site configuration, insira o seguinte:
+
+    - **Site name:** HR
+
+    - **Site address:** Confirme que o caminho da URL seja /sites/HR
+
+    - **Group Owner:** MOD Administrator 
+
+    - **Privacy settings:** Select Private.
+
+    - **Select a language:** English.
+
+    - Selecione **Next**, então selecione **Finish** para criar o site.
+    
+    ![](./media/image09.png)
+  	
+8.	Aguarde até que o site conclua o provisionamento. Verifique se ele aparece na lista de sites ativos com a URL https://[TenantPrefix].sharepoint.com/sites/HR.
+   
+    ![](./media/image010.png)
+  	
+Observação: Este site é a fonte de conhecimento do SharePoint para o agente Zava HR Assistant criado no Laboratório 00, Exercício 2. A conexão do agente no Copilot Studio faz referência especificamente a /sites/HR. Não utilize um slug de URL diferente.
+  	
+10.	Da mesma forma, crie o seguinte site:
+
+    - **Site name:** Operations
+
+    - **Site address:** Confirme que o caminho da URL seja /sites/Operations
+
+    - **Group Owner:** MOD Administrator
+
+    - **Privacy settings:** Select Private.
+
+    - **Select a language:** English.
 
 **Exercício 1: Configure o Entra ID e habilite autores no Copilot Studio**
 
@@ -359,26 +411,6 @@ Neste exercício, o MOD Administrator cria os três agentes da Zava no Microsoft
 19. Em seguida, selecione **Add channel**.
 
     ![](./media/image66.png)
-
-20. Selecione **Availability options**.
-
-    ![](./media/image67.png)
-
-21. Na página **Microsoft 365 Copilot and Microsoft Teams**, selecione **Show to everyone in my org**.
-
-    ![](./media/image68.png)
-
-22. Selecione **Submit to org catalog**.
-
-    ![](./media/image69.png)
-
-23. Na caixa de diálogo de confirmação **Give everyone access to this agent?**, selecione **Yes**.
-
-    ![](./media/image70.png)
-
-24. Você será redirecionado para **Show in Teams app store for org** e verá uma notificação: **Your agent is submitted and waiting for approval from your Teams admin.**
-
-    ![](./media/image71.png)
 
 **Tarefa 2: Crie o agente financeiro da Zava**
 
