@@ -11,7 +11,7 @@
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-En/Lab%2000/Lab_00_Environment_Setup.md",
         "Order": 2
       },
-    {
+      {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-En/Lab%2001/Lab_01_Agent_Discovery_and_Registry_Management.md",
         "Order": 3
       },
@@ -37,7 +37,7 @@
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-En/Lab%2007/Lab_07_Audit_Retention_Security_Copilot.md",
-        "Order":9
+        "Order": 9
       }
     ]
   },
@@ -49,7 +49,7 @@
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_00_Environment_Setup/Lab_00_Environment_Setup.md",
         "Order": 1
       },
-     {
+      {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_01_Agent_Discovery_and_Registry_Management/Lab_01_Agent_Discovery_and_Registry_Management.md",
         "Order": 2
       },
