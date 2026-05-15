@@ -1,5 +1,36 @@
 # Implement Agent 365 to observe, govern, and secure Al apps, Copilot & Agents
 
+### Overall Estimated Duration: 8 Hours
+
+## Overview
+
+In this hands-on lab, you will learn about the end-to-end security, governance, and monitoring of AI agents across a corporate environment. By assuming various personas—such as Administration, Security Operations, and End Users—you will deploy custom Copilot Studio agents, establish identity governance, apply Zero Trust conditional access policies, govern data sharing, and proactively hunt for security risks using Microsoft's suite of security and compliance tools. 
+
+## Objective
+
+The primary objective of these labs is to establish a comprehensive security and governance framework for AI agents. You will learn how to:
+- Provision and manage AI agents and their underlying Entra identities. 
+- Extend Zero Trust controls to AI agents using Custom Security Attributes and Conditional Access.
+- Protect sensitive corporate data from AI oversharing via Microsoft Purview Sensitivity Labels and Data Loss Prevention (DLP) policies.
+- Surface and investigate misconfigured or risky agents using Microsoft Defender XDR and Advanced Hunting.
+- Assess data risks and remediate oversharing using Data Security Posture Management (DSPM).
+- Fulfill compliance obligations by managing audit logs, retention policies, and analyzing events using Security Copilot.
+
+## Prerequisites
+
+- A Microsoft 365 tenant equipped with administrative access and applicable licensing for Microsoft Copilot Studio, Microsoft Entra ID, Microsoft Purview, and Microsoft Defender XDR.
+- Access to the designated lab personas: **MOD Administrator** (Setup/Admin), **Patti Fernandes** (SOC Analyst/Security Admin), and **Adele Vance** (End User).
+- **Lab 00 must be completed first**, as it sets up the foundational environment. It creates the required SharePoint sites (HR and Operations), the Entra ID security groups (`copilotagentsecurity`), and the three primary Zava Copilot Studio agents (HR Assistant, Finance Agent, and IT Support Agent) that act as the governance targets for all subsequent labs.
+
+## Explanation of Components
+
+- **Microsoft Copilot Studio:** Used to create, manage, and deploy custom AI agents.
+- **Microsoft Entra ID:** Manages identities, group memberships, and enforces Zero Trust via Conditional Access policies for AI agents.
+- **Microsoft Purview:** Provides Data Loss Prevention (DLP) policies and Sensitivity Labels to govern data sharing and prevent overexposure.
+- **Microsoft Defender XDR & Defender for Cloud Apps:** Utilized for Advanced Hunting and discovering unauthenticated or misconfigured agents.
+- **Microsoft Security Copilot:** Assists in analyzing audit events, logs, and interaction data to fulfill compliance obligations.
+- **Microsoft 365 Admin Center (Agent Registry):** Used to discover, inspect, and manage the lifecycle of custom AI agents across the tenant.
+
 ## Getting Started with the lab
 
 Welcome to your Capstone Project Workshop, Let's begin by making the most of this experience:
