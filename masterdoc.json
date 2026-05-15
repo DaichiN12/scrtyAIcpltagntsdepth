@@ -46,36 +46,44 @@
     "Language": "Portuguese",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_00_Environment_Setup/Lab_00_Environment_Setup.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/setup-guide-portuguese.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_01_Agent_Discovery_and_Registry_Management/Lab_01_Agent_Discovery_and_Registry_Management.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/getting-started-page-portuguese.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_02_Entra_Agent_Identity/Lab_02_Entra_Agent_Identity.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_00_Environment_Setup/Lab_00_Environment_Setup.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_03_Conditional_Access_Agent_Identities/Lab_03_Conditional_Access_Agent_Identities.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_01_Agent_Discovery_and_Registry_Management/Lab_01_Agent_Discovery_and_Registry_Management.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_04_Purview_Sensitivity_Labels_DLP/Lab_04_Purview_Sensitivity_Labels_DLP.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_02_Entra_Agent_Identity/Lab_02_Entra_Agent_Identity.md",
         "Order": 5
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_05_Defender_Advanced_Hunting/Lab_05_Defender_Advanced_Hunting.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_03_Conditional_Access_Agent_Identities/Lab_03_Conditional_Access_Agent_Identities.md",
         "Order": 6
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_06_DSPM_Oversharing_Assessment/Lab_06_DSPM_Oversharing_Assessment.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_04_Purview_Sensitivity_Labels_DLP/Lab_04_Purview_Sensitivity_Labels_DLP.md",
         "Order": 7
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_07_Audit_Retention_Security_Copilot/Lab_07_Audit_Retention_Security_Copilot.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_05_Defender_Advanced_Hunting/Lab_05_Defender_Advanced_Hunting.md",
         "Order": 8
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_06_DSPM_Oversharing_Assessment/Lab_06_DSPM_Oversharing_Assessment.md",
+        "Order": 9
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_07_Audit_Retention_Security_Copilot/Lab_07_Audit_Retention_Security_Copilot.md",
+        "Order": 10
       }
     ]
   }
