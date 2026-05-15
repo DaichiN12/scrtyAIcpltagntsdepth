@@ -73,19 +73,17 @@ Sinta-se à vontade para **Iniciar, Parar ou Reiniciar (2)** sua máquina virtua
 
 1. Em sua máquina virtual, clique no ícone do Portal do Azure.
 
-  ![](media/GettingStarted-07.png)
-
 2. Você verá a guia **Sign into Microsoft Azure** (Entrar no Microsoft Azure). Aqui, insira suas credenciais:
 
    - **E-mail/Nome de usuário:** <inject key="AzureAdUserEmail"></inject>
 
-     ![Digite Seu Nome de Usuário](./media/odlusr.png)
+     ![Digite Seu Nome de Usuário](./media/StLab2.png)
 
 3. Em seguida, forneça sua senha:
 
    - **Senha:** <inject key="AzureAdUserPassword"></inject>
 
-     ![Digite Sua Senha](./media/password.png)
+     ![Digite Sua Senha](./media/StLab3.png)
 
 4. Se a janela pop-up **Action required** (Ação necessária) for exibida, clique em **Ask later** (Perguntar mais tarde).
 5. Se solicitado a **permanecer conectado**, você pode clicar em **Não**.
