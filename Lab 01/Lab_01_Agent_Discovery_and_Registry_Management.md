@@ -31,11 +31,14 @@ Estimated time: **20 minutes**
 
 ### Task 1: Access the Agent 365 Overview Page
 
-1. Open a browser and navigate to `https://admin.cloud.microsoft/`. Sign in with **MOD Administrator** credentials if prompted.
+1. Open a browser and navigate to `https://admin.cloud.microsoft/`. Sign in with **ODL User** credentials if prompted.
+	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
 2. In the left navigation pane, expand **Agents**, and then select **Overview**.
 
-	![](./media/image1.png)
+	![](./media/L01-T1-S2.png)
 
 3. On the **Agent Overview** page, locate the following metrics and note their current values:
 
@@ -45,7 +48,7 @@ Estimated time: **20 minutes**
    - **Agents without owners** — agents whose owner has left the company.
    - **Agent analytics** — agents by creators, top platforms used to build agents, and active users in Copilot over time.
 
-	![](./media/image2.png)
+	![](./media/L01-T1-S3.png)
 
    > **Note:** In a freshly configured environment, active user counts and agents without owners may show zero. This is expected. The metrics will populate as agents are used throughout the course.
 
@@ -55,13 +58,13 @@ Estimated time: **20 minutes**
 
 1. In the left navigation pane, select **Agents**. Select **All agents**. Then select the **Requests** tab.
 
-	![](./media/image3.png)
+	![](./media/l01-t2-s1.png)
 
 2. In the agent list, locate **Zava IT Support Agent** and select the vertical **...** next to the name.
 
 3. From the two options, you can either **Reject submission** or **Publish to store**. For now, select **Publish to store**.
 
-	![](./media/image4.png)
+	![](./media/l01-t2-s2.png)
 
 4. On the **Publish new agent** flow, under **Select users or groups who can install the agent**, select **All users**.
 
