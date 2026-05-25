@@ -66,7 +66,7 @@
         "Order": 5
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_03_Conditional_Access_Agent_Identities/Lab_03_Conditional_Access_Agent_Identities.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_03_Conditional_Access_Agent_Identitie/Lab_03_Conditional_Access_Agent_Identitie.md",
         "Order": 6
       },
       {
@@ -74,16 +74,12 @@
         "Order": 7
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_05_Defender_Advanced_Hunting/Lab_05_Defender_Advanced_Hunting.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_06_DSPM_Oversharing_Assessment/Lab_06_DSPM_Oversharing_Assessment.md",
         "Order": 8
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_06_DSPM_Oversharing_Assessment/Lab_06_DSPM_Oversharing_Assessment.md",
-        "Order": 9
-      },
-      {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/scrtyAIcpltagntsdepth/refs/heads/SecureAIwithA365-PT/Lab_07_Audit_Retention_Security_Copilot/Lab_07_Audit_Retention_Security_Copilot.md",
-        "Order": 10
+        "Order": 9
       }
     ]
   }
