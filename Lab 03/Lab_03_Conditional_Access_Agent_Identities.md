@@ -4,9 +4,9 @@
 
 Zava's CISO has mandated that only reviewed and approved AI agents may access company resources. Any agent that has not been through the governance review process must be blocked automatically. Additionally, if any agent identity shows signs of compromise — such as anomalous token acquisition behaviour — it must be blocked immediately without manual intervention.
 
-MOD Administrator will implement both controls using Conditional Access for Agent Identities (Preview). Patti Fernandes will validate that policy evaluation is visible in sign-in logs. This lab establishes the Zava agent governance baseline that all subsequent security labs build upon.
+ODL User will implement both controls using Conditional Access for Agent Identities (Preview). Patti Fernandes will validate that policy evaluation is visible in sign-in logs. This lab establishes the Zava agent governance baseline that all subsequent security labs build upon.
 
-Conditional Access for Agent Identities is a preview capability in Microsoft Entra ID that extends Zero Trust controls to AI agents. MOD Administrator will create custom security attributes to classify the approval status of each Zava agent, build a Conditional Access policy that blocks all unapproved agent identities from accessing organisational resources, and create a second policy that blocks any agent identity exhibiting high-risk behaviour based on Entra ID Protection signals. The policies will first be validated in Report-only mode before being switched to enforcement. Patti Fernandes will investigate agent sign-in events to confirm Conditional Access policy evaluation.
+Conditional Access for Agent Identities is a preview capability in Microsoft Entra ID that extends Zero Trust controls to AI agents. ODL User will create custom security attributes to classify the approval status of each Zava agent, build a Conditional Access policy that blocks all unapproved agent identities from accessing organisational resources, and create a second policy that blocks any agent identity exhibiting high-risk behaviour based on Entra ID Protection signals. The policies will first be validated in Report-only mode before being switched to enforcement. Patti Fernandes will investigate agent sign-in events to confirm Conditional Access policy evaluation.
 
 ---
 
@@ -33,59 +33,56 @@ Estimated time: **30 minutes**
 
 ### Task 1: Assign the Attribute Definition Administrator Role
 
-1. Open a browser and navigate to `https://entra.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted. Under **Entra ID**, select **Roles & admins**.
+1. Open a browser and navigate to `https://entra.microsoft.com`. Sign in with **ODL User** credentials if prompted. Under **Entra ID**, select **Roles & admins**.
 
-	![](./media/image1.png)
+	![](./media/l03-e1-t1-s1.png)
 
 2. In the search bar, enter `Attribute Definition Administrator`.
 
-	![](./media/image2.png)
-
+	![](./media/l03-e1-t1-s2.png)
 3. Select **Attribute Definition Administrator** by selecting its name. Do not select the checkbox.
 
-	![](./media/image3.png)
+	![](./media/l03-e1-t1-s3.png)
 
 4. On the **Attribute Definition Administrator** page, select **+ Add assignments**.
 
-	![](./media/image4.png)
+	![](./media/l03-e1-t1-s4.png)
 
 5. On the **Add assignments** panel, select **No members selected**.
 
-	![](./media/image5.png)
+	![](./media/l03-e1-t1-s5.png)
+6. Search for and select **ODL User**. Choose **Select** to confirm.
 
-6. Search for and select **MOD Administrator**. Choose **Select** to confirm.
-
-	![](./media/image6.png)
+	![](./media/l03-e1-t1-s6.png)
 
 7. Select **Next**.
 
-	![](./media/image7.png)
+	![](./media/l03-e1-t1-s7.png)
 
 8. Under **Assignment type**, select **Active**.
 
-	![](./media/image8.png)
+	![](./media/l03-e1-t1-s8.png)
 
 9. In the activation panel, enter a justification — `Lab 03 custom security attribute configuration`.
 
-	![](./media/image9.png)
-
+	![](./media/l03-e1-t1-s9.png)
 10. Uncheck **Permanently assigned** and set the duration to **1 hour**. Select **Assign**.
 
-	![](./media/image10.png)
+	![](./media/l03-e1-t1-s10.png)
 
 11. Confirm the assignment appears in the list under **Active assignments**.
 
-	![](./media/image11.png)
+	![](./media/l03-e1-t1-s11.png)
 
 12. Navigate back to **Roles & admins**.
 
-13. In the search bar, enter `Attribute Assignment Administrator` and repeat the steps to assign the role to **MOD Administrator**.
+13. In the search bar, enter `Attribute Assignment Administrator` and repeat the steps to assign the role to **ODL User**.
 
-	![](./media/image12.png)
+	![](./media/l03-e1-t1-s13.png)
 
-14. Select the **MOD Administrator** account icon in the top-right corner of the page. Select **Sign out**.
+14. Select the **ODL_User** account icon in the top-right corner of the page. Select **Sign out**.
 
-15. Sign back in to `https://entra.microsoft.com` with **MOD Administrator** credentials.
+15. Sign back in to `https://entra.microsoft.com` with **ODL User** credentials.
 
     > **Note:** The Attribute Definition Administrator role grants permissions to create and manage custom security attribute definitions. This role is intentionally excluded from Global Administrator to enforce separation of duties. A fresh sign-in is required for the new role assignment to take effect.
 
@@ -95,11 +92,10 @@ Estimated time: **30 minutes**
 
 1. In the left navigation pane, expand **Entra ID** and select **Custom security attributes**.
 
-	![](./media/image13.png)
-
+	![](./media/l03-e1-t2-s1.png)
 2. On the **Custom security attributes** page, select **+ Add attribute set**.
 
-	![](./media/image14.png)
+	![](./media/l03-e1-t2-s2.png)
 
 3. On the **Add attribute set** panel, in the **Attribute set name** field, enter `AgentAttributes`.
 
@@ -109,11 +105,11 @@ Estimated time: **30 minutes**
 
 6. Select **Add** to create the attribute set.
 
-	![](./media/image15.png)
+	![](./media/l03-e1-t2-s6.png)
 
 7. Confirm that **AgentAttributes** appears in the attribute set list.
 
-	![](./media/image16.png)
+	![](./media/l03-e1-t2-s7.png)
 
 ---
 
@@ -121,11 +117,11 @@ Estimated time: **30 minutes**
 
 1. On the **Custom security attributes** page, select **AgentAttributes** to open the attribute set.
 
-	![](./media/image17.png)
+	![](./media/l03-e1-t3-s1.png)
 
 2. On the **AgentAttributes** page, select **+ Add attribute**.
 
-	![](./media/image18.png)
+	![](./media/l03-e1-t3-s2.png)
 
 3. On the **Add attribute** panel, configure the following fields:
 
@@ -137,71 +133,70 @@ Estimated time: **30 minutes**
 
 4. Under **Predefined values**, select **+ Add value**.
 
-	![](./media/image19.png)
+	![](./media/l03-e1-t3-s4.png)
 
 5. In the value field, enter `New`. Then select **Add**.
 
-	![](./media/image20.png)
+	![](./media/l03-e1-t3-s5.png)
 
 6. Select **+ Add value**.
 
-	![](./media/image21.png)
+	![](./media/l03-e1-t3-s6.png)
 
 7. In the value field, enter `In_Review`. Then select **Add**.
 
-	![](./media/image22.png)
+	![](./media/l03-e1-t3-s7.png)
 
 8. Select **+ Add value**.
 
-	![](./media/image23.png)
+	![](./media/l03-e1-t3-s8.png)
 
 9. In the value field, enter `HR_Approved`. Then select **Add**.
 
-	![](./media/image24.png)
+	![](./media/l03-e1-t3-s9.png)
 
 10. Select **+ Add value**.
 
-	![](./media/image25.png)
+	![](./media/l03-e1-t3-s10.png)
 
 11. In the value field, enter `Finance_Approved`. Then select **Add**.
 
-	![](./media/image26.png)
+	![](./media/l03-e1-t3-s11.png)
 
 12. Select **+ Add value**.
 
-	![](./media/image27.png)
+	![](./media/l03-e1-t3-s12.png)
 
 13. In the value field, enter `IT_Approved`. Then select **Add**.
 
-	![](./media/image28.png)
-
+	![](./media/l03-e1-t3-s13.png)
 14. Select **Save**.
 
-	![](./media/image29.png)
+	![](./media/l03-e1-t3-s14.png)
 
 15. Confirm that **AgentApprovalStatus** appears in the attributes list under **AgentAttributes**.
 
-	![](./media/image30.png)
+	![](./media/l03-e1-t3-s15.png)
 
 ---
 
 ### Task 4: Assign HR_Approved to the Zava HR Assistant
 
-1. In the left navigation pane, select **Agent ID**.
+1. In the left navigation pane, select **Agents**.
 
-	![](./media/image31.png)
+	![](./media/l03-e1-t4-s1.png)
 
-2. On the **All agent identities (Preview)** page, select **Zava HR Assistant (Microsoft Copilot Studio)**.
+2. On the **Agent identities** page, select **Zava HR Assistant (Microsoft Copilot Studio)**.
 
-	![](./media/image32.png)
+	![](./media/l03-e1-t4-s2.png)
 
-3. On the **Overview (Preview)** page, in the left sub-navigation, select **Custom security attributes (Preview)**.
+3. On the **Overview** page, in the left sub-navigation, select **Custom security attributes**.
 
-	![](./media/image33.png)
+	![](./media/l03-e1-t4-s3.png)
 
 4. On the **Custom security attributes** page, select **+ Add assignment**.
 
-	![](./media/image34.png)
+	![](./media/l03-e1-t4-s4.png)
 
 5. On the **Add custom security attribute assignment** panel, configure the following:
 
@@ -209,20 +204,20 @@ Estimated time: **30 minutes**
    - **Attribute:** Select **AgentApprovalStatus**.
    - **Assigned values:** Select **Add value** > **HR_Approved** and select **Save**.
 
-	![](./media/image35.png)
+		![](./media/l03-e1-t4-s5.png)
 
-	![](./media/image36.png)
+		![](./media/l03-e1-t4-s6.png)
 
 6. Select **Save** to apply the assignment.
 
-	![](./media/image37.png)
+	![](./media/l03-e1-t4-s6.1.png)
 
 7. Confirm that **AgentApprovalStatus** appears with the value **HR_Approved** on the custom security attributes page.
 
 8. Similarly assign the following attributes to respective agents.
 
    - **Zava Finance Agent (Microsoft Copilot Studio)**: HR_Approved
-   - **Zava HR Assistant (Microsoft Copilot Studio)**: HR_Approved
+   - **Zava IT Support Agent (Microsoft Copilot Studio)**: HR_Approved
 ---
 
 ## Exercise 2: Create a Conditional Access Policy to Block Unapproved Agent Identities
@@ -233,11 +228,11 @@ Estimated time: **30 minutes**
 
 2. On the **Conditional Access** page, select **Policies**.
 
-	![](./media/image38.png)
+	![](./media/l03-e2-t1-s2.png)
 
 3. On the **Policies** page, select **+ New policy**.
 
-	![](./media/image39.png)
+	![](./media/l03-e2-t1-s3.png)
 
 4. On the **New Conditional Access policy** page, in the **Name** field, enter `Zava - Block Unapproved Agent Identities`.
 
@@ -245,35 +240,35 @@ Estimated time: **30 minutes**
 
 6. On the assignments panel, under **What does this policy apply to?**, select **Agents (Preview)**.
 
-	![](./media/image40.png)
+	![](./media/l03-e2-t1-s6.png)
 
 7. Under **Include**, select **All agent identities (Preview)**.
 
-	![](./media/image41.png)
+	![](./media/l03-e2-t1-s7.png)
 
 8. Under **Exclude**, select **Select agent identities based on attributes**.
 
-	![](./media/image42.png)
+	![](./media/l03-e2-t1-s8.png)
 
 9. Set **Configure** to **Yes**.
 
-	![](./media/image43.png)
+	![](./media/l03-e2-t1-s9.png)
 
 10. In the expression configuration, under **AgentAttributes**, select the attribute **AgentApprovalStatus**. Set **Operator** to **Contains**. Set **Value** to **HR_Approved**.
 
-	![](./media/image44.png)
+	![](./media/l03-e2-t1-s10.png)
 
 11. Select **Done** to confirm the exclusion configuration.
 
-	![](./media/image45.png)
+	![](./media/l03-e2-t1-s11.png)
 
 12. Under **Target resources**, select **No target resources selected**.
 
-	![](./media/image46.png)
+	![](./media/l03-e2-t1-s12.png)
 
 13. Under **Include**, select **All resources (formerly 'All cloud apps')**.
 
-	![](./media/image47.png)
+	![](./media/l03-e2-t1-s13.png)
 
 15. Under **Access controls**, on the **Grant** panel, confirm that **Block access** is selected.
 
@@ -281,8 +276,7 @@ Estimated time: **30 minutes**
 
 17. Select **Create** to save the policy.
 
-	![](./media/image48.png)
-
+	![](./media/l03-e2-t1-s15.png)
 ---
 
 ### Task 2: Validate the Policy Using the What If Tool
@@ -291,47 +285,47 @@ Estimated time: **30 minutes**
 
    > **Note:** The What If tool allows you to simulate whether a specific identity would be affected by this policy without enforcing it.
 
-	![](./media/image49.png)
+	![](./media/l03-e2-t2-s1.png)
 
-2. On the **What If** panel, under **User or workload identity**, select **Agent identities**.
+2. On the **What If** panel, under **Select identity type**, select **Agent identities (Preview)**.
 
-	![](./media/image50.png)
+	![](./media/l03-e2-t2-s2.png)
 
 2. Select **Edit agent identity**.
 
-	![](./media/image51.png)
+	![](./media/l03-e2-t2-s3.png)
 
 3. In the agent identity search field, search for and select **Zava Finance Agent (Microsoft Copilot Studio)**.
 
-	![](./media/image52.png)
+	![](./media/l03-e2-t2-s4.png)
 
 4. Under **Target resource**, set **Select target type** to **Cloud apps**. Select **+ Select cloud app**.
 
 5. In the search field, enter `Office 365 SharePoint Online`. Select **Office 365 SharePoint Online** from the results. Choose **Select** to confirm.
 
-	![](./media/image53.png)
+	![](./media/l03-e2-t2-s6.png)
 
 6. Select **What if** to run the simulation.
 
-	![](./media/image54.png)
+	![](./media/l03-e2-t2-s7.png)
 
 7. Review the results and confirm that the policy **Zava - Block Unapproved Agent Identities** shows as **Applied** — because the Zava Finance Agent is NOT excluded by the `HR_Approved` attribute.
 
-	![](./media/image3541.png)
+	![](./media/l03-e2-t2-s8.png)
 
 8. Return to the **Edit agent identity** link and change the agent to **Zava HR Assistant**.
 
-	![](./media/image55.png)
+	![](./media/l03-e2-t2-s9.png)
 
-	![](./media/image56.png)
+	![](./media/l03-e2-t2-s9.1.png)
 
 8. Select **What if** to run the simulation.
 
-	![](./media/image57.png)
+	![](./media/l03-e2-t2-s10.png)
 
 9. Review the results and confirm that the policy **Zava - Block Unapproved Agent Identities** shows as **Not applied** — because the Zava HR Assistant is excluded by the `HR_Approved` attribute.
 
-	![](./media/image58.png)
+	![](./media/l03-e2-t2-s11.png)
 
 10. Select **Close** to exit the What If panel.
 
@@ -349,6 +343,10 @@ Estimated time: **30 minutes**
 
 4. On the **Policies** page, confirm that **Zava - Block Unapproved Agent Identities** shows a status of **On**.
 
+	![](./media/l03-e2-t3-s1.png)
+
+	>**Note:** If you receive the error “Security defaults must be disabled to enable Conditional Access policy”, click on Disable security defaults and turn off the Security Defaults option. Once disabled, proceed with enabling the Conditional Access policy.
+	![](./media/l03-e2-t3-s4.png)
 ---
 
 ## Exercise 3: Create a Conditional Access Policy to Block High-Risk Agent Identities
@@ -357,33 +355,33 @@ Estimated time: **30 minutes**
 
 1. On the **Conditional Access** page, select **+ Create new policy**.
 
-	![](./media/image59.png)
+	![](./media/l03-e3-t3-s1.png)
 
 2. In the **Name** field, enter `Zava - Block High Risk Agent Identities`.
 
 3. Under **Assignments**, select **0 users or agents (Preview) selected** under **Users or agents**.
 
-	![](./media/image60.png)
+	![](./media/l03-e3-t3-s2.png)
 
 4. Under **What does this policy apply to?**, select **Agents (Preview)**.
 
-	![](./media/image61.png)
+	![](./media/l03-e3-t3-s3.png)
 
 5. Under **Include**, select **All agent identities (Preview)**.
 
-	![](./media/image62.png)
+	![](./media/l03-e3-t3-s4.png)
 
 6. Under **Target resources**, select **No target resources selected**, then select **All resources (formerly 'All cloud apps')**.
 
-	![](./media/image63.png)
+	![](./media/l03-e3-t3-s6.png)
 
 7. Under **Conditions**, select **0 Conditions selected**. Then select **Not Configured** under **Agent Risk**.
 
-	![](./media/image64.png)
+	![](./media/l03-e3-t3-s7.png)
 
 8. On the **Agent risk** panel, set **Configure** to **Yes**. Under **Configure agent risk levels needed for policy to be enforced**, select **High**. Select **Done** to confirm the condition.
 
-	![](./media/image65.png)
+	![](./media/l03-e3-t3-s8.png)
 
 9. Under **Access controls**, under **Grant**, make sure that **Block access** is selected.
 
@@ -393,7 +391,7 @@ Estimated time: **30 minutes**
 
 11. Select **Create** to save the policy.
 
-	![](./media/image66.png)
+	![](./media/l03-e3-t3-s10.png)
 
 12. On the **Policies** page, confirm that **Zava - Block High Risk Agent Identities** appears with a status of **Report-only**.
 
@@ -407,15 +405,15 @@ Estimated time: **30 minutes**
 
 2. Navigate to `https://copilot.microsoft.com`.
 
-3. Sign in with **Patti Fernandes** credentials from the **Resources** tab. (You can use `pattif@TenantName` as your ID and the User Password from the Resources tab.)
+3. Sign in with **Patti Fernandes** credentials from the **Resources** tab. (You can use **<inject key="User 02 UPN"></inject>** as your ID and the User Password from the Resources tab.)
 
 4. In the Microsoft 365 Copilot chat interface, select **All agents** from the navigation. Search for and select **Zava HR Assistant**.
 
-	![](./media/image67.png)
+	![](./media/l03-e4-t1-s4.png)
 
 5. Then select **Add**.
 
-	![](./media/image68.png)
+	![](./media/l03-e4-t1-s5.png)
 
 6. In the chat input field, enter the following:
 
@@ -425,8 +423,7 @@ Estimated time: **30 minutes**
 
 7. Wait for the Zava HR Assistant to respond.
 
-	![](./media/image69.png)
-
+	![](./media/l03-e4-t1-s7.png)
 8. Enter a second message in the chat input field:
 
    ```
@@ -435,7 +432,7 @@ Estimated time: **30 minutes**
 
 9. Wait for the response.
 
-	![](./media/image70.png)
+	![](./media/l03-e4-t1-s8.png)
 
    > **Note:** These interactions generate agent sign-in events as the Zava HR Assistant authenticates to access its SharePoint knowledge source. These events will appear in the Entra sign-in logs and will have Conditional Access policy evaluation recorded against them.
 
@@ -445,27 +442,27 @@ Estimated time: **30 minutes**
 
 ### Task 2: Investigate Agent Sign-In Logs in Entra
 
-1. Return to the **MOD Administrator** browser session at `https://entra.microsoft.com`.
+1. Return to the **ODL User** browser session at `https://entra.microsoft.com`.
 
 2. In the left navigation pane, expand **Entra ID** and select **Monitoring & health**. Select **Sign-in logs**.
 
-	![](./media/image71.png)
+	![](./media/l03-e4-t2-s2.png)
 
 3. On the **Sign-in logs** page, select the **Service principal sign-ins** tab.
 
-	![](./media/image72.png)
+	![](./media/l03-e4-t2-s3.png)
 
 4. In the filter bar, select **+ Add filters**. Select **Is Agent** as the filter field.
 
-	![](./media/image73.png)
+	![](./media/l03-e4-t2-s4.png)
 
 5.  Select **Yes** and then select **Apply** to apply the filter.
 
-	![](./media/image74.png)
+	![](./media/l03-e4-t2-s5.png)
 
 6. Review the sign-in entries returned in the filtered view.
 
-	![](./media/image75.png)
+	![](./media/l03-e4-t2-s6.png)
 
 ---
 
