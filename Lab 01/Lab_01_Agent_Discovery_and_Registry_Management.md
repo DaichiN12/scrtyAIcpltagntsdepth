@@ -48,9 +48,9 @@ Estimated time: **20 minutes**
    - **Agents without owners** — agents whose owner has left the company.
    - **Agent analytics** — agents by creators, top platforms used to build agents, and active users in Copilot over time.
 
-	![](./media/L01-T1-S3.png)
+		![](./media/L01-T1-S3.png)
 
-   > **Note:** In a freshly configured environment, active user counts and agents without owners may show zero. This is expected. The metrics will populate as agents are used throughout the course.
+   		> **Note:** In a freshly configured environment, active user counts and agents without owners may show zero. This is expected. The metrics will populate as agents are used throughout the course.
 
 ---
 
@@ -68,53 +68,59 @@ Estimated time: **20 minutes**
 
 4. On the **Publish new agent** flow, under **Select users or groups who can install the agent**, select **All users**.
 
-	![](./media/image5.png)
+	![](./media/l01-e1-t2-s4.png)
 
 5. Under **Select users or groups who will have the agent pre-installed (optional)**, select **Specific users/groups**.
 
-	![](./media/image6.png)
+	![](./media/l01-e1-t2-s5.png)
 
 6. In the **Specific users/groups** search box, search for `Adele Vance` and select her from the dropdown.
 
-	![](./media/image7.png)
+	![](./media/l01-e1-t2-s6.png)
 
 7. Add **Patti Fernandes** as well.
 
-	![](./media/image8.png)
-
+	![](./media/l01-e1-t2-s7.png)
 8. Then select **Next**.
 
-	![](./media/image9.png)
+	![](./media/l01-e1-t2-s8.png)
 
 9. On **Apply security template**, select **Next**.
 
-	![](./media/image10.png)
+	![](./media/l01-e1-t2-s9.png)
 
 10. On **Review permissions**, select **Next**.
 
-	![](./media/image11.png)
+	![](./media/l01-e1-t2-s10.png)
 
 11. Select the **Registry** tab, search for `Zava IT Support Agent`, select it, and note the information in the details pane.
 
-	![](./media/image12.png)
+	![](./media/l01-e1-t2-s11.png)
+
+12. Select **Done** to publish the Zava IT Support Agent
+	![](./media/l01-e1-t2-s12.png)
+
 
 ---
 
 ### Task 3: Approve an Agent in Teams Admin Center
 
-1. Open a new browser tab and navigate to `https://admin.teams.microsoft.com/` and log in using the MOD Administrator credentials.
+1. Open a new browser tab and navigate to `https://admin.teams.microsoft.com/` and log in using the ODL User credentials.
+
+	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
 2. From the left navigation under **Teams apps**, select **Manage apps**.
 
-	![](./media/image13.png)
+	![](./media/l01-e1-t3-s1.png)
 
 3. In the search bar, search for `Zava` and select **Zava HR Assistant**.
 
-	![](./media/image14.png)
+	![](./media/l01-e1-t3-s3.png)
 
 4. On the **Zava HR Assistant** page, select **Publish**.
 
-	![](./media/image15.png)
+	![](./media/l01-e1-t3-s4.png)
 
 5. On the confirmation dialog, select **Publish** again.
 
@@ -124,35 +130,35 @@ Estimated time: **20 minutes**
 
 ### Task 4: Block and Unblock the Zava HR Assistant
 
-1. Navigate back to `https://admin.cloud.microsoft/`. Sign in with **MOD Administrator** credentials if prompted.
+1. Navigate back to `https://admin.cloud.microsoft/`. Sign in with **ODL User** credentials if prompted.
 
 2. On the **All agents** page, select the **Registry** tab, then search for and select **Zava HR Assistant** in the agent list.
 
-	![](./media/image17.png)
+	![](./media/l01-e1-t4-s2.png)
 
 3. On the details panel, below the agent name, select **Block**.
 
-	![](./media/image18.png)
+	![](./media/l01-e1-t4-s3.png)
 
 4. On the **Block agent** pane, review the message confirming that blocking will prevent all users in the organisation from accessing the agent. Check the box next to **Block agent**. Select **Save**.
 
-	![](./media/image19.png)
+	![](./media/l01-e1-t4-s4.png)
 
 5. Confirm that **Zava HR Assistant** now displays a **Blocked** status.
 
-	![](./media/image20.png)
+	![](./media/l01-e1-t4-s5.png)
 
 6. Below the agent name, select **Unblock**.
 
-	![](./media/image21.png)
+	![](./media/l01-e1-t4-s6.png)
 
 7. On the **Unblock agent** pane, select the **Unblock agent** checkbox. Select **Save**. Close the details panel.
 
-	![](./media/image22.png)
+	![](./media/l01-e1-t4-s7.png)
 
 8. In the agent list, confirm that **Zava HR Assistant** now displays an **Active** status.
 
-	![](./media/image23.png)
+	![](./media/l01-e1-t4-s8.png)
 
 ---
 
@@ -162,7 +168,7 @@ Estimated time: **20 minutes**
 
    > **Note:** If an **Export** button is not visible in the toolbar, select the ellipsis (**...**) menu in the toolbar to locate the export option.
 
-	![](./media/image24.png)
+	![](./media/l01-e1-t5-s1.png)
 
 2. Confirm the download in the confirmation dialog. Wait for the export file to be generated and downloaded to your lab VM.
 
@@ -174,7 +180,7 @@ Estimated time: **20 minutes**
 
 5. Confirm that the following columns are present: agent name, publisher, creator, creation date, host products, and availability status.
 
-	![](./media/image26.png)
+	![](./media/l01-e1-t5-s5.png)
 
 6. Close the CSV file.
 
@@ -184,19 +190,19 @@ Estimated time: **20 minutes**
 
 1. On the **Registry** tab, select the **Missing an owner** card.
 
-	![](./media/image27.png)
+	![](./media/l01-e1-t6-s1.png)
 
 2. Review the list of agents that are displayed after applying the ownerless filter.
 
-	![](./media/image28.png)
+	![](./media/l01-e1-t6-s2.png)
 
 3. Note whether any of the three Zava agents appear in this filtered list.
 
-   > **Note:** In a lab environment where agents were created by MOD Administrator, the agents may or may not appear as ownerless depending on how ownership is propagated from Copilot Studio. If no agents appear, this confirms that ownership was correctly assigned during creation. If agents appear, this represents a governance gap that would be addressed by reassigning ownership.
+   > **Note:** In a lab environment where agents were created by ODL User, the agents may or may not appear as ownerless depending on how ownership is propagated from Copilot Studio. If no agents appear, this confirms that ownership was correctly assigned during creation. If agents appear, this represents a governance gap that would be addressed by reassigning ownership.
 
 4. Select **Clear filter** or reset the filters to return to the full agent list.
 
-	![](./media/image29.png)
+	![](./media/l01-e1-t6-s4.png)
 
 ---
 
@@ -204,19 +210,19 @@ Estimated time: **20 minutes**
 
 ### Task 1: Verify Purview Audit Is Active
 
-1. Open a new browser tab and navigate to `https://purview.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted. Select **Get started**.
+1. Open a new browser tab and navigate to `https://purview.microsoft.com`. Sign in with **ODL User** credentials if prompted. Select **Get started**.
 
-	![](./media/image30.png)
+	![](./media/l01-e2-t1-s1.png)
 
 2. In the left navigation pane, select **Solutions**, then select **Audit**.
 
-	![](./media/image31.png)
+	![](./media/l01-e2-t1-s2.png)
 
 3. On the **Audit** page, check whether a banner appears prompting you to start recording user and admin activity.
 
    - If a banner is displayed, select **Start recording user and admin activity** to enable auditing.
 
-	![](./media/image32.png)
+		![](./media/l01-e2-t1-s3.png)
 
    - If no banner is displayed, auditing is already enabled. Proceed to the next step.
 
@@ -230,7 +236,7 @@ Estimated time: **20 minutes**
 
 5. Select **Search**.
 
-	![](./media/image33.png)
+	![](./media/l01-e2-t1-s5.png)
 
 6. Wait for the search job to complete.
 
@@ -244,7 +250,7 @@ Estimated time: **20 minutes**
 
 ### Task 1: Provision Microsoft Defender XDR
 
-1. Open a new browser tab and navigate to `https://security.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted.
+1. Open a new browser tab and navigate to `https://security.microsoft.com`. Sign in with **ODL User** credentials if prompted.
 
 2. On the **Microsoft Defender** portal welcome screen, review the provisioning message if displayed.
 
@@ -252,11 +258,11 @@ Estimated time: **20 minutes**
 
 3. Once the portal loads fully, confirm that the left navigation pane displays the following sections: **Home**, **Incidents & alerts**, **Hunting**, **Threat intelligence**, **Assets**, **Identities**, **Endpoints**, **Email & collaboration**, **Cloud Apps**, and **Settings**.
 
-	![](./media/image34.png)
+	![](./media/l01-e3-t1-s3.png)
 
 4. Select **Home** to confirm the Defender XDR home dashboard loads without errors.
 
-	![](./media/image35.png)
+	![](./media/l01-e3-t1-s4.png)
 
 ---
 
@@ -264,19 +270,19 @@ Estimated time: **20 minutes**
 
 1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, select **Settings**.
 
-	![](./media/image36.png)
+	![](./media/l01-e3-t2-s1.png)
 
 2. On the **Settings** page, select **Cloud Apps**.
 
-	![](./media/image37.png)
+	![](./media/l01-e3-t2-s2.png)
 
 3. Select **Organisation details**.
 
-	![](./media/image38.png)
+	![](./media/l01-e3-t2-s3.png)
 
 4. On the **Organisation details** page, in the **Organisation display name** field, enter `Zava Corporation`.
 
-5. In the **Environment name** field, enter `Dev One`.
+5. In the **Environment name** field, enter **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>**.
 
 6. In the **Managed domains** field, enter your tenant's primary domain in the following format:
    `[TenantPrefix].onmicrosoft.com`
@@ -285,11 +291,11 @@ Estimated time: **20 minutes**
 
 7. Select **Save**.
 
-	![](./media/image39.png)
+	![](./media/l01-e3-t2-s7.png)
 
 8. Confirm that a success notification appears confirming that the settings were saved.
 
-	![](./media/image40.png)
+	![](./media/l01-e3-t2-s8.png)
 
 ---
 
@@ -297,15 +303,15 @@ Estimated time: **20 minutes**
 
 1. In the Microsoft Defender portal, in the left navigation pane, select **Settings**.
 
-	![](./media/image36.png)
+	![](./media/l01-e3-t3-s1.png)
 
 2. On the **Settings** page, select **Cloud Apps**.
 
-	![](./media/image37.png)
+	![](./media/l01-e3-t3-s2.png)
 
 3. Under **Information Protection**, select **Files**. On the **Files** page, select the **Enable file monitoring** checkbox. Select **Save**.
 
-	![](./media/image46.png)
+	![](./media/l01-e3-t3-s3.png)
 
 5. Confirm that a success notification appears confirming that file monitoring was enabled.
 
@@ -315,15 +321,15 @@ Estimated time: **20 minutes**
 
 1. In the Microsoft Defender portal, in the left navigation pane, select **Settings**.
 
-	![](./media/image36.png)
+	![](./media/l01-e3-t4-s1.png)
 
 2. On the **Settings** page, select **Cloud Apps**.
 
-	![](./media/image37.png)
+	![](./media/l01-e3-t4-s2.png)
 
 3. Under **Connected apps**, select **App Connectors**.
 
-	![](./media/image41.png)
+	![](./media/l01-e3-t4-s3.png)
 
 4. On the **App Connectors** page, select **+ Connect an app**.
 
@@ -333,21 +339,21 @@ Estimated time: **20 minutes**
 
 7. Select **Connect Microsoft 365**.
 
-	![](./media/image42.png)
+	![](./media/l01-e3-t4-s7.png)
 
 8. Wait for the connection to complete. Then slect **Done**.
 
-	![](./media/image43.png)
+	![](./media/l01-e3-t4-s8.png)
 
 9. On the **App Connectors** page, confirm that **Microsoft 365** appears in the connectors list with a status of **Connected**.
 
 10. On the **App Connectors** page, select the checkbox next to **Microsoft 365** and from the top options select **Connect Microsoft Azure Instance**.
 
-	![](./media/image44.png)
+	![](./media/l01-e3-t4-s10.png)
 
 11. Select **Connect Microsoft Azure**. Wait for the connection to complete.
 
-	![](./media/image45.png)
+	![](./media/l01-e3-t4-s11.png)
 
     > **Note:** After connecting, Defender for Cloud Apps begins scanning Microsoft 365 activity. Initial data from the past week will appear in the portal. The first full scan may take several hours depending on tenant size. This connector is required for activity monitoring, DLP policy enforcement, and alert generation in Day 2 and Day 3 labs.
 

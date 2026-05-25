@@ -6,7 +6,7 @@ Zava's information security team has identified that the Zava Finance Agent and 
 
 Zava Corporation handles sensitive employee records, financial data, and vendor contracts across SharePoint sites that are now connected to AI agents. Without sensitivity labels and Data Loss Prevention policies, these agents can surface protected content to any user who asks — regardless of their access rights or data handling obligations.
 
-In this lab, MOD Administrator will enable sensitivity label support for SharePoint and OneDrive, build Zava's label taxonomy using a label group and child labels, configure auto-labelling for financial data, publish labels to users, and create a DLP policy that prevents Microsoft 365 Copilot from processing labelled content. Adele Vance will test whether Copilot is blocked from surfacing labelled content. Patti Fernandes will verify the audit trail.
+In this lab, ODL User will enable sensitivity label support for SharePoint and OneDrive, build Zava's label taxonomy using a label group and child labels, configure auto-labelling for financial data, publish labels to users, and create a DLP policy that prevents Microsoft 365 Copilot from processing labelled content. Adele Vance will test whether Copilot is blocked from surfacing labelled content. Patti Fernandes will verify the audit trail.
 
 ---
 
@@ -33,21 +33,21 @@ Estimated time: **30 minutes**
 
 ### Task 1: Enable Co-Authoring for Files with Sensitivity Labels
 
-1. Open a browser and navigate to `https://purview.microsoft.com`. Sign in with **MOD Administrator** credentials if prompted. In the left navigation pane, select **Settings**.
+1. Open a browser and navigate to `https://purview.microsoft.com`. Sign in with **ODL User** credentials if prompted. In the left navigation pane, select **Settings**.
 
 2. Under **Settings**, select **Information Protection**.
 
-	![](./media/image1.png)
+	![](./media/l04-e1-t1-s2.png)
 
 3. On the **Information Protection settings** page, select the **Co-authoring for files with sensitivity labels** tab.
 
 4. Select the checkbox for **Turn on co-authoring for files with sensitivity labels**.
 
-	![](./media/image2.png)
+	![](./media/l04-e1-t1-s4.png)
 
 5. Select **Apply** at the bottom of the page.
 
-	![](./media/image3.png)
+	![](./media/l04-e1-t1-s5.png)
 
    > **Note:** Enabling co-authoring also activates sensitivity label support for files stored in SharePoint and OneDrive. This is a prerequisite for applying labels to SharePoint-hosted files and for Defender for Cloud Apps to scan files for label metadata. Without this setting, the Sensitivity button will not appear in Office for the web.
 
@@ -59,25 +59,25 @@ Estimated time: **30 minutes**
 
 1. In the left navigation pane of the Microsoft Purview portal, select **Solutions**. Select **Information Protection**.
 
-	![](./media/image4.png)
+	![](./media/l04-e2-t1-s1.png)
 
 2. In the left sub-navigation, select **Sensitivity labels**.
 
-	![](./media/image5.png)
+	![](./media/l04-e2-t1-s2.png)
 
 3. If asked, select **Get started** for migrating to the new label scheme.
 
-	![](./media/image6.png)
+	![](./media/l04-e2-t1-s3.png)
 
 4. Select **Migrate** on the fly-out pane and then **Confirm migration**.
 
-	![](./media/image7.png)
+	![](./media/l04-e2-t1-s4.png)
 
-	![](./media/image8.png)
+	![](./media/l04-e2-t1-s5.png)
 
 5. On the **Sensitivity labels** page, select **+ Create** and then select **Label group**.
 
-	![](./media/image9.png)
+	![](./media/l04-e2-t1-s6.png)
 
 6. On the **New label group** configuration page, on the **Provide basic details for this label group** step, enter the following:
 
@@ -88,19 +88,19 @@ Estimated time: **30 minutes**
 
 7. Select **Next**.
 
-	![](./media/image10.png)
+	![](./media/l04-e2-t1-s7.png)
 
 8. On the **Review your settings and finish** page, select **Create label group**.
 
-	![](./media/image11.png)
+	![](./media/l04-e2-t1-s8.png)
 
 9. On the **Your label group was created** page, select **Done**.
 
-	![](./media/image12.png)
+	![](./media/l04-e2-t1-s9.png)
 
 10. Confirm that **Zava-Confidential** appears in the label list.
 
-	![](./media/image13.png)
+	![](./media/l04-e2-t1-s10.png)
 
 ---
 
@@ -108,7 +108,7 @@ Estimated time: **30 minutes**
 
 1. On the **Sensitivity labels** page, locate the **Zava-Confidential** label group. Select the vertical ellipsis (**…**) next to **Zava-Confidential**. Select **+ Create label in group** from the dropdown menu.
 
-	![](./media/image14.png)
+	![](./media/l04-e2-t2-s1.png)
 
 2. On the **Provide basic details for this label** page, enter the following:
 
@@ -119,63 +119,62 @@ Estimated time: **30 minutes**
 
 3. Select **Next**.
 
-	![](./media/image15.png)
+	![](./media/l04-e2-t2-s2.png)
 
 4. On the **Define the scope for this label** page, select **Files** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
 
-	![](./media/image16.png)
+	![](./media/l04-e2-t2-s3.png)
 
 5. On the **Choose protection settings for labeled items** page, select **Apply content marking**. Select **Next**.
 
-	![](./media/image17.png)
+	![](./media/l04-e2-t2-s5.png)
 
 6. On the **Content marking** page, set the **Content marking** toggle to **On**.
 
-	![](./media/image18.png)
+	![](./media/l04-e2-t2-s6.png)
 
 7. Select the checkbox for **Add a header**. Select the edit icon below to **Add a header**.
 
-	![](./media/image19.png)
+	![](./media/l04-e2-t2-s7.png)
 
 9. In the **Header text** field, enter `ZAVA CONFIDENTIAL — HR DATA`. Select **Save**.
 
-	![](./media/image20.png)
+	![](./media/l04-e2-t2-s8.png)
 
 10. Select the checkbox for **Add a footer**. Select the edit icon below to **Add a footer**.
 
-	![](./media/image21.png)
+	![](./media/l04-e2-t2-s9.png)
 
 11. In the **Footer text** field, enter `Restricted — Zava HR use only`. Select **Save**.
 
-	![](./media/image22.png)
+	![](./media/l04-e2-t2-s10.png)
 
 12. Select **Next**.
 
-	![](./media/image23.png)
+	![](./media/l04-e2-t2-s11.png)
 
 13. On the **Auto-labeling for files and emails** page, select **Next**.
 
-	![](./media/image24.png)
+	![](./media/l04-e2-t2-s12.png)
 
 14. On the **Define protection settings for groups and sites** page, select **Next**.
 
-	![](./media/image25.png)
+	![](./media/l04-e2-t2-s13.png)
 
 15. On the **Review your settings and finish** page, select **Create label**.
 
-	![](./media/image26.png)
+	![](./media/l04-e2-t2-s14.png)
 
 16. On the **Your sensitivity label was created** page, select **Don't create a policy yet**. Select **Done**.
 
-	![](./media/image27.png)
-
+	![](./media/l04-e2-t2-s15.png)
 ---
 
 ### Task 3: Create the Financial Data Child Label with Auto-Labelling
 
 1. On the **Sensitivity labels** page, locate the **Zava-Confidential** label group. Select the vertical ellipsis (**…**) next to **Zava-Confidential**. Select **+ Create label in group** from the dropdown menu.
 
-	![](./media/image28.png)
+	![](./media/l04-e2-t3-s1.png)
 
 2. On the **Provide basic details for this label** page, enter the following:
 
@@ -186,41 +185,41 @@ Estimated time: **30 minutes**
 
 3. Select **Next**.
 
-	![](./media/image29.png)
+	![](./media/l04-e2-t3-s2.png)
 
 4. On the **Define the scope for this label** page, select **Files** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
 
-	![](./media/image30.png)
+	![](./media/l04-e2-t3-s4.png)
 
 5. On the **Choose protection settings for labeled items** page, select **Apply content marking**. Select **Next**.
 
-	![](./media/image31.png)
+	![](./media/l04-e2-t3-s5.png)
 
 6. On the **Content marking** page, set the **Content marking** toggle to **On**.
 
 7. Select the checkbox for **Add a footer**. Select the edit icon next to **Add a footer**.
 
-	![](./media/image32.png)
+	![](./media/l04-e2-t3-s7.png)
 
 8. In the **Footer text** field, enter `Restricted — Zava Finance use only`. Select **Save**.
 
-	![](./media/image33.png)
+	![](./media/l04-e2-t3-s8.png)
 
 9. Select **Next**.
 
-	![](./media/image34.png)
+	![](./media/l04-e2-t3-s9.png)
 
 10. On the **Auto-labeling for files and emails** page, set the **Auto-labeling for files and emails** toggle to **On**.
 
-	![](./media/image35.png)
+	![](./media/l04-e2-t3-s10.png)
 
 11. Under **Detect content that matches these conditions**, select **+ Add condition**. Select **Content contains**.
 
-	![](./media/image36.png)
+	![](./media/l04-e2-t3-s11.png)
 
 12. In the **Content contains** section, select **Add**. Select **Sensitive info types**.
 
-	![](./media/image37.png)
+	![](./media/l04-e2-t3-s12.png)
 
 13. On the **Sensitive info types** flyout panel, search for and select the following sensitive info types:
 
@@ -230,27 +229,27 @@ Estimated time: **30 minutes**
 
 14. Select **Add** to confirm the selection.
 
-	![](./media/image38.png)
+	![](./media/l04-e2-t3-s14.png)
 
 15. Select **Next**.
 
-	![](./media/image39.png)
+	![](./media/l04-e2-t3-s15.png)
 
 16. On the **Define protection settings for groups and sites** page, select **Next**.
 
-	![](./media/image40.png)
+	![](./media/l04-e2-t3-s16.png)
 
 17. On the **Review your settings and finish** page, select **Create label**.
 
-	![](./media/image41.png)
+	![](./media/l04-e2-t3-s17.png)
 
 18. On the **Your sensitivity label was created** page, select **Automatically apply label to sensitive content**. Select **Done**.
 
-	![](./media/image42.png)
+	![](./media/l04-e2-t3-s18.png)
 
 19. On the **Create auto-labeling policy** flyout page, select **Review policy**.
 
-	![](./media/image43.png)
+	![](./media/l04-e2-t3-s19.png)
 
 ---
 
@@ -258,15 +257,15 @@ Estimated time: **30 minutes**
 
 1. On the **Name your auto-labeling policy** page, confirm the default name reflects the Financial-Data label, then select **Next**.
 
-	![](./media/image44.png)
+	![](./media/l04-e2-t4-s1.png)
 
 2. On the **Choose a label to auto-apply** page, confirm that **Zava-Confidential/Financial-Data** is selected, then select **Next**.
 
-	![](./media/image45.png)
+	![](./media/l04-e2-t4-s2.png)
 
 3. On the **Assign admin units** page, select **Next**.
 
-	![](./media/image46.png)
+	![](./media/l04-e2-t4-s3.png)
 
 4. On the **Choose locations where you want to apply the label** page, select the following locations:
 
@@ -276,21 +275,21 @@ Estimated time: **30 minutes**
 
 5. Select **Next**.
 
-	![](./media/image47.png)
+	![](./media/l04-e2-t4-s5.png)
 
 6. On the **Set up common or advanced rules** page, leave **Common rules** selected, then select **Next**.
 
-	![](./media/image48.png)
+	![](./media/l04-e2-t4-s6.png)
 
 7. On the **Define rules for content in all locations** page, expand the **Financial-Data rule** to confirm that Credit Card Number, ABA Routing Number, and SWIFT Code are listed as conditions.
 
 8. Select **Next**.
 
-	![](./media/image49.png)
+	![](./media/l04-e2-t4-s8.png)
 
 9. On the **Additional label settings** page, select **Next**.
 
-	![](./media/image50.png)
+	![](./media/l04-e2-t4-s9.png)
 
 10. On the **Decide if you want to test out the policy now or later** page, select **Run policy in simulation mode**.
 
@@ -298,15 +297,15 @@ Estimated time: **30 minutes**
 
 12. Select **Next**.
 
-	![](./media/image51.png)
+	![](./media/l04-e2-t4-s12.png)
 
 13. On the **Review and finish** page, select **Create policy**.
 
-	![](./media/image52.png)
+	![](./media/l04-e2-t4-s13.png)
 
 14. On the **Your auto-labeling policy was created** page, select **Done**.
 
-	![](./media/image53.png)
+	![](./media/l04-e2-t4-s14.png)
 
     > **Note:** The auto-labeling policy will scan existing content in SharePoint, OneDrive, and Exchange in simulation mode. The `Zava_Expense_Report_Alex.xlsx`, `Zava_Payroll_Q1_2025.xlsx`, and `Zava_Invoice_Log.xlsx` files uploaded in Lab 00 contain credit card numbers and IBAN values and will be matched by this policy. After 7 days in simulation without modification, the policy will turn on automatically and begin applying the Financial-Data label to matched files.
 
@@ -318,11 +317,11 @@ Estimated time: **30 minutes**
 
 1. On the **Sensitivity labels** page, select **Publish labels**.
 
-	![](./media/image54.png)
+	![](./media/l04-e3-t1-s1.png)
 
 2. On the **Choose sensitivity labels to publish** page, select **Choose sensitivity labels to publish**.
 
-	![](./media/image55.png)
+	![](./media/l04-e3-t1-s2.png)
 
 3. On the **Sensitivity labels to publish** flyout panel, select the checkboxes for both of the following labels:
 
@@ -331,11 +330,10 @@ Estimated time: **30 minutes**
 
 4. Select **Add** at the bottom of the flyout panel.
 
-	![](./media/image56.png)
-
+	![](./media/l04-e3-t1-s4.png)
 5. Back on the **Choose sensitivity labels to publish** page, select **Next**.
 
-	![](./media/image57.png)
+	![](./media/l04-e3-t1-s5.png)
 
 6. Then select **Next** until you reach the naming page.
 
@@ -346,17 +344,17 @@ Estimated time: **30 minutes**
 
 8. Select **Next**.
 
-	![](./media/image58.png)
+	![](./media/l04-e3-t1-s8.png)
 
 9. On the **Review and finish** page, select **Submit**.
 
-	![](./media/image59.png)
+	![](./media/l04-e3-t1-s9.png)
 
 10. On the **New policy created** page, select **Done**.
 
-	![](./media/image60.png)
+	![](./media/l04-e3-t1-s10.png)
 
-    > **Note:** Label policy propagation can take up to 24 hours before the Sensitivity button appears in Office for the web for all users. In this lab, MOD Administrator will apply labels directly via the SharePoint document library sensitivity column in the next exercise, which does not depend on the Office app Sensitivity button.
+    > **Note:** Label policy propagation can take up to 24 hours before the Sensitivity button appears in Office for the web for all users. In this lab, ODL User will apply labels directly via the SharePoint document library sensitivity column in the next exercise, which does not depend on the Office app Sensitivity button.
 
 ---
 
@@ -364,21 +362,17 @@ Estimated time: **30 minutes**
 
 ### Task 1: Apply Sensitivity Labels via SharePoint Document Library
 
-1. Open a new browser tab and navigate to `https://[TenantName].sharepoint.com/sites/HR`.
+1. Open a new browser tab and navigate to **https://[TenantName].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**.
 
    > **Note:** Replace `[TenantName]` with your tenant prefix from the **Resources** tab.
 
-2. In the top navigation pane, select **HR** > **Benefits@Contoso**.
-
-	![](./media/image61.png)
-
 3. Select **Documents** from the left navigation, and locate **Zava_Employee_Records.xlsx**. Select the checkbox to the left of **Zava_Employee_Records.xlsx** to select it.
 
-	![](./media/image62.png)
+	![](./media/l04-e4-t1-s2.png)
 
 4. In the toolbar above the document library, select **⋯** (More options) or the **Details** pane icon.
 
-	![](./media/image63.png)
+	![](./media/l04-e4-t1-s3.png)
 
 5. On the **Details** pane or right-click context menu, select the **Sensitivity** field and then select **Zava-Confidential/HR-Data** from the dropdown list.
 
@@ -400,23 +394,23 @@ Estimated time: **30 minutes**
 
 1. Return to the Microsoft Purview portal at `https://purview.microsoft.com`. In the left navigation pane, select **Solutions**. Select **Data Loss Prevention**.
 
-	![](./media/image65.png)
+	![](./media/l04-e5-t1-s1.png)
 
 2. In the left sub-navigation, select **Policies**.
 
-	![](./media/image66.png)
+	![](./media/l04-e5-t1-s2.png)
 
 3. On the **Policies** page, select **+ Create policy**.
 
-	![](./media/image67.png)
+	![](./media/l04-e5-t1-s3.png)
 
 4. For the **What info do you want to protect?** pane, select **Enterprise applications and devices**.
 
-	![](./media/image68.png)
+	![](./media/l04-e5-t1-s4.png)
 
 5. On the **Start with a template or create a custom policy** page, select **Custom** under **Categories**. Select **Custom policy** under **Regulations**. Select **Next**.
 
-	![](./media/image69.png)
+	![](./media/l04-e5-t1-s5.png)
 
 6. On the **Name your DLP policy** page, enter the following:
 
@@ -425,17 +419,17 @@ Estimated time: **30 minutes**
 
 7. Select **Next**.
 
-	![](./media/image70.png)
+	![](./media/l04-e5-t1-s7.png)
 
 8. On the **Assign admin units** page, select **Next**.
 
-	![](./media/image71.png)
+	![](./media/l04-e5-t1-s8.png)
 
 9. On the **Choose locations to apply the policy** page, deselect all locations that are toggled on by default.
 
 10. Locate **Microsoft 365 Copilot and Copilot Chat** in the locations list. Toggle **Microsoft 365 Copilot and Copilot Chat** to **On**.
 
-	![](./media/image72.png)
+	![](./media/l04-e5-t1-s10.png)
 
 11. Confirm that all other locations remain toggled **Off**.
 
@@ -443,15 +437,15 @@ Estimated time: **30 minutes**
 
     > **Note:** The Microsoft 365 Copilot and Copilot Chat location applies DLP policy controls to interactions in Microsoft 365 Copilot Chat and Copilot-powered experiences. It does not apply to Copilot Studio custom agents accessed directly. The test in Exercise 6 will use M365 Copilot Chat at copilot.microsoft.com, not the Zava HR Assistant directly, to validate enforcement.
 
-	![](./media/image73.png)
+	![](./media/l04-e5-t1-s12.png)
 
 13. On the **Define policy settings** page, select **Create or customize advanced DLP rules**. Select **Next**.
 
-	![](./media/image74.png)
+	![](./media/l04-e5-t1-s13.png)
 
 14. On the **Customize advanced DLP rules** page, select **+ Create rule**.
 
-	![](./media/image75.png)
+	![](./media/l04-e5-t1-s14.png)
 
 15. On the **Create rule** panel, in the **Name** field, enter `Block Copilot access to HR-labelled content`.
 
@@ -459,47 +453,46 @@ Estimated time: **30 minutes**
 
 17. Under **Conditions**, select **+ Add condition**. Select **Content contains**.
 
-	![](./media/image76.png)
+	![](./media/l04-e5-t1-s17.png)
 
 18. In the **Content contains** section, select **Add**. Select **Sensitivity labels**.
 
-	<!--![](./media/image77.png)-->
+	![](./media/l04-e5-t1-s19.png)
 
 19. On the **Sensitivity labels** flyout panel, search for and select **Zava-Confidential/HR-Data**. Select **Add** to confirm.
 
-	<!--![](./media/image78.png)-->
+	![](./media/l04-e5-t1-s18.png)
 
 20. Under **Actions**, select **+ Add an action**. Select **Restrict Copilot from processing contents**.
 
-	<!--![](./media/image79.png)-->
+	![](./media/l04-e5-t1-s20.png)
 
 21. Under **Restrict Copilot from processing contents**, select the checkbox next to **Accessing knowledge sources**.
 
 22. Select **Save** to save the rule.
 
-	<!--![](./media/image80.png)-->
+	![](./media/l04-e5-t1-s22.png)
 
 23. Confirm that **Block Copilot access to HR-labelled content** appears in the rules list on the **Customize advanced DLP rules** page. Select **Next**.
 
-	<!--![](./media/image81.png)-->
-
+	![](./media/l04-e5-t1-s23.png)
 24. On the **Policy mode** page, select **Turn the policy on immediately**. Select **Next**.
 
-	![](./media/image82.png)-->
+	![](./media/l04-e5-t1-s24.png)
 
 25. On the **Review and finish** page, review the policy configuration and select **Submit**.
 
-	<!--![](./media/image83.png)-->
+	![](./media/l04-e5-t1-s25.png)
 
 26. On the **New policy created** page, select **Done**.
 
-	<!--![](./media/image84.png)-->
+	![](./media/l04-e5-t1-s26.png)
 
 27. On the **Policies** page, confirm that **Zava - Block HR Data in M365 Copilot** appears in the list with a status of **On**.
 
-	<!--![](./media/image85.png)-->
+	![](./media/l04-e5-t1-s27.png)
 
-   > **Note:** DLP policy propagation to the Microsoft 365 Copilot location can take up to four hours. If the test in Exercise 6 does not produce a block immediately, this is expected. Proceed with the test, note the response, and if enforcement is not yet active, return to this test after completing Lab 05 or at the end of the day. The audit log event will confirm when enforcement first triggers.
+   	> **Note:** DLP policy propagation to the Microsoft 365 Copilot location can take up to four hours. If the test in Exercise 6 does not produce a block immediately, this is expected. Proceed with the test, note the response, and if enforcement is not yet active, return to this test after completing Lab 05 or at the end of the day. The audit log event will confirm when enforcement first triggers.
 
 ---
 
@@ -547,6 +540,8 @@ Estimated time: **30 minutes**
 2. Navigate to `https://purview.microsoft.com`.
 
 3. Sign in with **Patti Fernandes** credentials from the **Resources** tab.
+	- **Email:** <inject key="User 02 UPN"></inject>
+	- **Password:** <inject key="User's Password"></inject>
 
 4. In the left navigation pane, select **Solutions**.
 

@@ -19,7 +19,7 @@ The primary objective of these labs is to establish a comprehensive security and
 ## Prerequisites
 
 - A Microsoft 365 tenant equipped with administrative access and applicable licensing for Microsoft Copilot Studio, Microsoft Entra ID, Microsoft Purview, and Microsoft Defender XDR.
-- Access to the designated lab personas: **MOD Administrator** (Setup/Admin), **Patti Fernandes** (SOC Analyst/Security Admin), and **Adele Vance** (End User).
+- Access to the designated lab personas: **ODL User** (Setup/Admin), **Patti Fernandes** (SOC Analyst/Security Admin), and **Adele Vance** (End User).
 - **Lab 00 must be completed first**, as it sets up the foundational environment. It creates the required SharePoint sites (HR and Operations), the Entra ID security groups (`copilotagentsecurity`), and the three primary Zava Copilot Studio agents (HR Assistant, Finance Agent, and IT Support Agent) that act as the governance targets for all subsequent labs.
 
 ## Explanation of Components
@@ -55,13 +55,12 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![Explore Lab Resources](./media/envtab.png)
-
+![Explore Lab Resources](./media/gs1.1.png)
 ## Utilizing the Split Window Feature
 
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-![Use the Split Window Feature](./media/splittt.png)
+![Use the Split Window Feature](./media/gs1.2.png)
 
 ## Managing Your Virtual Machine
 
@@ -73,7 +72,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 1. On your virtual machine, click on the Azure Portal icon.
 
-  ![](media/GettingStarted-07.png)
+    ![](media/GettingStarted-07.png)
 
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
 

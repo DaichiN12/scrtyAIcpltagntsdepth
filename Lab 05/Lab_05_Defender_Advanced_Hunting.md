@@ -4,7 +4,7 @@
 
 Microsoft Defender for Cloud Apps provides a dedicated AI agent inventory that discovers all Copilot Studio custom agents in the tenant and exposes them for security investigation. Combined with the Advanced Hunting `AIAgentsInfo` table in Microsoft Defender XDR, the security team can query agent configurations, detect misconfigurations, identify governance gaps, and proactively hunt for risky agent behaviour — all without leaving the Defender portal.
 
-In this lab, MOD Administrator will enable Defender preview features, activate the Copilot Studio AI agent inventory, and connect it to Power Platform. Patti Fernandes will then explore the AI agent inventory, investigate Zava agent configurations, and run Advanced Hunting KQL queries to identify potential security risks across the Zava agent estate.
+In this lab, ODL User will enable Defender preview features, activate the Copilot Studio AI agent inventory, and connect it to Power Platform. Patti Fernandes will then explore the AI agent inventory, investigate Zava agent configurations, and run Advanced Hunting KQL queries to identify potential security risks across the Zava agent estate.
 
 ---
 
@@ -40,19 +40,29 @@ Estimated time: **60 minutes**
 
 1. Open a browser and navigate to `https://security.microsoft.com`.
 
-2. Sign in with **MOD Administrator** credentials if prompted.
+2. Sign in with **ODL User** credentials if prompted.
 
-3. In the left navigation pane, select **System** > **Settings**.
+3. In the left navigation pane, select **System(1)** > **Settings(2)**.
 
-4. On the **Settings** page, select **Microsoft Defender XDR**.
+4. On the **Settings** page, select **Microsoft Defender XDR(3)**.
+
+   ![](./media/l05-e1-t1-s4.png)
 
 5. In the left sub-navigation, select **Preview features**.
 
+   ![](./media/l05-e1-t1-s5.png)
+
 6. On the **Preview features** page, set the **Preview features** toggle to **On**.
+
+   ![](./media/l05-e1-t1-s6.png)
 
 7. Select **Save preferences**.
 
+   ![](./media/l05-e1-t1-s7.png)
+
 8. Confirm that a success notification appears.
+
+   ![](./media/l05-e1-t1-s8.png)
 
 <!--
 ---
@@ -81,15 +91,26 @@ Estimated time: **60 minutes**
 
 1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, select **Settings** under **System**.
 
-2. On the **Settings** page, select **Cloud Apps**.
+   ![](./media/l05-e2-t1-s1.png)
+
+2. On the **Settings** page, select **Security for AI**.
+
+   ![](./media/l05-e2-t1-s2.png)
 
 3. In the left sub-navigation, under **System**, select **Copilot Studio AI Agents**.
 
-4. On the **Copilot Studio AI Agents** page, set the **Copilot Studio AI Agents** toggle to **On**.
+4. Click Connect to begin the integration setup.
 
-5. Read the disclaimer that appears and select **I agree** or **Turn on** to confirm.
+   ![](./media/l05-e2-t1-s4.png)
 
-6. Note the **AI Agents Inventory** status indicator — it will initially show as pending or disconnected.
+5. In the Copilot Studio real-time protection pane, verify that Real-time protection is enabled and review the generated Power Platform Integration URL.
+
+   ![](./media/l05-e2-t1-s5.png)
+
+6. Enter the required App ID in the App ID field and click Save to complete the Copilot Studio real-time protection configuration.
+
+   ![](./media/l05-e2-t1-s6.png)
+   ![](./media/l05-e2-t1-s7.png)
 
    > **Note:** Enabling this setting initiates the connection between Defender for Cloud Apps and Copilot Studio. The second step in Power Platform Admin Center must be completed before the green Connected status appears.
 
@@ -99,7 +120,9 @@ Estimated time: **60 minutes**
 
 1. Open a new browser tab and navigate to `https://admin.powerplatform.microsoft.com`.
 
-2. Sign in with **MOD Administrator** credentials if prompted.
+2. Sign in with **ODL User** credentials if prompted.
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
 3. In the left navigation pane, select **Security**.
 
@@ -113,11 +136,13 @@ Estimated time: **60 minutes**
 
 8. Select **Save** to apply the setting.
 
+   ![](./media/l05-e2-t2-s4.png)
+
 ---
 
 ### Task 3: Confirm Connected Status in the Defender Portal
 
-1. Return to the **MOD Administrator** browser session at `https://security.microsoft.com`.
+1. Return to the **ODL User** browser session at `https://security.microsoft.com`.
 
 2. In the left navigation pane, select **Settings**.
 
@@ -210,6 +235,8 @@ Estimated time: **60 minutes**
 2. Navigate to `https://security.microsoft.com`.
 
 3. Sign in with **Patti Fernandes** credentials from the **Resources** tab.
+   - **Email:** <inject key="User 02 UPN"></inject>
+   - **Password:** <inject key="User's Password"></inject>
 
 4. In the left navigation pane, select **Investigation & response**.
 
