@@ -373,49 +373,31 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-3. If the current environment is not **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>**, select the environment switcher and select **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** from the dropdown list.
+1. If Copilot Studio does not load or does not show the option to select an **Environment** as in the screenshot below, follow these steps:
 
-   > **Important:** If Copilot Studio does not load or does not show the option to select an **Environment** as in the screenshot below, follow these steps.
-   >
-   > Open `https://admin.powerplatform.microsoft.com/`. Select **Manage** > **Environments** > **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** and copy the value of the **Environment ID**.
-   >
-   > Navigate back to the Copilot Studio tab and open `https://copilotstudio.microsoft.com/environments/<EnvironmentID>` (replacing `<EnvironmentID>` with the value copied above).
+	- Open `https://admin.powerplatform.microsoft.com/`. Select **Manage** > **Environments** > **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** and copy the value of the **Environment ID**.
+   
+   - Navigate back to the Copilot Studio tab and open `https://copilotstudio.microsoft.com/environments/<EnvironmentID>` (replacing `<EnvironmentID>` with the value copied above).
 
-	![](./media/L00-E2-T1-S3.png)
+		![](./media/L00-E2-T1-S3.png)
 
-2. On the **Welcome** screen, locate the environment switcher in the top-right corner of the page.
+2. On the **Welcome** screen, click on **Get Started**.
 
-4. In the left navigation pane, select **Agents**.
+4. In the left navigation pane, select **Agents**. On the **Create an agent** page, select **Create blank agent**.
 
-	![](./media/L00-E2-T1-S4.png)
+7. In the **Name** field, enter `Zava HR Assistant` and click on **Create**.
 
-5. On the **Create an agent** page, select **Create blank agent**.
+1. Click on **Edit**.
 
-	![](./media/L00-E2-T1-S5.png)
+8. In the **Description** field, enter `An AI assistant that helps Zava employees find HR policies, benefits information, and employee procedures.` Select **Save**.
 
-6. On the agent configuration page, select **Edit** under **Details**.
-
-	![](./media/L00-E2-T1-S6.png)
-
-7. In the **Name** field, enter `Zava HR Assistant`.
-
-8. In the **Description** field, enter `An AI assistant that helps Zava employees find HR policies, benefits information, and employee procedures.`
-
-9. Select **Save**.
-
-	![](./media/L00-E2-T1-S9.png)
-
-10. In the **Instructions** field, select **Edit** and enter the following, then select **Save**.
+10. Scroll downn to the **Instructions** field, select **Edit** and enter the following, then select **Save**.
 
     ```
     You are the Zava HR Assistant. Answer questions using only the information available in the Zava HR SharePoint knowledge base. Do not speculate or provide information outside the knowledge base. Always respond professionally.
     ```
-	![](./media/L00-E2-T1-S10.png)
-	![](./media/L00-E2-T1-S10.1.png)
 
 12. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
-
-	![](./media/L00-E2-T1-S11.png)
 
 13. On the **Add knowledge** panel, select **SharePoint**.
 
