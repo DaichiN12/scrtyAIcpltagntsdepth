@@ -418,49 +418,47 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
     > **Note:** Replace `[TenantPrefix]` with your tenant prefix found on the **Environment** tab of your lab environment.
 
-	![](./media/L00-E2-T1-S14.png)
+	   ![](./media/pp26.png)
 
-15. Select **Add to agent** to connect the SharePoint site as the knowledge source.
+       ![](./media/pp27.png)
 
-	![](./media/image63.png)
+16. Select **Add to agent** to connect the SharePoint site as the knowledge source.
 
-16. In the top-right corner of the agent configuration page, select **Publish**.
+17. In the top-right corner of the agent configuration page, select **Publish**.
 
-	![](./media/L00-E2-T1-S15.png)
-
-17. In the confirmation dialog, select **Publish** to confirm.
+18. In the confirmation dialog, select **Publish** to confirm.
 
 	![](./media/image65.png)
 
-18. On the agent configuration page, locate the **Channels** tab on the top section (select **+2** if it is not directly visible).
+19. On the agent configuration page, locate the **Channels** tab on the top section (select **+2** if it is not directly visible).
 
-	![](./media/L00-E2-T1-S17.png)
+	   ![](./media/pp30.png)
 
-19. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
+20. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
 
-	![](./media/L00-E2-T1-S18.png)
+	   ![](./media/pp31.png)
 
-20. Then select **Add channel**.
+21. Then select **Add channel**.
 
 	![](./media/L00-E2-T1-S19.png)
 
-21. Select **Availability options**.
+22. Select **Availability options**.
 
 	![](./media/L00-E2-T1-S20.png)
 
-22. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
+23. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
 
 	![](./media/L00-E2-T1-S21.png)
 
-23. Select **Submit to org catalog**.
+24. Select **Submit to org catalog**.
 
 	![](./media/L00-E2-T1-S22.png)
 
-24. On the **Give everyone access to this agent?** confirmation dialog, select **Yes**.
+25. On the **Give everyone access to this agent?** confirmation dialog, select **Yes**.
 
 	![](./media/L00-E2-T1-S23.png)
 
-25. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**.
+26. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**. Click on **Close**.
 
 	![](./media/L00-E2-T1-S24.png)
 
