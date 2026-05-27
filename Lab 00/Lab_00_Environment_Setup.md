@@ -240,7 +240,13 @@ Estimated time: **30 minutes**
 
 2. In the left navigation pane, select **Manage (1) > Environments (2)**. Click on **+New (3)**.
 
-1. On the New Environment pop-up, 
+1. On the New Environment pop-up, provide the name as **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>**.
+
+1. Scroll down and enable the **Add a dataverse store?** and click on **Next**.
+
+1. On the Add Dataverse page, click on +Select under Security Group and select the **copilotagentsecurity** group from the results. Then select **Done**.
+
+1. Select **Save** to apply the setting.
 
 3. Under **Manage**, select **Tenant Settings**. On the **Tenant Settings** page, locate and select **Copilot Studio Authors** from the list.
 
@@ -274,7 +280,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T6-S3.png)
 
-4. On the **Entra Agent Identity for Copilot Studio** panel, select the **Dev One** environment from the environment list. Select **Edit setting**.
+4. On the **Entra Agent Identity for Copilot Studio** panel, select the **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** environment from the environment list. Select **Edit setting**.
 
 	![](./media/L00-E1-T6-S4.png)
 
@@ -305,9 +311,7 @@ Estimated time: **30 minutes**
 
 	![](./media/image45.png)
 
-3. In the top-right corner, confirm that the **Dev One** environment is selected in the environment switcher. If not, select the environment switcher and select **Dev One**.
-
-	![](./media/L00-E1-T7-S3.png)
+3. In the top-right corner, confirm that the **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** environment is selected in the environment switcher. If not, select the environment switcher and select **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>**.
 
 4. In the left navigation bar, expand **More** and select **Connections**.
 
