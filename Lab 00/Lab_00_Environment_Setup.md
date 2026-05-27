@@ -238,9 +238,9 @@ Estimated time: **30 minutes**
 
 1. Open a new browser tab and navigate to `https://admin.powerplatform.microsoft.com`.
 
-2. In the left navigation pane, select **Manage**.
+2. In the left navigation pane, select **Manage (1) > Environments (2)**. Click on **+New (3)**.
 
-	![](./media/L00-E1-T5-S1.png)
+1. On the New Environment pop-up, 
 
 3. Under **Manage**, select **Tenant Settings**. On the **Tenant Settings** page, locate and select **Copilot Studio Authors** from the list.
 
