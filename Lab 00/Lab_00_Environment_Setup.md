@@ -40,7 +40,7 @@ Estimated time: **30 minutes**
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-2. In the left navigation pane, expand **Admin centers** and select **SharePoint**.
+2. In the left navigation pane, click on **Show All**, select **SharePoint** under **Admin centers**.
 
 	![](./media/L00-E0-S2.png)
 
@@ -54,32 +54,36 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E0-S5.png)
 
-6. On the **Select a template** page, select **Standard team**. Then on **Preview and use 'Standard team' template**, select **Use template**.
+6. On the **Select a template** page, select **Standard team**.
 
-6. On the **Team site** configuration page, enter the following:
+7. On the **Preview and use 'Standard team' template** page, select **Use template**.
+
+6. On the **Team site** configuration page, enter the following and click on **Next**:
 
    - **Site name:** **HR<inject key="Deployment ID" enableCopy="false"></inject>**
    - **Site address:** Confirm the URL path reads **/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**
-   - **Group Owner:** ODL_User
+   - **Group Owner:** ODL_User <inject key="Deployment ID" enableCopy="false"></inject>
 
 		![](./media/L00-E0-S7.png)
+
+1. Add the following details and click on **Create site**:
 
    - **Privacy settings:** Select **Private - only members can access this site**.
    - **Select a language:** English.
 
-7. Select **Next**, then select **Finish** to create the site.
+		![](./media/L00-E0-S8.png)
 
-	![](./media/L00-E0-S8.png)
+1. On the **Add site owners and members** page, click on **Finish**.
 
 8. Wait for the site to finish provisioning. Confirm it appears in the **Active sites** list with the URL **https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**.
 
    > **Note:** This site is the SharePoint knowledge source for the Zava HR Assistant agent created in Lab 00 Exercise 2. The agent connection in Copilot Studio references **/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** specifically. Do not use a different URL slug.
 
-9. Similarly create the following site.
+9. Follow the same steps from step-3 to step 8 and create the following site:
 
    - **Site name:** **Operations<inject key="Deployment ID" enableCopy="false"></inject>**
    - **Site address:** Confirm the URL path reads **/sites/Operations<inject key="Deployment ID" enableCopy="false"></inject>**
-   - **Group Owner:** ODL_User
+   - **Group Owner:** ODL_User <inject key="Deployment ID" enableCopy="false"></inject>
    - **Privacy settings:** Select **Private**.
    - **Select a language:** English.
 
@@ -93,7 +97,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T1-S1.png)
 
-2. On the sign-in page, enter the **ODL User** credentials from the **Environment** tab of your lab environment.
+2. On the sign-in page, enter the **ODL User** credentials from the **Environment** tab of your lab environment if prompted:
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	![](./media/L00-E1-T1-S2.png)
 
@@ -104,19 +108,20 @@ Estimated time: **30 minutes**
 
 	![](./media/image4.png)
 
-4. Follow the on-screen prompts to set up the Microsoft Authenticator app.
+	- Follow the on-screen prompts to set up the Microsoft Authenticator app.
 
-   > **Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then select **Scan a QR code**. Scan the QR code displayed on screen.
 
-	![](./media/image5.png)
+   		> **Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then select **Scan a QR code**. Scan the QR code displayed on screen.
 
-5. Complete all remaining prompts to finish the Authenticator setup.
+		![](./media/image5.png)
 
-	![](./media/image6.png)
+	- Complete all remaining prompts to finish the Authenticator setup.
 
-6. If asked **Stay signed in?**, select **Yes**.
+		![](./media/image6.png)
 
-7. On the Microsoft Entra admin center welcome screen, select **Get Started**.
+	- If asked **Stay signed in?**, select **Yes**.
+
+	- On the Microsoft Entra admin center welcome screen, select **Get Started**.
 
 ---
 
@@ -142,7 +147,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T2-S4.png)
 
-5. On the **Add owners** panel, search for and select **ODL_USER**. Choose **Select** to confirm the owner.
+5. On the **Add owners** panel, search for and select **ODL_USER <inject key="Deployment ID" enableCopy="false"></inject>**. Choose **Select** to confirm the owner.
 
 	![](./media/L00-E1-T2-S5.png)
 
@@ -150,7 +155,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T2-S6.png)
 
-7. On the **Add members** panel, search for and select **ODL User** and **Patti Fernandes**. Choose **Select** to confirm the members.
+7. On the **Add members** panel, search for and select **ODL User <inject key="Deployment ID" enableCopy="false"></inject>** and **Patti Fernandes**. Choose **Select** to confirm the members.
 
 	![](./media/L00-E1-T2-S7.png)
 
@@ -195,7 +200,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T3-S4.png)
 
-6. On the **Security defaults** panel, under **Security defaults**, select **Enabled**. Select **Save**.
+6. On the **Security defaults** panel, under **Security defaults**, select **Enabled** if not already enabled. Select **Save**.
 
 	![](./media/L00-E1-T3-S5.png)
 
@@ -215,33 +220,21 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T4-S2.png)
 
-3. In the search results, select **Privileged Role Administrator** by selecting its name. Do not select the checkbox next to it.
-
+3. In the search results, select **Privileged Role Administrator** by selecting its name.
+   
 	![](./media/L00-E1-T4-S3.png)
 
-4. On the **Privileged Role Administrator** page, select **+ Add assignments**.
+5. On the **Privileged Role Administrator** page, select **+ Add assignments**.
 
-	![](./media/L00-E1-T4-S4.png)
+	![](./media/pp1.png)
 
-5. On the **Add assignments** panel, select **No members selected**.
-
-	![](./media/L00-E1-T4-S5.png)
-
-6. On the **Select members** panel, search for and select **copilotagentsecurity**. Choose **select** to confirm.
+7. On the **Select members** panel, search for and select **copilotagentsecurity**. Choose **Add** to confirm.
 
 	![](./media/L00-E1-T4-S6.png)
 
-7. Select **Next**.
+11. Confirm that the role assignment appears in the assignments list.
 
-8. On the **Settings** step, under **Assignment type**, select **Active**. In the **Enter justification** field, enter `Successful lab completion`.
-
-9. Select **Assign**.
-
-	![](./media/L00-E1-T4-S9.png)
-
-10. Confirm that the role assignment appears in the assignments list.
-
-	![](./media/L00-E1-T4-S10.png)
+	![](./media/pp2.png)
 
 ---
 
@@ -249,9 +242,29 @@ Estimated time: **30 minutes**
 
 1. Open a new browser tab and navigate to `https://admin.powerplatform.microsoft.com`.
 
-2. In the left navigation pane, select **Manage**.
+2. In the left navigation pane, select **Manage (1) > Environments (2)**. Click on **+New (3)**.
 
-	![](./media/L00-E1-T5-S1.png)
+	![](./media/pp10.png)
+
+1. On the New Environment pop-up, provide the name as **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>**.
+
+	![](./media/pp4.png)
+
+1. Scroll down and enable the **Add a dataverse store? (1)** and click on **Next (2)**.
+
+	![](./media/pp5.png)
+
+1. On the **Add Dataverse** page, click on **+Select** under Security Group.
+
+	![](./media/pp6.png)
+
+1. Select the **copilotagentsecurity (1)** group from the results. Then select **Done (2)**.
+
+	![](./media/pp7.png)
+
+1. Select **Save** to apply the setting.
+
+	![](./media/pp8.png)
 
 3. Under **Manage**, select **Tenant Settings**. On the **Tenant Settings** page, locate and select **Copilot Studio Authors** from the list.
 
@@ -273,7 +286,7 @@ Estimated time: **30 minutes**
 
 ### Task 6: Enable Entra Agent Identity for Copilot Studio
 
-1. Remain in the Power Platform Admin Center at `https://admin.powerplatform.microsoft.com`. In the left navigation pane, select **Copilot**.
+1. In the left navigation pane, select **Copilot**.
 
 	![](./media/L00-E1-T6-S1.png)
 
@@ -285,23 +298,23 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T6-S3.png)
 
-4. On the **Entra Agent Identity for Copilot Studio** panel, select the **Dev One** environment from the environment list. Select **Edit setting**.
+4. On the **Entra Agent Identity for Copilot Studio** panel, select the **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** environment from the environment list. Select **Edit setting**.
 
 	![](./media/L00-E1-T6-S4.png)
 
-5. On the setting panel of Entra Agent Identity for Copilot Studio, select **On**.
+5. On the setting panel of Entra Agent Identity for Copilot Studio, select **On** if not done.
 
 	![](./media/L00-E1-T6-S5.png)
 
-6. Select **Save**.
+	- Select **Save**.
 
-	![](./media/L00-E1-T6-S6.png)
+		![](./media/L00-E1-T6-S6.png)
 
-7. After saving, close the panel.
+	- After saving, close the panel.
 
-	![](./media/L00-E1-T6-S7.png)
+		![](./media/L00-E1-T6-S7.png)
 
-   > **Note:** Enabling Entra Agent Identity allows Copilot Studio agents to be automatically assigned a unique identity in Microsoft Entra ID. This is required for identity governance, Conditional Access, and Defender for Cloud Apps integration in later labs.
+   		> **Note:** Enabling Entra Agent Identity allows Copilot Studio agents to be automatically assigned a unique identity in Microsoft Entra ID. This is required for identity governance, Conditional Access, and Defender for Cloud Apps integration in later labs.
 
 ---
 
@@ -316,34 +329,35 @@ Estimated time: **30 minutes**
 
 	![](./media/image45.png)
 
-3. In the top-right corner, confirm that the **Dev One** environment is selected in the environment switcher. If not, select the environment switcher and select **Dev One**.
+3. In the top-right corner, confirm that the **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** environment is selected in the environment switcher. If not, select the environment switcher and select **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>**.
 
-	![](./media/L00-E1-T7-S3.png)
+	![](./media/pp11.png)
 
-4. In the left navigation bar, expand **More** and select **Connections**.
+4. In the left navigation bar, expand **More (1)** and select **Connections (2)**.
 
-	![](./media/L00-E1-T7-S4.png)
+	![](./media/pp12.png)
 
 5. On the **Connections** page, select **+ New connection**.
 
-	![](./media/L00-E1-T7-S5.png)
+	![](./media/pp13.png)
 
 6. In the connector search bar, enter `SharePoint`. Select **SharePoint** from the list of available connectors.
 
-	![](./media/L00-E1-T7-S6.png)
+	![](./media/pp14.png)
 
 7. On the **SharePoint** connection panel, select **Connect directly (cloud services)**. Select **Create**.
 
-8. When prompted, sign in with **ODL_User** credentials to authorise the connection and select **Allow access**.
+8. When prompted, sign in with **ODL_User** credentials to authorise the connection.
+   
 	![](./media/L00-E1-T7-S7.png)
 
-	![](./media/L00-E1-T7-S7.1.png)
-9. Confirm that the SharePoint connection appears in the **Connections** list with a status of **Connected**.
+9. On the Confirmation required pop-up, check the box for **I have verified this request and trust this source (1)** and select **Allow access (2)**.
 
-	![](./media/L00-E1-T7-S9.png)
+	![](./media/pp3.png)
 
+11. Confirm that the SharePoint connection appears in the **Connections** list with a status of **Connected**.
 
-
+	![](./media/pp15.png)
 ---
 
 ## Exercise 2: Create the Zava Copilot Studio Agents
@@ -359,49 +373,41 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-2. On the **Welcome** screen, locate the environment switcher in the top-right corner of the page.
+1. If Copilot Studio does not load or does not show the option to select an **Environment** as in the screenshot below, follow these steps:
 
-3. If the current environment is not **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>**, select the environment switcher and select **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** from the dropdown list.
+	- Open `https://admin.powerplatform.microsoft.com/`. Select **Manage** > **Environments** > **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** and copy the value of the **Environment ID**.
+   
+   - Navigate back to the Copilot Studio tab and open `https://copilotstudio.microsoft.com/environments/<EnvironmentID>` (replacing `<EnvironmentID>` with the value copied above).
 
-   > **Important:** If Copilot Studio does not load or does not show the option to select an **Environment** as in the screenshot below, follow these steps.
-   >
-   > Open `https://admin.powerplatform.microsoft.com/`. Select **Manage** > **Environments** > **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** and copy the value of the **Environment ID**.
-   >
-   > Navigate back to the Copilot Studio tab and open `https://copilotstudio.microsoft.com/environments/<EnvironmentID>` (replacing `<EnvironmentID>` with the value copied above).
+		![](./media/pp20.png)
 
-	![](./media/L00-E2-T1-S3.png)
+2. On the **Welcome** screen, click on **Get Started**.
 
-4. In the left navigation pane, select **Agents**.
+	 ![](./media/pp21.png)
 
-	![](./media/L00-E2-T1-S4.png)
+4. In the left navigation pane, select **Agents**. On the **Create an agent** page, select **Create blank agent**.
 
-5. On the **Create an agent** page, select **Create blank agent**.
+	 ![](./media/pp22.png)
 
-	![](./media/L00-E2-T1-S5.png)
+7. In the **Name** field, enter `Zava HR Assistant` and click on **Create**.
 
-6. On the agent configuration page, select **Edit** under **Details**.
+	 ![](./media/pp23.png)
 
-	![](./media/L00-E2-T1-S6.png)
+1. Click on **Edit**.
 
-7. In the **Name** field, enter `Zava HR Assistant`.
+	 ![](./media/pp24.png)
 
-8. In the **Description** field, enter `An AI assistant that helps Zava employees find HR policies, benefits information, and employee procedures.`
+8. In the **Description** field, enter `An AI assistant that helps Zava employees find HR policies, benefits information, and employee procedures.` Select **Save**.
 
-9. Select **Save**.
+	 ![](./media/pp25.png)
 
-	![](./media/L00-E2-T1-S9.png)
-
-10. In the **Instructions** field, select **Edit** and enter the following, then select **Save**.
+10. Scroll downn to the **Instructions** field, select **Edit** and enter the following, then select **Save**.
 
     ```
     You are the Zava HR Assistant. Answer questions using only the information available in the Zava HR SharePoint knowledge base. Do not speculate or provide information outside the knowledge base. Always respond professionally.
     ```
-	![](./media/L00-E2-T1-S10.png)
-	![](./media/L00-E2-T1-S10.1.png)
 
 12. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
-
-	![](./media/L00-E2-T1-S11.png)
 
 13. On the **Add knowledge** panel, select **SharePoint**.
 
@@ -412,49 +418,47 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
     > **Note:** Replace `[TenantPrefix]` with your tenant prefix found on the **Environment** tab of your lab environment.
 
-	![](./media/L00-E2-T1-S14.png)
+	   ![](./media/pp26.png)
 
-15. Select **Add to agent** to connect the SharePoint site as the knowledge source.
+       ![](./media/pp27.png)
 
-	![](./media/image63.png)
+16. Select **Add to agent** to connect the SharePoint site as the knowledge source.
 
-16. In the top-right corner of the agent configuration page, select **Publish**.
+17. In the top-right corner of the agent configuration page, select **Publish**.
 
-	![](./media/L00-E2-T1-S15.png)
-
-17. In the confirmation dialog, select **Publish** to confirm.
+18. In the confirmation dialog, select **Publish** to confirm.
 
 	![](./media/image65.png)
 
-18. On the agent configuration page, locate the **Channels** tab on the top section (select **+2** if it is not directly visible).
+19. On the agent configuration page, locate the **Channels** tab on the top section (select **+2** if it is not directly visible).
 
-	![](./media/L00-E2-T1-S17.png)
+	   ![](./media/pp30.png)
 
-19. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
+20. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
 
-	![](./media/L00-E2-T1-S18.png)
+	   ![](./media/pp31.png)
 
-20. Then select **Add channel**.
+21. Then select **Add channel**.
 
 	![](./media/L00-E2-T1-S19.png)
 
-21. Select **Availability options**.
+22. Select **Availability options**.
 
 	![](./media/L00-E2-T1-S20.png)
 
-22. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
+23. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
 
 	![](./media/L00-E2-T1-S21.png)
 
-23. Select **Submit to org catalog**.
+24. Select **Submit to org catalog**.
 
 	![](./media/L00-E2-T1-S22.png)
 
-24. On the **Give everyone access to this agent?** confirmation dialog, select **Yes**.
+25. On the **Give everyone access to this agent?** confirmation dialog, select **Yes**.
 
 	![](./media/L00-E2-T1-S23.png)
 
-25. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**.
+26. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**. Click on **Close**.
 
 	![](./media/L00-E2-T1-S24.png)
 
