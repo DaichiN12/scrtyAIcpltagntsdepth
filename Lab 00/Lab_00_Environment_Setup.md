@@ -226,11 +226,15 @@ Estimated time: **30 minutes**
 
 5. On the **Privileged Role Administrator** page, select **+ Add assignments**.
 
+	![](./media/pp1.png)
+
 7. On the **Select members** panel, search for and select **copilotagentsecurity**. Choose **Add** to confirm.
 
 	![](./media/L00-E1-T4-S6.png)
 
 11. Confirm that the role assignment appears in the assignments list.
+
+	![](./media/pp2.png)
 
 ---
 
@@ -240,13 +244,27 @@ Estimated time: **30 minutes**
 
 2. In the left navigation pane, select **Manage (1) > Environments (2)**. Click on **+New (3)**.
 
+	![](./media/pp10.png)
+
 1. On the New Environment pop-up, provide the name as **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>**.
 
-1. Scroll down and enable the **Add a dataverse store?** and click on **Next**.
+	![](./media/pp4.png)
 
-1. On the Add Dataverse page, click on +Select under Security Group and select the **copilotagentsecurity** group from the results. Then select **Done**.
+1. Scroll down and enable the **Add a dataverse store? (1)** and click on **Next (2)**.
+
+	![](./media/pp5.png)
+
+1. On the **Add Dataverse** page, click on **+Select** under Security Group.
+
+	![](./media/pp6.png)
+
+1. Select the **copilotagentsecurity (1)** group from the results. Then select **Done (2)**.
+
+	![](./media/pp7.png)
 
 1. Select **Save** to apply the setting.
+
+	![](./media/pp8.png)
 
 3. Under **Manage**, select **Tenant Settings**. On the **Tenant Settings** page, locate and select **Copilot Studio Authors** from the list.
 
@@ -313,17 +331,19 @@ Estimated time: **30 minutes**
 
 3. In the top-right corner, confirm that the **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** environment is selected in the environment switcher. If not, select the environment switcher and select **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>**.
 
-4. In the left navigation bar, expand **More** and select **Connections**.
+	![](./media/pp11.png)
 
-	![](./media/L00-E1-T7-S4.png)
+4. In the left navigation bar, expand **More (1)** and select **Connections (2)**.
+
+	![](./media/pp12.png)
 
 5. On the **Connections** page, select **+ New connection**.
 
-	![](./media/L00-E1-T7-S5.png)
+	![](./media/pp13.png)
 
 6. In the connector search bar, enter `SharePoint`. Select **SharePoint** from the list of available connectors.
 
-	![](./media/L00-E1-T7-S6.png)
+	![](./media/pp14.png)
 
 7. On the **SharePoint** connection panel, select **Connect directly (cloud services)**. Select **Create**.
 
@@ -331,11 +351,13 @@ Estimated time: **30 minutes**
    
 	![](./media/L00-E1-T7-S7.png)
 
-9. On the Confirmation required pop-up, check the box for **I have verified this request and trust this source** and select **Allow access**.
+9. On the Confirmation required pop-up, check the box for **I have verified this request and trust this source (1)** and select **Allow access (2)**.
+
+	![](./media/pp3.png)
 
 11. Confirm that the SharePoint connection appears in the **Connections** list with a status of **Connected**.
 
-	![](./media/L00-E1-T7-S9.png)
+	![](./media/pp15.png)
 ---
 
 ## Exercise 2: Create the Zava Copilot Studio Agents
