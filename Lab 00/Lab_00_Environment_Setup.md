@@ -379,17 +379,27 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
    
    - Navigate back to the Copilot Studio tab and open `https://copilotstudio.microsoft.com/environments/<EnvironmentID>` (replacing `<EnvironmentID>` with the value copied above).
 
-		![](./media/L00-E2-T1-S3.png)
+		![](./media/pp20.png)
 
 2. On the **Welcome** screen, click on **Get Started**.
 
+	 ![](./media/pp21.png)
+
 4. In the left navigation pane, select **Agents**. On the **Create an agent** page, select **Create blank agent**.
+
+	 ![](./media/pp22.png)
 
 7. In the **Name** field, enter `Zava HR Assistant` and click on **Create**.
 
+	 ![](./media/pp23.png)
+
 1. Click on **Edit**.
 
+	 ![](./media/pp24.png)
+
 8. In the **Description** field, enter `An AI assistant that helps Zava employees find HR policies, benefits information, and employee procedures.` Select **Save**.
+
+	 ![](./media/pp25.png)
 
 10. Scroll downn to the **Instructions** field, select **Edit** and enter the following, then select **Save**.
 
