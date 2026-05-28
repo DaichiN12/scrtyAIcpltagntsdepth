@@ -38,8 +38,6 @@ Estimated time: **20 minutes**
 
 2. In the left navigation pane, expand **Agents**, and then select **Overview**.
 
-	![](./media/L01-T1-S2.png)
-
 3. On the **Agent Overview** page, locate the following metrics and note their current values:
 
    - **Agent Registry** — total count of agents in the tenant.
@@ -50,7 +48,7 @@ Estimated time: **20 minutes**
 
 		![](./media/L01-T1-S3.png)
 
-   		> **Note:** In a freshly configured environment, active user counts and agents without owners may show zero. This is expected. The metrics will populate as agents are used throughout the course.
+      >**Note:** In a freshly configured environment, active user counts and agents without owners may show zero. This is expected. The metrics will populate as agents are used throughout the course.
 
 ---
 
@@ -81,23 +79,25 @@ Estimated time: **20 minutes**
 7. Add **Patti Fernandes** as well.
 
 	![](./media/l01-e1-t2-s7.png)
-8. Then select **Next**.
+
+9. Then, select **Next**.
 
 	![](./media/l01-e1-t2-s8.png)
 
-9. On **Apply security template**, select **Next**.
+10. On **Apply template**, select **Next**.
 
 	![](./media/l01-e1-t2-s9.png)
 
-10. On **Review permissions**, select **Next**.
+11. On **Review permissions**, select **Next**.
 
 	![](./media/l01-e1-t2-s10.png)
 
-11. Select the **Registry** tab, search for `Zava IT Support Agent`, select it, and note the information in the details pane.
+12. Click on **Publish** to publish the Zava IT Support Agent.
 
 	![](./media/l01-e1-t2-s11.png)
 
-12. Select **Done** to publish the Zava IT Support Agent
+13. Select **Done**.
+    
 	![](./media/l01-e1-t2-s12.png)
 
 
@@ -110,21 +110,9 @@ Estimated time: **20 minutes**
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-2. From the left navigation under **Teams apps**, select **Manage apps**.
+2. From the left navigation under **Teams apps**, select **Manage apps (1)**. In the search bar, search for `Zava` and select **Zava HR Assistant (2)**.
 
-	![](./media/l01-e1-t3-s1.png)
-
-3. In the search bar, search for `Zava` and select **Zava HR Assistant**.
-
-	![](./media/l01-e1-t3-s3.png)
-
-4. On the **Zava HR Assistant** page, select **Publish**.
-
-	![](./media/l01-e1-t3-s4.png)
-
-5. On the confirmation dialog, select **Publish** again.
-
-	![](./media/image16.png)
+4. Verify if **Zava HR Assistant** is published.
 
 ---
 
@@ -134,15 +122,9 @@ Estimated time: **20 minutes**
 
 2. On the **All agents** page, select the **Registry** tab, then search for and select **Zava HR Assistant** in the agent list.
 
-	![](./media/l01-e1-t4-s2.png)
-
-3. On the details panel, below the agent name, select **Block**.
-
-	![](./media/l01-e1-t4-s3.png)
+3. On the details panel,select **Block**.
 
 4. On the **Block agent** pane, review the message confirming that blocking will prevent all users in the organisation from accessing the agent. Check the box next to **Block agent**. Select **Save**.
-
-	![](./media/l01-e1-t4-s4.png)
 
 5. Confirm that **Zava HR Assistant** now displays a **Blocked** status.
 
@@ -154,12 +136,9 @@ Estimated time: **20 minutes**
 
 7. On the **Unblock agent** pane, select the **Unblock agent** checkbox. Select **Save**. Close the details panel.
 
-	![](./media/l01-e1-t4-s7.png)
+8. In the agent list, confirm that **Zava HR Assistant** now displays an **Available** status.
 
-8. In the agent list, confirm that **Zava HR Assistant** now displays an **Active** status.
-
-	![](./media/l01-e1-t4-s8.png)
-
+9. Close the tab.
 ---
 
 ### Task 5: Export the Agent Inventory
@@ -168,11 +147,11 @@ Estimated time: **20 minutes**
 
    > **Note:** If an **Export** button is not visible in the toolbar, select the ellipsis (**...**) menu in the toolbar to locate the export option.
 
-	![](./media/l01-e1-t5-s1.png)
-
 2. Confirm the download in the confirmation dialog. Wait for the export file to be generated and downloaded to your lab VM.
 
 	![](./media/image25.png)
+
+   > **Note:** If the above pop-up doesn't appear like the above image, select **All agents (1)** and click on **Continue (2)**.
 
 3. Open the downloaded CSV file.
 
@@ -256,62 +235,32 @@ Estimated time: **20 minutes**
 
    > **Note:** Microsoft Defender XDR provisions automatically when an eligible admin visits the portal for the first time. If provisioning is in progress, a message will indicate the data centre location being used and an estimated completion time. Wait for provisioning to complete before continuing.
 
-3. Once the portal loads fully, confirm that the left navigation pane displays the following sections: **Home**, **Incidents & alerts**, **Hunting**, **Threat intelligence**, **Assets**, **Identities**, **Endpoints**, **Email & collaboration**, **Cloud Apps**, and **Settings**.
-
-	![](./media/l01-e3-t1-s3.png)
-
-4. Select **Home** to confirm the Defender XDR home dashboard loads without errors.
-
-	![](./media/l01-e3-t1-s4.png)
+3. Once the portal has loaded completely, select **Home** to confirm the Defender XDR home dashboard loads without errors.
 
 ---
 
 ### Task 2: Configure Defender for Cloud Apps Organisation Details
 
-1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, select **Settings**.
+1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, expand **System** and select **Settings**. On the **Settings** page, select **Cloud Apps**.
 
-	![](./media/l01-e3-t2-s1.png)
+3. Select **Organisation details (1)** and enter the following details and click on **Save (5)**:
 
-2. On the **Settings** page, select **Cloud Apps**.
+	- On the **Organisation details** page, in the **Organisation display name** field, replace the existing name with `Zava Corporation` (2).
 
-	![](./media/l01-e3-t2-s2.png)
+	- In the **Environment name** field, enter **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** (3).
 
-3. Select **Organisation details**.
+	- In the **Managed domains** field, replace the existing one with your tenant's primary domain in the following format:
+   `[TenantPrefix].onmicrosoft.com` (4)
 
-	![](./media/l01-e3-t2-s3.png)
-
-4. On the **Organisation details** page, in the **Organisation display name** field, enter `Zava Corporation`.
-
-5. In the **Environment name** field, enter **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>**.
-
-6. In the **Managed domains** field, enter your tenant's primary domain in the following format:
-   `[TenantPrefix].onmicrosoft.com`
-
-   > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
-
-7. Select **Save**.
-
-	![](./media/l01-e3-t2-s7.png)
+   		> **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
 
 8. Confirm that a success notification appears confirming that the settings were saved.
-
-	![](./media/l01-e3-t2-s8.png)
 
 ---
 
 ### Task 3: Enable File Monitoring in Defender for Cloud Apps
 
-1. In the Microsoft Defender portal, in the left navigation pane, select **Settings**.
-
-	![](./media/l01-e3-t3-s1.png)
-
-2. On the **Settings** page, select **Cloud Apps**.
-
-	![](./media/l01-e3-t3-s2.png)
-
-3. Under **Information Protection**, select **Files**. On the **Files** page, select the **Enable file monitoring** checkbox. Select **Save**.
-
-	![](./media/l01-e3-t3-s3.png)
+1. From the left navigation pane, under **Information Protection**, select **Files**. On the **Files** page, select the **Enable file monitoring** checkbox. Select **Save**.
 
 5. Confirm that a success notification appears confirming that file monitoring was enabled.
 
@@ -319,39 +268,19 @@ Estimated time: **20 minutes**
 
 ### Task 4: Connect the Microsoft 365 App Connector
 
-1. In the Microsoft Defender portal, in the left navigation pane, select **Settings**.
+1. From the left navigation pane, under **Connected apps**, select **App Connectors**. On the **App Connectors** page, select **+ Connect an app**. In the app list, select **Microsoft 365**.
 
-	![](./media/l01-e3-t4-s1.png)
-
-2. On the **Settings** page, select **Cloud Apps**.
-
-	![](./media/l01-e3-t4-s2.png)
-
-3. Under **Connected apps**, select **App Connectors**.
-
-	![](./media/l01-e3-t4-s3.png)
-
-4. On the **App Connectors** page, select **+ Connect an app**.
-
-5. In the app list, select **Microsoft 365**.
-
-6. On the **Select Microsoft 365 components** page, confirm that all components are selected by default. If any component is deselected, select it to enable it.
-
-7. Select **Connect Microsoft 365**.
-
-	![](./media/l01-e3-t4-s7.png)
+6. On the **Select Microsoft 365 components** page, confirm that all components are selected by default. If any component is deselected, select it to enable it.mSelect **Connect Microsoft 365**.
 
 8. Wait for the connection to complete. Then slect **Done**.
 
 	![](./media/l01-e3-t4-s8.png)
 
-9. On the **App Connectors** page, confirm that **Microsoft 365** appears in the connectors list with a status of **Connected**.
-
 10. On the **App Connectors** page, select the checkbox next to **Microsoft 365** and from the top options select **Connect Microsoft Azure Instance**.
 
 	![](./media/l01-e3-t4-s10.png)
 
-11. Select **Connect Microsoft Azure**. Wait for the connection to complete.
+11. Select **Connect Microsoft Azure**. Wait for the connection to complete and click on **Done**.
 
 	![](./media/l01-e3-t4-s11.png)
 
