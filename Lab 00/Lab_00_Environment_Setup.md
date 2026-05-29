@@ -314,7 +314,7 @@ Estimated time: **30 minutes**
 
 		![](./media/L00-E1-T6-S7.png)
 
-   		> **Note:** Enabling Entra Agent Identity allows Copilot Studio agents to be automatically assigned a unique identity in Microsoft Entra ID. This is required for identity governance, Conditional Access, and Defender for Cloud Apps integration in later labs.
+      >**Note:** Enabling Entra Agent Identity allows Copilot Studio agents to be automatically assigned a unique identity in Microsoft Entra ID. This is required for identity governance, Conditional Access, and Defender for Cloud Apps integration in later labs.
 
 ---
 
@@ -468,21 +468,13 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 1. In the left navigation pane, select **Agents**. Then select **Create blank agent**.
 
-	![](./media/L00-E2-T2-S1.png)
+	![](./media/pp22.png)
 
-2. On the **Agent** page, select **Edit** under **Details**.
-
-	![](./media/L00-E2-T2-S2.png)
-
-3. On the agent configuration page, in the **Name** field, enter `Zava Finance Agent`.
+3. In the **Name** field, enter `Zava Finance Agent` and click on **Create**.
 
 4. In the **Description** field, enter `An AI assistant that helps Zava finance team members retrieve budget information, invoice data, and financial reports.` Then select **Save**.
 
-	![](./media/L00-E2-T2-S4.png)
-
 5. In the **Instructions** field, select **Edit**.
-
-	![](./media/L00-E2-T2-S5.png)
 
 6. Enter the following and select **Save**.
 
@@ -490,11 +482,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
     You are the Zava Finance Agent. Answer questions using only the information in the Zava Finance SharePoint knowledge base. Do not share financial data with users who have not been granted access to the Finance SharePoint site. Always respond professionally and flag any requests for data outside your knowledge base.
     ```
 
-	![](./media/L00-E2-T2-S6.png)
-
-7. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
-
-	![](./media/L00-E2-T2-S7.png)
+7. Scroll down and on the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
 8. On the **Add knowledge** panel, select **SharePoint**.
 
@@ -505,29 +493,21 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
     > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Environment** tab.
 
-	![](./media/image83.png)
+	![](./media/pp26.png)
 
 10. Select **Add** to connect the SharePoint site as the knowledge source.
 
-	![](./media/image84.png)
-
 11. Then select **Add to agent**.
-
-	![](./media/image85.png)
 
 12. On the agent configuration page, locate the **Channels** tab on the top section (select **+6** if it is not directly visible).
 
-	![](./media/L00-E2-T2-S12.png)
-
 13. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
-
-	![](./media/L00-E2-T2-S13.png)
 
 14. Then select **Add channel**.
 
 	![](./media/L00-E2-T2-S14.png)
 
-15. In the **Ready to publish?** dialog, select **Publish**.
+15. In the **Ready to publish?** dialog, select **Publish**. Close the tab.
 
 	![](./media/image89.png)
 ---
@@ -536,21 +516,13 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 1. In the left navigation pane, select **Agents**. Then select **Create blank agent**.
 
-	![](./media/L00-E2-T3-S1.png)
+	![](./media/pp22.png)
 
-2. On the **Agent** page, select **Edit** under **Details**.
-
-	![](./media/L00-E2-T3-S2.png)
-
-3. On the agent configuration page, in the **Name** field, enter `Zava IT Support Agent`.
+3. In the **Name** field, enter `Zava IT Support Agent` and click on **Create**.
 
 4. In the **Description** field, enter `An AI assistant that helps Zava employees resolve common IT issues, submit support requests, and find IT policy documentation.` Then select **Save**.
 
-	![](./media/L00-E2-T3-S3.png)
-
 5. In the **Instructions** field, select **Edit**.
-
-	![](./media/L00-E2-T3-S5.png)
 
 6. Enter the following and select **Save**.
 
@@ -558,13 +530,9 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
     You are the Zava IT Support Agent. Help users with common IT questions using publicly available Microsoft support documentation and Zava IT policies. Do not access or share any sensitive financial or HR information. Escalate complex issues to the IT helpdesk.
     ```
 
-	![](./media/L00-E2-T3-S6.png)
-
 7. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
-	![](./media/L00-E2-T3-S7.png)
-
-8. On the **Add knowledge** panel, select **Public Website**.
+8. On the **Add knowledge** panel, select **Public Websites**.
 
 	![](./media/image103.png)
 
@@ -573,7 +541,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 	![](./media/image104.png)
 
-10. Then select **Add to agent**.
+10. Then, select **Add to agent**.
 
 	![](./media/image105.png)
 
@@ -583,11 +551,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 12. In the confirmation dialog, select **Publish** to confirm.
 
-	![](./media/image107.png)
-
 13. On the agent configuration page, locate the **Channels** tab on the top section (select **+7** if it is not directly visible).
-
-	![](./media/L00-E2-T3-S13.png)
 
 14. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
 
@@ -613,7 +577,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 	![](./media/image114.png)
 
-20. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**.
+20. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**. Close the tab.
 
 ---
 
@@ -629,7 +593,7 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
    > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Environment** tab.
 
-3. On the **Documents** page, select **Create or upload**. Then select **Files upload**.
+3. From the left navigation menu, click on **Documents** , select **Create or upload**. Then, select **Files upload**.
 
 	![](./media/L00-E3-T1-S2.png)
 
@@ -668,13 +632,7 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
    > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Environment** tab.
 
-2. In the left navigation pane, select **Documents**.
-
-	![](./media/L00-E3-T2-S2.png)
-
-3. On the **Documents** page, select **Create or upload** > **Files upload**.
-
-	![](./media/L00-E3-T2-S3.png)
+2. In the left navigation pane, select **Documents**. On the **Documents** page, select **Create or upload** > **Files upload**.
 
 4. In the file picker, navigate to the **C:\LabFiles\lab file\Operations** folder on your lab VM desktop.
 
@@ -713,13 +671,11 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
 3. On this page, confirm that the following three agents appear in the list. You can search for `Zava` in the search box to filter the results.
 
-   | Agent Name | Status | Publisher |
-   |---|---|---|
-   | Zava HR Assistant | Active | Default Publisher |
-   | Zava Finance Agent | Active | Default Publisher |
-   | Zava IT Support Agent | Active | Default Publisher |
-
-	![](./media/L00-E3-T3-S3.png)
+   | Agent Name | Status |
+   |---|---|
+   | Zava HR Assistant | Available | 
+   | Zava Finance Agent | Available | 
+   | Zava IT Support Agent | Available |
 
    > **Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
 

@@ -89,7 +89,7 @@ Estimated time: **10 minutes**
 
 	![](./media/l02-e1-t3-s1.png)
 
-2. On the **Owners and sponsors** page, confirm that no owners are currently listed. Select **+ Add** > **Add owner**.
+2. On the **Owners and sponsors** , select **+ Add** > **Add owner**.
 
 	![](./media/l02-e1-t3-s2.png)
 
@@ -97,7 +97,7 @@ Estimated time: **10 minutes**
 
 	![](./media/l02-e1-t3-s3.png)
 
-4. Confirm that **Patti Fernandes** now appears as the **Owner** on the **Owners and sponsors** page.
+4. Confirm that **Patti Fernandes** now appears as the **Full Owner** on the **Owners and sponsors** page.
 
 	![](./media/l02-e1-t3-s4.png)
 
@@ -109,7 +109,7 @@ Estimated time: **10 minutes**
 
 ### Task 1: Disable the Zava HR Assistant Identity
 
-1. On the **Agent identities** page in Microsoft Entra, navigate to the **Zava HR Assistant** agent identity overview page.
+1. Naviagate back to **Agent identities** page in Microsoft Entra, and select **Zava HR Assistant** agent identity.
 
 	![](./media/l02-e2-t1-s1.png)
 
