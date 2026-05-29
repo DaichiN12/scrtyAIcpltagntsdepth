@@ -38,6 +38,8 @@ Estimated time: **20 minutes**
 
 2. In the left navigation pane, expand **Agents**, and then select **Overview**.
 
+	![](./media/secure1.png)
+
 3. On the **Agent Overview** page, locate the following metrics and note their current values:
 
    - **Agent Registry** — total count of agents in the tenant.
@@ -45,6 +47,8 @@ Estimated time: **20 minutes**
    - **Pending requests for agents** — open requests to add specific agents.
    - **Agents without owners** — agents whose owner has left the company.
    - **Agent analytics** — agents by creators, top platforms used to build agents, and active users in Copilot over time.
+
+		![](./media/secure2.png)
 
       >**Note:** In a freshly configured environment, active user counts and agents without owners may show zero. This is expected. The metrics will populate as agents are used throughout the course.
 
@@ -97,8 +101,6 @@ Estimated time: **20 minutes**
 13. Select **Done**.
     
 	![](./media/l01-e1-t2-s12.png)
-
-
 ---
 
 ### Task 3: Approve an Agent in Teams Admin Center
@@ -110,9 +112,13 @@ Estimated time: **20 minutes**
 
 2. From the left navigation under **Teams apps**, select **Manage apps (1)**. In the search bar, search for `Zava` and select **Zava HR Assistant (2)**.
 
+	![](./media/secure3.png)
+
       >**Note:** Make sure to select the one with the M365 apps as the selected **Supported on** coloumn.
 
 4. Verify if **Zava HR Assistant** is published.
+
+	![](./media/secure4.png)
 
 ---
 
@@ -122,9 +128,15 @@ Estimated time: **20 minutes**
 
 2. Expand **Agents** from the left navigation pane, select **All agents (1)**, select the **Registry** tab, then search for and select **Zava HR Assistant (2)** in the agent list.
 
+	![](./media/secure5.png)
+
 3. On the details panel,select **Block**.
 
+	![](./media/secure6.png)
+
 4. On the **Block agent** pane, review the message confirming that blocking will prevent all users in the organisation from accessing the agent. Check the box next to **Block agent (1)**. Select **Save (2)**.
+
+	![](./media/secure7.png)
 
 5. Confirm that **Zava HR Assistant** now displays a **Blocked** status.
 
@@ -132,7 +144,7 @@ Estimated time: **20 minutes**
 
 6. Below the agent name, select **Unblock**.
 
-	![](./media/l01-e1-t4-s6.png)
+	![](./media/secure8.png)
 
 7. On the **Unblock agent** pane, select the **Unblock agent** checkbox. Select **Save**. Close the details panel.
 
@@ -145,6 +157,8 @@ Estimated time: **20 minutes**
 
 1. On the **Registry** tab, select **Export** on the toolbar above the agent list.
 
+	![](./media/secure9.png)
+
    > **Note:** If an **Export** button is not visible in the toolbar, select the ellipsis (**...**) menu in the toolbar to locate the export option.
 
 2. Confirm the download in the confirmation dialog. Wait for the export file to be generated and downloaded to your lab VM.
@@ -152,6 +166,8 @@ Estimated time: **20 minutes**
 	![](./media/image25.png)
 
    > **Note:** If the above pop-up doesn't appear like the above image, select **All agents (1)** and click on **Continue (2)**.
+
+	 ![](./media/secure10.png)
 
 3. Open the downloaded CSV file.
 
@@ -237,11 +253,15 @@ Estimated time: **20 minutes**
 
 3. Once the portal has loaded completely, select **Home** to confirm the Defender XDR home dashboard loads without errors.
 
+	![](./media/secure11.png)
+
 ---
 
 ### Task 2: Configure Defender for Cloud Apps Organisation Details
 
 1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, expand **System** and select **Settings (1)**. On the **Settings** page, select **Cloud Apps (2)**.
+
+	![](./media/secure12.png)
 
 3. Select **Organisation details (1)** and enter the following details and click on **Save (5)**:
 
@@ -252,7 +272,11 @@ Estimated time: **20 minutes**
 	- In the **Managed domains** field, replace the existing one with your tenant's primary domain in the following format:
    `[TenantPrefix].onmicrosoft.com` (4)
 
+		![](./media/secure13.png)
+
    		> **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
+
+		![](./media/pp26.png)
 
 8. Confirm that a success notification appears confirming that the settings were saved.
 
@@ -262,6 +286,8 @@ Estimated time: **20 minutes**
 
 1. From the left navigation pane, under **Information Protection**, select **Files (1)**. On the **Files** page, select the **Enable file monitoring (2)** checkbox. Select **Save (3)**.
 
+	 ![](./media/secure14.png)
+
 5. Confirm that a success notification appears confirming that file monitoring was enabled.
 
 ---
@@ -270,7 +296,11 @@ Estimated time: **20 minutes**
 
 1. From the left navigation pane, under **Connected apps**, select **App Connectors (1)**. On the **App Connectors** page, select **+ Connect an app (2)**. In the app list, select **Microsoft 365 (3)**.
 
-6. On the **Select Microsoft 365 components** page, confirm that all components are selected by default. If any component is deselected, select it to enable it.mSelect **Connect Microsoft 365**.
+	 ![](./media/secure15.png)
+
+6. On the **Select Microsoft 365 components** page, confirm that all components are selected by default. If any component is deselected, select it to enable it. Select **Connect Microsoft 365**.
+
+	 ![](./media/secure16.png)
 
 8. Wait for the connection to complete. Then slect **Done**.
 
