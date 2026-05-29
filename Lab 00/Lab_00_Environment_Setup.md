@@ -110,14 +110,13 @@ Estimated time: **30 minutes**
 
 	- Follow the on-screen prompts to set up the Microsoft Authenticator app.
 
+   		 >**Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then select **Scan a QR code**. Scan the QR code displayed on screen.
 
-   		> **Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then select **Scan a QR code**. Scan the QR code displayed on screen.
-
-		![](./media/image5.png)
+		 ![](./media/image5.png)
 
 	- Complete all remaining prompts to finish the Authenticator setup.
 
-		![](./media/image6.png)
+		 ![](./media/image6.png)
 
 	- If asked **Stay signed in?**, select **Yes**.
 
@@ -250,7 +249,7 @@ Estimated time: **30 minutes**
 
 	![](./media/pp4.png)
 
-1. Scroll down and enable the **Add a dataverse store? (1)** and click on **Next (2)**.
+1. Scroll down ,expand the Change default settings dropdown and enable the **Add a dataverse store? (1)** and click on **Next (2)**.
 
 	![](./media/pp5.png)
 
@@ -373,7 +372,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. If Copilot Studio does not load or does not show the option to select an **Environment** as in the screenshot below, follow these steps:
+1. If Copilot Studio does not load, follow these steps:
 
 	- Open `https://admin.powerplatform.microsoft.com/`. Select **Manage** > **Environments** > **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** and copy the value of the **Environment ID**.
    
