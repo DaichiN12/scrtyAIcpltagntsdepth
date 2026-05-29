@@ -46,8 +46,6 @@ Estimated time: **20 minutes**
    - **Agents without owners** — agents whose owner has left the company.
    - **Agent analytics** — agents by creators, top platforms used to build agents, and active users in Copilot over time.
 
-		![](./media/L01-T1-S3.png)
-
       >**Note:** In a freshly configured environment, active user counts and agents without owners may show zero. This is expected. The metrics will populate as agents are used throughout the course.
 
 ---
@@ -111,6 +109,8 @@ Estimated time: **20 minutes**
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
 2. From the left navigation under **Teams apps**, select **Manage apps (1)**. In the search bar, search for `Zava` and select **Zava HR Assistant (2)**.
+
+      >**Note:** Make sure to select the one with the M365 apps as the selected **Supported on** coloumn.
 
 4. Verify if **Zava HR Assistant** is published.
 
