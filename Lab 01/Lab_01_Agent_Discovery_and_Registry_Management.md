@@ -120,11 +120,11 @@ Estimated time: **20 minutes**
 
 1. Navigate back to `https://admin.cloud.microsoft/`. Sign in with **ODL User** credentials if prompted.
 
-2. On the **All agents** page, select the **Registry** tab, then search for and select **Zava HR Assistant** in the agent list.
+2. Expand **Agents** from the left navigation pane, select **All agents (1)**, select the **Registry** tab, then search for and select **Zava HR Assistant (2)** in the agent list.
 
 3. On the details panel,select **Block**.
 
-4. On the **Block agent** pane, review the message confirming that blocking will prevent all users in the organisation from accessing the agent. Check the box next to **Block agent**. Select **Save**.
+4. On the **Block agent** pane, review the message confirming that blocking will prevent all users in the organisation from accessing the agent. Check the box next to **Block agent (1)**. Select **Save (2)**.
 
 5. Confirm that **Zava HR Assistant** now displays a **Blocked** status.
 
@@ -241,7 +241,7 @@ Estimated time: **20 minutes**
 
 ### Task 2: Configure Defender for Cloud Apps Organisation Details
 
-1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, expand **System** and select **Settings**. On the **Settings** page, select **Cloud Apps**.
+1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, expand **System** and select **Settings (1)**. On the **Settings** page, select **Cloud Apps (2)**.
 
 3. Select **Organisation details (1)** and enter the following details and click on **Save (5)**:
 
@@ -260,7 +260,7 @@ Estimated time: **20 minutes**
 
 ### Task 3: Enable File Monitoring in Defender for Cloud Apps
 
-1. From the left navigation pane, under **Information Protection**, select **Files**. On the **Files** page, select the **Enable file monitoring** checkbox. Select **Save**.
+1. From the left navigation pane, under **Information Protection**, select **Files (1)**. On the **Files** page, select the **Enable file monitoring (2)** checkbox. Select **Save (3)**.
 
 5. Confirm that a success notification appears confirming that file monitoring was enabled.
 
@@ -268,7 +268,7 @@ Estimated time: **20 minutes**
 
 ### Task 4: Connect the Microsoft 365 App Connector
 
-1. From the left navigation pane, under **Connected apps**, select **App Connectors**. On the **App Connectors** page, select **+ Connect an app**. In the app list, select **Microsoft 365**.
+1. From the left navigation pane, under **Connected apps**, select **App Connectors (1)**. On the **App Connectors** page, select **+ Connect an app (2)**. In the app list, select **Microsoft 365 (3)**.
 
 6. On the **Select Microsoft 365 components** page, confirm that all components are selected by default. If any component is deselected, select it to enable it.mSelect **Connect Microsoft 365**.
 
