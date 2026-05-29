@@ -40,72 +40,34 @@ Estimated time: **30 minutes**
 2. In the search bar, enter `Attribute Definition Administrator`.
 
 	![](./media/l03-e1-t1-s2.png)
-3. Select **Attribute Definition Administrator** by selecting its name. Do not select the checkbox.
+3. Select **Attribute Definition Administrator** by selecting its name.
 
 	![](./media/l03-e1-t1-s3.png)
 
 4. On the **Attribute Definition Administrator** page, select **+ Add assignments**.
 
-	![](./media/l03-e1-t1-s4.png)
-
-5. On the **Add assignments** panel, select **No members selected**.
-
-	![](./media/l03-e1-t1-s5.png)
-6. Search for and select **ODL User**. Choose **Select** to confirm.
-
-	![](./media/l03-e1-t1-s6.png)
-
-7. Select **Next**.
-
-	![](./media/l03-e1-t1-s7.png)
-
-8. Under **Assignment type**, select **Active**.
-
-	![](./media/l03-e1-t1-s8.png)
-
-9. In the activation panel, enter a justification — `Lab 03 custom security attribute configuration`.
-
-	![](./media/l03-e1-t1-s9.png)
-10. Uncheck **Permanently assigned** and set the duration to **1 hour**. Select **Assign**.
-
-	![](./media/l03-e1-t1-s10.png)
-
-11. Confirm the assignment appears in the list under **Active assignments**.
-
-	![](./media/l03-e1-t1-s11.png)
+5. On the **Add assignments** panel, select **ODL_User<inject key="Deployment ID" enableCopy="false"></inject>**. Click on **Add**.
+   
+11. Confirm the assignment appears in the list.
 
 12. Navigate back to **Roles & admins**.
 
-13. In the search bar, enter `Attribute Assignment Administrator` and repeat the steps to assign the role to **ODL User**.
+13. In the search bar, enter `Attribute Assignment Administrator` and repeat the steps to assign the role to **ODL_User<inject key="Deployment ID" enableCopy="false"></inject>**.
 
 	![](./media/l03-e1-t1-s13.png)
-
-14. Select the **ODL_User** account icon in the top-right corner of the page. Select **Sign out**.
-
-15. Sign back in to `https://entra.microsoft.com` with **ODL User** credentials.
-
-    > **Note:** The Attribute Definition Administrator role grants permissions to create and manage custom security attribute definitions. This role is intentionally excluded from Global Administrator to enforce separation of duties. A fresh sign-in is required for the new role assignment to take effect.
 
 ---
 
 ### Task 2: Create the AgentAttributes Attribute Set
 
-1. In the left navigation pane, expand **Entra ID** and select **Custom security attributes**.
-
-	![](./media/l03-e1-t2-s1.png)
-2. On the **Custom security attributes** page, select **+ Add attribute set**.
+1. In the left navigation pane, expand **Entra ID** and select **Custom security attributes**. On the **Custom security attributes** page, select **+ Add attribute set**.
 
 	![](./media/l03-e1-t2-s2.png)
 
-3. On the **Add attribute set** panel, in the **Attribute set name** field, enter `AgentAttributes`.
-
-4. In the **Description** field, enter `Attribute set for classifying AI agent approval and governance status.`
-
-5. In the **Maximum number of attributes** field, leave the default value.
-
-6. Select **Add** to create the attribute set.
-
-	![](./media/l03-e1-t2-s6.png)
+3. On the **Add attribute set** panel and click on **Add**:
+   - In the **Attribute set name** field, enter `AgentAttributes`.
+   - In the **Description** field, enter `Attribute set for classifying AI agent approval and governance status.
+   - In the **Maximum number of attributes** field, leave the default value.
 
 7. Confirm that **AgentAttributes** appears in the attribute set list.
 
@@ -135,7 +97,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l03-e1-t3-s4.png)
 
-5. In the value field, enter `New`. Then select **Add**.
+5. In the value field, enter `New`. Then, select **Add**.
 
 	![](./media/l03-e1-t3-s5.png)
 
@@ -201,7 +163,7 @@ Estimated time: **30 minutes**
 5. On the **Add custom security attribute assignment** panel, configure the following:
 
    - **Attribute set:** Select **AgentAttributes**.
-   - **Attribute:** Select **AgentApprovalStatus**.
+   - **Attribute name:** Select **AgentApprovalStatus**.
    - **Assigned values:** Select **Add value** > **HR_Approved** and select **Save**.
 
 		![](./media/l03-e1-t4-s5.png)
@@ -246,7 +208,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l03-e2-t1-s7.png)
 
-8. Under **Exclude**, select **Select agent identities based on attributes**.
+8. Under **Exclude**, click on **None** under **Select agent identities based on attributes**.
 
 	![](./media/l03-e2-t1-s8.png)
 
@@ -254,11 +216,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l03-e2-t1-s9.png)
 
-10. In the expression configuration, under **AgentAttributes**, select the attribute **AgentApprovalStatus**. Set **Operator** to **Contains**. Set **Value** to **HR_Approved**.
-
-	![](./media/l03-e2-t1-s10.png)
-
-11. Select **Done** to confirm the exclusion configuration.
+10. In the expression configuration, under **Attribute**, select the attribute **AgentApprovalStatus**. Set **Operator** to **Contains**. Set **Value** to **HR_Approved**.Select **Done** to confirm the exclusion configuration.
 
 	![](./media/l03-e2-t1-s11.png)
 
@@ -272,7 +230,7 @@ Estimated time: **30 minutes**
 
 15. Under **Access controls**, on the **Grant** panel, confirm that **Block access** is selected.
 
-16. Under **Enable policy**, keep **Report-only**.
+16. For **Enable policy**, keep **Report-only**.
 
 17. Select **Create** to save the policy.
 
