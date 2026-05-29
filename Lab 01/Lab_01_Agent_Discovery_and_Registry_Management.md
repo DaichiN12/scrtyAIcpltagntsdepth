@@ -267,7 +267,7 @@ Estimated time: **20 minutes**
 
 	- On the **Organisation details** page, in the **Organisation display name** field, replace the existing name with `Zava Corporation` (2).
 
-	- In the **Environment name** field, enter **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** (3).
+	- In the **Environment name** field, enter **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** (3).
 
 	- In the **Managed domains** field, replace the existing one with your tenant's primary domain in the following format:
    `[TenantPrefix].onmicrosoft.com` (4)
