@@ -110,7 +110,7 @@ Estimated time: **30 minutes**
 
 	- Follow the on-screen prompts to set up the Microsoft Authenticator app.
 
-   		 >**Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then select **Scan a QR code**. Scan the QR code displayed on screen.
+   		 >**Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then, select **Scan a QR code**. Scan the QR code displayed on screen.
 
 		 ![](./media/image5.png)
 
@@ -162,7 +162,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T2-S8.png)
 
-9. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and then choose **select**.
+9. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and then, choose **select**.
 
 	![](./media/L00-E1-T2-S9.png)
 
@@ -257,7 +257,7 @@ Estimated time: **30 minutes**
 
 	![](./media/pp6.png)
 
-1. Select the **copilotagentsecurity (1)** group from the results. Then select **Done (2)**.
+1. Select the **copilotagentsecurity (1)** group from the results. Then, select **Done (2)**.
 
 	![](./media/pp7.png)
 
@@ -273,7 +273,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T5-S4.png)
 
-5. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results. Then select **Done**.
+5. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results. Then, select **Done**.
 
 	![](./media/L00-E1-T5-S5.png)
 
@@ -324,7 +324,7 @@ Estimated time: **30 minutes**
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-2. If prompted, on the **Welcome to Power Apps** screen, select **United States** and then select **Get started**.
+2. If prompted, on the **Welcome to Power Apps** screen, select **United States** and then, select **Get started**.
 
 	![](./media/image45.png)
 
