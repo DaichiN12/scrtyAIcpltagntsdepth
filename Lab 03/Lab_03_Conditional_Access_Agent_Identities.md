@@ -64,9 +64,9 @@ Estimated time: **30 minutes**
 
 	![](./media/l03-e1-t2-s2.png)
 
-3. On the **Add attribute set** panel and click on **Add**:
+3. On the **Add attribute set** panel, add the following and click on **Add**:
    - In the **Attribute set name** field, enter `AgentAttributes`.
-   - In the **Description** field, enter `Attribute set for classifying AI agent approval and governance status.
+   - In the **Description** field, enter `Attribute set for classifying AI agent approval and governance status`.
    - In the **Maximum number of attributes** field, leave the default value.
 
 7. Confirm that **AgentAttributes** appears in the attribute set list.
@@ -200,9 +200,7 @@ Estimated time: **30 minutes**
 
 5. Under **Assignments**, select **0 users or agents (Preview) selected** under **Users or agents**.
 
-6. On the assignments panel, under **What does this policy apply to?**, select **Agents (Preview)**.
-
-	![](./media/l03-e2-t1-s6.png)
+6. On the assignments panel, under **What does this policy apply to?**, select **Agents**.
 
 7. Under **Include**, select **All agent identities (Preview)**.
 
