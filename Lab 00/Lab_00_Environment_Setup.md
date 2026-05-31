@@ -696,7 +696,9 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
    | Zava Finance Agent | Available | 
    | Zava IT Support Agent | Available |
 
-   > **Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
+	  ![](./media/pp61.png)
+
+   	  >**Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
 
 ---
 
