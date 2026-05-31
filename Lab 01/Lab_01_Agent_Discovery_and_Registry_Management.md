@@ -122,6 +122,9 @@ Estimated time: **20 minutes**
 
       >**Note:** If not, click on **Publish** and click on it again on the pop-up confirmation.
 
+	  ![](./media/secure17.png)
+   
+   	  ![](./media/secure18.png)
 ---
 
 ### Task 4: Block and Unblock the Zava HR Assistant
