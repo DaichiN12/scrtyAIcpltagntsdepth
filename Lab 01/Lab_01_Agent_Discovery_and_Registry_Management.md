@@ -276,7 +276,7 @@ Estimated time: **20 minutes**
 
          > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
 
-		 ![](./media/pp26.png)
+		 ![](./media/ex1.png)
 
 8. Confirm that a success notification appears confirming that the settings were saved.
 
