@@ -50,11 +50,13 @@ Estimated time: **30 minutes**
    
 11. Confirm the assignment appears in the list.
 
+	![](./media/ex3-2.png)
+
 12. Navigate back to **Roles & admins**.
 
 13. In the search bar, enter `Attribute Assignment Administrator` and repeat the steps to assign the role to **ODL_User<inject key="Deployment ID" enableCopy="false"></inject>**.
 
-	![](./media/l03-e1-t1-s13.png)
+	![](./media/ex3-3.png)
 
 ---
 
@@ -190,8 +192,6 @@ Estimated time: **30 minutes**
 
 2. On the **Conditional Access** page, select **Policies**.
 
-	![](./media/l03-e2-t1-s2.png)
-
 3. On the **Policies** page, select **+ New policy**.
 
 	![](./media/l03-e2-t1-s3.png)
@@ -203,8 +203,6 @@ Estimated time: **30 minutes**
 6. On the assignments panel, under **What does this policy apply to?**, select **Agents**.
 
 7. Under **Include**, select **All agent identities (Preview)**.
-
-	![](./media/l03-e2-t1-s7.png)
 
 8. Under **Exclude**, click on **None** under **Select agent identities based on attributes**.
 
@@ -291,6 +289,8 @@ Estimated time: **30 minutes**
 
 1. Navigate back to **Policies** and click on **Zava - Block Unapproved Agent Identities**
 
+	![](./media/ex3-4.png)
+
 2. Under **Enable policy**, select **On**.
 
 3. Select **Save** to apply the change.
@@ -309,6 +309,8 @@ Estimated time: **30 minutes**
 
 1. On the **Conditional Access** page, select **+ New policy**.
 
+	![](./media/ex3-5.png)
+
 2. In the **Name** field, enter `Zava - Block High Risk Agent Identities`.
 
 3. Under **Assignments**, select **0 users or agents (Preview) selected** under **Users or agents**.
@@ -318,6 +320,8 @@ Estimated time: **30 minutes**
 4. Under **What does this policy apply to?**, select **Agents**.
 
 5. Under **Include**, select **All agent identities (Preview)**.
+
+	![](./media/ex3-6.png)
 
 6. Under **Target resources**, select **No target resources selected**, then select **All resources (formerly 'All cloud apps')**.
 
