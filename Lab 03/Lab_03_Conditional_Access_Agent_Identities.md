@@ -204,6 +204,8 @@ Estimated time: **30 minutes**
 
 7. Under **Include**, select **All agent identities (Preview)**.
 
+	![](./media/ex3-7.png)
+
 8. Under **Exclude**, click on **None** under **Select agent identities based on attributes**.
 
 	![](./media/l03-e2-t1-s8.png)
