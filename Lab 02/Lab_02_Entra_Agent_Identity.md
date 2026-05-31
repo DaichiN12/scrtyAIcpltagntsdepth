@@ -131,10 +131,22 @@ Estimated time: **10 minutes**
 
 ### Task 2: Verify that End-User Access is Blocked
 
-1. Open a new **InPrivate** or **Incognito** browser window. Navigate to `https://copilot.microsoft.com`. Sign in with **ODL User** credentials from the **Environment** tab.
+1. Open a new **InPrivate** or **Incognito** browser window. Navigate to `https://copilot.microsoft.com`. Click on **Sign in**.
+
+	![](./media/ex2-1.png)
+
+1. Click on Continue with Microsoft.
+
+	![](./media/ex2-2.png)
+
+1. Sign in with **ODL User** credentials from the **Environment** tab.
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+1. Click on the **Work** Tab on the **Which Copilot experience are you looking for?**.
+
+	![](./media/ex2-4.png)
 
 2. In the left navigation, select **All agents** and then search for `Zava`.
 
