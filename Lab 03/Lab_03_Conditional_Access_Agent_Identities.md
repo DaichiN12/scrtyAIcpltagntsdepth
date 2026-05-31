@@ -178,8 +178,8 @@ Estimated time: **30 minutes**
 
 8. Similarly assign the following attributes to respective agents.
 
-   - **Zava Finance Agent (Microsoft Copilot Studio)**: HR_Approved
-   - **Zava IT Support Agent (Microsoft Copilot Studio)**: HR_Approved
+   - **Zava Finance Agent (Microsoft Copilot Studio)**: New
+   - **Zava IT Support Agent (Microsoft Copilot Studio)**: New
 ---
 
 ## Exercise 2: Create a Conditional Access Policy to Block Unapproved Agent Identities
@@ -287,11 +287,9 @@ Estimated time: **30 minutes**
 
 ---
 
-### Task 3: Switch the Policy to Enforcement Mode (Read Only)
+### Task 3: Switch the Policy to Enforcement Mode 
 
-   > **Note:** You will not be able to perform this task in the current environment because Security Defaults were enabled in Lab 00 to allow publishing of Copilot Studio agents.
-
-1. On the **Zava - Block Unapproved Agent Identities** policy page, select **Edit**.
+1. Navigate back to **Policies** and click on **Zava - Block Unapproved Agent Identities**
 
 2. Under **Enable policy**, select **On**.
 
@@ -309,9 +307,7 @@ Estimated time: **30 minutes**
 
 ### Task 1: Create the Policy and Configure Assignments
 
-1. On the **Conditional Access** page, select **+ Create new policy**.
-
-	![](./media/l03-e3-t3-s1.png)
+1. On the **Conditional Access** page, select **+ New policy**.
 
 2. In the **Name** field, enter `Zava - Block High Risk Agent Identities`.
 
@@ -319,13 +315,9 @@ Estimated time: **30 minutes**
 
 	![](./media/l03-e3-t3-s2.png)
 
-4. Under **What does this policy apply to?**, select **Agents (Preview)**.
-
-	![](./media/l03-e3-t3-s3.png)
+4. Under **What does this policy apply to?**, select **Agents**.
 
 5. Under **Include**, select **All agent identities (Preview)**.
-
-	![](./media/l03-e3-t3-s4.png)
 
 6. Under **Target resources**, select **No target resources selected**, then select **All resources (formerly 'All cloud apps')**.
 
