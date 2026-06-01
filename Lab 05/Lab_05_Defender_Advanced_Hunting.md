@@ -52,17 +52,17 @@ Estimated time: **60 minutes**
 
    ![](./media/l05-e1-t1-s5.png)
 
-6. On the **Preview features** page, set the **Preview features** toggle to **On**.
+6. On the **Preview features** page, set the **Preview features** toggle to **On** if not already done.
 
-   ![](./media/l05-e1-t1-s6.png)
+      ![](./media/l05-e1-t1-s6.png)
 
-7. Select **Save preferences**.
+   - Select **Save preferences**.
 
-   ![](./media/l05-e1-t1-s7.png)
+        ![](./media/l05-e1-t1-s7.png)
 
-8. Confirm that a success notification appears.
+   - Confirm that a success notification appears.
 
-   ![](./media/l05-e1-t1-s8.png)
+        ![](./media/l05-e1-t1-s8.png)
 
 <!--
 ---
@@ -89,17 +89,11 @@ Estimated time: **60 minutes**
 
 ### Task 1: Enable Copilot Studio AI Agents in Defender for Cloud Apps Settings
 
-1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, select **Settings** under **System**.
-
-   ![](./media/l05-e2-t1-s1.png)
-
-2. On the **Settings** page, select **Security for AI**.
+1. Navigate back to **Settings** and select **Security for AI**.
 
    ![](./media/l05-e2-t1-s2.png)
 
-3. In the left sub-navigation, under **System**, select **Copilot Studio AI Agents**.
-
-4. Click Connect to begin the integration setup.
+4. Scroll down and find **Copilot Studio** and click on **Connect** to begin the integration setup.
 
    ![](./media/l05-e2-t1-s4.png)
 
@@ -124,17 +118,9 @@ Estimated time: **60 minutes**
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-3. In the left navigation pane, select **Security**.
+3. In the left navigation pane, select **Security**, select **Threat Detection** and locate **Microsoft Defender - Copilot Studio Agents (Preview)**.
 
-4. Under **Security**, select **Threat Protection**.
-
-5. On the **Threat Protection** page, locate **Microsoft Defender - Copilot Studio AI Agents**.
-
-6. Select **Microsoft Defender - Copilot Studio AI Agents** to open its settings.
-
-7. Set the **Enable Microsoft Defender - Copilot Studio AI Agents** toggle to **On**.
-
-8. Select **Save** to apply the setting.
+7. Set the **Enable Microsoft Defender - Copilot Studio Agents** toggle to **On** and select **Save** to apply the setting.
 
    ![](./media/l05-e2-t2-s4.png)
 
@@ -144,9 +130,7 @@ Estimated time: **60 minutes**
 
 1. Return to the **ODL User** browser session at `https://security.microsoft.com`.
 
-2. In the left navigation pane, select **Settings**.
-
-3. On the **Settings** page, select **Cloud Apps**.
+2. Navigate back to **Settings** and select **Cloud Apps**.
 
 4. Under **System**, select **Copilot Studio AI Agents**.
 

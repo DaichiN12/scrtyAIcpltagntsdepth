@@ -110,14 +110,13 @@ Estimated time: **30 minutes**
 
 	- Follow the on-screen prompts to set up the Microsoft Authenticator app.
 
+   		 >**Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then, select **Scan a QR code**. Scan the QR code displayed on screen.
 
-   		> **Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then select **Scan a QR code**. Scan the QR code displayed on screen.
-
-		![](./media/image5.png)
+		 ![](./media/image5.png)
 
 	- Complete all remaining prompts to finish the Authenticator setup.
 
-		![](./media/image6.png)
+		 ![](./media/image6.png)
 
 	- If asked **Stay signed in?**, select **Yes**.
 
@@ -163,7 +162,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T2-S8.png)
 
-9. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and then choose **select**.
+9. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and then, choose **select**.
 
 	![](./media/L00-E1-T2-S9.png)
 
@@ -250,7 +249,7 @@ Estimated time: **30 minutes**
 
 	![](./media/pp4.png)
 
-1. Scroll down and enable the **Add a dataverse store? (1)** and click on **Next (2)**.
+1. Scroll down ,expand the Change default settings dropdown and enable the **Add a dataverse store? (1)** and click on **Next (2)**.
 
 	![](./media/pp5.png)
 
@@ -258,7 +257,7 @@ Estimated time: **30 minutes**
 
 	![](./media/pp6.png)
 
-1. Select the **copilotagentsecurity (1)** group from the results. Then select **Done (2)**.
+1. Select the **copilotagentsecurity (1)** group from the results. Then, select **Done (2)**.
 
 	![](./media/pp7.png)
 
@@ -274,7 +273,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T5-S4.png)
 
-5. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results. Then select **Done**.
+5. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results. Then, select **Done**.
 
 	![](./media/L00-E1-T5-S5.png)
 
@@ -325,7 +324,7 @@ Estimated time: **30 minutes**
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-2. If prompted, on the **Welcome to Power Apps** screen, select **United States** and then select **Get started**.
+2. If prompted, on the **Welcome to Power Apps** screen, select **United States** and then, select **Get started**.
 
 	![](./media/image45.png)
 
@@ -373,7 +372,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. If Copilot Studio does not load or does not show the option to select an **Environment** as in the screenshot below, follow these steps:
+1. If Copilot Studio does not load, follow these steps:
 
 	- Open `https://admin.powerplatform.microsoft.com/`. Select **Manage** > **Environments** > **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** and copy the value of the **Environment ID**.
    
@@ -472,6 +471,8 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 3. In the **Name** field, enter `Zava Finance Agent` and click on **Create**.
 
+	![](./media/pp50.png)
+
 4. In the **Description** field, enter `An AI assistant that helps Zava finance team members retrieve budget information, invoice data, and financial reports.` Then select **Save**.
 
 5. In the **Instructions** field, select **Edit**.
@@ -481,6 +482,8 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
     ```
     You are the Zava Finance Agent. Answer questions using only the information in the Zava Finance SharePoint knowledge base. Do not share financial data with users who have not been granted access to the Finance SharePoint site. Always respond professionally and flag any requests for data outside your knowledge base.
     ```
+
+	![](./media/pp51.png)
 
 7. Scroll down and on the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
@@ -497,11 +500,17 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 10. Select **Add** to connect the SharePoint site as the knowledge source.
 
+	![](./media/pp52.png)
+
 11. Then select **Add to agent**.
 
 12. On the agent configuration page, locate the **Channels** tab on the top section (select **+6** if it is not directly visible).
 
+	![](./media/pp53.png)
+
 13. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
+
+	![](./media/pp54.png)
 
 14. Then select **Add channel**.
 
@@ -520,6 +529,8 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 3. In the **Name** field, enter `Zava IT Support Agent` and click on **Create**.
 
+	![](./media/pp55.png)
+
 4. In the **Description** field, enter `An AI assistant that helps Zava employees resolve common IT issues, submit support requests, and find IT policy documentation.` Then select **Save**.
 
 5. In the **Instructions** field, select **Edit**.
@@ -529,6 +540,8 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
     ```
     You are the Zava IT Support Agent. Help users with common IT questions using publicly available Microsoft support documentation and Zava IT policies. Do not access or share any sensitive financial or HR information. Escalate complex issues to the IT helpdesk.
     ```
+
+	 ![](./media/pp56.png)
 
 7. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
@@ -551,33 +564,37 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 12. In the confirmation dialog, select **Publish** to confirm.
 
+	![](./media/pp57.png)
+
 13. On the agent configuration page, locate the **Channels** tab on the top section (select **+7** if it is not directly visible).
 
-14. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
+	![](./media/pp58.png)
+
+15. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
 
 	![](./media/L00-E2-T3-S14.png)
 
-15. Then select **Add channel**.
+16. Then select **Add channel**.
 
 	![](./media/L00-E2-T3-S15.png)
 
-16. Select **Availability options**.
+17. Select **Availability options**.
 
 	![](./media/L00-E2-T3-S16.png)
 
-17. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
+18. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
 
 	![](./media/L00-E2-T3-S17.png)
 
-18. Select **Submit to org catalog**.
+19. Select **Submit to org catalog**.
 
 	![](./media/L00-E2-T3-S18.png)
 
-19. On the **Give everyone access to this agent?** confirmation dialog, select **Yes**.
+20. On the **Give everyone access to this agent?** confirmation dialog, select **Yes**.
 
 	![](./media/image114.png)
 
-20. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**. Close the tab.
+21. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**. Close the tab.
 
 ---
 
@@ -593,9 +610,9 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
    > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Environment** tab.
 
-3. From the left navigation menu, click on **Documents** , select **Create or upload**. Then, select **Files upload**.
+3. From the left navigation menu, click on **Documents (1)** , select **Create or upload (2)**. Then, select **Files upload (3)**.
 
-	![](./media/L00-E3-T1-S2.png)
+	![](./media/pp59.png)
 
 4. In the file picker, navigate to the **C:\LabFiles\lab file\HR** folder on your lab VM desktop.
 
@@ -632,7 +649,9 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
    > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Environment** tab.
 
-2. In the left navigation pane, select **Documents**. On the **Documents** page, select **Create or upload** > **Files upload**.
+2. From the left navigation menu, click on **Documents (1)** , select **Create or upload (2)**. Then, select **Files upload (3)**.
+   
+	![](./media/pp60.png)
 
 4. In the file picker, navigate to the **C:\LabFiles\lab file\Operations** folder on your lab VM desktop.
 
@@ -677,7 +696,9 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
    | Zava Finance Agent | Available | 
    | Zava IT Support Agent | Available |
 
-   > **Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
+	  ![](./media/pp61.png)
+
+   	  >**Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
 
 ---
 

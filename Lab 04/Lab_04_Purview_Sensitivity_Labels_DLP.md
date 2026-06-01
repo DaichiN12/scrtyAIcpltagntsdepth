@@ -41,15 +41,15 @@ Estimated time: **30 minutes**
 
 3. On the **Information Protection settings** page, select the **Co-authoring for files with sensitivity labels** tab.
 
-4. Select the checkbox for **Turn on co-authoring for files with sensitivity labels**.
+4. Select the checkbox for **Turn on co-authoring for files with sensitivity labels** if not already turned on.
 
-	![](./media/l04-e1-t1-s4.png)
+	  ![](./media/l04-e1-t1-s4.png)
 
-5. Select **Apply** at the bottom of the page.
+	- Select **Apply** at the bottom of the page.
 
-	![](./media/l04-e1-t1-s5.png)
+		![](./media/l04-e1-t1-s5.png)
 
-   > **Note:** Enabling co-authoring also activates sensitivity label support for files stored in SharePoint and OneDrive. This is a prerequisite for applying labels to SharePoint-hosted files and for Defender for Cloud Apps to scan files for label metadata. Without this setting, the Sensitivity button will not appear in Office for the web.
+   		 > **Note:** Enabling co-authoring also activates sensitivity label support for files stored in SharePoint and OneDrive. This is a prerequisite for applying labels to SharePoint-hosted files and for Defender for Cloud Apps to scan files for label metadata. Without this setting, the Sensitivity button will not appear in Office for the web.
 
 ---
 
@@ -67,13 +67,13 @@ Estimated time: **30 minutes**
 
 3. If asked, select **Get started** for migrating to the new label scheme.
 
-	![](./media/l04-e2-t1-s3.png)
+	  ![](./media/l04-e2-t1-s3.png)
 
-4. Select **Migrate** on the fly-out pane and then **Confirm migration**.
+	- Select **Migrate** on the fly-out pane and then **Confirm migration**.
 
-	![](./media/l04-e2-t1-s4.png)
+		 ![](./media/l04-e2-t1-s4.png)
 
-	![](./media/l04-e2-t1-s5.png)
+		 ![](./media/l04-e2-t1-s5.png)
 
 5. On the **Sensitivity labels** page, select **+ Create** and then select **Label group**.
 
@@ -94,7 +94,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l04-e2-t1-s8.png)
 
-9. On the **Your label group was created** page, select **Done**.
+9. On the **Your label group was created** page, select **Dont create a label yet** and click on **Done**.
 
 	![](./media/l04-e2-t1-s9.png)
 
@@ -106,7 +106,7 @@ Estimated time: **30 minutes**
 
 ### Task 2: Create the HR Data Child Label
 
-1. On the **Sensitivity labels** page, locate the **Zava-Confidential** label group. Select the vertical ellipsis (**…**) next to **Zava-Confidential**. Select **+ Create label in group** from the dropdown menu.
+1. On the **Sensitivity labels** page, locate the **Zava-Confidential** label group. Select the vertical ellipsis (**…**) next to **Zava-Confidential**. Select **+ Create label in group**.
 
 	![](./media/l04-e2-t2-s1.png)
 
@@ -121,7 +121,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l04-e2-t2-s2.png)
 
-4. On the **Define the scope for this label** page, select **Files** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
+4. On the **Define the scope for this label** page, select **Files & other data assets** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
 
 	![](./media/l04-e2-t2-s3.png)
 
@@ -129,11 +129,11 @@ Estimated time: **30 minutes**
 
 	![](./media/l04-e2-t2-s5.png)
 
-6. On the **Content marking** page, set the **Content marking** toggle to **On**.
+6. On the **Content marking** page, set the **Content marking** toggle to **On**. Select the checkbox for **Add a header**.
 
 	![](./media/l04-e2-t2-s6.png)
 
-7. Select the checkbox for **Add a header**. Select the edit icon below to **Add a header**.
+7. Select the edit icon below to **Add a header**.
 
 	![](./media/l04-e2-t2-s7.png)
 
@@ -141,7 +141,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l04-e2-t2-s8.png)
 
-10. Select the checkbox for **Add a footer**. Select the edit icon below to **Add a footer**.
+10. Select the edit icon below to **Add a footer**.
 
 	![](./media/l04-e2-t2-s9.png)
 
@@ -172,7 +172,7 @@ Estimated time: **30 minutes**
 
 ### Task 3: Create the Financial Data Child Label with Auto-Labelling
 
-1. On the **Sensitivity labels** page, locate the **Zava-Confidential** label group. Select the vertical ellipsis (**…**) next to **Zava-Confidential**. Select **+ Create label in group** from the dropdown menu.
+1. On the **Sensitivity labels** page, locate the **Zava-Confidential** label group. Select the vertical ellipsis (**…**) next to **Zava-Confidential**. Select **+ Create label in group**.
 
 	![](./media/l04-e2-t3-s1.png)
 
@@ -187,7 +187,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l04-e2-t3-s2.png)
 
-4. On the **Define the scope for this label** page, select **Files** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
+4. On the **Define the scope for this label** page, select **Files & other data assets** and **Emails**. Ensure **Meetings** is deselected. Select **Next**.
 
 	![](./media/l04-e2-t3-s4.png)
 
@@ -197,7 +197,7 @@ Estimated time: **30 minutes**
 
 6. On the **Content marking** page, set the **Content marking** toggle to **On**.
 
-7. Select the checkbox for **Add a footer**. Select the edit icon next to **Add a footer**.
+7. Select the edit icon below to **Add a footer**.
 
 	![](./media/l04-e2-t3-s7.png)
 
@@ -245,8 +245,6 @@ Estimated time: **30 minutes**
 
 18. On the **Your sensitivity label was created** page, select **Automatically apply label to sensitive content**. Select **Done**.
 
-	![](./media/l04-e2-t3-s18.png)
-
 19. On the **Create auto-labeling policy** flyout page, select **Review policy**.
 
 	![](./media/l04-e2-t3-s19.png)
@@ -255,7 +253,7 @@ Estimated time: **30 minutes**
 
 ### Task 4: Configure and Save the Financial Data Auto-Labelling Policy
 
-1. On the **Name your auto-labeling policy** page, confirm the default name reflects the Financial-Data label, then select **Next**.
+1. On the **Name your auto-labeling policy** page, confirm the default name reflects **Financial-Data auto-labeling policy**, then select **Next**.
 
 	![](./media/l04-e2-t4-s1.png)
 
@@ -274,8 +272,6 @@ Estimated time: **30 minutes**
    - **OneDrive accounts**
 
 5. Select **Next**.
-
-	![](./media/l04-e2-t4-s5.png)
 
 6. On the **Set up common or advanced rules** page, leave **Common rules** selected, then select **Next**.
 

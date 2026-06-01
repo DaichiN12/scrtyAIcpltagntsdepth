@@ -120,11 +120,16 @@ Estimated time: **20 minutes**
 
 	![](./media/secure4.png)
 
+      >**Note:** If not, click on **Publish** and click on it again on the pop-up confirmation.
+
+	  ![](./media/secure17.png)
+   
+   	  ![](./media/secure18.png)
 ---
 
 ### Task 4: Block and Unblock the Zava HR Assistant
 
-1. Navigate back to `https://admin.cloud.microsoft/`. Sign in with **ODL User** credentials if prompted.
+1. Navigate back to `https://admin.cloud.microsoft/`. 
 
 2. Expand **Agents** from the left navigation pane, select **All agents (1)**, select the **Registry** tab, then search for and select **Zava HR Assistant (2)** in the agent list.
 
@@ -183,11 +188,11 @@ Estimated time: **20 minutes**
 
 ### Task 6: Identify Ownerless Agents
 
-1. On the **Registry** tab, select the **Missing an owner** card.
+1. On the **Registry** tab, select the **Agents without Owners** card.
 
 	![](./media/l01-e1-t6-s1.png)
 
-2. Review the list of agents that are displayed after applying the ownerless filter.
+2. Review the list of agents that are displayed.
 
 	![](./media/l01-e1-t6-s2.png)
 
@@ -259,7 +264,7 @@ Estimated time: **20 minutes**
 
 ### Task 2: Configure Defender for Cloud Apps Organisation Details
 
-1. In the Microsoft Defender portal at `https://security.microsoft.com`, in the left navigation pane, expand **System** and select **Settings (1)**. On the **Settings** page, select **Cloud Apps (2)**.
+1. In the left navigation pane, expand **System** and select **Settings (1)**. On the **Settings** page, select **Cloud Apps (2)**.
 
 	![](./media/secure12.png)
 
@@ -269,14 +274,12 @@ Estimated time: **20 minutes**
 
 	- In the **Environment name** field, enter **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** (3).
 
-	- In the **Managed domains** field, replace the existing one with your tenant's primary domain in the following format:
+	- In the **Managed domains** field, enter your tenant's primary domain in the following format if not already present:
    `[TenantPrefix].onmicrosoft.com` (4)
 
-		![](./media/secure13.png)
+         > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
 
-   		> **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
-
-		![](./media/pp26.png)
+		 ![](./media/ex1.png)
 
 8. Confirm that a success notification appears confirming that the settings were saved.
 
@@ -310,9 +313,11 @@ Estimated time: **20 minutes**
 
 	![](./media/l01-e3-t4-s10.png)
 
-11. Select **Connect Microsoft Azure**. Wait for the connection to complete and click on **Done**.
+11. Select **Connect Microsoft Azure**. 
 
 	![](./media/l01-e3-t4-s11.png)
+
+12. Wait for the connection to complete and click on **Done**.
 
     > **Note:** After connecting, Defender for Cloud Apps begins scanning Microsoft 365 activity. Initial data from the past week will appear in the portal. The first full scan may take several hours depending on tenant size. This connector is required for activity monitoring, DLP policy enforcement, and alert generation in Day 2 and Day 3 labs.
 
