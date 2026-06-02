@@ -101,26 +101,12 @@ Estimated time: **30 minutes**
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	![](./media/L00-E1-T1-S2.png)
 
-	- **Password:** <inject key="AzureAdUserPassword"></inject>
-	![](./media/image3.png)
+	- **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
+	![](./media/tap.png)
 
-3. If prompted with a **Keep your account secure** window, select **Next**.
+1. If asked **Stay signed in?**, select **Yes**.
 
-	![](./media/image4.png)
-
-	- Follow the on-screen prompts to set up the Microsoft Authenticator app.
-
-   		 >**Note:** On your mobile device, open the Authenticator app, select **+** in the top-right corner, select **Work or school account**, and then, select **Scan a QR code**. Scan the QR code displayed on screen.
-
-		 ![](./media/image5.png)
-
-	- Complete all remaining prompts to finish the Authenticator setup.
-
-		 ![](./media/image6.png)
-
-	- If asked **Stay signed in?**, select **Yes**.
-
-	- On the Microsoft Entra admin center welcome screen, select **Get Started**.
+1. On the Microsoft Entra admin center welcome screen, select **Get Started**.
 
 ---
 
@@ -176,7 +162,6 @@ Estimated time: **30 minutes**
 
 12. Confirm that a success notification appears at the top of the page.
 
-	![](./media/L00-E1-T2-S12.png)
 	![](./media/L00-E1-T2-S13.png)
 
 ---
@@ -408,6 +393,8 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 12. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
+    ![](./media/kn.png)   
+
 13. On the **Add knowledge** panel, select **SharePoint**.
 
 	![](./media/L00-E2-T1-S12.png)
@@ -423,7 +410,11 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 16. Select **Add to agent** to connect the SharePoint site as the knowledge source.
 
+    ![](./media/l0e2t1s12.png)  
+
 17. In the top-right corner of the agent configuration page, select **Publish**.
+
+    ![](./media/l0e2t1s13.png)
 
 18. In the confirmation dialog, select **Publish** to confirm.
 
@@ -487,6 +478,8 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 7. Scroll down and on the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
+    ![](./media/kn.png) 
+
 8. On the **Add knowledge** panel, select **SharePoint**.
 
 	![](./media/image82.png)
@@ -503,6 +496,8 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 	![](./media/pp52.png)
 
 11. Then select **Add to agent**.
+
+    ![](./media/l0e2t2s10.png)
 
 12. On the agent configuration page, locate the **Channels** tab on the top section (select **+6** if it is not directly visible).
 
@@ -545,6 +540,8 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 7. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
 
+    ![](./media/kn.png) 
+
 8. On the **Add knowledge** panel, select **Public Websites**.
 
 	![](./media/image103.png)
@@ -564,7 +561,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 12. In the confirmation dialog, select **Publish** to confirm.
 
-	![](./media/pp57.png)
+	![](./media/image89.png)
 
 13. On the agent configuration page, locate the **Channels** tab on the top section (select **+7** if it is not directly visible).
 
@@ -633,7 +630,7 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
 7. On the **Documents** page, confirm that all 8 files appear in the document library.
 
-	![](./media/L00-E3-T1-S6.png)
+	![](./media/l0e3t1s6.png)
 
 8. Select **Zava_Employee_Records.xlsx** to open it.
 
@@ -670,6 +667,8 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
 7. On the **Documents** page, confirm that all 6 files appear in the document library.
 
+    ![](./media/l0e3t2s6.png)
+
 8. Select **Zava_Expense_Report_Alex.xlsx** to open it.
 
 9. Confirm that the file opens and displays expense data including credit card information.
@@ -686,7 +685,9 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-2. In the left navigation pane, select **Agents**. If this option is not visible, select **AI** and then select **Agents**. Then select **All agents**.
+2. In the left navigation pane, select **Agents** and Then select **All agents**.
+
+    ![](./media/l0e3t3s1.png)
 
 3. On this page, confirm that the following three agents appear in the list. You can search for `Zava` in the search box to filter the results.
 
@@ -698,7 +699,8 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
 	  ![](./media/pp61.png)
 
-   	  >**Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
+	  >**Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
+	  
 
 ---
 
