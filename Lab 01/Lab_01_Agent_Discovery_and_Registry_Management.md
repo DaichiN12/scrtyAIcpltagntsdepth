@@ -101,6 +101,8 @@ Estimated time: **20 minutes**
 13. Select **Done**.
     
 	![](./media/l01-e1-t2-s12.png)
+
+1. Repeat the above steps 1 to step 12 for **Zava HR Agent**
 ---
 
 ### Task 3: Approve an Agent in Teams Admin Center
@@ -122,9 +124,10 @@ Estimated time: **20 minutes**
 
       >**Note:** If not, click on **Publish** and click on it again on the pop-up confirmation.
 
-	  ![](./media/secure17.png)
-   
-   	  ![](./media/secure18.png)
+	![](./media/secure17.png)
+
+   	![](./media/secure18.png)
+
 ---
 
 ### Task 4: Block and Unblock the Zava HR Assistant
@@ -152,6 +155,8 @@ Estimated time: **20 minutes**
 	![](./media/secure8.png)
 
 7. On the **Unblock agent** pane, select the **Unblock agent** checkbox. Select **Save**. Close the details panel.
+
+    ![](./media/l1t4s7.png)
 
 8. In the agent list, confirm that **Zava HR Assistant** now displays an **Available** status.
 
@@ -274,12 +279,9 @@ Estimated time: **20 minutes**
 
 	- In the **Environment name** field, enter **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** (3).
 
-	- In the **Managed domains** field, enter your tenant's primary domain in the following format if not already present:
-   `[TenantPrefix].onmicrosoft.com` (4)
+	- In the **Managed domains** field, keep it default
 
-         > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
-
-		 ![](./media/ex1.png)
+	![](./media/l1e3t2s2.png)
 
 8. Confirm that a success notification appears confirming that the settings were saved.
 

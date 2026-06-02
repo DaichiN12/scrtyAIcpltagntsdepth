@@ -404,8 +404,6 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
     > **Note:** Replace `[TenantPrefix]` with your tenant prefix found on the **Environment** tab of your lab environment.
 
-	   ![](./media/pp26.png)
-
        ![](./media/pp27.png)
 
 16. Select **Add to agent** to connect the SharePoint site as the knowledge source.
@@ -488,8 +486,6 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
     **https://[TenantPrefix].sharepoint.com/sites/Operations<inject key="Deployment ID" enableCopy="false"></inject>**
 
     > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Environment** tab.
-
-	![](./media/pp26.png)
 
 10. Select **Add** to connect the SharePoint site as the knowledge source.
 
