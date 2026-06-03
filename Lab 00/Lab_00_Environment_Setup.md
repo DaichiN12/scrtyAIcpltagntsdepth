@@ -95,8 +95,6 @@ Estimated time: **30 minutes**
 
 1. Open a browser and navigate to `https://entra.microsoft.com`.
 
-	![](./media/L00-E1-T1-S1.png)
-
 2. On the sign-in page, enter the **ODL User** credentials from the **Environment** tab of your lab environment if prompted:
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	![](./media/L00-E1-T1-S2.png)

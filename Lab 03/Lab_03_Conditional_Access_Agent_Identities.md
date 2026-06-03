@@ -4,9 +4,9 @@
 
 Zava's CISO has mandated that only reviewed and approved AI agents may access company resources. Any agent that has not been through the governance review process must be blocked automatically. Additionally, if any agent identity shows signs of compromise — such as anomalous token acquisition behaviour — it must be blocked immediately without manual intervention.
 
-ODL User will implement both controls using Conditional Access for Agent Identities (Preview). Patti Fernandes will validate that policy evaluation is visible in sign-in logs. This lab establishes the Zava agent governance baseline that all subsequent security labs build upon.
+you will implement both controls using Conditional Access for Agent Identities (Preview). Patti Fernandes will validate that policy evaluation is visible in sign-in logs. This lab establishes the Zava agent governance baseline that all subsequent security labs build upon.
 
-Conditional Access for Agent Identities is a preview capability in Microsoft Entra ID that extends Zero Trust controls to AI agents. ODL User will create custom security attributes to classify the approval status of each Zava agent, build a Conditional Access policy that blocks all unapproved agent identities from accessing organisational resources, and create a second policy that blocks any agent identity exhibiting high-risk behaviour based on Entra ID Protection signals. The policies will first be validated in Report-only mode before being switched to enforcement. Patti Fernandes will investigate agent sign-in events to confirm Conditional Access policy evaluation.
+Conditional Access for Agent Identities is a preview capability in Microsoft Entra ID that extends Zero Trust controls to AI agents. you will create custom security attributes to classify the approval status of each Zava agent, build a Conditional Access policy that blocks all unapproved agent identities from accessing organisational resources, and create a second policy that blocks any agent identity exhibiting high-risk behaviour based on Entra ID Protection signals. The policies will first be validated in Report-only mode before being switched to enforcement. Patti Fernandes will investigate agent sign-in events to confirm Conditional Access policy evaluation.
 
 ---
 
@@ -218,6 +218,14 @@ Estimated time: **30 minutes**
 
 	![](./media/l03-e2-t1-s11.png)
 
+1. Under **Exclude**, click on **None** under **Select individual agent identities**.
+
+	![](./media/n1.png)
+
+1. Select **HR agent (1)** and click on **Select (2)** 
+
+	![](./media/n2.png)
+
 12. Under **Target resources**, select **No target resources selected**.
 
 	![](./media/l03-e2-t1-s12.png)
@@ -227,6 +235,8 @@ Estimated time: **30 minutes**
 	![](./media/l03-e2-t1-s13.png)
 
 15. Under **Access controls**, on the **Grant** panel, confirm that **Block access** is selected.
+
+	![](./media/l3e2t1s13.png)
 
 16. For **Enable policy**, keep **Report-only**.
 
@@ -256,6 +266,8 @@ Estimated time: **30 minutes**
 	![](./media/l03-e2-t2-s4.png)
 
 4. Under **Target resource**, set **Select target type** to **Cloud apps**. Select **+ Select cloud app**.
+
+	![](./media/l3e2t1s5.png)
 
 5. In the search field, enter `Office 365 SharePoint Online`. Select **Office 365 SharePoint Online** from the results. Choose **Select** to confirm.
 
@@ -331,13 +343,15 @@ Estimated time: **30 minutes**
 
 7. Under **Conditions**, select **0 Conditions selected**. Then select **Not Configured** under **Agent Risk**.
 
-	![](./media/l03-e3-t3-s7.png)
+	![](./media/l3e3t1s7.png)
 
 8. On the **Agent risk** panel, set **Configure** to **Yes**. Under **Configure agent risk levels needed for policy to be enforced**, select **High**. Select **Done** to confirm the condition.
 
 	![](./media/l03-e3-t3-s8.png)
 
 9. Under **Access controls**, under **Grant**, make sure that **Block access** is selected.
+
+	![](./media/l3e3t1s9.png)
 
 10. Under **Enable policy**, select **Report-only**.
 
@@ -359,7 +373,7 @@ Estimated time: **30 minutes**
 
 2. Navigate to `https://copilot.microsoft.com`.
 
-3. Sign in with **Patti Fernandes** credentials from the **Resources** tab. (You can use **<inject key="User 02 UPN"></inject>** as your ID and the User Password from the Resources tab.)
+3. Sign in with **Patti Fernandes** credentials from the **Resources** tab. (You can use **<inject key="User 02 UPN"></inject>** as your ID and Use the User Password from the Resources tab Uae the in the Temporary Acess Pass .)
 
 4. In the Microsoft 365 Copilot chat interface, select **All agents** from the navigation. Search for and select **Zava HR Assistant**.
 
@@ -398,7 +412,7 @@ Estimated time: **30 minutes**
 
 1. Return to the **ODL User** browser session at `https://entra.microsoft.com`.
 
-2. In the left navigation pane, expand **Entra ID** and select **Monitoring & health**. Select **Sign-in logs**.
+2. In the left navigation pane, expand **Entra ID** and Select **Sign-in logs** under **Monitoring & health**.
 
 	![](./media/l03-e4-t2-s2.png)
 
