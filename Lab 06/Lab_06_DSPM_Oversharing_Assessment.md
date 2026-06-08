@@ -56,7 +56,7 @@ Estimated time: **25 minutes**
 
 3. Configure the following:
    - **Name:** `Purview DSPM Item Level Scan`
-   - **Supported account types:** Select **Single tenant only - GPS Sandbox Labs**
+   - **Supported account types:** Select **Single tenant only**
 
 4. Select **Register**.
 
@@ -91,7 +91,7 @@ Estimated time: **25 minutes**
 
 	![](./media/l06-e1-t1-s10.png)
 
-11. Select **Grant admin consent for Contoso**.
+11. Select **Grant admin consent**.
 
 	![](./media/l06-e1-t1-s11.png)
 
@@ -126,7 +126,7 @@ Estimated time: **25 minutes**
 
 3. On the **DSPM** landing page, if prompted to complete initial setup tasks, select **Get started** and accept any required configuration to enable the solution. Allow the setup to complete before continuing.
 
-4. In the left sub-navigation, select **Discover**. Under **Discover**, select **Data risk assessments**.
+4. In the left sub-navigation, select **Data risk assessments** Under **Discover**
 
 	![](./media/l06-e1-t2-s4.png)
 
@@ -134,7 +134,7 @@ Estimated time: **25 minutes**
 
 	![](./media/l06-e1-t2-s5.png)
 
-6. On the **Client Secret** tab, enter the **Application ID** and **Client secret** value copied in Task 1. Then select **Authenticate**. Once successful, select **Save**.
+6. On the **Client Secret** tab, enter the **Application ID** and **Client secret (Value)** value copied in Task 1 step 14. Then select **Authenticate**. Once successful, select **Save**.
 
 	![](./media/l06-e1-t2-s6.png)
 
@@ -168,7 +168,7 @@ Estimated time: **25 minutes**
     - **HR<inject key="Deployment ID" enableCopy="false"></inject>**
     - **Operations<inject key="Deployment ID" enableCopy="false"></inject>**
 
-14. Select **Done** twice to confirm the site selection.
+14. Select **Done** to confirm the site selection.
 
 	![](./media/l06-e1-t2-s14.png)
 	![](./media/l06-e1-t2-s14.1.png)
@@ -250,26 +250,21 @@ In this exercise, Adele Vance generates realistic Microsoft 365 Copilot interact
 
 	![](./media/l06-e3-t1-s3.png)
 
-4. Review the following sections and note their current values:
-
-   - **Security Copilot suggested prompts** — note the prompt suggestions available.
-   - **Top objectives to address** — note which objectives are listed as highest priority.
-   - **Data use snapshot** — note the volume of sensitive data activity detected across the estate.
-   - **30-day trending graph** — review whether the trend is improving or worsening.
-
 ---
 
 ### Task 2: Activate the Detect Risky AI Usage One-Click Policy
 
 1. On the **DSPM** landing page, in the left sub-navigation, select **Tasks and actions**. Then select **Remediation actions**.
 
-	![](./media/l06-e3-t2-s1.png)
+	![](./media/l06-e3-t2-s0.png)
 
 2. Select **Detect risky interactions in AI apps** to expand it.
 
-	![](./media/l06-e3-t2-s2.png)
+   ![](./media/l06-e3-t2-s1.png)
 
 3. Select **Create Policy** to enable the **DSPM for AI - Detect risky AI usage** Insider Risk Management policy.
+
+	![](./media/l06-e3-t2-s2.png)
 
 4. Confirm that the policy status updates to **On** or **Active**. Close the tab.
 
@@ -289,25 +284,17 @@ In this exercise, Adele Vance generates realistic Microsoft 365 Copilot interact
 
 	![](./media/l06-e3-t3-s2.png)
 
-3. On the data pane, select **view** next to **Sensitive info types**.
+3. On the data pane, confirm credit card is present in **Sensitive info types**.
 
 	![](./media/l06-e3-t3-s3.png)
 
-4. Select **Credit Card Number**. Then select **Add**.
+4. If not present click **+ Add** and Select **Credit Card Number**. Then select **Add**.
 
 	![](./media/l06-e3-t3-s4.png)
 
 5. Under **Actions**, select **Restrict user prompts from being processed**. Then select **Create policy**.
 
 	![](./media/l06-e3-t3-s5.png)
-
-6. Return to the **Remediation actions** page and select **Safeguard sensitive data in Microsoft 365 Copilot interactions**. Then select **Get started**.
-
-	![](./media/l06-e3-t3-s6.png)
-
-7. Select **Enforce policy** to enable the **Default DLP policy - Protect sensitive M365 Copilot interactions** policy.
-
-	![](./media/l06-e3-t3-s7.png)
 
 8. Confirm the policy is active.
 

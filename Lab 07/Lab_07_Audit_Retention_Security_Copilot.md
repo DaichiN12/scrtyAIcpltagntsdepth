@@ -247,7 +247,7 @@ Estimated time: **30 minutes**
 
 7. Confirm the scope shows **All users** under the included entries.
 
-   > **Note:** The **Microsoft 365 Copilot and Copilot Chat** retention location covers user prompts and responses for both Microsoft 365 Copilot and Copilot Studio agents. Interaction data is stored in a hidden Exchange mailbox folder for each user — not directly accessible to users or administrators, but searchable via eDiscovery and subject to the retention policy configured here.
+   > **Note:** The **Microsoft Copilot experiences** retention location covers user prompts and responses for both Microsoft 365 Copilot and Copilot Studio agents. Interaction data is stored in a hidden Exchange mailbox folder for each user — not directly accessible to users or administrators, but searchable via eDiscovery and subject to the retention policy configured here.
 
 8. Select **Next**.
 
@@ -263,16 +263,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l07-e4-t2-s10.png)
 
-11. On the **Review and finish** page, review the full policy configuration.
-
-12. Confirm the following:
-
-   - **Name:** Zava - Retain AI Interactions 5 Year
-   - **Locations:** Microsoft 365 Copilot and Copilot Chat — All users
-   - **Retention period:** 5 years from creation
-   - **Action after retention:** Do nothing
-
-13. Select **Submit**.
+11. On the **Review and finish** page, review the full policy configuration and select **Submit**.
 
 	![](./media/l07-e4-t2-s13.png)
 
@@ -286,14 +277,14 @@ Estimated time: **30 minutes**
 
 1. On the **Retention policies** page, locate **Zava - Retain AI Interactions 5 Year**.
 
-2. Confirm the policy status shows **On** or **Active**.
-
 3. Select the policy to open its detail panel.
+
+	![](./media/n1.png)
 
 4. On the detail panel, confirm that:
 
-   - **Status** is **On**.
-   - **Locations** shows **Microsoft 365 Copilot and Copilot Chat**.
+   - **Status** is **Enabled**.
+   - **Locations** shows **Microsoft Copilot experiences**.
    - **Retention period** shows **5 years**.
 
 	   ![](./media/l07-e4-t3-s4.png)

@@ -120,7 +120,9 @@ Estimated time: **60 minutes**
 
 3. In the left navigation pane, select **Security**, select **Threat Detection** and locate **Microsoft Defender - Copilot Studio Agents (Preview)**.
 
-7. Set the **Enable Microsoft Defender - Copilot Studio Agents** toggle to **On** and select **Save** to apply the setting.
+   ![](./media/l5e2t2s3.png)   
+
+7. Set the **Enable Microsoft Defender - Copilot Studio Agents** toggle to **On** .
 
    ![](./media/l05-e2-t2-s4.png)
 
@@ -206,8 +208,6 @@ Estimated time: **60 minutes**
 
 6. Review the results returned in the query output panel.
 
-7. Note the columns returned, including `AIAgentName`, `AgentStatus`, `CreatorAccountUpn`, `KnowledgeDetails`, and `UserAuthenticationType`.
-
 ---
 
 ## Exercise 4: Run Advanced Hunting Queries Against AIAgentsInfo
@@ -219,7 +219,7 @@ Estimated time: **60 minutes**
 2. Navigate to `https://security.microsoft.com`.
 
 3. Sign in with **Patti Fernandes** credentials from the **Resources** tab.
-   - **Email:** <inject key="User 02 UPN"></inject>
+   - **Email:** <inject key="User 01 UPN"></inject>
    - **Password:** <inject key="User's Password"></inject>
 
 4. In the left navigation pane, select **Investigation & response**.
