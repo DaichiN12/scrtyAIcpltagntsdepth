@@ -4,13 +4,13 @@
 
 **Zava Corporation** is a mid-sized financial services and HR consulting firm operating across the UK and EU. Zava manages sensitive employee records, client financial data, and third-party vendor contracts. The organisation has recently deployed AI agents across its HR, Finance, and IT Support functions to improve operational efficiency.
 
-Before any security configuration can begin, the Zava Corporation environment must be fully provisioned. In this lab, **ODL User** will configure the Microsoft Entra ID tenant, enable Microsoft Copilot Studio, register the security group required for agent authoring, create the three AI agents that serve as governance targets throughout the entire course, connect each agent to its designated SharePoint knowledge source, and upload the sample business documents that simulate Zava's live data environment.
+Before any security configuration can begin, the Zava Corporation environment must be fully provisioned. In this lab, you will configure the Microsoft Entra ID tenant, enable Microsoft Copilot Studio, register the security group required for agent authoring, create the three AI agents that serve as governance targets throughout the entire course, connect each agent to its designated SharePoint knowledge source, and upload the sample business documents that simulate Zava's live data environment.
 
 Every subsequent lab depends on the agents, identities, and files created here. Complete all three exercises in order before proceeding to Lab 01.
 
 ---
 
-   > **Note:** In a real-world environment, responsibilities like these would be distributed across multiple personas — developers, IT administrators, security administrators, and compliance officers — each operating with scoped permissions aligned to the principles of least privilege and Zero Trust. This lab lightly replicates that separation by introducing three named personas: Patti Fernandes (SOC Analyst), Adele Vance (end user), and Alex Wilber (referenced in Finance files only). If these accounts are not available in your environment, use the User ID and Temporary Access Pass provided on your Environment tab to complete all exercises with a single account that has been pre-assigned the necessary permissions. In that case, all setup, configuration, and investigation tasks will be performed by that single user.
+   > **Note:** In a real-world environment, responsibilities like these would be distributed across multiple personas — developers, IT administrators, security administrators, and compliance officers — each operating with scoped permissions aligned to the principles of least privilege and Zero Trust.
 
 ---
 
@@ -44,9 +44,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E0-S2.png)
 
-3. In the SharePoint admin center, in the left navigation pane, select **Sites** > **Active sites**.
-
-4. Select **+ Create**.
+1. In the SharePoint admin center, from the left navigation pane, expand ****Sites** and select **Active sites**. Then, click **+ Create**.
 
 	![](./media/L00-E0-S4.png)
 
@@ -56,7 +54,11 @@ Estimated time: **30 minutes**
 
 6. On the **Select a template** page, select **Standard team**.
 
+	![](./media/l0n1.png)
+
 7. On the **Preview and use 'Standard team' template** page, select **Use template**.
+
+	![](./media/l0n2.png)
 
 6. On the **Team site** configuration page, enter the following and click on **Next**:
 
@@ -75,11 +77,13 @@ Estimated time: **30 minutes**
 
 1. On the **Add site owners and members** page, click on **Finish**.
 
+	![](./media/l0n3.png)
+
 8. Wait for the site to finish provisioning. Confirm it appears in the **Active sites** list with the URL **https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**.
 
    > **Note:** This site is the SharePoint knowledge source for the Zava HR Assistant agent created in Lab 00 Exercise 2. The agent connection in Copilot Studio references **/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** specifically. Do not use a different URL slug.
 
-9. Follow the same steps from step-3 to step 8 and create the following site:
+9. Follow the same steps from step-3 to step 9 and create the following site:
 
    - **Site name:** **Operations<inject key="Deployment ID" enableCopy="false"></inject>**
    - **Site address:** Confirm the URL path reads **/sites/Operations<inject key="Deployment ID" enableCopy="false"></inject>**
@@ -97,12 +101,16 @@ Estimated time: **30 minutes**
 
 2. On the sign-in page, enter the **ODL User** credentials from the **Environment** tab of your lab environment if prompted:
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-	![](./media/L00-E1-T1-S2.png)
+
+	  ![](./media/L00-E1-T1-S2.png)
 
 	- **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
-	![](./media/tap.png)
+
+	  ![](./media/tap.png)
 
 1. If asked **Stay signed in?**, select **Yes**.
+
+	![](./media/l0n4.png)
 
 1. On the Microsoft Entra admin center welcome screen, select **Get Started**.
 
@@ -110,7 +118,7 @@ Estimated time: **30 minutes**
 
 ### Task 2: Create the copilotagentsecurity Security Group
 
-1. In the Microsoft Entra admin center, in the left navigation pane, expand **Entra ID**. Under **Entra ID**, select **Groups**.
+1. In the Microsoft Entra admin center, in the left navigation pane, expand **Entra ID** and select **Groups**.
 
 	![](./media/L00-E1-T2-S1.png)
 
@@ -146,11 +154,11 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T2-S8.png)
 
-9. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and then, choose **select**.
+9. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and click **select**.
 
 	![](./media/L00-E1-T2-S9.png)
 
-10. Select **Create**.
+10. Click **Create** to create the new group.
 
 	![](./media/L00-E1-T2-S10.png)
 
@@ -166,7 +174,7 @@ Estimated time: **30 minutes**
 
 ### Task 3: Enable Access Management for Azure Resources
 
-1. In the left navigation pane of the Microsoft Entra admin center, expand **Entra ID**. Under **Entra ID**, select **Overview**.
+1. In the left navigation pane of the Microsoft Entra admin center, expand **Entra ID** and select **Overview**.
 
 	![](./media/L00-E1-T3-S1.png)
 
@@ -182,7 +190,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T3-S4.png)
 
-6. On the **Security defaults** panel, under **Security defaults**, select **Enabled** if not already enabled. Select **Save**.
+6. On the **Security defaults** panel, under **Security defaults**, select **Enabled** if not already enabled and then click **Save**.
 
 	![](./media/L00-E1-T3-S5.png)
 
@@ -198,13 +206,9 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T4-S1.png)
 
-2. On the **Roles and administrators** page, in the search bar, enter `privileged role admin`.
+2. On the **Roles and administrators** page, in the search bar, search `Privileged Role Administrato` and select **Privileged Role Administrator** by selecting its name .
 
 	![](./media/L00-E1-T4-S2.png)
-
-3. In the search results, select **Privileged Role Administrator** by selecting its name.
-   
-	![](./media/L00-E1-T4-S3.png)
 
 5. On the **Privileged Role Administrator** page, select **+ Add assignments**.
 
@@ -256,7 +260,7 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T5-S4.png)
 
-5. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results. Then, select **Done**.
+5. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results. Then, click **Done**.
 
 	![](./media/L00-E1-T5-S5.png)
 
@@ -280,21 +284,17 @@ Estimated time: **30 minutes**
 
 	![](./media/L00-E1-T6-S3.png)
 
-4. On the **Entra Agent Identity for Copilot Studio** panel, select the **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** environment from the environment list. Select **Edit setting**.
+4. On the **Entra Agent Identity for Copilot Studio** panel, select the **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** environment from the environment list and Select **Edit setting**.
 
 	![](./media/L00-E1-T6-S4.png)
 
-5. On the setting panel of Entra Agent Identity for Copilot Studio, select **On** if not done.
+5. On the setting panel of Entra Agent Identity for Copilot Studio, select **On** if not done and click **Save**
 
-	![](./media/L00-E1-T6-S5.png)
+	![](./media/L00-E1-T6-S6.png)
 
-	- Select **Save**.
+1. After saving, close the panel.
 
-		![](./media/L00-E1-T6-S6.png)
-
-	- After saving, close the panel.
-
-		![](./media/L00-E1-T6-S7.png)
+	![](./media/L00-E1-T6-S7.png)
 
       >**Note:** Enabling Entra Agent Identity allows Copilot Studio agents to be automatically assigned a unique identity in Microsoft Entra ID. This is required for identity governance, Conditional Access, and Defender for Cloud Apps integration in later labs.
 
@@ -307,7 +307,7 @@ Estimated time: **30 minutes**
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-2. If prompted, on the **Welcome to Power Apps** screen, select **United States** and then, select **Get started**.
+2. If prompted, on the **Welcome to Power Apps** screen, click **Get started**.
 
 	![](./media/image45.png)
 
@@ -323,7 +323,7 @@ Estimated time: **30 minutes**
 
 	![](./media/pp13.png)
 
-6. In the connector search bar, enter `SharePoint`. Select **SharePoint** from the list of available connectors.
+6. In the connector search bar, enter `SharePoint` and  select **SharePoint** from the list of available connectors.
 
 	![](./media/pp14.png)
 
@@ -344,7 +344,7 @@ Estimated time: **30 minutes**
 
 ## Exercise 2: Create the Zava Copilot Studio Agents
 
-In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot Studio. Each agent is configured with a name, description, instructions, and a SharePoint knowledge source. After publishing, each agent is shared with the designated lab user accounts. These agents serve as the live governance targets in Labs 01 through 07.
+In this exercise, you will creates all three Zava agents in Microsoft Copilot Studio. Each agent is configured with a name, description, instructions, and a SharePoint knowledge source. After publishing, each agent is shared with the designated lab user accounts. These agents serve as the live governance targets in Labs 01 through 07.
 
 ---
 
@@ -358,10 +358,10 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 1. If Copilot Studio does not load, follow these steps:
 
 	- Open `https://admin.powerplatform.microsoft.com/`. Select **Manage** > **Environments** > **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** and copy the value of the **Environment ID**.
-   
-   - Navigate back to the Copilot Studio tab and open `https://copilotstudio.microsoft.com/environments/<EnvironmentID>` (replacing `<EnvironmentID>` with the value copied above).
 
 		![](./media/pp20.png)
+   
+   - Navigate back to the Copilot Studio tab and open `https://copilotstudio.microsoft.com/environments/<EnvironmentID>` (replacing `<EnvironmentID>` with the value copied above).
 
 2. On the **Welcome** screen, click on **Get Started**.
 
@@ -379,11 +379,11 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 	 ![](./media/pp24.png)
 
-8. In the **Description** field, enter `An AI assistant that helps Zava employees find HR policies, benefits information, and employee procedures.` Select **Save**.
+8. In the **Description** field, enter `An AI assistant that helps Zava employees find HR policies, benefits information, and employee procedures.` and select **Save**.
 
 	 ![](./media/pp25.png)
 
-10. Scroll downn to the **Instructions** field, select **Edit** and enter the following, then select **Save**.
+10. Scroll downn to the **Instructions** field, click on **Edit** and enter the following, then select **Save**.
 
     ```
     You are the Zava HR Assistant. Answer questions using only the information available in the Zava HR SharePoint knowledge base. Do not speculate or provide information outside the knowledge base. Always respond professionally.
@@ -400,7 +400,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 14. In the **SharePoint URL** field, enter the SharePoint HR site URL in the following format and select **Add**:
     **https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**
 
-    > **Note:** Replace `[TenantPrefix]` with your tenant prefix found on the **Environment** tab of your lab environment.
+    > **Note:** Replace `[TenantPrefix]` with your tenant prefix found on the **Environment** tab of your lab environment or take url from exercise 0 .
 
        ![](./media/pp27.png)
 
@@ -416,7 +416,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 	![](./media/image65.png)
 
-19. On the agent configuration page, locate the **Channels** tab on the top section (select **+2** if it is not directly visible).
+19. On the agent configuration page, locate the **Channels** tab on the top section (select **+** if it is not directly visible).
 
 	   ![](./media/pp30.png)
 
@@ -493,7 +493,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
     ![](./media/l0e2t2s10.png)
 
-12. On the agent configuration page, locate the **Channels** tab on the top section (select **+6** if it is not directly visible).
+12. On the agent configuration page, locate the **Channels** tab on the top section (select **+** if it is not directly visible).
 
 	![](./media/pp53.png)
 
@@ -540,8 +540,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 	![](./media/image103.png)
 
-9. In the **URL** field, enter the following site URL. Select **Add** to connect the site as the knowledge source.
-    `https://support.microsoft.com/`
+9. In the **URL** field, enter `https://support.microsoft.com/` and select **Add** to connect the site as the knowledge source.
 
 	![](./media/image104.png)
 
@@ -557,7 +556,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 	![](./media/image89.png)
 
-13. On the agent configuration page, locate the **Channels** tab on the top section (select **+7** if it is not directly visible).
+13. On the agent configuration page, locate the **Channels** tab on the top section (select **+** if it is not directly visible).
 
 	![](./media/pp58.png)
 
@@ -591,7 +590,7 @@ In this exercise, ODL_User creates all three Zava agents in Microsoft Copilot St
 
 ## Exercise 3: Upload Zava Knowledge Files to SharePoint
 
-In this exercise, ODL User uploads the Zava sample business documents to the SharePoint HR and Finance sites. These files contain the sensitive data — including employee PII, payroll records, credit card numbers, and financial forecasts — that will trigger security detections and DLP policy matches throughout Labs 04, 05, and 07.
+In this exercise, you will uploads the Zava sample business documents to the SharePoint HR and Finance sites. These files contain the sensitive data — including employee PII, payroll records, credit card numbers, and financial forecasts — that will trigger security detections and DLP policy matches throughout Labs 04, 05, and 07.
 
 ---
 
@@ -626,12 +625,6 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
 	![](./media/l0e3t1s6.png)
 
-8. Select **Zava_Employee_Records.xlsx** to open it.
-
-9. Confirm that the file opens and displays employee data including employee IDs, names, and salary information.
-
-10. Close the file and return to the **Documents** library.
-
 ---
 
 ### Task 2: Upload Files to the Zava Finance SharePoint Site
@@ -663,12 +656,6 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
     ![](./media/l0e3t2s6.png)
 
-8. Select **Zava_Expense_Report_Alex.xlsx** to open it.
-
-9. Confirm that the file opens and displays expense data including credit card information.
-
-10. Close the file and return to the **Documents** library.
-
 ---
 
 ### Task 3: Verify Agents in the Microsoft Agent 365 Agent Registry
@@ -679,7 +666,7 @@ In this exercise, ODL User uploads the Zava sample business documents to the Sha
 
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-2. In the left navigation pane, select **Agents** and Then select **All agents**.
+2. In the left navigation pane, expand **Agents** and then select **All agents**.
 
     ![](./media/l0e3t3s1.png)
 
