@@ -141,8 +141,7 @@ Estimated time: **10 minutes**
     https://copilot.microsoft.com
     ```
 
-
-	![](./media/ex2-1.png)
+   ![](./media/ex2-1.png)
 
 1. Click on Continue with Microsoft.
 
