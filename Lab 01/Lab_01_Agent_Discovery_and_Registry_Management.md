@@ -31,7 +31,12 @@ Estimated time: **20 minutes**
 
 ### Task 1: Access the Agent 365 Overview Page
 
-1. Open a browser and navigate to `https://admin.cloud.microsoft/`. Sign in with **ODL User** credentials if prompted.
+1. Open a browser and navigate to **Microsoft 365 admin center** and Sign in with **ODL User** credentials if prompted.
+
+    ```
+	https://admin.cloud.microsoft/
+	```
+
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
@@ -74,11 +79,7 @@ Estimated time: **20 minutes**
 
 	![](./media/l01-e1-t2-s5.png)
 
-6. In the **Specific users/groups** search box, search for `Adele Vance` and select her from the dropdown.
-
-	![](./media/l01-e1-t2-s6.png)
-
-7. Add **Patti Fernandes** as well.
+6. In the **Specific users/groups** search box, search for `Patti Fernandes` and select her from the dropdown.
 
 	![](./media/l01-e1-t2-s7.png)
 
@@ -101,11 +102,17 @@ Estimated time: **20 minutes**
 13. Select **Done**.
     
 	![](./media/l01-e1-t2-s12.png)
+
+1. Repeat the above steps 1 to step 12 for **Zava HR Agent**
 ---
 
 ### Task 3: Approve an Agent in Teams Admin Center
 
-1. Open a new browser tab and navigate to `https://admin.teams.microsoft.com/` and log in using the ODL User credentials.
+1. Open a new browser tab and navigate to **Teams Admin Center** using the below URL and log in using the ODL User credentials.
+
+    ```
+	https://admin.teams.microsoft.com/
+	```
 
 	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 	- **Password:** <inject key="AzureAdUserPassword"></inject>
@@ -122,14 +129,19 @@ Estimated time: **20 minutes**
 
       >**Note:** If not, click on **Publish** and click on it again on the pop-up confirmation.
 
-	  ![](./media/secure17.png)
-   
-   	  ![](./media/secure18.png)
+	![](./media/secure17.png)
+
+   	![](./media/secure18.png)
+
 ---
 
 ### Task 4: Block and Unblock the Zava HR Assistant
 
-1. Navigate back to `https://admin.cloud.microsoft/`. 
+1. Navigate back to Microsoft 365 admin center.
+
+    ```
+	https://admin.cloud.microsoft/
+	```
 
 2. Expand **Agents** from the left navigation pane, select **All agents (1)**, select the **Registry** tab, then search for and select **Zava HR Assistant (2)** in the agent list.
 
@@ -152,6 +164,8 @@ Estimated time: **20 minutes**
 	![](./media/secure8.png)
 
 7. On the **Unblock agent** pane, select the **Unblock agent** checkbox. Select **Save**. Close the details panel.
+
+    ![](./media/l1t4s7.png)
 
 8. In the agent list, confirm that **Zava HR Assistant** now displays an **Available** status.
 
@@ -210,11 +224,15 @@ Estimated time: **20 minutes**
 
 ### Task 1: Verify Purview Audit Is Active
 
-1. Open a new browser tab and navigate to `https://purview.microsoft.com`. Sign in with **ODL User** credentials if prompted. Select **Get started**.
+1. Open a new browser tab and navigate to **Microsoft Purview** using the below URL and Sign in with **ODL User** credentials if prompted. Select **Get started**.
+
+    ```
+	https://purview.microsoft.com
+	```
 
 	![](./media/l01-e2-t1-s1.png)
 
-2. In the left navigation pane, select **Solutions**, then select **Audit**.
+2. In the left navigation pane, select **Audit** from **Solutions**.
 
 	![](./media/l01-e2-t1-s2.png)
 
@@ -240,6 +258,8 @@ Estimated time: **20 minutes**
 
 6. Wait for the search job to complete.
 
+	![](./media/l1n3.png)
+
 7. Review the results to confirm that audit records are being returned.
 
    > **Note:** If the search returns no results, this may indicate that no audited activities have occurred yet in the tenant, or that audit log ingestion requires additional time after initial provisioning. This is expected in a new lab environment. Audit records generated throughout this and subsequent labs will be searchable from Day 2 onwards.
@@ -250,7 +270,11 @@ Estimated time: **20 minutes**
 
 ### Task 1: Provision Microsoft Defender XDR
 
-1. Open a new browser tab and navigate to `https://security.microsoft.com`. Sign in with **ODL User** credentials if prompted.
+1. Open a new browser tab and navigate to **Microsoft Defender** using the below URL and Sign in with **ODL User** credentials if prompted.
+
+    ```
+	https://security.microsoft.com
+	```
 
 2. On the **Microsoft Defender** portal welcome screen, review the provisioning message if displayed.
 
@@ -274,12 +298,9 @@ Estimated time: **20 minutes**
 
 	- In the **Environment name** field, enter **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** (3).
 
-	- In the **Managed domains** field, enter your tenant's primary domain in the following format if not already present:
-   `[TenantPrefix].onmicrosoft.com` (4)
+	- In the **Managed domains** field, keep it default
 
-         > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Resources** tab. Adding managed domains ensures that internal users are correctly identified in Cloud Apps reports and alerts.
-
-		 ![](./media/ex1.png)
+	![](./media/l1e3t2s2.png)
 
 8. Confirm that a success notification appears confirming that the settings were saved.
 
@@ -287,7 +308,7 @@ Estimated time: **20 minutes**
 
 ### Task 3: Enable File Monitoring in Defender for Cloud Apps
 
-1. From the left navigation pane, under **Information Protection**, select **Files (1)**. On the **Files** page, select the **Enable file monitoring (2)** checkbox. Select **Save (3)**.
+1. From the left navigation pane, under **Information Protection**, select **Files (1)**. On the **Files** page, select the **Enable file monitoring (2)** checkbox and click **Save (3)**.
 
 	 ![](./media/secure14.png)
 
@@ -301,7 +322,7 @@ Estimated time: **20 minutes**
 
 	 ![](./media/secure15.png)
 
-6. On the **Select Microsoft 365 components** page, confirm that all components are selected by default. If any component is deselected, select it to enable it. Select **Connect Microsoft 365**.
+6. On the **Select Microsoft 365 components** page, confirm that all components are selected by default. If any component is deselected, select it to enable it and click **Connect Microsoft 365**.
 
 	 ![](./media/secure16.png)
 
