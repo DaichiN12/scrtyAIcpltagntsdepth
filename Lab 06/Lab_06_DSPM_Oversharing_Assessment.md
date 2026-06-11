@@ -45,7 +45,11 @@ Estimated time: **25 minutes**
 
 ### Task 1: Register an Entra App
 
-1. Navigate to `https://entra.microsoft.com`. Sign in with **ODL User** credentials if prompted.
+1. Navigate to **Entra admin center** using the below URL and Sign in with **ODL User** credentials if prompted.
+
+    ```
+    https://entra.microsoft.com
+    ```
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    - **Password:** <inject key="AzureAdUserPassword"></inject>
@@ -74,7 +78,7 @@ Estimated time: **25 minutes**
 
 	![](./media/l06-e1-t1-s7.png)
 
-8. Select **Application permissions**.
+8. Under Microsoft Graph , Select **Application permissions**.
 
 	![](./media/l06-e1-t1-s8.png)
 
@@ -91,7 +95,7 @@ Estimated time: **25 minutes**
 
 	![](./media/l06-e1-t1-s10.png)
 
-11. Select **Grant admin consent**.
+11. Select **Grant admin consent** to give the permission consent.
 
 	![](./media/l06-e1-t1-s11.png)
 
@@ -113,7 +117,11 @@ Estimated time: **25 minutes**
 
 ### Task 2: Run a Custom Data Risk Assessment Against Zava SharePoint Sites
 
-1. Open a browser and navigate to `https://purview.microsoft.com`. Sign in with **ODL User** credentials if prompted.
+1. Open a browser and navigate to **Microsoft Purview** portal using the below URL and Sign in with **ODL User** credentials if prompted.
+
+    ```
+    https://purview.microsoft.com
+    ```
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    - **Password:** <inject key="AzureAdUserPassword"></inject>
@@ -151,11 +159,11 @@ Estimated time: **25 minutes**
 
 	![](./media/l06-e1-t2-s9.png)
 
-10. On the **Select scan level**, choose **Item-level**.
+10. On the **Select scan level**, choose **Item-level** and make sure all checkbos are enabled.
 
 	![](./media/l06-e1-t2-s10.png)
 
-11. Select **Next** until you reach **Add data sources to assess**. Next to **SharePoint**, select **Scope sites**.
+11. Select **Next** until you reach **Add data sources to assess** and select **Scope sites** , Next to **SharePoint**.
 
 	![](./media/l06-e1-t2-s11.png)
 
@@ -174,7 +182,7 @@ Estimated time: **25 minutes**
 
 	![](./media/l06-e1-t2-s14.1.png)
 
-15. Select **Next**.
+15. Make sure only **SharePoint** is enabled and click **Next**.
 
 	![](./media/l06-e1-t2-s15.png)
 
@@ -182,7 +190,7 @@ Estimated time: **25 minutes**
 
 	![](./media/l06-e1-t2-s16.png)
 
-17. Select **Done**.
+17. Click **Done**.
 
 	![](./media/l06-e1-t2-s17.png)
 
@@ -190,7 +198,7 @@ Estimated time: **25 minutes**
 
 	![](./media/l06-e1-t2-s18.png)
 
-    > **Note:** The assessment will take 30–60 minutes to complete depending on the number of items in the selected SharePoint sites. Proceed immediately to Exercise 2. You will return to review the results in Exercise 4.
+    > **Note:** The assessment will take time to complete depending on the number of items in the selected SharePoint sites.
 
 ---
 
@@ -200,7 +208,11 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
 
 ### Task 1: Generate HR Data Interaction Signals as Adele Vance
 
-1. Open a new **InPrivate** or **Incognito** browser window. Navigate to `https://copilot.microsoft.com`. Sign in with **Patti Fernandes** credentials from the **Resources** tab. Complete the authentication steps if necessary.
+1. Open a new **InPrivate** or **Incognito** browser window. Navigate to Copilot studio and Sign in with **Patti Fernandes** credentials from the **Resources** tab. Complete the authentication steps if necessary.
+
+    ```
+    https://copilot.microsoft.com
+    ```
 
    - **Email:** <inject key="User 01 UPN"></inject>
    - **Password:** <inject key="User's Password"></inject>
@@ -215,9 +227,9 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
    Summarise the contents of Zava_Employee_Records.xlsx from the HR SharePoint site
    ```
 
-	![](./media/l06-e2-t1-s3.png)
-
 4. Wait for the response and note what Copilot returns.
+
+	![](./media/l06-e2-t1-s4.png)
 
 5. Enter the following second prompt:
 
@@ -227,6 +239,8 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
 
 6. Wait for the response.
 
+	![](./media/l06-e2-t1-s5.png)
+
 7. Enter the following third prompt:
 
    ```
@@ -235,13 +249,19 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
 
 8. Wait for the response.
 
+	![](./media/l06-e2-t1-s6.png)
+
 ---
 
 ## Exercise 3: Explore the DSPM Posture Dashboard and Activate One-Click Policies
 
 ### Task 1: Review the DSPM Posture Dashboard
 
-1. Return to the **ODL User** session in the Microsoft Purview portal at `https://purview.microsoft.com`.
+1. Return to the **ODL User** session in the Microsoft Purview portal .
+
+    ```
+    https://purview.microsoft.com
+    ```
 
 2. In the left navigation pane, select **DSPM** from **Solutions** .
 
@@ -317,13 +337,15 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
 
    ![](./media/l06-e4-t1-s2.png)
 
+   >**Note** - It can take time get Completed maximum upto 24 hours
+
 3. Confirm the status shows **Completed**. If the status still shows **In progress**, wait for it to complete before continuing.
 
 4. Select **Zava SharePoint Oversharing Assessment** to open the results.
 
 ---
 
-### Task 2: Review Overshared Items
+### Task 2: Review Overshared Items [Optional]
 
 1. On the assessment results page, select the **Items** tab.
 
@@ -344,7 +366,7 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
 
 ---
 
-### Task 3: Apply Remediation — Restrict Access by Label
+### Task 3: Apply Remediation — Restrict Access by Label [Optional]
 
 1. On the assessment results page, select the **Protect** tab.
 
@@ -362,7 +384,7 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
 
 ---
 
-### Task 4: Apply Remediation — Enable SharePoint Restricted Content Discovery
+### Task 4: Apply Remediation — Enable SharePoint Restricted Content Discovery [Optional]
 
 1. On the **Protect** tab, locate the **Restrict all items** or **Enable Restricted Content Discovery** remediation action.
 
@@ -384,29 +406,36 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
 
 ### Task 1: Review the Apps and Agents Dashboard
 
-1. In the left sub-navigation, select **Discover**.
+1. In the left sub-navigation,Select **Apps and agents** under **Discover**.
 
-2. Select **Apps and agents**.
+   ![](./media/l6e5t1s1.png)
 
 3. On the **Apps and agents** dashboard, review the list of AI apps detected across the tenant.
 
-4. Locate **Copilot Studio** in the platform filter and apply it to show only Copilot Studio agents.
+   ![](./media/l6e5t1s2.png)
 
-5. Confirm that the three Zava agents appear in the dashboard.
+3. On the **Apps and agents** dashboard, select **Agents**.
+
+   ![](./media/l6e5t1s3.png)
 
 6. Select **Zava HR Assistant** to open its agent details.
+
+   ![](./media/l6e5t1s4.png)
+
 
 7. On the agent details panel, review the following:
 
    - **Sensitive data accessed** — types and volume of sensitive content the agent has referenced.
    - **Policy coverage** — which Purview policies are protecting data accessed by this agent.
-   - **Users** — which users have interacted with this agent.
+   - **Users Risk And activity** — which users have interacted with this agent.
+
+   ![](./media/l6e5t1s5.png)
 
 8. Close the agent details panel.
 
 ---
 
-### Task 2: Investigate AI Activities in Activity Explorer
+### Task 2: Investigate AI Activities in Activity Explorer [Optional]
 
 1. In the left sub-navigation, select **Discover**.
 
@@ -414,7 +443,7 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
 
 3. On the **Activity explorer** page, select the **AI activities** tab.
 
-4. In the filter bar, select **User** and enter `Adele Vance`.
+4. In the filter bar, select **User** and enter `Patti Fernandes`.
 
 5. Select **Apply** to filter results to Adele's interactions.
 
@@ -444,6 +473,6 @@ In this exercise, Patti Fernandes generates realistic Microsoft 365 Copilot inte
 
 ## Summary
 
-In this lab, you initiated a custom DSPM data risk assessment against the Zava HR and Finance SharePoint sites at the start of Day 3, ensuring results were available for investigation later in the lab. You registered an Entra app and configured the item-level scan connection required by DSPM. As Adele Vance, you generated three realistic Microsoft 365 Copilot interaction events referencing sensitive labelled files including employee records, payroll data, and financial projections — creating the AI activity signals needed for investigation throughout Day 3.
+In this lab, you initiated a custom DSPM data risk assessment against the Zava HR and Finance SharePoint sites at the start of Day 3, ensuring results were available for investigation later in the lab. You registered an Entra app and configured the item-level scan connection required by DSPM. As Patti Fernandes, you generated three realistic Microsoft 365 Copilot interaction events referencing sensitive labelled files including employee records, payroll data, and financial projections — creating the AI activity signals needed for investigation throughout Day 3.
 
-You explored the DSPM Posture dashboard and reviewed its key metrics, top objectives, and Security Copilot suggested prompts. You activated two one-click policies: the DSPM for AI risky AI usage Insider Risk Management policy and the sensitive info detection DLP policy for Copilot interactions. You reviewed the data risk assessment results, identified overshared sensitive items in the Zava HR and Finance sites, and applied two remediation actions: restricting access by the HR-Data sensitivity label and enabling SharePoint Restricted Content Discovery on the Zava HR site. Finally, as Patti Fernandes, you investigated Adele Vance's Copilot interaction events in the DSPM Activity Explorer AI activities tab, reviewing file references, sensitivity labels, and DLP match records — building the evidence base for the Day 3 compliance review.
+You explored the DSPM Posture dashboard and reviewed its key metrics, top objectives, and Security Copilot suggested prompts. You activated two one-click policies: the DSPM for AI risky AI usage Insider Risk Management policy and the sensitive info detection DLP policy for Copilot interactions. You reviewed the data risk assessment results, identified overshared sensitive items in the Zava HR and Finance sites, and applied two remediation actions: restricting access by the HR-Data sensitivity label and enabling SharePoint Restricted Content Discovery on the Zava HR site. Finally you investigated Patti Fernandes Copilot interaction events in the DSPM Activity Explorer AI activities tab, reviewing file references, sensitivity labels, and DLP match records — building the evidence base for the Day 3 compliance review.

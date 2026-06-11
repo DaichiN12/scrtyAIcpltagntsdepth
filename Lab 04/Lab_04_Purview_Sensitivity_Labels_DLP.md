@@ -296,7 +296,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l04-e2-t4-s9.png)
 
-10. On the **Decide if you want to test out the policy now or later** page, select **Run policy in simulation mode** and Select the checkbox for **Automatically turn on policy if not modified after 7 days in simulation**.
+10. On the **Decide if you want to test out the policy now or later** page, select **Run policy in simulation mode** and enable the checkbox for **Automatically turn on policy if not modified after 7 days in simulation**.
 
 12. Select **Next**.
 
@@ -357,7 +357,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l04-e3-t1-s10.png)
 
-    > **Note:** Label policy propagation can take up to 24 hours before the Sensitivity button appears in Office for the web for all users. In this lab, ODL User will apply labels directly via the SharePoint document library sensitivity column in the next exercise, which does not depend on the Office app Sensitivity button.
+    > **Note:** Label policy propagation can take up to 24 hours before the Sensitivity button appears in Office for the web for all users. In this lab, you will apply labels directly via the SharePoint document library sensitivity column in the next exercise, which does not depend on the Office app Sensitivity button.
 
 ---
 
@@ -458,15 +458,15 @@ Estimated time: **30 minutes**
 
 	![](./media/l04-e5-t1-s17.png)
 
-18. In the **Content contains** section, select **Add**. Select **Sensitivity labels**.
+18. In the **Content contains** section, click **Add** and Select **Sensitivity labels**.
 
 	![](./media/l04-e5-t1-s19.png)
 
-19. On the **Sensitivity labels** flyout panel, search for and select **Zava-Confidential/HR-Data**. Select **Add** to confirm.
+19. On the **Sensitivity labels** flyout panel, search for and select **Zava-Confidential/HR-Data** and click **Add** to confirm.
 
 	![](./media/l04-e5-t1-s18.png)
 
-20. Under **Actions**, select **+ Add an action**. Select **Restrict Copilot from processing contents**.
+20. Under **Actions**, click **+ Add an action** and select **Restrict Copilot from processing contents**.
 
 	![](./media/l04-e5-t1-s20.png)
 
@@ -479,11 +479,12 @@ Estimated time: **30 minutes**
 23. Confirm that **Block Copilot access to HR-labelled content** appears in the rules list on the **Customize advanced DLP rules** page. Select **Next**.
 
 	![](./media/l04-e5-t1-s23.png)
-24. On the **Policy mode** page, select **Turn the policy on immediately**. Select **Next**.
+
+24. On the **Policy mode** page, select **Turn the policy on immediately** and click **Next**.
 
 	![](./media/l04-e5-t1-s24.png)
 
-25. On the **Review and finish** page, review the policy configuration and select **Submit**.
+25. On the **Review and finish** page, review the policy configuration and click **Submit**.
 
 	![](./media/l04-e5-t1-s25.png)
 
@@ -505,7 +506,11 @@ Estimated time: **30 minutes**
 
 1. Open a new **InPrivate** or **Incognito** browser window.
 
-2. Navigate to `https://copilot.microsoft.com`.
+2. Navigate to **Microsodt copilot studio using the URL.
+
+    ```
+	https://copilot.microsoft.com
+	```
 
 3. Sign in with **Patti Fernandes** credentials from the **Resources** tab.
 	- **Email:** <inject key="User 01 UPN"></inject>
@@ -548,7 +553,11 @@ Estimated time: **30 minutes**
 
 1. Open a new **InPrivate** or **Incognito** browser window.
 
-2. Navigate to `https://purview.microsoft.com`.
+2. Navigate to **Microsoft Purview** using the below URL.
+
+    ```
+	https://purview.microsoft.com
+	```
 
 3. Sign in with **Patti Fernandes** credentials from the **Resources** tab.
 	- **Email:** <inject key="User 01 UPN"></inject>
@@ -572,8 +581,6 @@ Estimated time: **30 minutes**
 9. Wait for the search job to complete.
 
     > **Note:** If no DLP match events appear in the audit log yet, this indicates that either the DLP policy has not yet propagated fully or that the test interaction in Exercise 6 did not trigger enforcement. DLP audit events for the Copilot location can take up to one hour to appear in the audit log after enforcement occurs. Return to this search after completing Lab 05 if results are not yet available.
-
-13. Close the detail panel.
 
 14. Close the InPrivate browser window.
 

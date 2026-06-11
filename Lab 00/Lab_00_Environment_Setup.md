@@ -682,6 +682,59 @@ In this exercise, you will uploads the Zava sample business documents to the Sha
 
 	  >**Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
 	  
+---
+
+## Exercise 4: Enable Organizational Setup
+
+1. Navigate to **Exchange Admin Center** using the below URL
+
+    ```
+    https://admin.cloud.microsoft/exchange
+	```
+1. Sign in with **ODL_User** credentials if prompted.
+
+	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+	- **Password:** <inject key="AzureAdUserPassword"></inject>
+
+1. In the Exchange admin center, select the **Cloud Shell icon** from the upper-right corner of the page to launch an Azure Cloud Shell session
+
+	![](./media/ex-1.png)
+
+	>**Note**: If prompted, complete the Cloud Shell initialization before proceeding.
+
+1. After the Cloud Shell session is ready and displays the PowerShell prompt, run the following command to disconnect the current Exchange Online session
+
+    ```
+    Disconnect-ExchangeOnline -Confirm:$false	
+	```
+
+	![](./media/ex-2.png)
+
+1. Connect to Exchange Online Using Device Authentication
+by running the following command to initiate a new Exchange Online connection using device authentication:
+
+    ```
+    Connect-ExchangeOnline -Device
+    ```
+
+	![](./media/ex-3.png)
+
+    - Note: A device code and sign-in URL will be displayed. Open the URL and paste the code to complete the authentication
+
+	    ![](./media/ex-4.png)
+
+		![](./media/ex-7.png)
+
+1. After the Exchange Online PowerShell session is successfully connected, run the following command to enable organization customization:
+
+    ```
+    Enable-OrganizationCustomization
+	```
+
+	![](./media/ex-8.png)
+
+
+    >**Note**: This command prepares the Exchange Online organization for advanced configuration tasks. If organization customization has already been enabled, the command returns a message indicating that no further action is required. Continue with the next step in the lab. This may take upto 24 hours to get organization custimaztion enabled
 
 ---
 

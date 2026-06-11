@@ -4,7 +4,7 @@
 
 Zava's CISO has mandated that only reviewed and approved AI agents may access company resources. Any agent that has not been through the governance review process must be blocked automatically. Additionally, if any agent identity shows signs of compromise — such as anomalous token acquisition behaviour — it must be blocked immediately without manual intervention.
 
-you will implement both controls using Conditional Access for Agent Identities (Preview). Patti Fernandes will validate that policy evaluation is visible in sign-in logs. This lab establishes the Zava agent governance baseline that all subsequent security labs build upon.
+You will implement both controls using Conditional Access for Agent Identities (Preview). Patti Fernandes will validate that policy evaluation is visible in sign-in logs. This lab establishes the Zava agent governance baseline that all subsequent security labs build upon.
 
 Conditional Access for Agent Identities is a preview capability in Microsoft Entra ID that extends Zero Trust controls to AI agents. you will create custom security attributes to classify the approval status of each Zava agent, build a Conditional Access policy that blocks all unapproved agent identities from accessing organisational resources, and create a second policy that blocks any agent identity exhibiting high-risk behaviour based on Entra ID Protection signals. The policies will first be validated in Report-only mode before being switched to enforcement. Patti Fernandes will investigate agent sign-in events to confirm Conditional Access policy evaluation.
 
@@ -33,7 +33,11 @@ Estimated time: **30 minutes**
 
 ### Task 1: Assign the Attribute Definition Administrator Role
 
-1. Open a browser and navigate to `https://entra.microsoft.com`. Sign in with **ODL User** credentials if prompted. Under **Entra ID**, select **Roles & admins**.
+1. Open a browser and navigate to **Microsoft Entra admin center** using the below URL. Sign in with **ODL User** credentials if prompted. Under **Entra ID**, select **Roles & admins**.
+
+    ```
+    https://entra.microsoft.com
+	```
 
 	![](./media/l03-e1-t1-s1.png)
 
@@ -46,7 +50,13 @@ Estimated time: **30 minutes**
 
 4. On the **Attribute Definition Administrator** page, select **+ Add assignments**.
 
-5. On the **Add assignments** panel, select **ODL_User<inject key="Deployment ID" enableCopy="false"></inject>**. Click on **Add**.
+5. On the **Add assignments** panel,Click on **0 member selected** and  select **ODL_User<inject key="Deployment ID" enableCopy="false"></inject>**. Click on **Next**.
+
+	![](./media/l3e1t1s5.png)
+
+1. Select the assignemnt type as **Active** , make sure **Permanently assigned** is enabled and enter **Active** in the Justification field.
+
+	![](./media/l3e1t1s6.png)
    
 11. Confirm the assignment appears in the list.
 
@@ -70,6 +80,8 @@ Estimated time: **30 minutes**
    - In the **Attribute set name** field, enter `AgentAttributes`.
    - In the **Description** field, enter `Attribute set for classifying AI agent approval and governance status`.
    - In the **Maximum number of attributes** field, leave the default value.
+
+	![](./media/l3e1t2s2.png)
 
 7. Confirm that **AgentAttributes** appears in the attribute set list.
 
@@ -371,7 +383,11 @@ Estimated time: **30 minutes**
 
 1. Open a new **InPrivate** or **Incognito** browser window.
 
-2. Navigate to `https://copilot.microsoft.com`.
+2. Navigate to Copilot studio using the below URL.
+
+    ```
+    https://copilot.microsoft.com
+	```
 
 3. Sign in with **Patti Fernandes** credentials from the **Resources** tab. (You can use **<inject key="User 02 UPN"></inject>** as your ID and Use the User Password from the Resources tab Uae the in the Temporary Acess Pass .)
 
@@ -410,7 +426,11 @@ Estimated time: **30 minutes**
 
 ### Task 2: Investigate Agent Sign-In Logs in Entra
 
-1. Return to the **ODL User** browser session at `https://entra.microsoft.com`.
+1. Return to the **ODL User** browser session at Microsoft Entra admin center 
+
+    ```
+    https://entra.microsoft.com
+	```
 
 2. In the left navigation pane, expand **Entra ID** and Select **Sign-in logs** under **Monitoring & health**.
 
@@ -424,7 +444,7 @@ Estimated time: **30 minutes**
 
 	![](./media/l03-e4-t2-s4.png)
 
-5.  Select **Yes** and then select **Apply** to apply the filter.
+5.  Select **Yes** and then click **Apply** to apply the filter.
 
 	![](./media/l03-e4-t2-s5.png)
 
