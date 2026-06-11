@@ -6,7 +6,7 @@ Zava's security team has received confirmation from the CISO that all AI agent i
 
 Every Copilot Studio agent deployed in the Zava environment was automatically assigned a unique identity in Microsoft Entra ID when Entra Agent Identity was enabled in Lab 00. These identities appear in the **Agent ID** section of the Microsoft Entra admin center and can be governed like any other identity in the tenant — with owners, sponsors, access controls, audit logs, and Conditional Access policies.
 
-In this lab, ODL User will locate the Zava agent identities, review their current configuration, assign Patti Fernandes as owner of the Zava Finance Agent, and disable and re-enable the Zava HR Assistant identity to simulate an identity quarantine action.
+In this lab, you will locate the Zava agent identities, review their current configuration, assign Patti Fernandes as owner of the Zava Finance Agent, and disable and re-enable the Zava HR Assistant identity to simulate an identity quarantine action.
 
 ---
 
@@ -33,7 +33,11 @@ Estimated time: **10 minutes**
 
 ### Task 1: Navigate to Entra Agent Identities
 
-1. Open a browser and navigate to `https://entra.microsoft.com`. Sign in with **ODL User** credentials if prompted.
+1. Open a browser and navigate to Microsoft entra admin center and Sign in with **ODL User** credentials if prompted.
+
+    ```
+    https://entra.microsoft.com
+    ```
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    - **Password:** <inject key="AzureAdUserPassword"></inject>
@@ -89,11 +93,11 @@ Estimated time: **10 minutes**
 
 	![](./media/l02-e1-t3-s1.png)
 
-2. On the **Owners and sponsors** , select **+ Add** > **Add owner**.
+2. On the **Owners and sponsors** , select **+ Add** and click **Add owner**.
 
 	![](./media/l02-e1-t3-s2.png)
 
-3. In the search field on the **Add owners** panel, enter `Patti`. Select **Patti Fernandes** from the results. Select **Select** to confirm.
+3. In the search field on the **Add owners** panel, enter `Patti`. Select **Patti Fernandes** from the results and click **Select** to confirm.
 
 	![](./media/l02-e1-t3-s3.png)
 
@@ -131,7 +135,12 @@ Estimated time: **10 minutes**
 
 ### Task 2: Verify that End-User Access is Blocked
 
-1. Open a new **InPrivate** or **Incognito** browser window. Navigate to `https://copilot.microsoft.com`. Click on **Sign in**.
+1. Open a new **InPrivate** or **Incognito** browser window. Navigate to Copilot studio and Click on **Sign in**.
+
+    ```
+    https://copilot.microsoft.com
+    ```
+
 
 	![](./media/ex2-1.png)
 
@@ -152,12 +161,16 @@ Estimated time: **10 minutes**
 
 3. Note the results — the agent **Zava HR Assistant** should not be visible.
 
-   > **Note:** Identity disable propagation may take up to five minutes. If the agent responds normally immediately after disabling, wait three to five minutes and attempt again. Do not proceed to Task 3 until the agent is confirmed unavailable.
+   > **Note:** Identity disable propagation may take up  time . If the agent responds normally immediately after disabling, wait for some time and attempt again. you can proceed to Task 3 as it may take time.
 ---
 
 ### Task 3: Re-enable the Zava HR Assistant Identity
 
-1. Return to the **ODL User** browser session at `https://entra.microsoft.com`.
+1. Return to the **ODL User** browser session at Microsoft Entra admin center 
+
+    ```
+    https://entra.microsoft.com
+	```
 
 2. In the left navigation pane, select **Agents**. On the **Agent identities** page, select **Zava HR Assistant (Microsoft Copilot Studio)**.
 
