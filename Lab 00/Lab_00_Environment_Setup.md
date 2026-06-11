@@ -733,8 +733,8 @@ by running the following command to initiate a new Exchange Online connection us
 
 	![](./media/ex-8.png)
 
-
-    >**Note**: This command prepares the Exchange Online organization for advanced configuration tasks. If organization customization has already been enabled, the command returns a message indicating that no further action is required. Continue with the next step in the lab. This may take upto 24 hours to get organization custimaztion enabled
+     >**Note**: This command prepares the Exchange Online organization for advanced configuration tasks. If organization customization has already been enabled, the command returns a message indicating that no further action is required. Continue with the next step in the lab. This may take upto 24 hours to get organization custimaztion enabled
+	
 
 ---
 
