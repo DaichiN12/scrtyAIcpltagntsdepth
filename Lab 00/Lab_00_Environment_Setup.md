@@ -1,46 +1,46 @@
-# Lab 00: Environment Setup — Zava Corporation AI Agent Infrastructure
+# Lab 00: 環境セットアップ — Zava Corporation AI Agent インフラストラクチャ
 
-## Introduction
+## 概要
 
-**Zava Corporation** is a mid-sized financial services and HR consulting firm operating across the UK and EU. Zava manages sensitive employee records, client financial data, and third-party vendor contracts. The organisation has recently deployed AI agents across its HR, Finance, and IT Support functions to improve operational efficiency.
+**Zava Corporation** は、英国およびEU全域で事業を展開する中規模の金融サービスおよびHRコンサルティング企業です。Zava  Corporation は、従業員の機密記録、クライアントの財務データ、および第三者ベンダー契約を管理しています。同組織は、運用効率を向上させるため、HR、財務、及び IT サポート機能全体にAIエージェントを最近導入しました。
 
-Before any security configuration can begin, the Zava Corporation environment must be fully provisioned. In this lab, you will configure the Microsoft Entra ID tenant, enable Microsoft Copilot Studio, register the security group required for agent authoring, create the three AI agents that serve as governance targets throughout the entire course, connect each agent to its designated SharePoint knowledge source, and upload the sample business documents that simulate Zava's live data environment.
+セキュリティ構成を開始する前に、Zava Corporation 環境は完全にプロビジョニングされる必要があります。このラボでは、Microsoft Entra ID テナントを構成し、Microsoft Copilot Studio を有効にし、エージェント作成に必要なセキュリティグループを登録し、コース全体を通じてガバナンスの対象となる3つのAI エージェントを作成し、各エージェントを指定されたSharePoint ナレッジソースに接続し、Zava のライブデータ環境をシミュレートするサンプルビジネス文書をアップロードします。
 
-Every subsequent lab depends on the agents, identities, and files created here. Complete all three exercises in order before proceeding to Lab 01.
-
----
-
-   > **Note:** In a real-world environment, responsibilities like these would be distributed across multiple personas — developers, IT administrators, security administrators, and compliance officers — each operating with scoped permissions aligned to the principles of least privilege and Zero Trust.
+後続のすべてのラボは、ここで作成されるエージェント、アイデンティティ、およびファイルに依存しています。Lab 01 に進む前に、3つの演習すべてを順番に完了してください。
 
 ---
 
-## Objectives
-
-- Create a role-assignable security group in Microsoft Entra ID and assign it the Privileged Role Administrator role.
-- Enable the **copilotagentsecurity** group as the authorised Copilot Studio Authors group in Power Platform Admin Center.
-- Enable Entra Agent Identity for Copilot Studio at the environment level.
-- Connect SharePoint as a data source in the Power Apps maker portal.
-- Create three Copilot Studio agents: Zava HR Assistant, Zava Finance Agent, and Zava IT Support Agent.
-- Connect each agent to its designated SharePoint knowledge source.
-- Publish each agent and share it with the appropriate lab users.
-- Upload Zava sample business documents to the HR and Finance SharePoint sites.
-- Verify that all three agents appear as Active in the Microsoft Agent 365 Agent Registry.
+   > **注記：** 実際の環境では、このような責務は複数のペルソナ（開発者、IT 管理者、セキュリティ管理者、コンプライアンス担当者）に分散され、各々は最小権限の原則とゼロトラストの原則に沿ったスコープ権限で運用されます。
 
 ---
 
-## Lab Duration
+## 目的
 
-Estimated time: **30 minutes**
+- Microsoft Entra ID にロール割り当て可能なセキュリティグループを作成し、Privileged Role Administrator ロールを割り当てる。
+- Power Platform Admin Centerで **copilotagentsecurity** グループを認可された Copilot Studio Authors グループとして有効にする。
+- 環境レベルで Copilot Studio の Entra Agent Identity を有効にする。
+- Power Apps メーカーポータルで SharePoint をデータソースとして接続する。
+- 3つの Copilot Studio エージェントを作成する：Zava HR Assistant、Zava Finance Agent、および Zava IT Support Agent。
+- 各エージェントを指定された SharePoint ナレッジソースに接続する。
+- 各エージェントを公開し、適切なラボユーザーと共有する。
+- Zava サンプルビジネス文書を HR および Finance SharePoint サイトにアップロードする。
+- 3つのエージェント全てが Microsoft Agent 365 Agent Registry でアクティブとして表示されることを確認する
 
 ---
-## Exercise 0: Create the Zava HR SharePoint Site
 
-1. Open a new browser tab and navigate to `https://admin.microsoft.com`. Sign in with **ODL_User** credentials if prompted.
+## ラボ所要時間
 
-	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-	- **Password:** <inject key="AzureAdUserPassword"></inject>
+推定所要時間：**30分**
 
-2. In the left navigation pane, click on **Show All**, select **SharePoint** under **Admin centers**.
+---
+## 演習 0: Zava HR SharePoint サイトを作成する
+
+1. 新しいブラウザタブを開き、以下のサイトに移動します `https://admin.microsoft.com`. プロンプトが表示された場合は、**ODL_User** の認証情報でサインインしてください。
+
+	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
+	- **パスワード:** <inject key="AzureAdUserPassword"></inject>
+
+2. 左側のナビゲーションペインで **[すべてを表示]** をクリックし、**[管理センター]** の下から **[SharePoint]** を選択します。
 
 	![](./media/L00-E0-S2.png)
 
