@@ -44,665 +44,667 @@
 
 	![](./media/L00-E0-S2.png)
 
-1. In the SharePoint admin center, from the left navigation pane, expand ****Sites** and select **Active sites**. Then, click **+ Create**.
+1. SharePoint管理センターで、左側のナビゲーションペインから **[サイト]** を展開し、**[アクティブなサイト]** を選択します。その後、**[+ 作成]** をクリックします。
 
 	![](./media/L00-E0-S4.png)
 
-5. On the **Create a site** panel, select **Team site**.
+5. **[サイトの作成]** パネルで、**[チームサイト]** を選択します。
 
 	![](./media/L00-E0-S5.png)
 
-6. On the **Select a template** page, select **Standard team**.
+6. **[テンプレートの選択]** ページで、**[標準チーム]** を選択します。
 
 	![](./media/l0n1.png)
 
-7. On the **Preview and use 'Standard team' template** page, select **Use template**.
+7. **['標準チーム' テンプレートをプレビューして使用]** ページで、**[テンプレートを使用]** を選択します。
 
 	![](./media/l0n2.png)
 
-6. On the **Team site** configuration page, enter the following and click on **Next**:
+6. **[チームサイト]** 構成ページで、以下を入力して **[次へ]** をクリックします。
 
-   - **Site name:** **HR<inject key="Deployment ID" enableCopy="false"></inject>**
-   - **Site address:** Confirm the URL path reads **/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**
-   - **Group Owner:** ODL_User <inject key="Deployment ID" enableCopy="false"></inject>
+   - **サイト名:** **HR<inject key="Deployment ID" enableCopy="false"></inject>**
+   - **サイトアドレス:** URL パスが **/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** であることを確認します
+   - **グループ所有者:** ODL_User <inject key="Deployment ID" enableCopy="false"></inject>
 
 		![](./media/L00-E0-S7.png)
 
-1. Add the following details and click on **Create site**:
+1. 以下の詳細情報を追加して、**[サイトを作成]** をクリックします。
 
-   - **Privacy settings:** Select **Private - only members can access this site**.
-   - **Select a language:** English.
+   - **プライバシー設定:** **[プライベート - メンバーのみがこのサイトにアクセスできます]** を選択します。
+   - **言語を選択:** 英語。
 
 		![](./media/L00-E0-S8.png)
 
-1. On the **Add site owners and members** page, click on **Finish**.
+1. **[サイト所有者とメンバーを追加]** ページで、**[完了]** をクリックします。
 
 	![](./media/l0n3.png)
 
-8. Wait for the site to finish provisioning. Confirm it appears in the **Active sites** list with the URL **https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**.
+8. サイトのプロビジョニングが完了するまで待機します。**[アクティブなサイト]** リストに URL **https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** で表示されていることを確認します。
 
-   > **Note:** This site is the SharePoint knowledge source for the Zava HR Assistant agent created in Lab 00 Exercise 2. The agent connection in Copilot Studio references **/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** specifically. Do not use a different URL slug.
+   > **注記:** このサイトはLab 00 演習2で作成されるZava HR AssistantエージェントのSharePointナレッジソースです。Copilot Studioのエージェント接続は、特に **/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** を参照します。異なるURLスラッグを使用しないでください。
 
-9. Follow the same steps from step-3 to step 9 and create the following site:
+9. ステップ3からステップ9までの同じ手順に従い、以下のサイトを作成します。
 
-   - **Site name:** **Operations<inject key="Deployment ID" enableCopy="false"></inject>**
-   - **Site address:** Confirm the URL path reads **/sites/Operations<inject key="Deployment ID" enableCopy="false"></inject>**
-   - **Group Owner:** ODL_User <inject key="Deployment ID" enableCopy="false"></inject>
-   - **Privacy settings:** Select **Private**.
-   - **Select a language:** English.
+   - **サイト名:** **Operations<inject key="Deployment ID" enableCopy="false"></inject>**
+   - **サイトアドレス:** URL パスが **/sites/Operations<inject key="Deployment ID" enableCopy="false"></inject>** であることを確認します
+   - **グループ所有者:** ODL_User <inject key="Deployment ID" enableCopy="false"></inject>
+   - **プライバシー設定:** **[プライベート]** を選択します。
+   - **言語を選択:** 英語。
 
 ---
 
-## Exercise 1: Configure Entra ID and Enable Copilot Studio Authors
+## 演習 1: Entra IDを構成し、Copilot Studio Authorsを有効にする
 
-### Task 1: Sign In and Configure Multi-Factor Authentication
+### タスク 1: サインインして多要素認証を構成する
 
-1. Open a browser and navigate to `https://entra.microsoft.com`.
+1. ブラウザを開き、`https://entra.microsoft.com` に移動します。
 
-2. On the sign-in page, enter the **ODL User** credentials from the **Environment** tab of your lab environment if prompted:
-	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+2. サインインページで、プロンプトが表示された場合は、ラボ環境の **[環境]** タブから **ODL User** 認証情報を入力します。
+	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
 
 	  ![](./media/L00-E1-T1-S2.png)
 
-	- **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
+	- **一時アクセスパス:** <inject key="AzureAdUserPassword"></inject>
 
 	  ![](./media/tap.png)
 
-1. If asked **Stay signed in?**, select **Yes**.
+1. **[サインインしたままにしますか?]** と表示された場合は、**[はい]** を選択します。
 
 	![](./media/l0n4.png)
 
-1. On the Microsoft Entra admin center welcome screen, select **Get Started**.
+1. Microsoft Entra管理センターのウェルカムスクリーンで、**[はじめに]** を選択します。
 
 ---
 
-### Task 2: Create the copilotagentsecurity Security Group
+### タスク 2: copilotagentsecurity セキュリティグループを作成する
 
-1. In the Microsoft Entra admin center, in the left navigation pane, expand **Entra ID** and select **Groups**.
+1. Microsoft Entra管理センターの左側のナビゲーションペインで、**[Entra ID]** を展開し、**[グループ]** を選択します。
 
 	![](./media/L00-E1-T2-S1.png)
 
-2. On the **Overview** page, select **New group**.
+2. **[概要]** ページで、**[新しいグループ]** を選択します。
 
 	![](./media/L00-E1-T2-S2.png)
 
-3. On the **New Group** page, configure the following fields:
+3. **[新しいグループ]** ページで、以下のフィールドを構成します。
 
-   - **Group type:** Select **Security**.
-   - **Group name:** Enter `copilotagentsecurity`.
-   - **Microsoft Entra roles can be assigned to the group:** Select **Yes**. If this option is not visible, skip this field and continue.
+   - **グループタイプ:** **[セキュリティ]** を選択します。
+   - **グループ名:** `copilotagentsecurity` を入力します。
+   - **Microsoft Entra ロールをこのグループに割り当てることができます:** **[はい]** を選択します。このオプションが表示されない場合は、このフィールドをスキップして続行します。
 
 		![](./media/L00-E1-T2-S3.png)
 
-4. Under **Owners**, select **No owners selected**.
+4. **[所有者]** で、**[所有者が選択されていません]** を選択します。
 
 	![](./media/L00-E1-T2-S4.png)
 
-5. On the **Add owners** panel, search for and select **ODL_USER <inject key="Deployment ID" enableCopy="false"></inject>**. Choose **Select** to confirm the owner.
+5. **[所有者を追加]** パネルで、**ODL_USER <inject key="Deployment ID" enableCopy="false"></inject>** を検索して選択します。**[選択]** を選択して所有者を確認します。
 
 	![](./media/L00-E1-T2-S5.png)
 
-6. Under **Members**, select **No members selected**.
+6. **[メンバー]** で、**[メンバーが選択されていません]** を選択します。
 
 	![](./media/L00-E1-T2-S6.png)
 
-7. On the **Add members** panel, search for and select **ODL User <inject key="Deployment ID" enableCopy="false"></inject>** and **Patti Fernandes**. Choose **Select** to confirm the members.
+7. **[メンバーを追加]** パネルで、**ODL User <inject key="Deployment ID" enableCopy="false"></inject>** と **Patti Fernandes** を検索して選択します。**[選択]** を選択してメンバーを確認します。
 
 	![](./media/L00-E1-T2-S7.png)
 
-8. Under **Roles**, select **No roles selected**.
+8. **[ロール]** で、**[ロールが選択されていません]** を選択します。
 
 	![](./media/L00-E1-T2-S8.png)
 
-9. On the **Select roles** panel, search for `Global admin`, select **Global Administrator**, and click **select**.
+9. **[ロールを選択]** パネルで、`Global admin` を検索し、**[グローバル管理者]** を選択して、**[選択]** をクリックします。
 
 	![](./media/L00-E1-T2-S9.png)
 
-10. Click **Create** to create the new group.
+10. **[作成]** をクリックして新しいグループを作成します。
 
 	![](./media/L00-E1-T2-S10.png)
 
-11. In the confirmation dialog, select **Yes**.
+11. 確認ダイアログで、**[はい]** を選択します。
 
 	![](./media/L00-E1-T2-S11.png)
 
-12. Confirm that a success notification appears at the top of the page.
+12. ページの上部に成功通知が表示されることを確認します。
 
 	![](./media/L00-E1-T2-S13.png)
 
 ---
 
-### Task 3: Enable Access Management for Azure Resources
+### タスク 3: Azureリソースのアクセス管理を有効にする
 
-1. In the left navigation pane of the Microsoft Entra admin center, expand **Entra ID** and select **Overview**.
+1. Microsoft Entra管理センターの左側のナビゲーションペインで、**[Entra ID]** を展開し、**[概要]** を選択します。
 
 	![](./media/L00-E1-T3-S1.png)
 
-2. On the **Overview** page, select **Properties** from the top bar.
+2. **[概要]** ページで、上部のバーから **[プロパティ]** を選択します。
 
 	![](./media/L00-E1-T3-S2.png)
 
-3. On the **Properties** page, locate the **Access management for Azure resources** toggle and set it to **Yes**.
+3. **[プロパティ]** ページで、**[Azureリソースのアクセス管理]** トグルを見つけて、**[はい]** に設定します。
 
 	![](./media/L00-E1-T3-S3.png)
 
-5. Select **Manage security defaults**.
+5. **[セキュリティ既定値を管理]** を選択します。
 
 	![](./media/L00-E1-T3-S4.png)
 
-6. On the **Security defaults** panel, under **Security defaults**, select **Enabled** if not already enabled and then click **Save**.
+6. **[セキュリティ既定値]** パネルで、**[セキュリティ既定値]** の下で、**[有効]** を選択（まだ有効化されていない場合）してから **[保存]** をクリックします。
 
 	![](./media/L00-E1-T3-S5.png)
 
-7. Return to the **Properties** page and select **Save**.
+7. **[プロパティ]** ページに戻り、**[保存]** を選択します。
 
 	![](./media/L00-E1-T3-S6.png)
 
 ---
 
-### Task 4: Assign the Privileged Role Administrator Role
+### タスク 4: Privileged Role Administrator ロールを割り当てる
 
-1. In the left navigation pane of the Microsoft Entra admin center, expand **Entra ID** and select **Roles & admins**.
+1. Microsoft Entra管理センターの左側のナビゲーションペインで、**[Entra ID]** を展開し、**[ロールと管理者]** を選択します。
 
 	![](./media/L00-E1-T4-S1.png)
 
-2. On the **Roles and administrators** page, in the search bar, search `Privileged Role Administrato` and select **Privileged Role Administrator** by selecting its name .
+2. **[ロールと管理者]** ページの検索バーで、`Privileged Role Administrato` を検索し、その名前を選択して **[Privileged Role Administrator]** を選択します。
 
 	![](./media/L00-E1-T4-S2.png)
 
-5. On the **Privileged Role Administrator** page, select **+ Add assignments**.
+5. **[Privileged Role Administrator]** ページで、**[+ 割り当てを追加]** を選択します。
 
 	![](./media/pp1.png)
 
-7. On the **Select members** panel, search for and select **copilotagentsecurity**. Choose **Add** to confirm.
+7. **[メンバーを選択]** パネルで、**copilotagentsecurity** を検索して選択します。**[追加]** を選択して確認します。
 
 	![](./media/L00-E1-T4-S6.png)
 
-11. Confirm that the role assignment appears in the assignments list.
+11. ロール割り当てが割り当てリストに表示されることを確認します。
 
 	![](./media/pp2.png)
 
 ---
 
-### Task 5: Configure Copilot Studio Authors in Power Platform Admin Center
+### タスク 5: Power Platform Admin Center でCopilot Studio Authorsを構成する
 
-1. Open a new browser tab and navigate to `https://admin.powerplatform.microsoft.com`.
+1. 新しいブラウザタブを開き、`https://admin.powerplatform.microsoft.com` に移動します。
 
-2. In the left navigation pane, select **Manage (1) > Environments (2)**. Click on **+New (3)**.
+2. 左側のナビゲーションペインで、**[管理(1)] > [環境(2)]** を選択します。**[+新規(3)]** をクリックします。
 
 	![](./media/pp10.png)
 
-1. On the New Environment pop-up, provide the name as **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>**.
+1. [新しい環境] ポップアップで、名前を **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** として指定します。
 
 	![](./media/pp4.png)
 
-1. Scroll down ,expand the Change default settings dropdown and enable the **Add a dataverse store? (1)** and click on **Next (2)**.
+1. 下にスクロールし、[既定の設定を変更] ドロップダウンを展開して、**[Dataverse ストアを追加しますか?(1)]** を有効にして、**[次へ(2)]** をクリックします。
 
 	![](./media/pp5.png)
 
-1. On the **Add Dataverse** page, click on **+Select** under Security Group.
+1. **[Dataverse を追加]** ページで、セキュリティグループの下の **[+選択]** をクリックします。
 
 	![](./media/pp6.png)
 
-1. Select the **copilotagentsecurity (1)** group from the results. Then, select **Done (2)**.
+1. 結果から **[copilotagentsecurity(1)]** グループを選択します。その後、**[完了(2)]** を選択します。
 
 	![](./media/pp7.png)
 
-1. Select **Save** to apply the setting.
+1. **[保存]** を選択して設定を適用します。
 
 	![](./media/pp8.png)
 
-3. Under **Manage**, select **Tenant Settings**. On the **Tenant Settings** page, locate and select **Copilot Studio Authors** from the list.
+3. **[管理]** で、**[テナント設定]** を選択します。**[テナント設定]** ページで、リストから **[Copilot Studio Authors]** を見つけて選択します。
 
 	![](./media/L00-E1-T5-S2.png)
 
-4. On the **Copilot Studio Authors** panel, select the **Edit** icon near security group.
+4. **[Copilot Studio Authors]** パネルで、セキュリティグループの近くにある **[編集]** アイコンを選択します。
 
 	![](./media/L00-E1-T5-S4.png)
 
-5. In the search field, enter `copilotagentsecurity`. Select the **copilotagentsecurity** group from the results. Then, click **Done**.
+5. 検索フィールドに `copilotagentsecurity` を入力します。結果から **[copilotagentsecurity]** グループを選択します。その後、**[完了]** をクリックします。
 
 	![](./media/L00-E1-T5-S5.png)
 
-6. Select **Save** to apply the setting.
+6. **[保存]** を選択して設定を適用します。
 
 	![](./media/L00-E1-T5-S6.png)
 
 ---
 
-### Task 6: Enable Entra Agent Identity for Copilot Studio
+### タスク 6: Copilot Studio 用のEntra Agent Identityを有効にする
 
-1. In the left navigation pane, select **Copilot**.
+1. 左側のナビゲーションペインで、**[Copilot]** を選択します。
 
 	![](./media/L00-E1-T6-S1.png)
 
-2. On the **Copilot** page, select **Settings**.
+2. **[Copilot]** ページで、**[設定]** を選択します。
 
 	![](./media/L00-E1-T6-S2.png)
 
-3. In the settings list, under the **Copilot Studio** section, select **Entra Agent Identity for Copilot Studio**.
+3. 設定リストで、**[Copilot Studio]** セクションの下から **[Copilot Studio 用のEntra Agent Identity]** を選択します。
 
 	![](./media/L00-E1-T6-S3.png)
 
-4. On the **Entra Agent Identity for Copilot Studio** panel, select the **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** environment from the environment list and Select **Edit setting**.
+4. **[Copilot Studio 用のEntra Agent Identity]** パネルで、環境リストから **[DevOne-<inject key="Deployment ID" enableCopy="false"></inject>]** 環境を選択して、**[設定を編集]** を選択します。
 
 	![](./media/L00-E1-T6-S4.png)
 
-5. On the setting panel of Entra Agent Identity for Copilot Studio, select **On** if not done and click **Save**
+5. Copilot Studio 用のEntra Agent Identityの設定パネルで、**[オン]** を選択（まだの場合）して、**[保存]** をクリックします。
 
 	![](./media/L00-E1-T6-S6.png)
 
-1. After saving, close the panel.
+1. 保存後、パネルを閉じます。
 
 	![](./media/L00-E1-T6-S7.png)
 
-      >**Note:** Enabling Entra Agent Identity allows Copilot Studio agents to be automatically assigned a unique identity in Microsoft Entra ID. This is required for identity governance, Conditional Access, and Defender for Cloud Apps integration in later labs.
+      >**注記:** Entra Agent Identityを有効にすると、Copilot StudioエージェントにMicrosoft Entra IDで一意のアイデンティティが自動的に割り当てられます。これは後続のラボでのアイデンティティガバナンス、条件付きアクセス、およびDefender for Cloud Apps統合に必要です。
 
 ---
 
-### Task 7: Add a SharePoint Connection in the Power Apps Maker Portal
+### タスク 7: Power Apps メーカーポータルでSharePoint接続を追加する
 
-1. Open a new browser tab and navigate to `https://make.powerapps.com` and sign in with **ODL_User** credentials if prompted.
+1. 新しいブラウザタブを開き、`https://make.powerapps.com` に移動してサインインします。プロンプトが表示された場合は **ODL_User** の認証情報を使用します。
 
-	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-	- **Password:** <inject key="AzureAdUserPassword"></inject>
+	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
+	- **パスワード:** <inject key="AzureAdUserPassword"></inject>
 
-2. If prompted, on the **Welcome to Power Apps** screen, click **Get started**.
+2. **[Power Appsへようこそ]** スクリーンが表示されたら、**[はじめに]** をクリックします。
 
 	![](./media/image45.png)
 
-3. In the top-right corner, confirm that the **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** environment is selected in the environment switcher. If not, select the environment switcher and select **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>**.
+3. 右上隅で、環境スイッチャーで **[DevOne-<inject key="Deployment ID" enableCopy="false"></inject>]** 環境が選択されていることを確認します。そうでない場合は、環境スイッチャーを選択して **[DevOne-<inject key="Deployment ID" enableCopy="false"></inject>]** を選択します。
 
 	![](./media/pp11.png)
 
-4. In the left navigation bar, expand **More (1)** and select **Connections (2)**.
+4. 左側のナビゲーションバーで、**[その他(1)]** を展開し、**[接続(2)]** を選択します。
 
 	![](./media/pp12.png)
 
-5. On the **Connections** page, select **+ New connection**.
+5. **[接続]** ページで、**[+ 新しい接続]** を選択します。
 
 	![](./media/pp13.png)
 
-6. In the connector search bar, enter `SharePoint` and  select **SharePoint** from the list of available connectors.
+6. コネクタ検索バーに `SharePoint` と入力し、利用可能なコネクタのリストから **[SharePoint]** を選択します。
 
 	![](./media/pp14.png)
 
-7. On the **SharePoint** connection panel, select **Connect directly (cloud services)**. Select **Create**.
+7. **[SharePoint]** 接続パネルで、**[直接接続(クラウドサービス)]** を選択します。**[作成]** を選択します。
 
-8. When prompted, sign in with **ODL_User** credentials to authorise the connection.
+8. プロンプトが表示されたら、**ODL_User** の認証情報を使用してサインインし、接続を認可します。
    
 	![](./media/L00-E1-T7-S7.png)
 
-9. On the Confirmation required pop-up, check the box for **I have verified this request and trust this source (1)** and select **Allow access (2)**.
+9. **[確認が必要]** ポップアップで、**[このリクエストを確認しました。このソースは信頼できます(1)]** のチェックボックスをオンにして、**[アクセスを許可(2)]** を選択します。
 
 	![](./media/pp3.png)
 
-11. Confirm that the SharePoint connection appears in the **Connections** list with a status of **Connected**.
+11. SharePoint接続が **[接続]** リストに **[接続済み]** ステータスで表示されていることを確認します。
 
 	![](./media/pp15.png)
----
-
-## Exercise 2: Create the Zava Copilot Studio Agents
-
-In this exercise, you will creates all three Zava agents in Microsoft Copilot Studio. Each agent is configured with a name, description, instructions, and a SharePoint knowledge source. After publishing, each agent is shared with the designated lab user accounts. These agents serve as the live governance targets in Labs 01 through 07.
 
 ---
 
-### Task 1: Create the Zava HR Assistant
+## 演習 2: Zava Copilot Studio エージェントを作成する
 
-1. Open a new browser tab and navigate to `https://copilotstudio.microsoft.com`. Sign in with **ODL_User** credentials if prompted.
+この演習では、Microsoft Copilot Studioで3つのZavaエージェントをすべて作成します。各エージェントは、名前、説明、指示、およびSharePointナレッジソースで構成されます。公開後、各エージェントは指定されたラボユーザーアカウントと共有されます。これらのエージェントはLab 01から07全体を通じてライブガバナンスターゲットとして機能します。
 
-	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-	- **Password:** <inject key="AzureAdUserPassword"></inject>
+---
 
-1. If Copilot Studio does not load, follow these steps:
+### タスク 1: Zava HR Assistantを作成する
 
-	- Open `https://admin.powerplatform.microsoft.com/`. Select **Manage** > **Environments** > **dev-one-<inject key="Deployment ID" enableCopy="false"></inject>** and copy the value of the **Environment ID**.
+1. 新しいブラウザタブを開き、`https://copilotstudio.microsoft.com` に移動します。プロンプトが表示された場合は **ODL_User** の認証情報でサインインします。
+
+	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
+	- **パスワード:** <inject key="AzureAdUserPassword"></inject>
+
+1. Copilot Studioが読み込まれない場合は、以下の手順に従います。
+
+	- `https://admin.powerplatform.microsoft.com/` を開きます。**[管理] > [環境] > [dev-one-<inject key="Deployment ID" enableCopy="false"></inject>]** を選択し、**[環境ID]** の値をコピーします。
 
 		![](./media/pp20.png)
    
-   - Navigate back to the Copilot Studio tab and open `https://copilotstudio.microsoft.com/environments/<EnvironmentID>` (replacing `<EnvironmentID>` with the value copied above).
+   - Copilot Studioタブに戻り、`https://copilotstudio.microsoft.com/environments/<EnvironmentID>` を開きます。（`<EnvironmentID>` を上記でコピーした値に置き換えます）
 
-2. On the **Welcome** screen, click on **Get Started**.
+2. **[ウェルカム]** スクリーンで、**[はじめに]** をクリックします。
 
 	 ![](./media/pp21.png)
 
-4. In the left navigation pane, select **Agents**. On the **Create an agent** page, select **Create blank agent**.
+4. 左側のナビゲーションペインで、**[エージェント]** を選択します。**[エージェントを作成]** ページで、**[空白のエージェントを作成]** を選択します。
 
 	 ![](./media/pp22.png)
 
-7. In the **Name** field, enter `Zava HR Assistant` and click on **Create**.
+7. **[名前]** フィールドに `Zava HR Assistant` と入力し、**[作成]** をクリックします。
 
 	 ![](./media/pp23.png)
 
-1. Click on **Edit**.
+1. **[編集]** をクリックします。
 
 	 ![](./media/pp24.png)
 
-8. In the **Description** field, enter `An AI assistant that helps Zava employees find HR policies, benefits information, and employee procedures.` and select **Save**.
+8. **[説明]** フィールドに `Zava従業員がHRポリシー、給付情報、および従業員手順を見つけるのに役立つAIアシスタント。` と入力し、**[保存]** を選択します。
 
 	 ![](./media/pp25.png)
 
-10. Scroll downn to the **Instructions** field, click on **Edit** and enter the following, then select **Save**.
+10. **[指示]** フィールドまでスクロールダウンし、**[編集]** をクリックして、以下を入力してから **[保存]** を選択します。
 
     ```
-    You are the Zava HR Assistant. Answer questions using only the information available in the Zava HR SharePoint knowledge base. Do not speculate or provide information outside the knowledge base. Always respond professionally.
+    Zava HR Assistantです。Zava HR SharePointナレッジベースで利用可能な情報のみを使用して質問に答えてください。推測したり、ナレッジベース外の情報を提供したりしないでください。常にプロフェッショナルに対応してください。
     ```
 
-12. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
+12. エージェント構成ページで、**[ナレッジ]** セクションを見つけます。**[+ ナレッジを追加]** を選択します。
 
     ![](./media/kn.png)   
 
-13. On the **Add knowledge** panel, select **SharePoint**.
+13. **[ナレッジを追加]** パネルで、**[SharePoint]** を選択します。
 
 	![](./media/L00-E2-T1-S12.png)
 
-14. In the **SharePoint URL** field, enter the SharePoint HR site URL in the following format and select **Add**:
+14. **[SharePoint URL]** フィールドに、次の形式でSharePoint HR サイトのURLを入力して、**[追加]** を選択します。
     **https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**
 
-    > **Note:** Replace `[TenantPrefix]` with your tenant prefix found on the **Environment** tab of your lab environment or take url from exercise 0 .
+    > **注記:** `[TenantPrefix]` をラボ環境の **[環境]** タブから見つかるテナントプレフィックスで置き換えるか、演習0から取得したURLを使用します。
 
        ![](./media/pp27.png)
 
-16. Select **Add to agent** to connect the SharePoint site as the knowledge source.
+16. **[エージェントに追加]** を選択してSharePointサイトをナレッジソースとして接続します。
 
     ![](./media/l0e2t1s12.png)  
 
-17. In the top-right corner of the agent configuration page, select **Publish**.
+17. エージェント構成ページの右上隅で、**[公開]** を選択します。
 
     ![](./media/l0e2t1s13.png)
 
-18. In the confirmation dialog, select **Publish** to confirm.
+18. 確認ダイアログで、**[公開]** を選択して確認します。
 
 	![](./media/image65.png)
 
-19. On the agent configuration page, locate the **Channels** tab on the top section (select **+** if it is not directly visible).
+19. エージェント構成ページで、上部セクションにある **[チャネル]** タブを見つけます。（直接表示されていない場合は **[+]** を選択）
 
 	   ![](./media/pp30.png)
 
-20. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
+20. **[Microsoft 365 Copilot および Microsoft Teams]** を選択してチャネルとして追加します。
 
 	   ![](./media/pp31.png)
 
-21. Then select **Add channel**.
+21. その後、**[チャネルを追加]** を選択します。
 
 	![](./media/L00-E2-T1-S19.png)
 
-22. Select **Availability options**.
+22. **[可用性オプション]** を選択します。
 
 	![](./media/L00-E2-T1-S20.png)
 
-23. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
+23. **[Microsoft 365 Copilot および Microsoft Teams]** ページで、**[組織内の全員に表示]** を選択します。
 
 	![](./media/L00-E2-T1-S21.png)
 
-24. Select **Submit to org catalog**.
+24. **[組織カタログに送信]** を選択します。
 
 	![](./media/L00-E2-T1-S22.png)
 
-25. On the **Give everyone access to this agent?** confirmation dialog, select **Yes**.
+25. **[このエージェントへのアクセスをすべてのユーザーに付与しますか?]** 確認ダイアログで、**[はい]** を選択します。
 
 	![](./media/L00-E2-T1-S23.png)
 
-26. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**. Click on **Close**.
+26. **[Teams アプリストアで組織向けに表示]** にリダイレクトされ、通知が表示されます。**[閉じる]** をクリックします。
 
 	![](./media/L00-E2-T1-S24.png)
 
 ---
 
-### Task 2: Create the Zava Finance Agent
+### タスク 2: Zava Finance Agentを作成する
 
-1. In the left navigation pane, select **Agents**. Then select **Create blank agent**.
+1. 左側のナビゲーションペインで、**[エージェント]** を選択します。その後、**[空白のエージェントを作成]** を選択します。
 
 	![](./media/pp22.png)
 
-3. In the **Name** field, enter `Zava Finance Agent` and click on **Create**.
+3. **[名前]** フィールドに `Zava Finance Agent` と入力し、**[作成]** をクリックします。
 
 	![](./media/pp50.png)
 
-4. In the **Description** field, enter `An AI assistant that helps Zava finance team members retrieve budget information, invoice data, and financial reports.` Then select **Save**.
+4. **[説明]** フィールドに `Zava財務チームメンバーが予算情報、請求書データ、および財務レポートを取得するのに役立つAIアシスタント。` と入力します。その後、**[保存]** を選択します。
 
-5. In the **Instructions** field, select **Edit**.
+5. **[指示]** フィールドで、**[編集]** を選択します。
 
-6. Enter the following and select **Save**.
+6. 以下を入力して、**[保存]** を選択します。
 
     ```
-    You are the Zava Finance Agent. Answer questions using only the information in the Zava Finance SharePoint knowledge base. Do not share financial data with users who have not been granted access to the Finance SharePoint site. Always respond professionally and flag any requests for data outside your knowledge base.
+    Zava Finance Agentです。Zava Finance SharePointナレッジベースの情報のみを使用して質問に答えてください。Finance SharePointサイトへのアクセス権を付与されていないユーザーと財務データを共有しないでください。常にプロフェッショナルに対応し、ナレッジベース外のデータリクエストにはフラグを立ててください。
     ```
 
 	![](./media/pp51.png)
 
-7. Scroll down and on the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
+7. 下にスクロールし、エージェント構成ページで **[ナレッジ]** セクションを見つけます。**[+ ナレッジを追加]** を選択します。
 
     ![](./media/kn.png) 
 
-8. On the **Add knowledge** panel, select **SharePoint**.
+8. **[ナレッジを追加]** パネルで、**[SharePoint]** を選択します。
 
 	![](./media/image82.png)
 
-9. In the **SharePoint URL** field, enter the SharePoint Finance site URL in the following format:
+9. **[SharePoint URL]** フィールドに、次の形式でSharePoint Finance サイトのURLを入力します。
     **https://[TenantPrefix].sharepoint.com/sites/Operations<inject key="Deployment ID" enableCopy="false"></inject>**
 
-    > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Environment** tab.
+    > **注記:** `[TenantPrefix]` を **[環境]** タブから取得したテナントプレフィックスに置き換えます。
 
-10. Select **Add** to connect the SharePoint site as the knowledge source.
+10. **[追加]** を選択してSharePointサイトをナレッジソースとして接続します。
 
 	![](./media/pp52.png)
 
-11. Then select **Add to agent**.
+11. その後、**[エージェントに追加]** を選択します。
 
     ![](./media/l0e2t2s10.png)
 
-12. On the agent configuration page, locate the **Channels** tab on the top section (select **+** if it is not directly visible).
+12. エージェント構成ページで、上部セクションにある **[チャネル]** タブを見つけます。（直接表示されていない場合は **[+]** を選択）
 
 	![](./media/pp53.png)
 
-13. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
+13. **[Microsoft 365 Copilot および Microsoft Teams]** を選択してチャネルとして追加します。
 
 	![](./media/pp54.png)
 
-14. Then select **Add channel**.
+14. その後、**[チャネルを追加]** を選択します。
 
 	![](./media/L00-E2-T2-S14.png)
 
-15. In the **Ready to publish?** dialog, select **Publish**. Close the tab.
+15. **[公開の準備はできていますか?]** ダイアログで、**[公開]** を選択します。タブを閉じます。
 
 	![](./media/image89.png)
+
 ---
 
-### Task 3: Create the Zava IT Support Agent
+### タスク 3: Zava IT Support Agentを作成する
 
-1. In the left navigation pane, select **Agents**. Then select **Create blank agent**.
+1. 左側のナビゲーションペインで、**[エージェント]** を選択します。その後、**[空白のエージェントを作成]** を選択します。
 
 	![](./media/pp22.png)
 
-3. In the **Name** field, enter `Zava IT Support Agent` and click on **Create**.
+3. **[名前]** フィールドに `Zava IT Support Agent` と入力し、**[作成]** をクリックします。
 
 	![](./media/pp55.png)
 
-4. In the **Description** field, enter `An AI assistant that helps Zava employees resolve common IT issues, submit support requests, and find IT policy documentation.` Then select **Save**.
+4. **[説明]** フィールドに `Zava従業員が一般的なIT問題を解決し、サポートリクエストを送信し、ITポリシードキュメントを見つけるのに役立つAIアシスタント。` と入力します。その後、**[保存]** を選択します。
 
-5. In the **Instructions** field, select **Edit**.
+5. **[指示]** フィールドで、**[編集]** を選択します。
 
-6. Enter the following and select **Save**.
+6. 以下を入力して、**[保存]** を選択します。
 
     ```
-    You are the Zava IT Support Agent. Help users with common IT questions using publicly available Microsoft support documentation and Zava IT policies. Do not access or share any sensitive financial or HR information. Escalate complex issues to the IT helpdesk.
+    Zava IT Support Agentです。公開されているMicrosoft サポートドキュメントとZava ITポリシーを使用して、一般的なIT質問をユーザーに支援してください。機密の財務またはHR情報にアクセスしたり共有したりしないでください。複雑な問題についてはITヘルプデスクにエスカレーションしてください。
     ```
 
 	 ![](./media/pp56.png)
 
-7. On the agent configuration page, locate the **Knowledge** section. Select **+ Add knowledge**.
+7. エージェント構成ページで、**[ナレッジ]** セクションを見つけます。**[+ ナレッジを追加]** を選択します。
 
     ![](./media/kn.png) 
 
-8. On the **Add knowledge** panel, select **Public Websites**.
+8. **[ナレッジを追加]** パネルで、**[パブリックウェブサイト]** を選択します。
 
 	![](./media/image103.png)
 
-9. In the **URL** field, enter `https://support.microsoft.com/` and select **Add** to connect the site as the knowledge source.
+9. **[URL]** フィールドに `https://support.microsoft.com/` と入力し、**[追加]** を選択してサイトをナレッジソースとして接続します。
 
 	![](./media/image104.png)
 
-10. Then, select **Add to agent**.
+10. その後、**[エージェントに追加]** を選択します。
 
 	![](./media/image105.png)
 
-11. In the top-right corner of the agent configuration page, select **Publish**.
+11. エージェント構成ページの右上隅で、**[公開]** を選択します。
 
 	![](./media/L00-E2-T3-S11.png)
 
-12. In the confirmation dialog, select **Publish** to confirm.
+12. 確認ダイアログで、**[公開]** を選択して確認します。
 
 	![](./media/image89.png)
 
-13. On the agent configuration page, locate the **Channels** tab on the top section (select **+** if it is not directly visible).
+13. エージェント構成ページで、上部セクションにある **[チャネル]** タブを見つけます。（直接表示されていない場合は **[+]** を選択）
 
 	![](./media/pp58.png)
 
-15. Select **Microsoft 365 Copilot and Microsoft Teams** to add them as channels.
+15. **[Microsoft 365 Copilot および Microsoft Teams]** を選択してチャネルとして追加します。
 
 	![](./media/L00-E2-T3-S14.png)
 
-16. Then select **Add channel**.
+16. その後、**[チャネルを追加]** を選択します。
 
 	![](./media/L00-E2-T3-S15.png)
 
-17. Select **Availability options**.
+17. **[可用性オプション]** を選択します。
 
 	![](./media/L00-E2-T3-S16.png)
 
-18. On the **Microsoft 365 Copilot and Microsoft Teams** page, select **Show to everyone in my org**.
+18. **[Microsoft 365 Copilot および Microsoft Teams]** ページで、**[組織内の全員に表示]** を選択します。
 
 	![](./media/L00-E2-T3-S17.png)
 
-19. Select **Submit to org catalog**.
+19. **[組織カタログに送信]** を選択します。
 
 	![](./media/L00-E2-T3-S18.png)
 
-20. On the **Give everyone access to this agent?** confirmation dialog, select **Yes**.
+20. **[このエージェントへのアクセスをすべてのユーザーに付与しますか?]** 確認ダイアログで、**[はい]** を選択します。
 
 	![](./media/image114.png)
 
-21. You will be redirected to **Show in Teams app store for org** and see a notification: **Your agent is submitted and waiting for approval from your Teams admin**. Close the tab.
+21. **[Teams アプリストアで組織向けに表示]** にリダイレクトされ、通知が表示されます。タブを閉じます。
 
 ---
 
-## Exercise 3: Upload Zava Knowledge Files to SharePoint
+## 演習 3: Zava ナレッジファイルをSharePointにアップロードする
 
-In this exercise, you will uploads the Zava sample business documents to the SharePoint HR and Finance sites. These files contain the sensitive data — including employee PII, payroll records, credit card numbers, and financial forecasts — that will trigger security detections and DLP policy matches throughout Labs 04, 05, and 07.
+この演習では、Zava サンプルビジネス文書をSharePoint HR および Finance サイトにアップロードします。これらのファイルには、Lab 04、05、および07全体を通じてセキュリティ検出とDLPポリシーマッチをトリガーする機密データ（従業員の個人識別情報、給与記録、クレジットカード番号、財務予測を含む）が含まれます。
 
 ---
 
-### Task 1: Upload Files to the Zava HR SharePoint Site
+### タスク 1: Zava HR SharePoint サイトにファイルをアップロードする
 
-1. Open a new browser tab and navigate to **https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**.
+1. 新しいブラウザタブを開き、**https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** に移動します。
 
-   > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Environment** tab.
+   > **注記:** `[TenantPrefix]` を **[環境]** タブから取得したテナントプレフィックスに置き換えます。
 
-3. From the left navigation menu, click on **Documents (1)** , select **Create or upload (2)**. Then, select **Files upload (3)**.
+3. 左側のナビゲーションメニューから、**[ドキュメント(1)]** をクリックし、**[作成またはアップロード(2)]** を選択します。その後、**[ファイルのアップロード(3)]** を選択します。
 
 	![](./media/pp59.png)
 
-4. In the file picker, navigate to the **C:\LabFiles\lab file\HR** folder on your lab VM desktop.
+4. ファイルピッカーで、ラボVMデスクトップの **C:\LabFiles\lab file\HR** フォルダに移動します。
 
-5. Select the following files and then select **Open** to upload them:
+5. 以下のファイルを選択してから、**[開く]** を選択してアップロードします。
 
-   | Filename | Contains |
+   | ファイル名 | 内容 |
    |---|---|
-   | `Zava_HR_Policy_2024.docx` | Leave and disciplinary policy — no PII |
-   | `Zava_Employee_Records.xlsx` | Employee IDs (format: ZVA123456), names, DOB, salary |
-   | `Zava_Payroll_Q1_2025.xlsx` | Payroll data with credit card numbers in expense column |
-   | `Zava_Onboarding_Guide.docx` | Standard onboarding content |
-   | `Zava_Benefits_Summary.pdf` | Insurance and pension details |
-   | `Zava_Org_Chart.docx` | Reporting lines and management structure |
-   | `Zava_Termination_Checklist.docx` | Departing employee process with names and dates |
-   | `Zava_Sick_Leave_Report.xlsx` | Employee names and illness reasons |
+   | `Zava_HR_Policy_2024.docx` | 休暇および懲戒方針 — PII なし |
+   | `Zava_Employee_Records.xlsx` | 従業員ID(形式: ZVA123456)、名前、生年月日、給与 |
+   | `Zava_Payroll_Q1_2025.xlsx` | 経費列にクレジットカード番号を含む給与データ |
+   | `Zava_Onboarding_Guide.docx` | 標準的なオンボーディングコンテンツ |
+   | `Zava_Benefits_Summary.pdf` | 保険と年金の詳細 |
+   | `Zava_Org_Chart.docx` | 報告ラインと管理構造 |
+   | `Zava_Termination_Checklist.docx` | 離職従業員プロセス（名前と日付付き）|
+   | `Zava_Sick_Leave_Report.xlsx` | 従業員名と病気の理由 |
 
-6. Wait for all 8 files to finish uploading.
+6. 8つのファイルすべてのアップロードが完了するまで待機します。
 
-7. On the **Documents** page, confirm that all 8 files appear in the document library.
+7. **[ドキュメント]** ページで、8つのファイルすべてがドキュメントライブラリに表示されることを確認します。
 
 	![](./media/l0e3t1s6.png)
 
 ---
 
-### Task 2: Upload Files to the Zava Finance SharePoint Site
+### タスク 2: Zava Finance SharePoint サイトにファイルをアップロードする
 
-1. Open a new browser tab and navigate to **https://[TenantPrefix].sharepoint.com/sites/Operations<inject key="Deployment ID" enableCopy="false"></inject>**.
+1. 新しいブラウザタブを開き、**https://[TenantPrefix].sharepoint.com/sites/Operations<inject key="Deployment ID" enableCopy="false"></inject>** に移動します。
 
-   > **Note:** Replace `[TenantPrefix]` with your tenant prefix from the **Environment** tab.
+   > **注記:** `[TenantPrefix]` を **[環境]** タブから取得したテナントプレフィックスに置き換えます。
 
-2. From the left navigation menu, click on **Documents (1)** , select **Create or upload (2)**. Then, select **Files upload (3)**.
+2. 左側のナビゲーションメニューから、**[ドキュメント(1)]** をクリックし、**[作成またはアップロード(2)]** を選択します。その後、**[ファイルのアップロード(3)]** を選択します。
    
 	![](./media/pp60.png)
 
-4. In the file picker, navigate to the **C:\LabFiles\lab file\Operations** folder on your lab VM desktop.
+4. ファイルピッカーで、ラボVMデスクトップの **C:\LabFiles\lab file\Operations** フォルダに移動します。
 
-5. Select the following files and then select **Open** to upload them:
+5. 以下のファイルを選択してから、**[開く]** を選択してアップロードします。
 
-   | Filename | Contains |
+   | ファイル名 | 内容 |
    |---|---|
-   | `Zava_Budget_2025.xlsx` | Department budgets and cost centres |
-   | `Zava_Invoice_Log.xlsx` | Vendor invoices with IBAN and account numbers |
-   | `Zava_Expense_Report_Alex.xlsx` | Alex Wilber's expenses with Visa credit card number |
-   | `Zava_Audit_Report_2024.docx` | Internal audit findings — marked Confidential |
-   | `Zava_Contracts_External.docx` | Third-party vendor contract — externally shared |
-   | `Zava_Financial_Projections.xlsx` | Revenue forecasts with broad SharePoint permissions |
+   | `Zava_Budget_2025.xlsx` | 部門予算とコストセンター |
+   | `Zava_Invoice_Log.xlsx` | IBANと口座番号が記載されたベンダー請求書 |
+   | `Zava_Expense_Report_Alex.xlsx` | Visaクレジットカード番号を含むAlex Wilberの経費 |
+   | `Zava_Audit_Report_2024.docx` | 内部監査結果 — Confidential (機密)とマーク |
+   | `Zava_Contracts_External.docx` | 第三者ベンダー契約 — 外部で共有 |
+   | `Zava_Financial_Projections.xlsx` | 広範なSharePoint権限を持つ収益予測 |
 
-6. Wait for all 6 files to finish uploading.
+6. 6つのファイルすべてのアップロードが完了するまで待機します。
 
-7. On the **Documents** page, confirm that all 6 files appear in the document library.
+7. **[ドキュメント]** ページで、6つのファイルすべてがドキュメントライブラリに表示されることを確認します。
 
     ![](./media/l0e3t2s6.png)
 
 ---
 
-### Task 3: Verify Agents in the Microsoft Agent 365 Agent Registry
+### タスク 3: Microsoft Agent 365 Agent Registryでエージェントを確認する
 
-1. Open a new browser tab and navigate to `https://admin.cloud.microsoft/`. Sign in with **ODL_User** credentials if prompted.
+1. 新しいブラウザタブを開き、`https://admin.cloud.microsoft/` に移動します。プロンプトが表示された場合は **ODL_User** の認証情報でサインインします。
 
-	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
 
-	- **Password:** <inject key="AzureAdUserPassword"></inject>
+	- **パスワード:** <inject key="AzureAdUserPassword"></inject>
 
-2. In the left navigation pane, expand **Agents** and then select **All agents**.
+2. 左側のナビゲーションペインで、**[エージェント]** を展開してから **[すべてのエージェント]** を選択します。
 
     ![](./media/l0e3t3s1.png)
 
-3. On this page, confirm that the following three agents appear in the list. You can search for `Zava` in the search box to filter the results.
+3. このページで、次の3つのエージェントがリストに表示されていることを確認します。検索ボックスで `Zava` を検索して結果をフィルタリングできます。
 
-   | Agent Name | Status |
+   | エージェント名 | ステータス |
    |---|---|
-   | Zava HR Assistant | Available | 
-   | Zava Finance Agent | Available | 
-   | Zava IT Support Agent | Available |
+   | Zava HR Assistant | 利用可能 | 
+   | Zava Finance Agent | 利用可能 | 
+   | Zava IT Support Agent | 利用可能 |
 
 	  ![](./media/pp61.png)
 
-	  >**Note:** It may take up to 10 minutes after publishing in Copilot Studio for agents to appear in the Agent Registry. If the agents are not visible, wait 10 minutes and then refresh the page.
+	  >**注記:** Copilot Studioでの公開後、エージェントがAgent Registryに表示されるまで最大10分かかる場合があります。エージェントが表示されない場合は、10分待ってページを更新してください。
 	  
 ---
 
-## Exercise 4: Enable Organizational Setup
+## 演習 4: 組織的なセットアップを有効にする
 
-1. Navigate to **Exchange Admin Center** using the below URL
+1. 以下のURLを使用して **Exchange Admin Center** に移動します
 
     ```
     https://admin.cloud.microsoft/exchange
 	```
-1. Sign in with **ODL_User** credentials if prompted.
+1. プロンプトが表示された場合は **ODL_User** の認証情報でサインインします。
 
-	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-	- **Password:** <inject key="AzureAdUserPassword"></inject>
+	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
+	- **パスワード:** <inject key="AzureAdUserPassword"></inject>
 
-1. In the Exchange admin center, select the **Cloud Shell icon** from the upper-right corner of the page to launch an Azure Cloud Shell session
+1. Exchange管理センターで、ページの右上隅から **[クラウドシェルアイコン]** を選択してAzure Cloud Shellセッションを起動します
 
 	![](./media/ex-1.png)
 
-	>**Note**: If prompted, complete the Cloud Shell initialization before proceeding.
+	>**注記**: 要求された場合は、続行する前にCloud Shell初期化を完了してください。
 
-1. After the Cloud Shell session is ready and displays the PowerShell prompt, run the following command to disconnect the current Exchange Online session
+1. Cloud Shellセッションが準備完了になり、PowerShellプロンプトが表示されたら、次のコマンドを実行して現在のExchange Onlineセッションを切断します
 
     ```
     Disconnect-ExchangeOnline -Confirm:$false	
@@ -710,8 +712,7 @@ In this exercise, you will uploads the Zava sample business documents to the Sha
 
 	![](./media/ex-2.png)
 
-1. Connect to Exchange Online Using Device Authentication
-by running the following command to initiate a new Exchange Online connection using device authentication:
+1. デバイス認証を使用してExchange Onlineに接続するには、次のコマンドを実行して新しいExchange Online接続を開始します。
 
     ```
     Connect-ExchangeOnline -Device
@@ -719,13 +720,13 @@ by running the following command to initiate a new Exchange Online connection us
 
 	![](./media/ex-3.png)
 
-    - Note: A device code and sign-in URL will be displayed. Open the URL and paste the code to complete the authentication
+    - 注記: デバイスコードとサインインURLが表示されます。URLを開いてコードを貼り付け、認証を完了します
 
 	    ![](./media/ex-4.png)
 
 		![](./media/ex-7.png)
 
-1. After the Exchange Online PowerShell session is successfully connected, run the following command to enable organization customization:
+1. Exchange Online PowerShellセッションが正常に接続された後、次のコマンドを実行して組織のカスタマイズを有効にします。
 
     ```
     Enable-OrganizationCustomization
@@ -733,11 +734,11 @@ by running the following command to initiate a new Exchange Online connection us
 
 	![](./media/ex-8.png)
 
-     >**Note**: This command prepares the Exchange Online organization for advanced configuration tasks. If organization customization has already been enabled, the command returns a message indicating that no further action is required. Continue with the next step in the lab. This may take upto 24 hours to get organization custimaztion enabled
+     >**注記**: このコマンドは、高度な構成タスク用にExchange Online組織を準備します。組織のカスタマイズが既に有効化されている場合、コマンドはそれ以上のアクションが必要ないことを示すメッセージを返します。ラボの次のステップに進んでください。これは有効になるまで最大24時間かかる場合があります。
 	
 
 ---
 
-## Summary
+## まとめ
 
-In this lab, you completed the full environment baseline for the Zava Corporation AI security course. You created a role-assignable security group in the Microsoft Entra admin center, configured ODL User as owner and member, assigned the Privileged Role Administrator role, and enabled the group as the authorised Copilot Studio Authors group in Power Platform Admin Center. You enabled Entra Agent Identity for Copilot Studio at the environment level, added a SharePoint connection in the Power Apps maker portal, and created three Copilot Studio agents — Zava HR Assistant, Zava Finance Agent, and Zava IT Support Agent — each connected to a designated knowledge source, published across Teams and Microsoft 365 channels. You uploaded 14 sample business documents containing realistic sensitive data across the Zava HR and Finance SharePoint sites, and verified that all three agents are registered and Active in the Microsoft Agent 365 Agent Registry. The environment is now fully prepared for security configuration in Labs 01 through 07.
+このラボでは、Zava Corporation AI セキュリティコースの完全な環境ベースラインを完了しました。Microsoft Entra管理センターでロール割り当て可能なセキュリティグループを作成し、所有者およびメンバーとしてODL Userを構成し、Privileged Role Administrator ロールを割り当て、Power Platform Admin CenterでCopilot Studio Authors承認グループとしてグループを有効にしました。環境レベルでCopilot Studio用のEntra Agent Identityを有効にし、Power Apps メーカーポータルでSharePoint接続を追加し、3つのCopilot Studioエージェント（Zava HR Assistant、Zava Finance Agent、Zava IT Support Agent）を作成しました。各エージェントは指定されたナレッジソースに接続され、TeamsおよびMicrosoft 365チャネル全体で公開されました。Zava HR および Finance SharePointサイト全体に14のサンプルビジネス文書（リアルな機密データを含む）をアップロードし、3つのエージェントすべてがMicrosoft Agent 365 Agent Registryに登録され、アクティブであることを確認しました。環境はLab 01から07でのセキュリティ構成に向けて完全に準備完了です
