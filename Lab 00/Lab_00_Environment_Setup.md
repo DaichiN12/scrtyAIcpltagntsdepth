@@ -44,7 +44,7 @@
 
 	![](./media/L00-E0-S2.png)
 
-1. SharePoint管理センターで、左側のナビゲーションペインから **[サイト]** を展開し、**[アクティブなサイト]** を選択します。その後、**[+ 作成]** をクリックします。
+1. SharePoint 管理センターで、左側のナビゲーションペインから **[サイト]** を展開し、**[アクティブなサイト]** を選択します。その後、**[+ 作成]** をクリックします。
 
 	![](./media/L00-E0-S4.png)
 
@@ -81,7 +81,7 @@
 
 8. サイトのプロビジョニングが完了するまで待機します。**[アクティブなサイト]** リストに URL **https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** で表示されていることを確認します。
 
-   > **注記:** このサイトはLab 00 演習2で作成されるZava HR AssistantエージェントのSharePointナレッジソースです。Copilot Studioのエージェント接続は、特に **/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** を参照します。異なるURLスラッグを使用しないでください。
+   > **注記:** このサイトは Lab 00 演習2で作成される Zava HR Assistant エージェントの SharePoint ナレッジソースです。Copilot Studio のエージェント接続は、特に **/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>** を参照します。異なる URLスラッグを使用しないでください。
 
 9. ステップ3からステップ9までの同じ手順に従い、以下のサイトを作成します。
 
@@ -93,7 +93,7 @@
 
 ---
 
-## 演習 1: Entra IDを構成し、Copilot Studio Authorsを有効にする
+## 演習 1: Entra ID を構成し、Copilot Studio Authors を有効にする
 
 ### タスク 1: サインインして多要素認証を構成する
 
@@ -112,13 +112,13 @@
 
 	![](./media/l0n4.png)
 
-1. Microsoft Entra管理センターのウェルカムスクリーンで、**[はじめに]** を選択します。
+1. Microsoft Entra 管理センターのウェルカムスクリーンで、**[はじめに]** を選択します。
 
 ---
 
 ### タスク 2: copilotagentsecurity セキュリティグループを作成する
 
-1. Microsoft Entra管理センターの左側のナビゲーションペインで、**[Entra ID]** を展開し、**[グループ]** を選択します。
+1. Microsoft Entra 管理センターの左側のナビゲーションペインで、**[Entra ID]** を展開し、**[グループ]** を選択します。
 
 	![](./media/L00-E1-T2-S1.png)
 
@@ -172,9 +172,9 @@
 
 ---
 
-### タスク 3: Azureリソースのアクセス管理を有効にする
+### タスク 3: Azure リソースのアクセス管理を有効にする
 
-1. Microsoft Entra管理センターの左側のナビゲーションペインで、**[Entra ID]** を展開し、**[概要]** を選択します。
+1. Microsoft Entra 管理センターの左側のナビゲーションペインで、**[Entra ID]** を展開し、**[概要]** を選択します。
 
 	![](./media/L00-E1-T3-S1.png)
 
@@ -202,7 +202,7 @@
 
 ### タスク 4: Privileged Role Administrator ロールを割り当てる
 
-1. Microsoft Entra管理センターの左側のナビゲーションペインで、**[Entra ID]** を展開し、**[ロールと管理者]** を選択します。
+1. Microsoft Entra 管理センターの左側のナビゲーションペインで、**[Entra ID]** を展開し、**[ロールと管理者]** を選択します。
 
 	![](./media/L00-E1-T4-S1.png)
 
@@ -224,7 +224,7 @@
 
 ---
 
-### タスク 5: Power Platform Admin Center でCopilot Studio Authorsを構成する
+### タスク 5: Power Platform Admin Center でCopilot Studio Authors を構成する
 
 1. 新しいブラウザタブを開き、`https://admin.powerplatform.microsoft.com` に移動します。
 
@@ -270,7 +270,7 @@
 
 ---
 
-### タスク 6: Copilot Studio 用のEntra Agent Identityを有効にする
+### タスク 6: Copilot Studio 用の Entra Agent Identity を有効にする
 
 1. 左側のナビゲーションペインで、**[Copilot]** を選択します。
 
@@ -288,7 +288,7 @@
 
 	![](./media/L00-E1-T6-S4.png)
 
-5. Copilot Studio 用のEntra Agent Identityの設定パネルで、**[オン]** を選択（まだの場合）して、**[保存]** をクリックします。
+5. Copilot Studio 用の Entra Agent Identity の設定パネルで、**[オン]** を選択（まだの場合）して、**[保存]** をクリックします。
 
 	![](./media/L00-E1-T6-S6.png)
 
@@ -296,11 +296,11 @@
 
 	![](./media/L00-E1-T6-S7.png)
 
-      >**注記:** Entra Agent Identityを有効にすると、Copilot StudioエージェントにMicrosoft Entra IDで一意のアイデンティティが自動的に割り当てられます。これは後続のラボでのアイデンティティガバナンス、条件付きアクセス、およびDefender for Cloud Apps統合に必要です。
+      >**注記:** Entra Agent Identity を有効にすると、Copilot Studio エージェントに Microsoft Entra ID で一意のアイデンティティが自動的に割り当てられます。これは後続のラボでのアイデンティティガバナンス、条件付きアクセス、および Defender for Cloud Apps 統合に必要です。
 
 ---
 
-### タスク 7: Power Apps メーカーポータルでSharePoint接続を追加する
+### タスク 7: Power Apps メーカーポータルで SharePoint 接続を追加する
 
 1. 新しいブラウザタブを開き、`https://make.powerapps.com` に移動してサインインします。プロンプトが表示された場合は **ODL_User** の認証情報を使用します。
 
@@ -337,7 +337,7 @@
 
 	![](./media/pp3.png)
 
-11. SharePoint接続が **[接続]** リストに **[接続済み]** ステータスで表示されていることを確認します。
+11. SharePoint 接続が **[接続]** リストに **[接続済み]** ステータスで表示されていることを確認します。
 
 	![](./media/pp15.png)
 
@@ -345,7 +345,7 @@
 
 ## 演習 2: Zava Copilot Studio エージェントを作成する
 
-この演習では、Microsoft Copilot Studioで3つのZavaエージェントをすべて作成します。各エージェントは、名前、説明、指示、およびSharePointナレッジソースで構成されます。公開後、各エージェントは指定されたラボユーザーアカウントと共有されます。これらのエージェントはLab 01から07全体を通じてライブガバナンスターゲットとして機能します。
+この演習では、Microsoft Copilot Studio で3つの Zava エージェントをすべて作成します。各エージェントは、名前、説明、指示、およびSharePoint ナレッジソースで構成されます。公開後、各エージェントは指定されたラボユーザーアカウントと共有されます。これらのエージェントはLab 01 から 07 全体を通じてライブガバナンスターゲットとして機能します。
 
 ---
 
@@ -356,13 +356,13 @@
 	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
 	- **パスワード:** <inject key="AzureAdUserPassword"></inject>
 
-1. Copilot Studioが読み込まれない場合は、以下の手順に従います。
+1. Copilot Studio が読み込まれない場合は、以下の手順に従います。
 
 	- `https://admin.powerplatform.microsoft.com/` を開きます。**[管理] > [環境] > [dev-one-<inject key="Deployment ID" enableCopy="false"></inject>]** を選択し、**[環境ID]** の値をコピーします。
 
 		![](./media/pp20.png)
    
-   - Copilot Studioタブに戻り、`https://copilotstudio.microsoft.com/environments/<EnvironmentID>` を開きます。（`<EnvironmentID>` を上記でコピーした値に置き換えます）
+   - Copilot Studio タブに戻り、`https://copilotstudio.microsoft.com/environments/<EnvironmentID>` を開きます。（`<EnvironmentID>` を上記でコピーした値に置き換えます）
 
 2. **[ウェルカム]** スクリーンで、**[はじめに]** をクリックします。
 
@@ -387,7 +387,7 @@
 10. **[指示]** フィールドまでスクロールダウンし、**[編集]** をクリックして、以下を入力してから **[保存]** を選択します。
 
     ```
-    Zava HR Assistantです。Zava HR SharePointナレッジベースで利用可能な情報のみを使用して質問に答えてください。推測したり、ナレッジベース外の情報を提供したりしないでください。常にプロフェッショナルに対応してください。
+    Zava HR Assistant です。Zava HR SharePoint ナレッジベースで利用可能な情報のみを使用して質問に答えてください。推測したり、ナレッジベース外の情報を提供したりしないでください。常にプロフェッショナルに対応してください。
     ```
 
 12. エージェント構成ページで、**[ナレッジ]** セクションを見つけます。**[+ ナレッジを追加]** を選択します。
@@ -398,14 +398,14 @@
 
 	![](./media/L00-E2-T1-S12.png)
 
-14. **[SharePoint URL]** フィールドに、次の形式でSharePoint HR サイトのURLを入力して、**[追加]** を選択します。
+14. **[SharePoint URL]** フィールドに、次の形式で SharePoint HR サイトの URL を入力して、**[追加]** を選択します。
     **https://[TenantPrefix].sharepoint.com/sites/HR<inject key="Deployment ID" enableCopy="false"></inject>**
 
     > **注記:** `[TenantPrefix]` をラボ環境の **[環境]** タブから見つかるテナントプレフィックスで置き換えるか、演習0から取得したURLを使用します。
 
        ![](./media/pp27.png)
 
-16. **[エージェントに追加]** を選択してSharePointサイトをナレッジソースとして接続します。
+16. **[エージェントに追加]** を選択して SharePoint サイトをナレッジソースとして接続します。
 
     ![](./media/l0e2t1s12.png)  
 
@@ -451,7 +451,7 @@
 
 ---
 
-### タスク 2: Zava Finance Agentを作成する
+### タスク 2: Zava Finance Agent を作成する
 
 1. 左側のナビゲーションペインで、**[エージェント]** を選択します。その後、**[空白のエージェントを作成]** を選択します。
 
@@ -461,14 +461,14 @@
 
 	![](./media/pp50.png)
 
-4. **[説明]** フィールドに `Zava財務チームメンバーが予算情報、請求書データ、および財務レポートを取得するのに役立つAIアシスタント。` と入力します。その後、**[保存]** を選択します。
+4. **[説明]** フィールドに ` Zava 財務チームメンバーが予算情報、請求書データ、および財務レポートを取得するのに役立つ AI アシスタント。` と入力します。その後、**[保存]** を選択します。
 
 5. **[指示]** フィールドで、**[編集]** を選択します。
 
 6. 以下を入力して、**[保存]** を選択します。
 
     ```
-    Zava Finance Agentです。Zava Finance SharePointナレッジベースの情報のみを使用して質問に答えてください。Finance SharePointサイトへのアクセス権を付与されていないユーザーと財務データを共有しないでください。常にプロフェッショナルに対応し、ナレッジベース外のデータリクエストにはフラグを立ててください。
+    Zava Finance Agent です。Zava Finance SharePoint ナレッジベースの情報のみを使用して質問に答えてください。Finance SharePoint サイトへのアクセス権を付与されていないユーザーと財務データを共有しないでください。常にプロフェッショナルに対応し、ナレッジベース外のデータリクエストにはフラグを立ててください。
     ```
 
 	![](./media/pp51.png)
@@ -481,12 +481,12 @@
 
 	![](./media/image82.png)
 
-9. **[SharePoint URL]** フィールドに、次の形式でSharePoint Finance サイトのURLを入力します。
+9. **[SharePoint URL]** フィールドに、次の形式で SharePoint Finance サイトのURLを入力します。
     **https://[TenantPrefix].sharepoint.com/sites/Operations<inject key="Deployment ID" enableCopy="false"></inject>**
 
     > **注記:** `[TenantPrefix]` を **[環境]** タブから取得したテナントプレフィックスに置き換えます。
 
-10. **[追加]** を選択してSharePointサイトをナレッジソースとして接続します。
+10. **[追加]** を選択して SharePoint サイトをナレッジソースとして接続します。
 
 	![](./media/pp52.png)
 
@@ -512,7 +512,7 @@
 
 ---
 
-### タスク 3: Zava IT Support Agentを作成する
+### タスク 3: Zava IT Support Agent を作成する
 
 1. 左側のナビゲーションペインで、**[エージェント]** を選択します。その後、**[空白のエージェントを作成]** を選択します。
 
@@ -522,14 +522,14 @@
 
 	![](./media/pp55.png)
 
-4. **[説明]** フィールドに `Zava従業員が一般的なIT問題を解決し、サポートリクエストを送信し、ITポリシードキュメントを見つけるのに役立つAIアシスタント。` と入力します。その後、**[保存]** を選択します。
+4. **[説明]** フィールドに `Zava 従業員が一般的な IT 問題を解決し、サポートリクエストを送信し、IT ポリシードキュメントを見つけるのに役立つ AI アシスタント。` と入力します。その後、**[保存]** を選択します。
 
 5. **[指示]** フィールドで、**[編集]** を選択します。
 
 6. 以下を入力して、**[保存]** を選択します。
 
     ```
-    Zava IT Support Agentです。公開されているMicrosoft サポートドキュメントとZava ITポリシーを使用して、一般的なIT質問をユーザーに支援してください。機密の財務またはHR情報にアクセスしたり共有したりしないでください。複雑な問題についてはITヘルプデスクにエスカレーションしてください。
+    Zava IT Support Agent です。公開されている Microsoft サポートドキュメントと Zava IT ポリシーを使用して、一般的な IT 質問をユーザーに支援してください。機密の財務または HR 情報にアクセスしたり共有したりしないでください。複雑な問題については IT ヘルプデスクにエスカレーションしてください。
     ```
 
 	 ![](./media/pp56.png)
@@ -590,9 +590,9 @@
 
 ---
 
-## 演習 3: Zava ナレッジファイルをSharePointにアップロードする
+## 演習 3: Zava ナレッジファイルを SharePoint にアップロードする
 
-この演習では、Zava サンプルビジネス文書をSharePoint HR および Finance サイトにアップロードします。これらのファイルには、Lab 04、05、および07全体を通じてセキュリティ検出とDLPポリシーマッチをトリガーする機密データ（従業員の個人識別情報、給与記録、クレジットカード番号、財務予測を含む）が含まれます。
+この演習では、Zava サンプルビジネス文書を SharePoint HR および Finance サイトにアップロードします。これらのファイルには、Lab 04、05、および 07 全体を通じてセキュリティ検出と DLP ポリシーマッチをトリガーする機密データ（従業員の個人識別情報、給与記録、クレジットカード番号、財務予測を含む）が含まれます。
 
 ---
 
@@ -647,10 +647,10 @@
    |---|---|
    | `Zava_Budget_2025.xlsx` | 部門予算とコストセンター |
    | `Zava_Invoice_Log.xlsx` | IBANと口座番号が記載されたベンダー請求書 |
-   | `Zava_Expense_Report_Alex.xlsx` | Visaクレジットカード番号を含むAlex Wilberの経費 |
+   | `Zava_Expense_Report_Alex.xlsx` | Visa クレジットカード番号を含む Alex Wilber の経費 |
    | `Zava_Audit_Report_2024.docx` | 内部監査結果 — Confidential (機密)とマーク |
    | `Zava_Contracts_External.docx` | 第三者ベンダー契約 — 外部で共有 |
-   | `Zava_Financial_Projections.xlsx` | 広範なSharePoint権限を持つ収益予測 |
+   | `Zava_Financial_Projections.xlsx` | 広範な SharePoint 権限を持つ収益予測 |
 
 6. 6つのファイルすべてのアップロードが完了するまで待機します。
 
@@ -660,7 +660,7 @@
 
 ---
 
-### タスク 3: Microsoft Agent 365 Agent Registryでエージェントを確認する
+### タスク 3: Microsoft Agent 365 Agent Registry でエージェントを確認する
 
 1. 新しいブラウザタブを開き、`https://admin.cloud.microsoft/` に移動します。プロンプトが表示された場合は **ODL_User** の認証情報でサインインします。
 
@@ -682,7 +682,7 @@
 
 	  ![](./media/pp61.png)
 
-	  >**注記:** Copilot Studioでの公開後、エージェントがAgent Registryに表示されるまで最大10分かかる場合があります。エージェントが表示されない場合は、10分待ってページを更新してください。
+	  >**注記:** Copilot Studio での公開後、エージェントが Agent Registry に表示されるまで最大10分かかる場合があります。エージェントが表示されない場合は、10分待ってページを更新してください。
 	  
 ---
 
@@ -698,13 +698,13 @@
 	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
 	- **パスワード:** <inject key="AzureAdUserPassword"></inject>
 
-1. Exchange管理センターで、ページの右上隅から **[クラウドシェルアイコン]** を選択してAzure Cloud Shellセッションを起動します
+1. Exchange 管理センターで、ページの右上隅から **[クラウドシェルアイコン]** を選択して Azure Cloud Shell セッションを起動します
 
 	![](./media/ex-1.png)
 
-	>**注記**: 要求された場合は、続行する前にCloud Shell初期化を完了してください。
+	>**注記**: 要求された場合は、続行する前に Cloud Shell 初期化を完了してください。
 
-1. Cloud Shellセッションが準備完了になり、PowerShellプロンプトが表示されたら、次のコマンドを実行して現在のExchange Onlineセッションを切断します
+1. Cloud Shell セッションが準備完了になり、PowerShell プロンプトが表示されたら、次のコマンドを実行して現在の Exchange Online セッションを切断します
 
     ```
     Disconnect-ExchangeOnline -Confirm:$false	
@@ -712,7 +712,7 @@
 
 	![](./media/ex-2.png)
 
-1. デバイス認証を使用してExchange Onlineに接続するには、次のコマンドを実行して新しいExchange Online接続を開始します。
+1. デバイス認証を使用して Exchange Online に接続するには、次のコマンドを実行して新しい Exchange Online 接続を開始します。
 
     ```
     Connect-ExchangeOnline -Device
@@ -720,13 +720,13 @@
 
 	![](./media/ex-3.png)
 
-    - 注記: デバイスコードとサインインURLが表示されます。URLを開いてコードを貼り付け、認証を完了します
+    - 注記: デバイスコードとサインイン URL が表示されます。URLを開いてコードを貼り付け、認証を完了します
 
 	    ![](./media/ex-4.png)
 
 		![](./media/ex-7.png)
 
-1. Exchange Online PowerShellセッションが正常に接続された後、次のコマンドを実行して組織のカスタマイズを有効にします。
+1. Exchange Online PowerShell セッションが正常に接続された後、次のコマンドを実行して組織のカスタマイズを有効にします。
 
     ```
     Enable-OrganizationCustomization
@@ -734,11 +734,11 @@
 
 	![](./media/ex-8.png)
 
-     >**注記**: このコマンドは、高度な構成タスク用にExchange Online組織を準備します。組織のカスタマイズが既に有効化されている場合、コマンドはそれ以上のアクションが必要ないことを示すメッセージを返します。ラボの次のステップに進んでください。これは有効になるまで最大24時間かかる場合があります。
+     >**注記**: このコマンドは、高度な構成タスク用に Exchange Online 組織を準備します。組織のカスタマイズが既に有効化されている場合、コマンドはそれ以上のアクションが必要ないことを示すメッセージを返します。ラボの次のステップに進んでください。これは有効になるまで最大24時間かかる場合があります。
 	
 
 ---
 
 ## まとめ
 
-このラボでは、Zava Corporation AI セキュリティコースの完全な環境ベースラインを完了しました。Microsoft Entra管理センターでロール割り当て可能なセキュリティグループを作成し、所有者およびメンバーとしてODL Userを構成し、Privileged Role Administrator ロールを割り当て、Power Platform Admin CenterでCopilot Studio Authors承認グループとしてグループを有効にしました。環境レベルでCopilot Studio用のEntra Agent Identityを有効にし、Power Apps メーカーポータルでSharePoint接続を追加し、3つのCopilot Studioエージェント（Zava HR Assistant、Zava Finance Agent、Zava IT Support Agent）を作成しました。各エージェントは指定されたナレッジソースに接続され、TeamsおよびMicrosoft 365チャネル全体で公開されました。Zava HR および Finance SharePointサイト全体に14のサンプルビジネス文書（リアルな機密データを含む）をアップロードし、3つのエージェントすべてがMicrosoft Agent 365 Agent Registryに登録され、アクティブであることを確認しました。環境はLab 01から07でのセキュリティ構成に向けて完全に準備完了です
+このラボでは、Zava Corporation AI セキュリティコースの完全な環境ベースラインを完了しました。Microsoft Entra 管理センターでロール割り当て可能なセキュリティグループを作成し、所有者およびメンバーとして ODL User を構成し、Privileged Role Administrator ロールを割り当て、Power Platform Admin CenterでCopilot Studio Authors 承認グループとしてグループを有効にしました。環境レベルで Copilot Studio 用の Entra Agent Identity を有効にし、Power Apps メーカーポータルで SharePoint 接続を追加し、3つの Copilot Studio エージェント（Zava HR Assistant、Zava Finance Agent、Zava IT Support Agent）を作成しました。各エージェントは指定されたナレッジソースに接続され、Teams および Microsoft 365 チャネル全体で公開されました。Zava HR および Finance SharePoint サイト全体に14のサンプルビジネス文書（リアルな機密データを含む）をアップロードし、3つのエージェントすべてが Microsoft Agent 365 Agent Registry に登録され、アクティブであることを確認しました。環境はLab 01 から 07 でのセキュリティ構成に向けて完全に準備完了です。
