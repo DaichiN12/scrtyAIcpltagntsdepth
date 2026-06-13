@@ -1,133 +1,134 @@
-# Lab 01: Agent Discovery and Registry Management
+# Lab 01: エージェント検出とレジストリ管理
 
-## Introduction
+## 概要
 
-Zava's CISO has asked the security team to confirm that all deployed AI agents are visible, governed, and accounted for before any security policy work begins. Patti Fernandes, Zava's Security Admin and SOC Analyst, will use the Agent Registry in Microsoft Entra ID to inspect the three Zava agents, test lifecycle controls, and identify any governance gaps. The Defender XDR workspace and Defender for Cloud Apps connector will also be initialised so that agent activity data begins flowing before moving further in the security journey.
+Zava の最高情報セキュリティ責任者(CISO)は、セキュリティチームに対して、セキュリティポリシー作業が開始される前に、すべてのデプロイされたAIエージェントが可視化され、ガバナンスされ、説明責任が取られていることを確認するよう要求しました。Zava のセキュリティアドミンおよびSOC分析官であるPatti Fernandes は、Microsoft Entra ID の Agent Registry を使用して3つの Zava エージェントを検査し、ライフサイクル制御をテストし、ガバナンスギャップを特定します。Defender XDR ワークスペースと Defender for Cloud Apps コネクタも初期化されるため、セキュリティの取り組みがさらに進む前にエージェント活動データの流入が開始されます。
 
-This lab introduces the Microsoft 365 Admin Center Agent Registry as the primary tool for agent discovery, lifecycle management, and governance. Patti will explore the registry, review agent metadata, take lifecycle actions, identify ownerless agents, and complete the prerequisite configuration tasks required for Day 2 security labs — including Purview Audit verification, Defender XDR provisioning, and Defender for Cloud Apps initialisation.
-
----
-
-## Objectives
-
-- Explore the Agent 365 Overview dashboard and interpret key metrics.
-- Inspect all three Zava agents in the Agent Registry and review their metadata.
-- Block and unblock the Zava HR Assistant to validate lifecycle controls.
-- Export the agent inventory to confirm audit trail capability.
-- Identify ownerless agents using the registry dashboard filter.
-- Verify that Purview Audit is active and run a baseline audit log search.
-- Provision Microsoft Defender XDR by signing in to the Defender portal.
-- Configure Defender for Cloud Apps organisation details and connect the Microsoft 365 app connector.
+このラボでは、Microsoft 365 Admin Center の Agent Registry をエージェント検出、ライフサイクル管理、およびガバナンスの主要なツールとして紹介します。Patti はレジストリを探索し、エージェントメタデータをレビューし、ライフサイクルアクションを実行し、所有者のないエージェントを特定し、Purview Audit 検証、Defender XDR プロビジョニング、および Defender for Cloud Apps 初期化を含む Day 2 セキュリティラボに必要な前提条件構成タスクを完了します。
 
 ---
 
-## Lab Duration
+## 目的
 
-Estimated time: **20 minutes**
+- Agent 365 概要ダッシュボードを探索し、主要なメトリクスを解釈する。
+- Agent Registry で3つの Zava エージェントすべてを検査し、メタデータをレビューする。
+- Zava HR Assistant をブロック/ブロック解除してライフサイクル制御を検証する。
+- エージェントインベントリをエクスポートして監査証跡機能を確認する。
+- レジストリダッシュボードフィルタを使用して所有者のないエージェントを特定する。
+- Purview Audit がアクティブであることを確認し、ベースライン監査ログ検索を実行する。
+- Defender ポータルにサインインして Microsoft Defender XDR をプロビジョニングする。
+- Defender for Cloud Apps の組織詳細を構成し、Microsoft 365 アプリコネクタを接続する。
 
 ---
 
-## Exercise 1: Explore the Agent 365 Overview and Agent Registry
+## ラボ所要時間
 
-### Task 1: Access the Agent 365 Overview Page
+推定所要時間：**20分**
 
-1. Open a browser and navigate to **Microsoft 365 admin center** and Sign in with **ODL User** credentials if prompted.
+---
+
+## 演習 1: Agent 365 概要と Agent Registry を探索する
+
+### タスク 1: Agent 365 概要ページにアクセスする
+
+1. ブラウザを開き、**Microsoft 365 管理センター** に移動してサインインします。プロンプトが表示された場合は **ODL User** 認証情報を使用します。
 
     ```
 	https://admin.cloud.microsoft/
 	```
 
-	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
 
-	- **Password:** <inject key="AzureAdUserPassword"></inject>
+	- **パスワード:** <inject key="AzureAdUserPassword"></inject>
 
-2. In the left navigation pane, expand **Agents**, and then select **Overview**.
+2. 左側のナビゲーションペインで、**[エージェント]** を展開してから **[概要]** を選択します。
 
 	![](./media/secure1.png)
 
-3. On the **Agent Overview** page, locate the following metrics and note their current values:
+3. **[エージェント概要]** ページで、以下のメトリクスを見つけて現在の値をメモします。
 
-   - **Agent Registry** — total count of agents in the tenant.
-   - **Active users in Copilot** — unique users who interacted with an agent in the last 30 days.
-   - **Pending requests for agents** — open requests to add specific agents.
-   - **Agents without owners** — agents whose owner has left the company.
-   - **Agent analytics** — agents by creators, top platforms used to build agents, and active users in Copilot over time.
+   - **Agent Registry** — テナント内のエージェントの総数。
+   - **Copilotのアクティブユーザー** — 過去30日間にエージェントと対話したユニークユーザー数。
+   - **エージェントの保留中リクエスト** — 特定のエージェントを追加するための未処理リクエスト。
+   - **所有者のないエージェント** — 所有者が退職したエージェント。
+   - **エージェント分析** — クリエイターによるエージェント、エージェント構築に使用されるトップのプラットフォーム、時系列でのCopilotのアクティブユーザー。
 
 		![](./media/secure2.png)
 
-      >**Note:** In a freshly configured environment, active user counts and agents without owners may show zero. This is expected. The metrics will populate as agents are used throughout the course.
+      >**注記:** 新しく構成された環境では、アクティブユーザー数と所有者のないエージェント数がゼロを表示する場合があります。これは予想されています。メトリクスはコース全体を通じてエージェントが使用されるにつれて入力されます。
 
 ---
 
-### Task 2: Inspect and Approve the Zava Agents in the Agent Registry
+### タスク 2: Agent Registry で Zava エージェントを検査・承認する
 
-1. In the left navigation pane, select **Agents**. Select **All agents**. Then select the **Requests** tab.
+1. 左側のナビゲーションペインで、**[エージェント]** を選択します。**[すべてのエージェント]** を選択します。その後、**[リクエスト]** タブを選択します。
 
 	![](./media/l01-t2-s1.png)
 
-2. In the agent list, locate **Zava IT Support Agent** and select the vertical **...** next to the name.
+2. エージェントリストで **[Zava IT Support Agent]** を見つけ、名前の横にある縦の **[...]** を選択します。
 
-3. From the two options, you can either **Reject submission** or **Publish to store**. For now, select **Publish to store**.
+3. 2つのオプションから、**[送信を拒否]** または **[ストアに公開]** を選択できます。今は **[ストアに公開]** を選択します。
 
 	![](./media/l01-t2-s2.png)
 
-4. On the **Publish new agent** flow, under **Select users or groups who can install the agent**, select **All users**.
+4. **[新しいエージェントを公開]** フローで、**[エージェントをインストールできるユーザーまたはグループを選択]** で、**[すべてのユーザー]** を選択します。
 
 	![](./media/l01-e1-t2-s4.png)
 
-5. Under **Select users or groups who will have the agent pre-installed (optional)**, select **Specific users/groups**.
+5. **[エージェントをプリインストールするユーザーまたはグループを選択(オプション)]** で、**[特定のユーザー/グループ]** を選択します。
 
 	![](./media/l01-e1-t2-s5.png)
 
-6. In the **Specific users/groups** search box, search for `Patti Fernandes` and select her from the dropdown.
+6. **[特定のユーザー/グループ]** 検索ボックスで、`Patti Fernandes` を検索してドロップダウンから彼女を選択します。
 
 	![](./media/l01-e1-t2-s7.png)
 
-9. Then, select **Next**.
+9. その後、**[次へ]** を選択します。
 
 	![](./media/l01-e1-t2-s8.png)
 
-10. On **Apply template**, select **Next**.
+10. **[テンプレートを適用]** で、**[次へ]** を選択します。
 
 	![](./media/l01-e1-t2-s9.png)
 
-11. On **Review permissions**, select **Next**.
+11. **[権限を確認]** で、**[次へ]** を選択します。
 
 	![](./media/l01-e1-t2-s10.png)
 
-12. Click on **Publish** to publish the Zava IT Support Agent.
+12. **[公開]** をクリックしてZava IT Support Agentを公開します。
 
 	![](./media/l01-e1-t2-s11.png)
 
-13. Select **Done**.
+13. **[完了]** を選択します。
     
 	![](./media/l01-e1-t2-s12.png)
 
-1. Repeat the above steps 1 to step 12 for **Zava HR Agent**
+1. **[Zava HR Agent]** について、上記のステップ1からステップ12までを繰り返します。
+
 ---
 
-### Task 3: Approve an Agent in Teams Admin Center
+### タスク 3: Teams Admin Center でエージェントを承認する
 
-1. Open a new browser tab and navigate to **Teams Admin Center** using the below URL and log in using the ODL User credentials.
+1. 新しいブラウザタブを開き、以下の URL を使用して **[Teams管理センター]** に移動し、ODL User の認証情報を使用してログインします。
 
     ```
 	https://admin.teams.microsoft.com/
 	```
 
-	- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-	- **Password:** <inject key="AzureAdUserPassword"></inject>
+	- **メールアドレス/ユーザー名:** <inject key="AzureAdUserEmail"></inject>
+	- **パスワード:** <inject key="AzureAdUserPassword"></inject>
 
-2. From the left navigation under **Teams apps**, select **Manage apps (1)**. In the search bar, search for `Zava` and select **Zava HR Assistant (2)**.
+2. 左側のナビゲーションの **[Teamsアプリ]** で、**[アプリを管理(1)]** を選択します。検索バーで `Zava` を検索して、**[Zava HR Assistant(2)]** を選択します。
 
 	![](./media/secure3.png)
 
-      >**Note:** Make sure to select the one with the M365 apps as the selected **Supported on** coloumn.
+      >**注記:** **[サポート対象]** 列がM365アプリの場合のみを選択してください。
 
-4. Verify if **Zava HR Assistant** is published.
+4. **[Zava HR Assistant]** が公開されているかどうかを確認します。
 
 	![](./media/secure4.png)
 
-      >**Note:** If not, click on **Publish** and click on it again on the pop-up confirmation.
+      >**注記:** 公開されていない場合は、**[公開]** をクリックし、ポップアップ確認で再度クリックします。
 
 	![](./media/secure17.png)
 
@@ -135,96 +136,97 @@ Estimated time: **20 minutes**
 
 ---
 
-### Task 4: Block and Unblock the Zava HR Assistant
+### タスク 4: Zava HR Assistant をブロック/ブロック解除する
 
-1. Navigate back to Microsoft 365 admin center.
+1. Microsoft 365 管理センターに戻ります。
 
     ```
 	https://admin.cloud.microsoft/
 	```
 
-2. Expand **Agents** from the left navigation pane, select **All agents (1)**, select the **Registry** tab, then search for and select **Zava HR Assistant (2)** in the agent list.
+2. 左側のナビゲーションペインから **[エージェント]** を展開し、**[すべてのエージェント(1)]** を選択します。**[Registry]** タブを選択してから、エージェントリストで **[Zava HR Assistant(2)]** を検索して選択します。
 
 	![](./media/secure5.png)
 
-3. On the details panel,select **Block**.
+3. 詳細パネルで、**[ブロック]** を選択します。
 
 	![](./media/secure6.png)
 
-4. On the **Block agent** pane, review the message confirming that blocking will prevent all users in the organisation from accessing the agent. Check the box next to **Block agent (1)**. Select **Save (2)**.
+4. **[エージェントをブロック]** ペインで、ブロックすることで組織内のすべてのユーザーがエージェントにアクセスできなくなることを確認するメッセージを確認します。**[エージェントをブロック(1)]** の横のチェックボックスを選択します。**[保存(2)]** を選択します。
 
 	![](./media/secure7.png)
 
-5. Confirm that **Zava HR Assistant** now displays a **Blocked** status.
+5. **[Zava HR Assistant]** に **[ブロック済み]** ステータスが表示されることを確認します。
 
 	![](./media/l01-e1-t4-s5.png)
 
-6. Below the agent name, select **Unblock**.
+6. エージェント名の下で、**[ブロック解除]** を選択します。
 
 	![](./media/secure8.png)
 
-7. On the **Unblock agent** pane, select the **Unblock agent** checkbox. Select **Save**. Close the details panel.
+7. **[エージェントをブロック解除]** ペインで、**[エージェントをブロック解除]** チェックボックスを選択します。**[保存]** を選択します。詳細パネルを閉じます。
 
     ![](./media/l1t4s7.png)
 
-8. In the agent list, confirm that **Zava HR Assistant** now displays an **Available** status.
+8. エージェントリストで、**[Zava HR Assistant]** に **[利用可能]** ステータスが表示されることを確認します。
 
-9. Close the tab.
+9. タブを閉じます。
+
 ---
 
-### Task 5: Export the Agent Inventory
+### タスク 5: エージェントインベントリをエクスポートする
 
-1. On the **Registry** tab, select **Export** on the toolbar above the agent list.
+1. **[Registry]** タブで、エージェントリストの上のツールバーから **[エクスポート]** を選択します。
 
 	![](./media/secure9.png)
 
-   > **Note:** If an **Export** button is not visible in the toolbar, select the ellipsis (**...**) menu in the toolbar to locate the export option.
+   > **注記:** ツールバーに **[エクスポート]** ボタンが表示されない場合は、ツールバーの省略記号(**...**)メニューを選択してエクスポートオプションを見つけます。
 
-2. Confirm the download in the confirmation dialog. Wait for the export file to be generated and downloaded to your lab VM.
+2. 確認ダイアログで確認を選択します。エクスポートファイルが生成されてラボVMにダウンロードされるまで待機します。
 
 	![](./media/image25.png)
 
-   > **Note:** If the above pop-up doesn't appear like the above image, select **All agents (1)** and click on **Continue (2)**.
+   > **注記:** 上記のポップアップが表示されない場合は、**[すべてのエージェント(1)]** を選択して、**[続行(2)]** をクリックします。
 
 	 ![](./media/secure10.png)
 
-3. Open the downloaded CSV file.
+3. ダウンロードされたCSVファイルを開きます。
 
-4. Confirm that the file contains rows for **Zava HR Assistant**, **Zava Finance Agent**, and **Zava IT Support Agent**.
+4. ファイルに **[Zava HR Assistant]**、**[Zava Finance Agent]**、および **[Zava IT Support Agent]** の行が含まれていることを確認します。
 
-5. Confirm that the following columns are present: agent name, publisher, creator, creation date, host products, and availability status.
+5. 以下の列が存在することを確認します。エージェント名、発行元、作成者、作成日、ホスト製品、可用性ステータス。
 
 	![](./media/l01-e1-t5-s5.png)
 
-6. Close the CSV file.
+6. CSVファイルを閉じます。
 
 ---
 
-### Task 6: Identify Ownerless Agents
+### タスク 6: 所有者のないエージェントを特定する
 
-1. On the **Registry** tab, select the **Agents without Owners** card.
+1. **[Registry]** タブで、**[所有者のないエージェント]** カードを選択します。
 
 	![](./media/l01-e1-t6-s1.png)
 
-2. Review the list of agents that are displayed.
+2. 表示されるエージェントのリストを確認します。
 
 	![](./media/l01-e1-t6-s2.png)
 
-3. Note whether any of the three Zava agents appear in this filtered list.
+3. 3つのZavaエージェントのいずれかがこのフィルタリングされたリストに表示されるかどうかをメモします。
 
-   > **Note:** In a lab environment where agents were created by ODL User, the agents may or may not appear as ownerless depending on how ownership is propagated from Copilot Studio. If no agents appear, this confirms that ownership was correctly assigned during creation. If agents appear, this represents a governance gap that would be addressed by reassigning ownership.
+   > **注記:** エージェントが ODL User によって作成されたラボ環境では、Copilot Studio から所有権がどのように伝播されるかに応じて、エージェントが所有者のないものとして表示される場合とされない場合があります。エージェントが表示されない場合は、所有権が作成時に正しく割り当てられたことを確認できます。エージェントが表示される場合は、所有権を再割り当てすることで対処されるガバナンスギャップを表します。
 
-4. Select **Clear filter** or reset the filters to return to the full agent list.
+4. **[フィルタをクリア]** を選択するか、フィルタをリセットしてエージェントのフルリストに戻ります。
 
 	![](./media/l01-e1-t6-s4.png)
 
 ---
 
-## Exercise 2: Prepare Purview Audit for Day 2
+## 演習 2: Day 2 向けて Purview Audit を準備する
 
-### Task 1: Verify Purview Audit Is Active
+### タスク 1: Purview Audit がアクティブであることを確認する
 
-1. Open a new browser tab and navigate to **Microsoft Purview** using the below URL and Sign in with **ODL User** credentials if prompted. Select **Get started**.
+1. 新しいブラウザタブを開き、以下のURLを使用して **[Microsoft Purview]** に移動してサインインします。プロンプトが表示された場合は **ODL User** 認証情報を使用します。**[はじめに]** を選択します。
 
     ```
 	https://purview.microsoft.com
@@ -232,122 +234,122 @@ Estimated time: **20 minutes**
 
 	![](./media/l01-e2-t1-s1.png)
 
-2. In the left navigation pane, select **Audit** from **Solutions**.
+2. 左側のナビゲーションペインで、**[ソリューション]** から **[監査]** を選択します。
 
 	![](./media/l01-e2-t1-s2.png)
 
-3. On the **Audit** page, check whether a banner appears prompting you to start recording user and admin activity.
+3. **[監査]** ページで、ユーザーと管理者の活動の記録を開始するよう促すバナーが表示されるかどうかを確認します。
 
-   - If a banner is displayed, select **Start recording user and admin activity** to enable auditing.
+   - バナーが表示されている場合は、**[ユーザーと管理者の活動の記録を開始]** を選択して監査を有効にします。
 
 		![](./media/l01-e2-t1-s3.png)
 
-   - If no banner is displayed, auditing is already enabled. Proceed to the next step.
+   - バナーが表示されていない場合は、監査は既に有効になっています。次のステップに進みます。
 
-4. Configure the search with the following values:
+4. 検索を以下の値で構成します。
 
-   - **Start date:** Select today's date minus 3 days.
-   - **End date:** Select today's date.
-   - **Activities – friendly names:** Leave blank to search all activities.
-   - **Users:** Leave blank.
-   - **Record type:** Leave blank.
+   - **開始日:** 本日から3日前を選択します。
+   - **終了日:** 本日を選択します。
+   - **アクティビティ – フレンドリー名:** すべてのアクティビティを検索するには空白のままにします。
+   - **ユーザー:** 空白のままにします。
+   - **レコード型:** 空白のままにします。
 
-5. Select **Search**.
+5. **[検索]** を選択します。
 
 	![](./media/l01-e2-t1-s5.png)
 
-6. Wait for the search job to complete.
+6. 検索ジョブが完了するまで待機します。
 
 	![](./media/l1n3.png)
 
-7. Review the results to confirm that audit records are being returned.
+7. 監査レコードが返されていることを確認するために結果を確認します。
 
-   > **Note:** If the search returns no results, this may indicate that no audited activities have occurred yet in the tenant, or that audit log ingestion requires additional time after initial provisioning. This is expected in a new lab environment. Audit records generated throughout this and subsequent labs will be searchable from Day 2 onwards.
+   > **注記:** 検索が結果を返さない場合、これはテナントでまだ監査対象のアクティビティが発生していないこと、または初期プロビジョニング後に監査ログの取り込みに追加時間が必要なことを示す場合があります。これは新しいラボ環境では予想されます。このおよび後続のラボ全体で生成された監査レコードは、Day 2 以降から検索可能になります。
 
 ---
 
-## Exercise 3: Initialise Microsoft Defender XDR and Defender for Cloud Apps
+## 演習 3: Microsoft Defender XDR および Defender for Cloud Apps を初期化する
 
-### Task 1: Provision Microsoft Defender XDR
+### タスク 1: Microsoft Defender XDR をプロビジョニングする
 
-1. Open a new browser tab and navigate to **Microsoft Defender** using the below URL and Sign in with **ODL User** credentials if prompted.
+1. 新しいブラウザタブを開き、以下のURLを使用して **[Microsoft Defender]** に移動してサインインします。プロンプトが表示された場合は **ODL User** 認証情報を使用します。
 
     ```
 	https://security.microsoft.com
 	```
 
-2. On the **Microsoft Defender** portal welcome screen, review the provisioning message if displayed.
+2. **[Microsoft Defender]** ポータルのウェルカムスクリーンで、表示されている場合はプロビジョニングメッセージを確認します。
 
-   > **Note:** Microsoft Defender XDR provisions automatically when an eligible admin visits the portal for the first time. If provisioning is in progress, a message will indicate the data centre location being used and an estimated completion time. Wait for provisioning to complete before continuing.
+   > **注記:** Microsoft Defender XDR は、対象となる管理者が初めてポータルにアクセスしたときに自動的にプロビジョニングされます。プロビジョニングが進行中の場合、メッセージは使用されているデータセンターの場所と推定完了時間を示します。続行する前にプロビジョニングが完了するまで待機します。
 
-3. Once the portal has loaded completely, select **Home** to confirm the Defender XDR home dashboard loads without errors.
+3. ポータルが完全に読み込まれたら、**[ホーム]** を選択して Defender XDR ホームダッシュボードがエラーなく読み込まれることを確認します。
 
 	![](./media/secure11.png)
 
 ---
 
-### Task 2: Configure Defender for Cloud Apps Organisation Details
+### タスク 2: Defender for Cloud Apps 組織詳細を構成する
 
-1. In the left navigation pane, expand **System** and select **Settings (1)**. On the **Settings** page, select **Cloud Apps (2)**.
+1. 左側のナビゲーションペインで、**[システム]** を展開して **[設定(1)]** を選択します。**[設定]** ページで、**[Cloud Apps(2)]** を選択します。
 
 	![](./media/secure12.png)
 
-3. Select **Organisation details (1)** and enter the following details and click on **Save (5)**:
+3. **[組織詳細(1)]** を選択し、以下の詳細情報を入力して **[保存(5)]** をクリックします。
 
-	- On the **Organisation details** page, in the **Organisation display name** field, replace the existing name with `Zava Corporation` (2).
+	- **[組織詳細]** ページの **[組織表示名]** フィールドで、既存の名前を `Zava Corporation` に置き換えます(2)。
 
-	- In the **Environment name** field, enter **DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** (3).
+	- **[環境名]** フィールドに、**DevOne-<inject key="Deployment ID" enableCopy="false"></inject>** を入力します(3)。
 
-	- In the **Managed domains** field, keep it default
+	- **[管理対象ドメイン]** フィールドでは、デフォルトのままにしておきます。
 
 	![](./media/l1e3t2s2.png)
 
-8. Confirm that a success notification appears confirming that the settings were saved.
+8. 設定が保存されたことを確認する成功通知が表示されることを確認します。
 
 ---
 
-### Task 3: Enable File Monitoring in Defender for Cloud Apps
+### タスク 3: Defender for Cloud Apps でファイル監視を有効にする
 
-1. From the left navigation pane, under **Information Protection**, select **Files (1)**. On the **Files** page, select the **Enable file monitoring (2)** checkbox and click **Save (3)**.
+1. 左側のナビゲーションペインで、**[情報保護]** の下から **[ファイル(1)]** を選択します。**[ファイル]** ページで、**[ファイル監視を有効にする(2)]** チェックボックスを選択して、**[保存(3)]** をクリックします。
 
 	 ![](./media/secure14.png)
 
-5. Confirm that a success notification appears confirming that file monitoring was enabled.
+5. ファイル監視が有効になったことを確認する成功通知が表示されることを確認します。
 
 ---
 
-### Task 4: Connect the Microsoft 365 App Connector
+### タスク 4: Microsoft 365 アプリコネクタを接続する
 
-1. From the left navigation pane, under **Connected apps**, select **App Connectors (1)**. On the **App Connectors** page, select **+ Connect an app (2)**. In the app list, select **Microsoft 365 (3)**.
+1. 左側のナビゲーションペインで、**[接続されたアプリ]** の下から **[アプリコネクタ(1)]** を選択します。**[アプリコネクタ]** ページで、**[+ アプリを接続(2)]** を選択します。アプリリストで、**[Microsoft 365(3)]** を選択します。
 
 	 ![](./media/secure15.png)
 
-6. On the **Select Microsoft 365 components** page, confirm that all components are selected by default. If any component is deselected, select it to enable it and click **Connect Microsoft 365**.
+6. **[Microsoft 365コンポーネントを選択]** ページで、すべてのコンポーネントがデフォルトで選択されていることを確認します。選択されていないコンポーネントがある場合は、それを選択して有効にし、**[Microsoft 365を接続]** をクリックします。
 
 	 ![](./media/secure16.png)
 
-8. Wait for the connection to complete. Then slect **Done**.
+8. 接続が完了するまで待機します。その後、**[完了]** を選択します。
 
 	![](./media/l01-e3-t4-s8.png)
 
-10. On the **App Connectors** page, select the checkbox next to **Microsoft 365** and from the top options select **Connect Microsoft Azure Instance**.
+10. **[アプリコネクタ]** ページで、**[Microsoft 365]** の横のチェックボックスを選択して、上部オプションから **[Microsoft Azureインスタンスを接続]** を選択します。
 
 	![](./media/l01-e3-t4-s10.png)
 
-11. Select **Connect Microsoft Azure**. 
+11. **[Microsoft Azureを接続]** を選択します。
 
 	![](./media/l01-e3-t4-s11.png)
 
-12. Wait for the connection to complete and click on **Done**.
+12. 接続が完了するまで待機して、**[完了]** をクリックします。
 
-    > **Note:** After connecting, Defender for Cloud Apps begins scanning Microsoft 365 activity. Initial data from the past week will appear in the portal. The first full scan may take several hours depending on tenant size. This connector is required for activity monitoring, DLP policy enforcement, and alert generation in Day 2 and Day 3 labs.
+    > **注記:** 接続後、Defender for Cloud Apps は Microsoft 365 アクティビティのスキャンを開始します。過去1週間の初期データがポータルに表示されます。最初の完全スキャンはテナントサイズに応じて数時間かかる場合があります。このコネクタは Day 2 および Day 3 ラボでのアクティビティ監視、DLP ポリシー適用、アラート生成に必要です。
 
 ---
 
-## Summary
+## まとめ
 
-In this lab, you explored the Agent 365 Overview dashboard and reviewed key governance metrics for the Zava tenant. You inspected all three Zava agents in the Agent Registry, reviewing their metadata, host products, and knowledge sources. You approved the Zava IT Support Agent submission, published the Zava HR Assistant through Teams Admin Center, then blocked and unblocked the Zava HR Assistant to verify that lifecycle controls function correctly. You exported the agent inventory to a CSV file to confirm audit trail capability, and used the ownerless agent filter to check for governance gaps in agent ownership.
+このラボでは、Agent 365 概要ダッシュボードを探索し、Zava テナントの主要なガバナンスメトリクスをレビューしました。Agent Registry で3つの Zava エージェントすべてを検査し、メタデータ、ホスト製品、およびナレッジソースをレビューしました。Zava IT Support Agent 送信を承認し、Teams Admin Center で Zava HR Assistantを公開してから、Zava HR Assistant をブロック/ブロック解除してライフサイクル制御が正しく機能することを確認しました。エージェントインベントリをCSVファイルにエクスポートして監査証跡機能を確認し、所有者のないエージェントフィルタを使用してエージェント所有権のガバナンスギャップを確認しました。
 
-You then prepared the Day 2 monitoring infrastructure by verifying that Purview Audit is active and running a baseline audit log search. You provisioned Microsoft Defender XDR, configured Defender for Cloud Apps with Zava Corporation organisation details and managed domain, connected the Microsoft 365 app connector to begin activity data ingestion, and enabled file monitoring.
+その後、Purview Audit がアクティブであることを確認し、ベースライン監査ログ検索を実行して Day 2 監視インフラストラクチャを準備しました。Microsoft Defender XDR をプロビジョニングし、Zava Corporation 組織詳細と管理対象ドメインで Defender for Cloud Apps を構成し、Microsoft 365 アプリコネクタを接続してアクティビティデータの取り込みを開始し、ファイル監視を有効にしました。
 
-The Zava agent environment is now fully visible, governed, and ready for security policy configuration in Day 2.
+Zava エージェント環境は完全に可視化され、ガバナンスされ、Day 2 でのセキュリティポリシー構成の準備が整いました。
