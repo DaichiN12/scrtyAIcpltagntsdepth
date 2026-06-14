@@ -2,9 +2,9 @@
 
 ## 概要
 
-**Zava Corporation** は、英国およびEU全域で事業を展開する中規模の金融サービスおよびHRコンサルティング企業です。Zava  Corporation は、従業員の機密記録、クライアントの財務データ、および第三者ベンダー契約を管理しています。同組織は、運用効率を向上させるため、HR、財務、及び IT サポート機能全体にAIエージェントを最近導入しました。
+**Zava Corporation** は、英国および EU 全域で事業を展開する中規模の金融サービスおよびHRコンサルティング企業です。Zava  Corporation は、従業員の機密記録、クライアントの財務データ、および第三者ベンダー契約を管理しています。同組織は、運用効率を向上させるため、HR、財務、及び IT サポート機能全体に AI エージェントを最近導入しました。
 
-セキュリティ構成を開始する前に、Zava Corporation 環境は完全にプロビジョニングされる必要があります。このラボでは、Microsoft Entra ID テナントを構成し、Microsoft Copilot Studio を有効にし、エージェント作成に必要なセキュリティグループを登録し、コース全体を通じてガバナンスの対象となる3つのAI エージェントを作成し、各エージェントを指定されたSharePoint ナレッジソースに接続し、Zava のライブデータ環境をシミュレートするサンプルビジネス文書をアップロードします。
+セキュリティ構成を開始する前に、Zava Corporation 環境は完全にプロビジョニングされる必要があります。このラボでは、Microsoft Entra ID テナントを構成し、Microsoft Copilot Studio を有効にし、エージェント作成に必要なセキュリティグループを登録し、コース全体を通じてガバナンスの対象となる3つの AI エージェントを作成し、各エージェントを指定された SharePoint ナレッジソースに接続し、Zava のライブデータ環境をシミュレートするサンプルビジネス文書をアップロードします。
 
 後続のすべてのラボは、ここで作成されるエージェント、アイデンティティ、およびファイルに依存しています。Lab 01 に進む前に、3つの演習すべてを順番に完了してください。
 
@@ -17,7 +17,7 @@
 ## 目的
 
 - Microsoft Entra ID にロール割り当て可能なセキュリティグループを作成し、Privileged Role Administrator ロールを割り当てる。
-- Power Platform Admin Centerで **copilotagentsecurity** グループを認可された Copilot Studio Authors グループとして有効にする。
+- Power Platform Admin Center で **copilotagentsecurity** グループを認可された Copilot Studio Authors グループとして有効にする。
 - 環境レベルで Copilot Studio の Entra Agent Identity を有効にする。
 - Power Apps メーカーポータルで SharePoint をデータソースとして接続する。
 - 3つの Copilot Studio エージェントを作成する：Zava HR Assistant、Zava Finance Agent、および Zava IT Support Agent。
