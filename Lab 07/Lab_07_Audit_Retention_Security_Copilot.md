@@ -53,7 +53,7 @@ Patti Fernandes は Zava HR Assistant の監査レコードを調査し、エー
 3. チャット入力フィールドに以下のプロンプトを入力します:
 
    ```
-   What is Zava's policy on annual leave entitlement?
+   Zava の年間休暇取得ポリシーはどのようなものですか？
    ```
 
 4. Zava HR Assistant の応答を待ちます。
@@ -63,7 +63,7 @@ Patti Fernandes は Zava HR Assistant の監査レコードを調査し、エー
 5. 以下の 2 番目のプロンプトを入力します:
 
    ```
-   Can you show me the employee onboarding process at Zava?
+   Zava における従業員オンボーディングプロセスをお見せいただけますか？
    ```
 
 6. 応答を待ちます。
@@ -73,7 +73,7 @@ Patti Fernandes は Zava HR Assistant の監査レコードを調査し、エー
 7. 機密ラベル付きファイルを参照する以下の 3 番目のプロンプトを入力します:
 
     ```
-    What are the details in the Zava employee records?
+    Zava の従業員記録にはどのような詳細情報が含まれていますか？
     ```
 
 8. 応答を待ち、ラボ 04 の DLP ポリシーが応答をブロックするか許可するかをメモします。
@@ -83,7 +83,7 @@ Patti Fernandes は Zava HR Assistant の監査レコードを調査し、エー
 9. 以下の 4 番目のプロンプトを入力します:
 
     ```
-    Who are the employees listed in the sick leave report?
+    病欠報告書に記載されている従業員は誰ですか？
     ```
 
 10. 応答を待ち、結果をメモします。
@@ -246,8 +246,8 @@ Patti Fernandes は Zava HR Assistant の監査レコードを調査し、エー
 
 3. **保持ポリシーに名前を付ける** ページで、以下を入力します:
 
-   - **名前:** `Zava - Retain AI Interactions 5 Year`
-   - **説明:** `Retains all Microsoft 365 Copilot and Copilot Studio agent interaction data — including prompts and responses — for a minimum of five years to satisfy Zava financial services regulatory obligations.`
+   - **名前:** `Zava - AI インタラクション 5 年保持ポリシー`
+   - **説明:** `Microsoft 365 Copilot および Copilot Studio エージェントのすべてのインタラクションデータ（プロンプトと応答を含む）を、Zava の金融サービス規制要件を満たすために最低 5 年間保持します。`
 
 4. Zava の財務サービス規制要件を満たすために、プロンプトと応答を含むすべての Microsoft 365 Copilot および Copilot Studio エージェントインタラクションデータを最低 5 年間保持します。」と入力します。
 
